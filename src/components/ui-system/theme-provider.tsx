@@ -20,11 +20,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     try {
       const saved = localStorage.getItem("theme") as Theme | null;
-      const prefersDark =
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const initial = saved ?? (prefersDark ? "dark" : "light");
-      setThemeState(initial as Theme);
+      const initial = saved ?? "dark";
+      setThemeState(initial);
       document.documentElement.classList.toggle("dark", initial === "dark");
     } catch (err) {
       // noop in SSR-unfriendly environments

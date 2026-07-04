@@ -23,6 +23,7 @@ import { Button } from "@/components/ui/button";
 import { Section } from "@/components/layout/section";
 import { AllToolsIconGrid, CategoryShowcase } from "@/components/home/category-showcase";
 import { HeroVisual } from "@/components/home/hero-visual";
+import { WorkflowShowcase } from "@/components/home/workflow-showcase";
 import { ToolCard } from "@/components/tools/tool-card";
 import { faqs, siteConfig, tools } from "@/constants/site";
 
@@ -30,24 +31,6 @@ const proofPoints = [
   { label: "Files processed", value: "1.2M+", icon: Gauge },
   { label: "Countries served", value: "120+", icon: Globe2 },
   { label: "Platform uptime", value: "99.9%", icon: Zap },
-];
-
-const workflow = [
-  {
-    title: "Upload",
-    copy: "Validate MIME type, file signature, size, and plan limits before anything runs.",
-    icon: Upload,
-  },
-  {
-    title: "Process",
-    copy: "Sharp, Poppler, LibreOffice, and custom pipelines handle each format professionally.",
-    icon: Rocket,
-  },
-  {
-    title: "Download",
-    copy: "Secure delivery with signed links, ZIP bundles for multi-page jobs, and expiry controls.",
-    icon: Cloud,
-  },
 ];
 
 const trustBadges = [
@@ -192,24 +175,7 @@ export default function HomePage() {
       </Section>
 
       <Section className="pt-0">
-        <div className="mb-8 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-gold">How it works</p>
-          <h2 className="mt-3 font-heading text-3xl font-semibold">Simple, secure, premium</h2>
-        </div>
-        <div className="grid gap-6 lg:grid-cols-3">
-          {workflow.map((step) => {
-            const Icon = step.icon;
-            return (
-              <div key={step.title} className="card-premium border-gold-glow p-6">
-                <span className="flex size-12 items-center justify-center rounded-2xl border border-gold/15 bg-gold/10">
-                  <Icon className="size-6 text-gold" />
-                </span>
-                <h3 className="mt-5 font-heading text-xl font-semibold">{step.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-muted-foreground">{step.copy}</p>
-              </div>
-            );
-          })}
-        </div>
+        <WorkflowShowcase />
       </Section>
 
       <Section className="pt-0">
