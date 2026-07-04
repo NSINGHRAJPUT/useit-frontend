@@ -1,13 +1,16 @@
 import { allTools, planLimits } from "@toolkit-pro/shared-utils";
 
-const isProd = process.env.NODE_ENV === "production";
+function requirePublicEnv(name: "NEXT_PUBLIC_SITE_URL" | "NEXT_PUBLIC_API_URL", devFallback: string) {
+  const value = process.env[name];
+  if (value) return value;
+  if (process.env.NODE_ENV !== "production") return devFallback;
+  throw new Error(`Missing required environment variable: ${name}`);
+}
 
 export const siteConfig = {
   name: "ToolKit Pro",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? (isProd ? "https://tools.nsrgfx.in" : "http://localhost:3000"),
-  apiUrl:
-    process.env.NEXT_PUBLIC_API_URL ??
-    (isProd ? "https://toolsapi.nsrgfx.in/api" : "http://localhost:5001/api"),
+  url: requirePublicEnv("NEXT_PUBLIC_SITE_URL", "http://localhost:3000"),
+  apiUrl: requirePublicEnv("NEXT_PUBLIC_API_URL", "http://localhost:5001/api"),
   description:
     "Professional online conversion tools for images, PDFs, documents, and text — fast, secure, and free to start.",
 };

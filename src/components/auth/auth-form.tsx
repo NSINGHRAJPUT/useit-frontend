@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Loader2 } from "lucide-react";
@@ -11,6 +11,14 @@ import { Label } from "@/components/ui/label";
 import { api } from "@/services/api";
 
 export function AuthForm({ mode }: { mode: "login" | "register" | "forgot" | "reset" }) {
+  return (
+    <Suspense fallback={<div className="rounded-lg border bg-card p-6 text-sm text-muted-foreground">Loading form…</div>}>
+      <AuthFormInner mode={mode} />
+    </Suspense>
+  );
+}
+
+function AuthFormInner({ mode }: { mode: "login" | "register" | "forgot" | "reset" }) {
   const [busy, setBusy] = useState(false);
   const router = useRouter();
   const searchParams = useSearchParams();
