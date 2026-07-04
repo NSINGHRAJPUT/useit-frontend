@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import { QueryProvider } from "@/providers/query-provider";
 import { ThemeProvider } from "@/components/ui-system";
+import { getRuntimePublicEnvScript } from "@/lib/public-env";
 import { buildOrganizationJsonLd, buildSiteMetadata, buildWebsiteJsonLd, getSiteSettings } from "@/lib/seo";
 import "./globals.css";
 
@@ -33,6 +34,7 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${cormorant.variable} dark h-full antialiased`}>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: getRuntimePublicEnvScript() }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
       </head>

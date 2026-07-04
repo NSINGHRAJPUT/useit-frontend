@@ -1,16 +1,14 @@
 import { allTools, planLimits } from "@toolkit-pro/shared-utils";
-
-function requirePublicEnv(name: "NEXT_PUBLIC_SITE_URL" | "NEXT_PUBLIC_API_URL", devFallback: string) {
-  const value = process.env[name];
-  if (value) return value;
-  if (process.env.NODE_ENV !== "production") return devFallback;
-  throw new Error(`Missing required environment variable: ${name}`);
-}
+import { getPublicApiUrl, getPublicSiteUrl } from "@/lib/public-env";
 
 export const siteConfig = {
   name: "ToolKit Pro",
-  url: requirePublicEnv("NEXT_PUBLIC_SITE_URL", "http://localhost:3000"),
-  apiUrl: requirePublicEnv("NEXT_PUBLIC_API_URL", "http://localhost:5001/api"),
+  get url() {
+    return getPublicSiteUrl();
+  },
+  get apiUrl() {
+    return getPublicApiUrl();
+  },
   description:
     "Professional online conversion tools for images, PDFs, documents, and text — fast, secure, and free to start.",
 };

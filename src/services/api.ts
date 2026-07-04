@@ -1,8 +1,8 @@
 import axios from "axios";
-import { siteConfig } from "@/constants/site";
+import { getPublicApiUrl } from "@/lib/public-env";
 
 export const api = axios.create({
-  baseURL: siteConfig.apiUrl,
+  baseURL: getPublicApiUrl(),
   withCredentials: true
 });
 
