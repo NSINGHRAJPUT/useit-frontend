@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { AxiosError } from "axios";
 import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
@@ -8,9 +8,12 @@ import type { ToolDefinition } from "@toolkit-pro/shared-types";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { cn } from "@/lib/utils";
 import { api } from "@/services/api";
-import { DownloadCard, type ToolResult } from "./download-card";
+import { BatchResultsPanel } from "./batch-results-panel";
+import type { ToolResult } from "./download-card";
 import { ProcessingStatus, type ToolStatus } from "./processing-status";
+import { SelectedFilesPreview } from "./selected-files-preview";
 import { UploadDropzone } from "./upload-dropzone";
 
 async function pollJob(jobId: string, tool: ToolDefinition): Promise<ToolResult> {
@@ -51,41 +54,113 @@ export function UploadTool({ tool }: { tool: ToolDefinition }) {
   const [quality, setQuality] = useState(82);
   const [width, setWidth] = useState("");
   const [height, setHeight] = useState("");
-  const [result, setResult] = useState<ToolResult | null>(null);
+  const [results, setResults] = useState<ToolResult[]>([]);
   const [busy, setBusy] = useState(false);
   const [status, setStatus] = useState<ToolStatus>("idle");
+  const [batchProgress, setBatchProgress] = useState("");
+  const [batchCurrent, setBatchCurrent] = useState<number | undefined>();
+  const [batchTotal, setBatchTotal] = useState<number | undefined>();
 
-  const onFile = useCallback((file: File) => {
-    setFiles(tool.inputType === "multi-file" ? (prev) => [...prev, file] : [file]);
-    setResult(null);
+  const allowsMultiple = tool.inputType === "multi-file" || tool.category === "image";
+  const isBatchImageConversion = tool.category === "image" && tool.inputType === "file";
+
+  const onFiles = useCallback(
+    (incoming: File[]) => {
+      if (!incoming.length) return;
+      const maxFiles = tool.maxFiles ?? 20;
+      setFiles((prev) => {
+        const next = allowsMultiple ? [...prev, ...incoming] : [incoming[0]!];
+        return next.slice(0, maxFiles);
+      });
+      setResults([]);
+      setStatus("idle");
+      setBatchProgress("");
+      setBatchCurrent(undefined);
+      setBatchTotal(undefined);
+    },
+    [allowsMultiple, tool.maxFiles],
+  );
+
+  const onRemoveFile = useCallback((index: number) => {
+    if (index < 0) {
+      setFiles([]);
+    } else {
+      setFiles((prev) => prev.filter((_, i) => i !== index));
+    }
+    setResults([]);
     setStatus("idle");
-  }, [tool.inputType]);
+    setBatchProgress("");
+    setBatchCurrent(undefined);
+    setBatchTotal(undefined);
+  }, []);
+
+  async function convertOne(file: File): Promise<ToolResult> {
+    const form = new FormData();
+    form.append("file", file);
+    form.set("quality", String(quality));
+    if (width) form.set("width", width);
+    if (height) form.set("height", height);
+
+    const { data, status: httpStatus } = await api.post<{
+      data: ToolResult & { jobId?: string; status?: string };
+    }>(`/conversions/${tool.slug}`, form);
+
+    if (httpStatus === 202 && data.data.jobId) {
+      return pollJob(data.data.jobId, tool);
+    }
+    return data.data;
+  }
 
   async function process() {
     const uploadFiles = files.length ? files : [];
     if (!uploadFiles.length) return toast.error("Choose a file first.");
 
-    const form = new FormData();
-    for (const file of uploadFiles) form.append("file", file);
-    form.set("quality", String(quality));
-    if (width) form.set("width", width);
-    if (height) form.set("height", height);
-
     setBusy(true);
     setStatus("uploading");
-    setResult(null);
-    try {
-      const { data, status: httpStatus } = await api.post<{
-        data: ToolResult & { jobId?: string; status?: string };
-      }>(`/conversions/${tool.slug}`, form);
+    setResults([]);
+    setBatchProgress("");
 
-      if (httpStatus === 202 && data.data.jobId) {
+    try {
+      if (isBatchImageConversion && uploadFiles.length > 1) {
         setStatus("processing");
-        const polled = await pollJob(data.data.jobId, tool);
-        setResult(polled);
-      } else {
-        setResult(data.data);
+        setBatchTotal(uploadFiles.length);
+        const converted: ToolResult[] = [];
+
+        for (let i = 0; i < uploadFiles.length; i++) {
+          setBatchCurrent(i + 1);
+          setBatchProgress(`Converting image ${i + 1} of ${uploadFiles.length}…`);
+          converted.push(await convertOne(uploadFiles[i]!));
+        }
+
+        setResults(converted);
+        setStatus("completed");
+        setBatchCurrent(undefined);
+        setBatchTotal(undefined);
+        toast.success(`Converted ${converted.length} images.`);
+        return;
       }
+
+      if (tool.inputType === "multi-file") {
+        const form = new FormData();
+        for (const file of uploadFiles) form.append("file", file);
+        form.set("quality", String(quality));
+        if (width) form.set("width", width);
+        if (height) form.set("height", height);
+
+        const { data, status: httpStatus } = await api.post<{
+          data: ToolResult & { jobId?: string; status?: string };
+        }>(`/conversions/${tool.slug}`, form);
+
+        if (httpStatus === 202 && data.data.jobId) {
+          setStatus("processing");
+          setResults([await pollJob(data.data.jobId, tool)]);
+        } else {
+          setResults([data.data]);
+        }
+      } else {
+        setResults([await convertOne(uploadFiles[0]!)]);
+      }
+
       setStatus("completed");
       toast.success("Conversion complete.");
     } catch (error) {
@@ -99,19 +174,40 @@ export function UploadTool({ tool }: { tool: ToolDefinition }) {
       toast.error(message ?? "Conversion failed.");
     } finally {
       setBusy(false);
+      setBatchProgress("");
+      setBatchCurrent(undefined);
+      setBatchTotal(undefined);
     }
   }
 
+  const convertLabel =
+    isBatchImageConversion && files.length > 1
+      ? `Convert ${files.length} images`
+      : tool.processingMode === "async"
+        ? "Start processing"
+        : "Convert now";
+
+  const readyResults = results.filter((result) => result.downloadUrl);
+  const hasBatchResults = readyResults.length > 1;
+
   return (
-    <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
-      <div className="space-y-4">
-        <UploadDropzone tool={tool} onFile={onFile} onError={(m) => toast.error(m)} />
-        {files.length > 0 ? (
-          <p className="text-sm text-muted-foreground">
-            {files.length} file{files.length > 1 ? "s" : ""} selected: {files.map((f) => f.name).join(", ")}
-          </p>
-        ) : null}
-        <div className="grid gap-4 rounded-lg border bg-card p-5 shadow-sm sm:grid-cols-3">
+    <div className="space-y-6">
+      <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
+        <div className="card-premium space-y-5 border-gold/15 p-5 sm:p-6">
+        <div className="space-y-1">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Upload workspace</p>
+          <p className="text-sm text-muted-foreground">Select files, review previews, then run the conversion.</p>
+        </div>
+
+        <UploadDropzone
+          tool={tool}
+          onFiles={onFiles}
+          onError={(m) => toast.error(m)}
+          hasFiles={files.length > 0}
+        />
+        <SelectedFilesPreview files={files} onRemove={onRemoveFile} />
+
+        <div className="grid gap-4 rounded-xl border border-gold/10 bg-background/30 p-5 backdrop-blur-sm sm:grid-cols-3">
           <div className="space-y-2">
             <Label htmlFor="quality">Quality</Label>
             <Input id="quality" type="number" min={1} max={100} value={quality} onChange={(e) => setQuality(Number(e.target.value))} />
@@ -129,15 +225,36 @@ export function UploadTool({ tool }: { tool: ToolDefinition }) {
             </>
           ) : null}
         </div>
-        <Button onClick={process} disabled={busy} className="w-full sm:w-auto">
+        <Button
+          onClick={process}
+          disabled={busy || !files.length}
+          className={cn(
+            "w-full transition-all duration-300 sm:w-auto",
+            files.length > 0 && "btn-gold border-0 px-8",
+          )}
+        >
           {busy ? <Loader2 className="size-4 animate-spin" /> : null}
-          {tool.processingMode === "async" ? "Start processing" : "Convert now"}
+          {convertLabel}
         </Button>
+        {batchProgress ? (
+          <p className="sr-only">{batchProgress}</p>
+        ) : null}
+        </div>
+        <div className="space-y-4 lg:sticky lg:top-24 lg:self-start">
+          <ProcessingStatus
+            status={status}
+            detail={batchProgress || undefined}
+            batchCurrent={batchCurrent}
+            batchTotal={batchTotal}
+          />
+          {!hasBatchResults ? (
+            <BatchResultsPanel results={results} zipFileName={`${tool.slug}-converted.zip`} />
+          ) : null}
+        </div>
       </div>
-      <div className="space-y-4">
-        <ProcessingStatus status={status} />
-        {result?.downloadUrl ? <DownloadCard result={result} /> : null}
-      </div>
+      {hasBatchResults ? (
+        <BatchResultsPanel results={results} zipFileName={`${tool.slug}-converted.zip`} />
+      ) : null}
     </div>
   );
 }

@@ -13,20 +13,30 @@ export interface ToolResult {
   expiresAt?: string;
 }
 
-export function DownloadCard({ result }: { result: ToolResult }) {
+export function DownloadCard({ result, compact = false }: { result: ToolResult; compact?: boolean }) {
   return (
-    <div className="rounded-lg border bg-card p-5 shadow-sm">
-      <p className="font-semibold">{result.fileName}</p>
-      <p className="mt-2 text-sm text-muted-foreground">
-        Input {formatBytes(result.inputSize)} · Output {formatBytes(result.outputSize)}
-        {result.fileName.endsWith(".zip") ? " · Extract ZIP for all pages" : null}
+    <div
+      className={
+        compact
+          ? "flex h-full flex-col gap-3 rounded-lg border border-gold/15 bg-card p-4 shadow-sm"
+          : "rounded-lg border bg-card p-5 shadow-sm"
+      }
+    >
+      <p className={compact ? "truncate text-sm font-semibold" : "font-semibold"} title={result.fileName}>
+        {result.fileName}
       </p>
-      <Button className="mt-5 w-full" asChild>
-        <a href={result.downloadUrl}>
-          <Download className="size-4" />
-          Download
-        </a>
-      </Button>
+      <p className={compact ? "text-xs text-muted-foreground" : "mt-2 text-sm text-muted-foreground"}>
+        {formatBytes(result.inputSize)} → {formatBytes(result.outputSize)}
+        {result.fileName.endsWith(".zip") ? " · ZIP" : null}
+      </p>
+      <div className={compact ? "mt-auto" : undefined}>
+        <Button className={compact ? "w-full" : "mt-5 w-full"} size={compact ? "sm" : "default"} asChild>
+          <a href={result.downloadUrl}>
+            <Download className="size-4" />
+            Download
+          </a>
+        </Button>
+      </div>
     </div>
   );
 }

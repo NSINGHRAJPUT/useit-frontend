@@ -44,7 +44,9 @@ export function getPublicApiUrl(): string {
     return DEV_API_URL;
   }
 
-  return DEV_API_URL;
+  throw new Error(
+    "NEXT_PUBLIC_API_URL is not set. Add it in Vercel → Settings → Environment Variables, then redeploy.",
+  );
 }
 
 export function getRuntimePublicEnvScript(): string {
