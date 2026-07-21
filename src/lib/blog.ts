@@ -1,3 +1,5 @@
+import "server-only";
+
 import type { BlogPost } from "@toolkit-pro/shared-types";
 import { connectDb } from "./db";
 import { BlogModel } from "./models/blog.model";
@@ -49,7 +51,10 @@ function publishedFilter() {
 }
 
 function serializeBlog(doc: FeedBlogDocument): BlogPost {
-  const rawContent = typeof doc.content === "string" ? doc.content : typeof doc.body === "string" ? doc.body : "";
+  // Prefer `content` when present (server feed / default schema),
+  // but support `body` (HTML) from alternate feeds.
+  const rawContent =
+    typeof doc.content === "string" ? doc.content : typeof doc.body === "string" ? doc.body : "";
   const plainContent = rawContent.includes("<") ? htmlToText(rawContent) : rawContent;
 
   return {
