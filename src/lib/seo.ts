@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import type { BlogPost, SiteSettings } from "@toolkit-pro/shared-types";
 import { siteConfig } from "@/constants/site";
-import { apiGet } from "@/services/api";
 
 export const defaultSiteSettings: SiteSettings = {
   siteName: siteConfig.name,
@@ -25,7 +24,7 @@ export const defaultSiteSettings: SiteSettings = {
 };
 
 export async function getSiteSettings() {
-  return apiGet<SiteSettings>("/seo").catch(() => defaultSiteSettings);
+  return defaultSiteSettings;
 }
 
 export function buildSiteMetadata(settings: SiteSettings): Metadata {
@@ -84,7 +83,7 @@ export function buildBlogMetadata(post: BlogPost, settings: SiteSettings): Metad
   return {
     title,
     description,
-    keywords: [post.focusKeyword, ...post.tags].filter(Boolean) as string[],
+    keywords: [post.focusKeyword, ...(post.tags ?? [])].filter(Boolean) as string[],
     alternates: { canonical },
     openGraph: {
       title,
@@ -95,7 +94,7 @@ export function buildBlogMetadata(post: BlogPost, settings: SiteSettings): Metad
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
       authors: [post.author],
-      tags: post.tags,
+      tags: post.tags ?? [],
       images: [{ url: image, alt: post.title }],
     },
     twitter: {
@@ -163,13 +162,13 @@ export function buildArticleJsonLd(post: BlogPost, settings: SiteSettings) {
     dateModified: post.updatedAt || post.publishedAt,
     image,
     mainEntityOfPage: post.canonicalUrl || `${siteConfig.url}/blog/${post.slug}`,
-    keywords: [post.focusKeyword, ...post.tags].filter(Boolean).join(", "),
-    wordCount: post.content.split(/\s+/).filter(Boolean).length,
+    keywords: [post.focusKeyword, ...(post.tags ?? [])].filter(Boolean).join(", "),
+    wordCount: (post.content ?? "").split(/\s+/).filter(Boolean).length,
   };
 }
 
 export function buildFaqJsonLd(faqs: BlogPost["faqs"]) {
-  if (!faqs.length) return null;
+  if (!faqs?.length) return null;
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -185,9 +184,12 @@ export function buildFaqJsonLd(faqs: BlogPost["faqs"]) {
 }
 
 export async function getPublishedBlogSlugs() {
-  return apiGet<Array<{ slug: string; updatedAt?: string; publishedAt?: string }>>("/blogs/slugs").catch(
-    () => [],
-  );
+  try {
+    const { getPublishedBlogSlugs: fetchSlugs } = await import("./blog");
+    return fetchSlugs();
+  } catch {
+    return [];
+  }
 }
 
 export function getWeekKey(date = new Date()) {

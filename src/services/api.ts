@@ -3,7 +3,6 @@ import { getPublicApiUrl } from "@/lib/public-env";
 
 export const api = axios.create({
   baseURL: getPublicApiUrl(),
-  withCredentials: true
 });
 
 export async function apiGet<T>(path: string) {

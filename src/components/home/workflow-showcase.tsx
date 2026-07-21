@@ -3,22 +3,22 @@ import { ArrowRight, Cloud, Rocket, Upload } from "lucide-react";
 const steps = [
   {
     step: "01",
-    title: "Upload",
-    copy: "Validate MIME type, file signature, size, and plan limits before anything runs.",
+    title: "Select",
+    copy: "Choose a file or paste text. Client-side tools validate format and size before processing.",
     icon: Upload,
     gradient: "from-amber-500/25 via-gold/10 to-transparent",
   },
   {
     step: "02",
     title: "Process",
-    copy: "Sharp, Poppler, LibreOffice, and custom pipelines handle each format professionally.",
+    copy: "Most conversions run instantly in your browser. Office documents use a secure server when needed.",
     icon: Rocket,
     gradient: "from-orange-500/20 via-gold/12 to-transparent",
   },
   {
     step: "03",
     title: "Download",
-    copy: "Secure delivery with signed links, ZIP bundles for multi-page jobs, and expiry controls.",
+    copy: "Get your result immediately — no account required, no waiting for uploads on client-side tools.",
     icon: Cloud,
     gradient: "from-yellow-500/15 via-gold/10 to-transparent",
   },

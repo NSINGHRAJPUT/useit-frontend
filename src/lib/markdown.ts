@@ -15,7 +15,7 @@ function inlineMarkdown(value: string) {
 }
 
 export function renderMarkdown(content: string) {
-  const lines = content.replace(/\r\n/g, "\n").split("\n");
+  const lines = (content ?? "").replace(/\r\n/g, "\n").split("\n");
   const html: string[] = [];
   let inList = false;
 

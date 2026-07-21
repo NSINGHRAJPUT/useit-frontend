@@ -34,8 +34,17 @@ function useAnimatedProgress(
   status: ToolStatus,
   batchCurrent?: number,
   batchTotal?: number,
+  runKey = 0,
 ) {
   const [value, setValue] = useState(0);
+
+  const batchProgress =
+    batchTotal && batchCurrent
+      ? Math.min(
+          99,
+          (((batchCurrent - 1) / batchTotal) + 0.45 / batchTotal) * 100,
+        )
+      : null;
 
   useEffect(() => {
     if (status === "idle") {
@@ -47,24 +56,27 @@ function useAnimatedProgress(
       return;
     }
 
+    if (batchProgress != null) {
+      setValue(batchProgress);
+      return;
+    }
+
+    setValue(8);
+
     const tick = window.setInterval(() => {
       setValue((current) => {
-        let cap = status === "uploading" ? 36 : status === "generating" ? 94 : 90;
-
-        if (batchTotal && batchCurrent) {
-          const slice = 100 / batchTotal;
-          const completed = (batchCurrent - 1) * slice;
-          const inFlight = status === "uploading" ? slice * 0.28 : slice * 0.88;
-          cap = Math.min(98, completed + inFlight);
-        }
-
+        const cap = status === "uploading" ? 36 : status === "generating" ? 94 : 90;
         if (current >= cap) return current;
-        return current + Math.max(0.35, (cap - current) * 0.09);
+        return current + Math.max(0.5, (cap - current) * 0.12);
       });
-    }, 100);
+    }, 80);
 
     return () => window.clearInterval(tick);
-  }, [status, batchCurrent, batchTotal]);
+  }, [status, batchProgress, runKey]);
+
+  if (batchProgress != null && (status === "uploading" || status === "processing" || status === "generating")) {
+    return batchProgress;
+  }
 
   return value;
 }
@@ -90,15 +102,17 @@ export function ProcessingStatus({
   detail,
   batchCurrent,
   batchTotal,
+  runKey = 0,
 }: {
   status: ToolStatus;
   error?: string;
   detail?: string;
   batchCurrent?: number;
   batchTotal?: number;
+  runKey?: number;
 }) {
   const [messageIndex, setMessageIndex] = useState(0);
-  const progress = useAnimatedProgress(status, batchCurrent, batchTotal);
+  const progress = useAnimatedProgress(status, batchCurrent, batchTotal, runKey);
   const isActive = status === "uploading" || status === "processing" || status === "generating";
 
   useEffect(() => {

@@ -4,6 +4,7 @@ import { siteConfig } from "@/constants/site";
 const links = [
   ["Tools", "/tools"],
   ["Categories", "/categories"],
+  ["Blog", "/blog"],
   ["About", "/about"],
   ["Contact", "/contact"],
   ["Privacy", "/privacy-policy"],

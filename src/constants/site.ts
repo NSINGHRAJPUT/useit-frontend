@@ -1,4 +1,4 @@
-import { allTools, planLimits } from "@toolkit-pro/shared-utils";
+import { allTools } from "@toolkit-pro/shared-utils";
 import { getPublicApiUrl, getPublicSiteUrl } from "@/lib/public-env";
 
 export const siteConfig = {
@@ -10,24 +10,23 @@ export const siteConfig = {
     return getPublicApiUrl();
   },
   description:
-    "Professional online conversion tools for images, PDFs, documents, and text — fast, secure, and free to start.",
+    "Free online conversion tools for images, PDFs, documents, and text — most processing happens locally in your browser.",
 };
 
 export const tools = allTools;
-export const plans = Object.values(planLimits);
 
 export const categories = [
   {
     name: "Image Tools",
     slug: "image",
     status: "live",
-    description: "Convert, compress, resize, crop, and optimize images.",
+    description: "Convert, compress, resize, crop, and optimize images in your browser.",
   },
   {
     name: "PDF Tools",
     slug: "pdf",
     status: "live",
-    description: "Merge, split, compress, and convert PDF files.",
+    description: "Merge, split, compress, and convert PDF files locally.",
   },
   {
     name: "Document Tools",
@@ -45,8 +44,8 @@ export const categories = [
 
 export const faqs = [
   [
-    "Are my files stored permanently?",
-    "No. Processed files are stored temporarily and conversion records expire automatically.",
+    "Are my files uploaded to a server?",
+    "Most tools process files entirely in your browser — files never leave your device. Only Office-to-PDF conversions require a server upload.",
   ],
   [
     "Which file types are supported?",
@@ -54,10 +53,10 @@ export const faqs = [
   ],
   [
     "How does PDF processing work?",
-    "PDF and document tools run in a background queue. You receive a download link when processing completes.",
+    "PDF tools run locally in your browser using modern web APIs. Results download instantly with no upload required.",
   ],
   [
-    "What are the upload limits?",
-    "Free users can upload up to 25 MB, Pro up to 100 MB, and Business up to 250 MB per file.",
+    "What are the file size limits?",
+    "Individual files up to 250 MB are supported for browser-based processing.",
   ],
 ];

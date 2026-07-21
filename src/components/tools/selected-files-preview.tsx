@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { FileText, FileType, ImageIcon, Layers, Sparkles, X } from "lucide-react";
+import { ChevronDown, ChevronUp, FileText, FileType, ImageIcon, Layers, Sparkles, X } from "lucide-react";
 import { formatBytes } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -40,7 +40,7 @@ function useObjectUrls(files: File[]) {
   return urls;
 }
 
-function PreviewMedia({ file, url }: { file: File; url: string }) {
+function PreviewMedia({ file, url, compact }: { file: File; url: string; compact?: boolean }) {
   const kind = getPreviewKind(file);
 
   if (kind === "image") {
@@ -48,7 +48,10 @@ function PreviewMedia({ file, url }: { file: File; url: string }) {
       <img
         src={url}
         alt={file.name}
-        className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+        className={cn(
+          "block max-h-full max-w-full object-contain object-center",
+          compact ? "h-full w-full" : "h-auto w-full",
+        )}
       />
     );
   }
@@ -64,6 +67,73 @@ function PreviewMedia({ file, url }: { file: File; url: string }) {
   }
 
   return null;
+}
+
+function OrderedFileRow({
+  file,
+  index,
+  total,
+  onRemove,
+  onMoveUp,
+  onMoveDown,
+}: {
+  file: File;
+  index: number;
+  total: number;
+  onRemove: () => void;
+  onMoveUp?: () => void;
+  onMoveDown?: () => void;
+}) {
+  return (
+    <div className="flex items-center gap-2 rounded-xl border border-gold/15 bg-card/70 p-3 backdrop-blur-sm sm:gap-3">
+      <div className="flex shrink-0 flex-col gap-1">
+        <Button
+          type="button"
+          size="icon"
+          variant="outline"
+          className="size-8"
+          disabled={index === 0}
+          onClick={onMoveUp}
+          aria-label={`Move ${file.name} up`}
+        >
+          <ChevronUp className="size-4" />
+        </Button>
+        <Button
+          type="button"
+          size="icon"
+          variant="outline"
+          className="size-8"
+          disabled={index === total - 1}
+          onClick={onMoveDown}
+          aria-label={`Move ${file.name} down`}
+        >
+          <ChevronDown className="size-4" />
+        </Button>
+      </div>
+
+      <div className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-gold/20 bg-gold/10 text-sm font-semibold text-gold">
+        {index + 1}
+      </div>
+
+      <div className="min-w-0 flex-1">
+        <p className="truncate text-sm font-medium" title={file.name}>
+          {file.name}
+        </p>
+        <p className="text-xs text-muted-foreground">{formatBytes(file.size)}</p>
+      </div>
+
+      <Button
+        type="button"
+        size="icon"
+        variant="ghost"
+        className="size-8 shrink-0"
+        onClick={onRemove}
+        aria-label={`Remove ${file.name}`}
+      >
+        <X className="size-4" />
+      </Button>
+    </div>
+  );
 }
 
 function FilePreviewCard({
@@ -92,13 +162,13 @@ function FilePreviewCard({
     >
       <div
         className={cn(
-          "relative overflow-hidden bg-muted/30",
-          compact ? "aspect-[4/3]" : "aspect-video max-h-[300px] sm:max-h-[340px]",
+          "relative flex items-center justify-center overflow-hidden bg-muted/30",
+          compact ? "aspect-[4/3]" : "min-h-[220px] max-h-[360px] w-full",
         )}
       >
         {hasVisualPreview && url ? (
           <>
-            <PreviewMedia file={file} url={url} />
+            <PreviewMedia file={file} url={url} compact={compact} />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           </>
         ) : (
@@ -141,9 +211,17 @@ function FilePreviewCard({
 export function SelectedFilesPreview({
   files,
   onRemove,
+  reorderable = false,
+  onMoveUp,
+  onMoveDown,
+  orderHint,
 }: {
   files: File[];
   onRemove: (index: number) => void;
+  reorderable?: boolean;
+  onMoveUp?: (index: number) => void;
+  onMoveDown?: (index: number) => void;
+  orderHint?: string;
 }) {
   const urls = useObjectUrls(files);
   const compact = files.length > 1;
@@ -169,7 +247,9 @@ export function SelectedFilesPreview({
               <Sparkles className="size-3.5 text-gold" />
               {files.length} file{files.length > 1 ? "s" : ""} ready
             </p>
-            <p className="text-xs text-muted-foreground">Total {formatBytes(totalSize)}</p>
+            <p className="text-xs text-muted-foreground">
+              {orderHint ? `${orderHint} · Total ${formatBytes(totalSize)}` : `Total ${formatBytes(totalSize)}`}
+            </p>
           </div>
         </div>
         {files.length > 1 ? (
@@ -185,18 +265,34 @@ export function SelectedFilesPreview({
         ) : null}
       </div>
 
-      <div className={`grid gap-3 ${gridClass}`}>
-        {files.map((file, index) => (
-          <FilePreviewCard
-            key={`${file.name}-${file.size}-${file.lastModified}-${index}`}
-            file={file}
-            url={urls[index] ?? ""}
-            compact={compact}
-            index={index}
-            onRemove={() => onRemove(index)}
-          />
-        ))}
-      </div>
+      {reorderable ? (
+        <div className="space-y-2">
+          {files.map((file, index) => (
+            <OrderedFileRow
+              key={`${file.name}-${file.size}-${file.lastModified}-${index}`}
+              file={file}
+              index={index}
+              total={files.length}
+              onRemove={() => onRemove(index)}
+              onMoveUp={onMoveUp ? () => onMoveUp(index) : undefined}
+              onMoveDown={onMoveDown ? () => onMoveDown(index) : undefined}
+            />
+          ))}
+        </div>
+      ) : (
+        <div className={`grid gap-3 ${gridClass}`}>
+          {files.map((file, index) => (
+            <FilePreviewCard
+              key={`${file.name}-${file.size}-${file.lastModified}-${index}`}
+              file={file}
+              url={urls[index] ?? ""}
+              compact={compact}
+              index={index}
+              onRemove={() => onRemove(index)}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

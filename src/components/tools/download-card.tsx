@@ -11,6 +11,7 @@ export interface ToolResult {
   inputSize: number;
   outputSize: number;
   expiresAt?: string;
+  isLocal?: boolean;
 }
 
 export function DownloadCard({ result, compact = false }: { result: ToolResult; compact?: boolean }) {
@@ -28,6 +29,7 @@ export function DownloadCard({ result, compact = false }: { result: ToolResult; 
       <p className={compact ? "text-xs text-muted-foreground" : "mt-2 text-sm text-muted-foreground"}>
         {formatBytes(result.inputSize)} → {formatBytes(result.outputSize)}
         {result.fileName.endsWith(".zip") ? " · ZIP" : null}
+        {result.isLocal ? " · Processed locally" : null}
       </p>
       <div className={compact ? "mt-auto" : undefined}>
         <Button className={compact ? "w-full" : "mt-5 w-full"} size={compact ? "sm" : "default"} asChild>

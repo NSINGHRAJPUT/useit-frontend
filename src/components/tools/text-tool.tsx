@@ -1,14 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { AxiosError } from "axios";
 import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import type { ToolDefinition } from "@toolkit-pro/shared-types";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { api } from "@/services/api";
+import { processTool } from "@/lib/processing/router";
 import { DownloadCard, type ToolResult } from "./download-card";
 import { ProcessingStatus, type ToolStatus } from "./processing-status";
 
@@ -20,21 +19,17 @@ export function TextTool({ tool }: { tool: ToolDefinition }) {
 
   async function process() {
     if (!text.trim()) return toast.error("Enter text to process.");
-    const form = new FormData();
-    form.set("text", text);
     setBusy(true);
     setStatus("processing");
     setResult(null);
     try {
-      const { data } = await api.post<{ data: ToolResult }>(`/conversions/${tool.slug}`, form);
-      setResult(data.data);
+      const output = (await processTool({ tool, options: { text } })) as ToolResult;
+      setResult(output);
       setStatus("completed");
       toast.success("Conversion complete.");
     } catch (error) {
       setStatus("failed");
-      const message =
-        error instanceof AxiosError ? error.response?.data?.error?.message : "Conversion failed.";
-      toast.error(message ?? "Conversion failed.");
+      toast.error(error instanceof Error ? error.message : "Conversion failed.");
     } finally {
       setBusy(false);
     }
