@@ -1,85 +1,92 @@
-import "server-only";
-
 import type { BlogPost } from "@toolkit-pro/shared-types";
-import { connectDb } from "./db";
-import { BlogModel } from "./models/blog.model";
 
+const DEFAULT_BLOG_API_URL = "https://nsrgfx.in/api/blog";
 
-type FeedBlogDocument = {
-  _id: unknown;
-  title?: string;
-  slug: string;
-  excerpt?: string;
-  content?: string;
-  body?: string;
-  featuredImage?: string;
-  author?: string;
-  authorName?: string;
-  categories?: string[];
-  tags?: string[];
-  seoTitle?: string;
-  seoDescription?: string;
-  focusKeyword?: string;
-  canonicalUrl?: string;
-  ogImage?: string;
-  metaRobots?: string;
-  faqs?: Array<{ question: string; answer: string }>;
-  readingTimeMinutes?: number;
-  status: "draft" | "published";
-  publishedAt?: Date;
-  scheduledPublishAt?: Date;
-  createdAt?: Date;
-  updatedAt?: Date;
-};
+function getBlogApiUrl(): string {
+  return process.env.NEXT_PUBLIC_BLOG_API_URL?.trim() || DEFAULT_BLOG_API_URL;
+}
 
-function htmlToText(html: string): string {
-  return html
-    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+function estimateReadingTimeFromHtml(html: string): number {
+  // Remove tags + normalize whitespace. This keeps reading-time roughly stable.
+  const text = html
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
     .replace(/<[^>]+>/g, " ")
-    .replace(/&nbsp;/gi, " ")
-    .replace(/&amp;/gi, "&")
     .replace(/\s+/g, " ")
     .trim();
+
+  const words = text ? text.split(/\s+/).filter(Boolean).length : 0;
+  return Math.max(1, Math.ceil(words / 220));
 }
 
-function publishedFilter() {
-  return {
-    status: "published" as const,
-    publishedAt: { $lte: new Date() },
-  };
-}
+type ExternalListPost = {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  tags?: string[];
+  status: "draft" | "published" | string;
+  authorName?: string;
+  publishedAt?: string;
+  updatedAt?: string;
+  // Present on the detail endpoint; omitted on the list endpoint.
+  body?: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  createdAt?: string;
+};
 
-function serializeBlog(doc: FeedBlogDocument): BlogPost {
-  // Prefer `content` when present (server feed / default schema),
-  // but support `body` (HTML) from alternate feeds.
-  const rawContent =
-    typeof doc.content === "string" ? doc.content : typeof doc.body === "string" ? doc.body : "";
-  const plainContent = rawContent.includes("<") ? htmlToText(rawContent) : rawContent;
+type ExternalListResponse = {
+  posts: ExternalListPost[];
+  total: number;
+  page: number;
+  limit: number;
+  totalPages?: number;
+};
+
+type ExternalDetailPost = ExternalListPost & {
+  createdAt?: string;
+};
+
+type ExternalDetailResponse = {
+  post: ExternalDetailPost;
+};
+
+function mapExternalPostToBlogPost(listOrDetail: ExternalListPost | ExternalDetailPost): BlogPost {
+  const author = listOrDetail.authorName ?? "ToolKit Pro";
+  const tags = listOrDetail.tags ?? [];
+  const status = (listOrDetail.status === "draft" ? "draft" : "published") as "draft" | "published";
+
+  const content = typeof listOrDetail.body === "string" ? listOrDetail.body : "";
+  const seoTitle = typeof listOrDetail.seoTitle === "string" ? listOrDetail.seoTitle : listOrDetail.title;
+  const seoDescription =
+    typeof listOrDetail.seoDescription === "string"
+      ? listOrDetail.seoDescription
+      : listOrDetail.excerpt ?? "";
 
   return {
-    _id: String(doc._id),
-    title: doc.title ?? "Untitled",
-    slug: doc.slug,
-    excerpt: doc.excerpt ?? plainContent.slice(0, 180) ?? "",
-    content: rawContent,
-    featuredImage: doc.featuredImage ?? undefined,
-    author: doc.author ?? doc.authorName ?? "ToolKit Pro",
-    categories: doc.categories ?? [],
-    tags: doc.tags ?? [],
-    seoTitle: doc.seoTitle ?? doc.title ?? "Untitled",
-    seoDescription: doc.seoDescription ?? doc.excerpt ?? plainContent.slice(0, 180) ?? "",
-    focusKeyword: doc.focusKeyword ?? undefined,
-    canonicalUrl: doc.canonicalUrl ?? undefined,
-    ogImage: doc.ogImage ?? undefined,
-    metaRobots: doc.metaRobots ?? undefined,
-    faqs: doc.faqs ?? [],
-    readingTimeMinutes: doc.readingTimeMinutes ?? undefined,
-    status: doc.status,
-    publishedAt: doc.publishedAt?.toISOString(),
-    scheduledPublishAt: doc.scheduledPublishAt?.toISOString(),
-    createdAt: doc.createdAt?.toISOString(),
-    updatedAt: doc.updatedAt?.toISOString(),
+    _id: listOrDetail.id,
+    title: listOrDetail.title,
+    slug: listOrDetail.slug,
+    excerpt: listOrDetail.excerpt ?? "",
+    content,
+    featuredImage: undefined,
+    author,
+    categories: [],
+    tags,
+    seoTitle,
+    seoDescription,
+    focusKeyword: undefined,
+    canonicalUrl: undefined,
+    ogImage: undefined,
+    metaRobots: "index,follow",
+    faqs: [],
+    readingTimeMinutes: content ? estimateReadingTimeFromHtml(content) : undefined,
+    status,
+    publishedAt: listOrDetail.publishedAt,
+    scheduledPublishAt: undefined,
+    createdAt: listOrDetail.createdAt,
+    updatedAt: listOrDetail.updatedAt,
   };
 }
 
@@ -92,44 +99,76 @@ export async function listPublishedBlogs({
   limit?: number;
   search?: string;
 }) {
-  await connectDb();
+  const apiUrl = getBlogApiUrl();
+  const params = new URLSearchParams();
+  params.set("page", String(page));
+  params.set("limit", String(limit));
+  if (search?.trim()) params.set("search", search.trim());
 
-  const query = search?.trim()
-    ? { $text: { $search: search.trim() }, ...publishedFilter() }
-    : publishedFilter();
+  const res = await fetch(`${apiUrl}?${params.toString()}`, { cache: "no-store" });
+  if (!res.ok) {
+    // Keep behavior predictable for the page component (shows "No published articles yet" if empty).
+    throw new Error(`Failed to load blog posts (${res.status}).`);
+  }
 
-  const [docs, total] = await Promise.all([
-    BlogModel.find(query)
-      .sort({ publishedAt: -1 })
-      .skip((page - 1) * limit)
-      .limit(limit)
-      .lean<FeedBlogDocument[]>(),
-    BlogModel.countDocuments(query),
-  ]);
+  const data = (await res.json()) as ExternalListResponse;
+  const totalPages = data.totalPages ?? Math.max(1, Math.ceil(data.total / (data.limit || limit)));
 
   return {
-    posts: docs.map((doc) => serializeBlog(doc)),
-    total,
-    page,
-    totalPages: Math.max(1, Math.ceil(total / limit)),
+    posts: (data.posts ?? []).map(mapExternalPostToBlogPost),
+    total: data.total ?? 0,
+    page: data.page ?? page,
+    totalPages,
   };
 }
 
 export async function getPublishedBlogBySlug(slug: string) {
-  await connectDb();
-  const doc = await BlogModel.findOne({ slug, ...publishedFilter() }).lean<FeedBlogDocument>();
-  return doc ? serializeBlog(doc) : null;
+  const apiUrl = getBlogApiUrl();
+  const res = await fetch(`${apiUrl}/${encodeURIComponent(slug)}`, { cache: "no-store" });
+  if (!res.ok) {
+    if (res.status === 404) return null;
+    throw new Error(`Failed to load blog post (${res.status}).`);
+  }
+
+  const data = (await res.json()) as ExternalDetailResponse;
+  if (!data?.post) return null;
+
+  return mapExternalPostToBlogPost(data.post);
 }
 
-export async function getPublishedBlogSlugs() {
-  await connectDb();
-  const docs = await BlogModel.find(publishedFilter())
-    .select("slug updatedAt publishedAt")
-    .sort({ publishedAt: -1 })
-    .lean<Array<{ slug: string; updatedAt?: Date; publishedAt?: Date }>>();
+export async function getPublishedBlogSlugs(): Promise<Array<{ slug: string; updatedAt?: string }>> {
+  const apiUrl = getBlogApiUrl();
 
-  return docs.map((doc) => ({
-    slug: doc.slug,
-    updatedAt: (doc.updatedAt ?? doc.publishedAt)?.toISOString(),
-  }));
+  // Fetch all pages to ensure static generation + sitemap cover everything.
+  const limit = 200;
+  let page = 1;
+  let total = Infinity;
+  const results: Array<{ slug: string; updatedAt?: string }> = [];
+
+  while ((page - 1) * limit < total) {
+    const params = new URLSearchParams({ page: String(page), limit: String(limit) });
+    const res = await fetch(`${apiUrl}?${params.toString()}`, { cache: "no-store" });
+    if (!res.ok) throw new Error(`Failed to load blog slugs (${res.status}).`);
+
+    const data = (await res.json()) as ExternalListResponse;
+    total = data.total ?? results.length;
+
+    for (const p of data.posts ?? []) {
+      results.push({ slug: p.slug, updatedAt: p.updatedAt ?? p.publishedAt });
+    }
+
+    if (!data.posts?.length || data.page * data.limit >= total) break;
+    page += 1;
+  }
+
+  // De-dupe (in case of weird API pagination).
+  const seen = new Set<string>();
+  return results
+    .filter(({ slug }) => {
+      if (seen.has(slug)) return false;
+      seen.add(slug);
+      return true;
+    })
+    .sort((a, b) => (b.updatedAt ?? "").localeCompare(a.updatedAt ?? ""));
 }
+

@@ -183,14 +183,7 @@ export function buildFaqJsonLd(faqs: BlogPost["faqs"]) {
   };
 }
 
-export async function getPublishedBlogSlugs() {
-  try {
-    const { getPublishedBlogSlugs: fetchSlugs } = await import("./blog");
-    return fetchSlugs();
-  } catch {
-    return [];
-  }
-}
+export { getPublishedBlogSlugs } from "./blog";
 
 export function getWeekKey(date = new Date()) {
   const start = new Date(date);
