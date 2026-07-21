@@ -1,13 +1,12 @@
 import type { MetadataRoute } from "next";
+import { getPublishedBlogSlugs } from "@/lib/blog";
 import { siteConfig, tools } from "@/constants/site";
-import { getPublishedBlogSlugs } from "@/lib/seo";
 
 const staticRoutes = [
   "",
   "/tools",
   "/categories",
   "/blog",
-  "/pricing",
   "/about",
   "/contact",
   "/faq",
@@ -18,14 +17,26 @@ const staticRoutes = [
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
-  const blogPosts = await getPublishedBlogSlugs();
+  let blogRoutes: MetadataRoute.Sitemap = [];
+
+  try {
+    const slugs = await getPublishedBlogSlugs();
+    blogRoutes = slugs.map(({ slug, updatedAt }) => ({
+      url: `${siteConfig.url}/blog/${slug}`,
+      lastModified: updatedAt ? new Date(updatedAt) : now,
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
+    }));
+  } catch {
+    blogRoutes = [];
+  }
 
   return [
     ...staticRoutes.map((route) => ({
       url: `${siteConfig.url}${route}`,
       lastModified: now,
-      changeFrequency: route === "" || route === "/blog" ? ("daily" as const) : ("weekly" as const),
-      priority: route === "" ? 1 : route === "/tools" || route === "/blog" ? 0.9 : 0.7,
+      changeFrequency: route === "" ? ("daily" as const) : ("weekly" as const),
+      priority: route === "" ? 1 : route === "/tools" ? 0.9 : route === "/blog" ? 0.75 : 0.7,
     })),
     ...tools.map((tool) => ({
       url: `${siteConfig.url}/tools/${tool.slug}`,
@@ -33,11 +44,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly" as const,
       priority: 0.8,
     })),
-    ...blogPosts.map((post) => ({
-      url: `${siteConfig.url}/blog/${post.slug}`,
-      lastModified: post.updatedAt ? new Date(post.updatedAt) : post.publishedAt ? new Date(post.publishedAt) : now,
-      changeFrequency: "weekly" as const,
-      priority: 0.75,
-    })),
+    ...blogRoutes,
   ];
 }

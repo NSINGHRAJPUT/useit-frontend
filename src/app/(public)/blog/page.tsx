@@ -1,106 +1,110 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Newspaper } from "lucide-react";
 import { Section } from "@/components/layout/section";
-import { Card, CardContent } from "@/components/ui/card";
-import { apiGet } from "@/services/api";
-import { buildSiteMetadata, getSiteSettings } from "@/lib/seo";
-import type { BlogPost } from "@toolkit-pro/shared-types";
+import { BlogCard } from "@/components/blog/blog-card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { listPublishedBlogs } from "@/lib/blog";
+import { siteConfig } from "@/constants/site";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const settings = await getSiteSettings();
-  return {
-    ...buildSiteMetadata(settings),
-    title: "Blog",
-    description:
-      "SEO guides, conversion workflows, and product updates from ToolKit Pro to help you work faster with files.",
-    alternates: { canonical: "/blog" },
-    openGraph: {
-      ...buildSiteMetadata(settings).openGraph,
-      title: "Blog | ToolKit Pro",
-      url: "/blog",
-      type: "website",
-    },
-  };
-}
+export const revalidate = 300;
 
-export default async function BlogPage() {
-  const posts = await apiGet<BlogPost[]>("/blogs").catch(() => []);
-  const featuredPost = posts[0];
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "Guides, tips, and updates about online file conversion, PDF tools, and image workflows.",
+  alternates: { canonical: `${siteConfig.url}/blog` },
+};
+
+export default async function BlogPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string; search?: string }>;
+}) {
+  const params = await searchParams;
+  const page = Math.max(1, Number(params.page ?? 1) || 1);
+  const search = params.search?.trim() ?? "";
+
+  let posts: Awaited<ReturnType<typeof listPublishedBlogs>>["posts"] = [];
+  let totalPages = 1;
+  let total = 0;
+  let loadError: string | null = null;
+
+  try {
+    const result = await listPublishedBlogs({ page, limit: 12, search: search || undefined });
+    posts = result.posts;
+    totalPages = result.totalPages;
+    total = result.total;
+  } catch (error) {
+    loadError = error instanceof Error ? error.message : "Unable to load blog posts.";
+  }
 
   return (
-    <Section className="space-y-8">
-      <div className="rounded-3xl border border-border/70 bg-card/60 p-8">
-        <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.24em] text-gold">
-          <Newspaper className="size-4" />
-          Insights & updates
-        </div>
-        <div className="mt-6 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl font-semibold tracking-tight">
-              Stories for makers who want faster, cleaner file workflows.
-            </h1>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Learn how to optimize assets, automate conversions, and ship polished media experiences without the usual friction.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-border/70 bg-background/70 px-4 py-3 text-sm text-muted-foreground">
-            {posts.length} articles available
-          </div>
-        </div>
+    <Section>
+      <div className="max-w-3xl">
+        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Blog</p>
+        <h1 className="mt-3 font-heading text-4xl font-semibold md:text-5xl">Guides & updates</h1>
+        <p className="mt-4 text-muted-foreground">
+          Practical articles about file conversion, PDF workflows, and getting more from ToolKit Pro.
+        </p>
       </div>
 
-      {featuredPost ? (
-        <Card className="overflow-hidden rounded-3xl">
-          <CardContent className="grid gap-6 p-6 lg:grid-cols-[1.15fr_0.85fr] lg:p-8">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-gold">
-                Featured article
-              </p>
-              <h2 className="mt-3 text-2xl font-semibold">{featuredPost.title}</h2>
-              <p className="mt-3 text-muted-foreground">{featuredPost.excerpt}</p>
-              <Link
-                href={`/blog/${featuredPost.slug}`}
-                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-gold"
-              >
-                Read article <ArrowRight className="size-4" />
+      <form className="mt-10 flex max-w-xl flex-col gap-3 sm:flex-row" action="/blog" method="get">
+        <Input
+          name="search"
+          defaultValue={search}
+          placeholder="Search articles"
+          className="flex-1"
+        />
+        <Button type="submit" className="btn-gold border-0">
+          Search
+        </Button>
+      </form>
+
+      {loadError ? (
+        <div className="mt-10 rounded-2xl border border-destructive/30 bg-destructive/5 p-5 text-sm text-muted-foreground">
+          {loadError}
+        </div>
+      ) : posts.length ? (
+        <>
+          <p className="mt-8 text-sm text-muted-foreground">
+            {total} article{total === 1 ? "" : "s"}
+            {search ? ` matching “${search}”` : ""}
+          </p>
+          <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {posts.map((post) => (
+              <BlogCard key={post.slug} post={post} />
+            ))}
+          </div>
+        </>
+      ) : (
+        <div className="mt-10 rounded-2xl border border-gold/15 bg-card/40 p-8 text-center">
+          <p className="text-lg font-medium">No published articles yet</p>
+          <p className="mt-2 text-sm text-muted-foreground">
+            {search ? "Try a different search term." : "Check back soon for new guides and updates."}
+          </p>
+        </div>
+      )}
+
+      {totalPages > 1 ? (
+        <div className="mt-10 flex items-center justify-center gap-3">
+          {page > 1 ? (
+            <Button variant="outline" asChild>
+              <Link href={`/blog?page=${page - 1}${search ? `&search=${encodeURIComponent(search)}` : ""}`}>
+                Previous
               </Link>
-            </div>
-            <div className="rounded-2xl border border-border/70 bg-muted/30 p-5 text-sm text-muted-foreground">
-              <p className="font-medium text-foreground">What you’ll find</p>
-              <ul className="mt-3 space-y-2">
-                <li>• Practical workflow advice for high-volume file tasks</li>
-                <li>• Product updates and automation ideas</li>
-                <li>• Tips for building better conversion experiences</li>
-              </ul>
-            </div>
-          </CardContent>
-        </Card>
-      ) : null}
-
-      <div className="grid gap-4 md:grid-cols-2">
-        {posts.map((post) => (
-          <Link
-            key={post.slug}
-            href={`/blog/${post.slug}`}
-            className="group rounded-2xl border border-border/70 bg-card p-6 shadow-sm transition hover:-translate-y-0.5 hover:bg-muted/40"
-          >
-            <p className="text-sm font-medium text-gold">{post.author}</p>
-            <p className="mt-3 text-xl font-semibold">{post.title}</p>
-            <p className="mt-3 text-sm leading-6 text-muted-foreground">{post.excerpt}</p>
-            <div className="mt-5 flex items-center gap-2 text-sm font-medium text-foreground">
-              Continue reading <ArrowRight className="size-4 transition group-hover:translate-x-1" />
-            </div>
-          </Link>
-        ))}
-      </div>
-
-      {!posts.length ? (
-        <Card className="rounded-3xl border-dashed">
-          <CardContent className="p-8 text-center text-muted-foreground">
-            No articles are available yet. New guidance will appear here soon.
-          </CardContent>
-        </Card>
+            </Button>
+          ) : null}
+          <span className="text-sm text-muted-foreground">
+            Page {page} of {totalPages}
+          </span>
+          {page < totalPages ? (
+            <Button variant="outline" asChild>
+              <Link href={`/blog?page=${page + 1}${search ? `&search=${encodeURIComponent(search)}` : ""}`}>
+                Next
+              </Link>
+            </Button>
+          ) : null}
+        </div>
       ) : null}
     </Section>
   );

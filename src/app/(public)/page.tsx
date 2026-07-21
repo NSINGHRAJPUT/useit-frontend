@@ -92,7 +92,7 @@ export default function HomePage() {
               </Button>
             </div>
             <div className="mt-8 flex flex-wrap gap-2">
-              {["No watermark", "Signed downloads", "Async PDF & docs", "Free to start"].map((item) => (
+              {["No watermark", "Browser-local processing", "Instant downloads", "Free to use"].map((item) => (
                 <span
                   key={item}
                   className="inline-flex items-center gap-2 rounded-full border border-gold/15 bg-card/50 px-3 py-1.5 text-sm text-muted-foreground"
@@ -203,15 +203,15 @@ export default function HomePage() {
                 Ready for a <span className="text-metallic-gold">premium</span> conversion workflow?
               </h2>
               <p className="mt-4 max-w-xl text-muted-foreground">
-                Start free, upgrade when you need higher limits, priority processing, and team-ready billing.
+                Most tools run entirely in your browser — fast, private, and free.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row md:flex-col">
               <Button size="lg" asChild className="btn-gold border-0 font-semibold">
-                <Link href="/register">Create free account</Link>
+                <Link href="/tools">Browse all tools</Link>
               </Button>
               <Button size="lg" variant="outline" asChild className="border-gold/25">
-                <Link href="/pricing">View pricing</Link>
+                <Link href="/tools/jpg-to-webp">Try JPG to WebP</Link>
               </Button>
             </div>
           </div>
