@@ -93,7 +93,7 @@ export function buildBlogMetadata(post: BlogPost, settings: SiteSettings): Metad
       type: "article",
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
-      authors: [post.author],
+      authors: [post.author || "ToolKit Pro"],
       tags: post.tags ?? [],
       images: [{ url: image, alt: post.title }],
     },
@@ -146,7 +146,7 @@ export function buildArticleJsonLd(post: BlogPost, settings: SiteSettings) {
     description: post.excerpt,
     author: {
       "@type": "Person",
-      name: post.author,
+      name: post.author || "ToolKit Pro",
     },
     publisher: {
       "@type": "Organization",

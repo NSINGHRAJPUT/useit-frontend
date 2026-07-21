@@ -34,7 +34,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
           </h2>
           <p className="line-clamp-3 text-sm leading-6 text-muted-foreground">{post.excerpt}</p>
         </Link>
-        {post.tags.length ? (
+        {post.tags?.length ? (
           <div className="flex flex-wrap gap-2">
             {post.tags.slice(0, 3).map((tag) => (
               <span

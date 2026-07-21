@@ -5,7 +5,8 @@ function looksLikeHtml(value: string): boolean {
 }
 
 export function BlogContent({ content }: { content: string }) {
-  const html = looksLikeHtml(content) ? content : renderMarkdown(content);
+  const safeContent = content ?? "";
+  const html = looksLikeHtml(safeContent) ? safeContent : renderMarkdown(safeContent);
 
   return (
     <div
