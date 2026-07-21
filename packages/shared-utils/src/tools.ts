@@ -3,19 +3,41 @@ import type {
   ToolDefinition,
   ToolInputType,
   ToolOperation,
+  ToolProcessingLocation,
   ToolProcessingMode,
 } from "@toolkit-pro/shared-types";
 
-const defaultBenefits = [
-  "Fast server-side processing",
-  "Secure signed download links",
+export const SERVER_TOOL_SLUGS = [
+  "docx-to-pdf",
+  "pptx-to-pdf",
+  "xlsx-to-pdf",
+  "md-to-pdf",
+  "rtf-to-pdf",
+  "odt-to-pdf",
+  "pdf-to-docx",
+] as const;
+
+const SERVER_SLUG_SET = new Set<string>(SERVER_TOOL_SLUGS);
+
+const clientBenefits = [
+  "Files never leave your device",
+  "Instant processing in your browser",
   "No software installation required",
 ];
 
-const defaultFaq = (formats: string[]) => [
+const serverBenefits = [
+  "High-fidelity Office document conversion",
+  "Processed securely on the server",
+  "No software installation required",
+];
+
+const defaultFaq = (formats: string[], processingLocation: ToolProcessingLocation) => [
   {
     question: "Are my files stored permanently?",
-    answer: "Processed files are stored temporarily and conversion records expire automatically.",
+    answer:
+      processingLocation === "client"
+        ? "No. All processing happens locally in your browser and files are never uploaded."
+        : "Processed files are stored temporarily on the server and expire automatically.",
   },
   {
     question: "Which formats are supported?",
@@ -38,22 +60,29 @@ function createTool(input: {
   seoDescription: string;
   inputType?: ToolInputType;
   processingMode?: ToolProcessingMode;
+  processingLocation?: ToolProcessingLocation;
   maxFiles?: number;
   searchKeywords?: string[];
 }): ToolDefinition {
   const inputType =
     input.inputType ??
     (input.category === "text" ? "text" : input.operation === "merge" ? "multi-file" : "file");
+  const processingLocation =
+    input.processingLocation ?? (SERVER_SLUG_SET.has(input.slug) ? "server" : "client");
   const processingMode =
-    input.processingMode ?? (input.category === "pdf" || input.category === "document" ? "async" : "sync");
+    input.processingMode ?? (processingLocation === "server" ? "async" : "sync");
 
   return {
     ...input,
     inputType,
     processingMode,
-    benefits: defaultBenefits,
+    processingLocation,
+    benefits: processingLocation === "server" ? serverBenefits : clientBenefits,
     useCases: ["Everyday file workflows", "Business document handling", "Web publishing"],
-    faq: defaultFaq(input.acceptedFormats.length ? input.acceptedFormats : input.inputFormats),
+    faq: defaultFaq(
+      input.acceptedFormats.length ? input.acceptedFormats : input.inputFormats,
+      processingLocation,
+    ),
     isActive: true,
   };
 }
@@ -392,6 +421,7 @@ function documentTool(
   outputFormats: string[],
   mimeTypes: string[],
   description: string,
+  processingLocation?: ToolProcessingLocation,
 ) {
   return createTool({
     slug,
@@ -404,6 +434,7 @@ function documentTool(
     acceptedFormats: inputFormats,
     acceptedMimeTypes: mimeTypes,
     outputFormat: outputFormats[0] ?? "pdf",
+    processingLocation,
     seoTitle: name,
     seoDescription: `${description} online.`,
   });
@@ -449,6 +480,7 @@ const documentTools: ToolDefinition[] = [
     ["csv"],
     ["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"],
     "Convert Excel spreadsheets to CSV",
+    "client",
   ),
   documentTool(
     "csv-to-xlsx",
@@ -457,6 +489,7 @@ const documentTools: ToolDefinition[] = [
     ["xlsx"],
     ["text/csv", "application/vnd.ms-excel"],
     "Convert CSV files to Excel spreadsheets",
+    "client",
   ),
   documentTool(
     "docx-to-text",
@@ -465,6 +498,7 @@ const documentTools: ToolDefinition[] = [
     ["txt"],
     ["application/vnd.openxmlformats-officedocument.wordprocessingml.document"],
     "Extract plain text from Word documents",
+    "client",
   ),
   documentTool(
     "md-to-pdf",

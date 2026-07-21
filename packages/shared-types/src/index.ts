@@ -13,6 +13,7 @@ export type ToolOperation =
   | "extract";
 export type ToolInputType = "file" | "text" | "multi-file";
 export type ToolProcessingMode = "sync" | "async";
+export type ToolProcessingLocation = "client" | "server";
 
 export interface AuthUser {
   id: string;
@@ -47,6 +48,7 @@ export interface ToolDefinition {
   isActive: boolean;
   inputType: ToolInputType;
   processingMode: ToolProcessingMode;
+  processingLocation: ToolProcessingLocation;
   maxFiles?: number;
   searchKeywords?: string[];
 }
