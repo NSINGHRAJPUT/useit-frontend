@@ -34,7 +34,7 @@ export function DownloadCard({ result, compact = false }: { result: ToolResult; 
       <div className={compact ? "mt-auto" : undefined}>
         <Button className={compact ? "w-full" : "mt-5 w-full"} size={compact ? "sm" : "default"} asChild>
           <a href={result.downloadUrl}>
-            <Download className="size-4" />
+            <Download className="size-4" download={result.fileName} />
             Download
           </a>
         </Button>
