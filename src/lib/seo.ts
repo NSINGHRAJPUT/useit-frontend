@@ -1,24 +1,34 @@
 import type { Metadata } from "next";
 import type { BlogPost, SiteSettings } from "@toolkit-pro/shared-types";
+import { ADSENSE_CLIENT } from "@/constants/adsense";
 import { siteConfig } from "@/constants/site";
 
 export const defaultSiteSettings: SiteSettings = {
   siteName: siteConfig.name,
   siteDescription: siteConfig.description,
-  defaultTitle: "ToolKit Pro - Online Conversion Tools for Images, PDFs & Documents",
-  titleTemplate: "%s | ToolKit Pro",
+  defaultTitle: "ApkaOS - Free Online Image, PDF & Document Tools",
+  titleTemplate: "%s | ApkaOS",
   keywords: [
+    "free online converter",
     "image converter",
+    "jpg to png",
     "pdf tools",
+    "merge pdf",
+    "compress image",
+    "word to pdf",
     "document converter",
     "online file conversion",
-    "compress image",
-    "merge pdf",
-    "word to pdf",
+    "webp converter",
+    "json formatter",
+    "apkaos",
   ],
   twitterCard: "summary_large_image",
-  organizationName: siteConfig.name,
+  organizationName: "ApkaOS",
+  organizationEmail: siteConfig.contactEmail,
+  organizationLogo: `${siteConfig.url}/icon`,
   organizationSameAs: [],
+  googleSiteVerification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() || undefined,
+  bingSiteVerification: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION?.trim() || undefined,
   weeklyPostGoal: 2,
   contentKeywords: [],
 };
@@ -28,7 +38,7 @@ export async function getSiteSettings() {
 }
 
 export function buildSiteMetadata(settings: SiteSettings): Metadata {
-  const ogImage = settings.ogImage || `${siteConfig.url}/og-default.png`;
+  const ogImage = settings.ogImage || `${siteConfig.url}/opengraph-image`;
 
   return {
     metadataBase: new URL(siteConfig.url),
@@ -38,12 +48,17 @@ export function buildSiteMetadata(settings: SiteSettings): Metadata {
     },
     description: settings.siteDescription,
     keywords: settings.keywords,
-    alternates: { canonical: "/" },
+    applicationName: settings.siteName,
+    authors: [{ name: settings.siteName, url: siteConfig.url }],
+    creator: settings.siteName,
+    publisher: settings.siteName,
+    category: "File conversion tools",
     openGraph: {
       title: settings.defaultTitle,
       description: settings.siteDescription,
       url: siteConfig.url,
       siteName: settings.siteName,
+      locale: "en_IN",
       type: "website",
       images: [{ url: ogImage, width: 1200, height: 630, alt: settings.siteName }],
     },
@@ -69,6 +84,41 @@ export function buildSiteMetadata(settings: SiteSettings): Metadata {
       ...(settings.googleSiteVerification ? { google: settings.googleSiteVerification } : {}),
       ...(settings.bingSiteVerification ? { other: { "msvalidate.01": settings.bingSiteVerification } } : {}),
     },
+    other: {
+      "google-adsense-account": ADSENSE_CLIENT,
+    },
+  };
+}
+
+export function buildPageMetadata({
+  title,
+  description,
+  path,
+  keywords,
+}: {
+  title: string;
+  description: string;
+  path: string;
+  keywords?: string[];
+}): Metadata {
+  const canonical = path.startsWith("http") ? path : `${siteConfig.url}${path}`;
+  return {
+    title,
+    description,
+    keywords,
+    alternates: { canonical },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      siteName: siteConfig.name,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 
@@ -76,7 +126,7 @@ export function buildBlogMetadata(post: BlogPost, settings: SiteSettings): Metad
   const title = post.seoTitle || post.title;
   const description = post.seoDescription || post.excerpt;
   const canonical = post.canonicalUrl || `${siteConfig.url}/blog/${post.slug}`;
-  const image = post.ogImage || post.featuredImage || settings.ogImage || `${siteConfig.url}/og-default.png`;
+  const image = post.ogImage || post.featuredImage || settings.ogImage || `${siteConfig.url}/opengraph-image`;
   const robots = post.metaRobots || "index,follow";
   const [indexRule, followRule] = robots.split(",").map((part) => part.trim());
 
@@ -93,7 +143,7 @@ export function buildBlogMetadata(post: BlogPost, settings: SiteSettings): Metad
       type: "article",
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
-      authors: [post.author || "ToolKit Pro"],
+      authors: [post.author || "ApkaOS"],
       tags: post.tags ?? [],
       images: [{ url: image, alt: post.title }],
     },
@@ -116,8 +166,8 @@ export function buildOrganizationJsonLd(settings: SiteSettings) {
     "@type": "Organization",
     name: settings.organizationName || settings.siteName,
     url: siteConfig.url,
-    logo: settings.organizationLogo,
-    email: settings.organizationEmail || undefined,
+    logo: settings.organizationLogo || `${siteConfig.url}/icon`,
+    email: settings.organizationEmail || siteConfig.contactEmail,
     sameAs: settings.organizationSameAs,
   };
 }
@@ -129,6 +179,11 @@ export function buildWebsiteJsonLd(settings: SiteSettings) {
     name: settings.siteName,
     url: siteConfig.url,
     description: settings.siteDescription,
+    inLanguage: "en-IN",
+    publisher: {
+      "@type": "Organization",
+      name: settings.organizationName || settings.siteName,
+    },
     potentialAction: {
       "@type": "SearchAction",
       target: `${siteConfig.url}/tools?q={search_term_string}`,
@@ -138,25 +193,23 @@ export function buildWebsiteJsonLd(settings: SiteSettings) {
 }
 
 export function buildArticleJsonLd(post: BlogPost, settings: SiteSettings) {
-  const image = post.ogImage || post.featuredImage || settings.ogImage;
+  const image = post.ogImage || post.featuredImage || settings.ogImage || `${siteConfig.url}/opengraph-image`;
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
     author: {
-      "@type": "Person",
-      name: post.author || "ToolKit Pro",
+      "@type": "Organization",
+      name: post.author || "ApkaOS",
     },
     publisher: {
       "@type": "Organization",
       name: settings.organizationName || settings.siteName,
-      logo: settings.organizationLogo
-        ? {
-            "@type": "ImageObject",
-            url: settings.organizationLogo,
-          }
-        : undefined,
+      logo: {
+        "@type": "ImageObject",
+        url: settings.organizationLogo || `${siteConfig.url}/icon`,
+      },
     },
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
@@ -167,7 +220,7 @@ export function buildArticleJsonLd(post: BlogPost, settings: SiteSettings) {
   };
 }
 
-export function buildFaqJsonLd(faqs: BlogPost["faqs"]) {
+export function buildFaqJsonLd(faqs: Array<{ question: string; answer: string }> | undefined) {
   if (!faqs?.length) return null;
   return {
     "@context": "https://schema.org",
@@ -180,6 +233,58 @@ export function buildFaqJsonLd(faqs: BlogPost["faqs"]) {
         text: faq.answer,
       },
     })),
+  };
+}
+
+export function buildBreadcrumbJsonLd(items: Array<{ name: string; path: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.path.startsWith("http") ? item.path : `${siteConfig.url}${item.path}`,
+    })),
+  };
+}
+
+export function buildHowToJsonLd(name: string, description: string, steps: string[]) {
+  if (!steps.length) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    step: steps.map((text, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: `Step ${index + 1}`,
+      text,
+    })),
+  };
+}
+
+export function buildSoftwareApplicationJsonLd(input: {
+  name: string;
+  description: string;
+  url: string;
+  featureList?: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: input.name,
+    applicationCategory: "UtilitiesApplication",
+    operatingSystem: "Web",
+    url: input.url,
+    description: input.description,
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "INR",
+    },
+    ...(input.featureList?.length ? { featureList: input.featureList } : {}),
   };
 }
 

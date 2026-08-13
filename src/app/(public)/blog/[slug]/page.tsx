@@ -6,6 +6,8 @@ import { ArrowLeft, Clock } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { BlogContent } from "@/components/blog/blog-content";
 import { Section } from "@/components/layout/section";
+import { AdSlot } from "@/components/ads/ad-slot";
+import { ADSENSE_SLOTS } from "@/constants/adsense";
 import { getPublishedBlogBySlug, getPublishedBlogSlugs } from "@/lib/blog";
 import {
   buildArticleJsonLd,
@@ -101,6 +103,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
           <div className="mt-10">
             <BlogContent content={post.content} />
+          </div>
+
+          <div className="mt-10">
+            <AdSlot slot={ADSENSE_SLOTS.inArticle} format="horizontal" />
           </div>
 
           {post.faqs?.length ? (

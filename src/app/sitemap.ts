@@ -12,6 +12,7 @@ const staticRoutes = [
   "/faq",
   "/privacy-policy",
   "/terms-of-service",
+  "/cookie-policy",
   "/refund-policy",
 ];
 

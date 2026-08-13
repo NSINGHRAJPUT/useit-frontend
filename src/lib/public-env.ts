@@ -3,24 +3,27 @@ declare global {
     __PUBLIC_ENV__?: {
       siteUrl?: string;
       apiUrl?: string;
+      contactEmail?: string;
     };
   }
 }
 
 const DEV_SITE_URL = "http://localhost:3000";
 const DEV_API_URL = "http://localhost:5001/api";
+const PROD_SITE_URL = "https://apkaos.in";
+const DEFAULT_CONTACT_EMAIL = "hello@apkaos.in";
 
-function readRuntimeEnv(key: "siteUrl" | "apiUrl"): string | undefined {
+function readRuntimeEnv(key: "siteUrl" | "apiUrl" | "contactEmail"): string | undefined {
   if (typeof window === "undefined") return undefined;
   return window.__PUBLIC_ENV__?.[key];
 }
 
 export function getPublicSiteUrl(): string {
-  const fromBuild = process.env.NEXT_PUBLIC_SITE_URL;
-  if (fromBuild) return fromBuild;
+  const fromBuild = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (fromBuild) return fromBuild.replace(/\/+$/, "");
 
-  const fromRuntime = readRuntimeEnv("siteUrl");
-  if (fromRuntime) return fromRuntime;
+  const fromRuntime = readRuntimeEnv("siteUrl")?.trim();
+  if (fromRuntime) return fromRuntime.replace(/\/+$/, "");
 
   if (typeof window !== "undefined") {
     return window.location.origin;
@@ -30,7 +33,7 @@ export function getPublicSiteUrl(): string {
     return DEV_SITE_URL;
   }
 
-  return DEV_SITE_URL;
+  return PROD_SITE_URL;
 }
 
 export function getPublicApiUrl(): string {
@@ -49,10 +52,21 @@ export function getPublicApiUrl(): string {
   );
 }
 
+export function getPublicContactEmail(): string {
+  const fromBuild = process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim();
+  if (fromBuild) return fromBuild;
+
+  const fromRuntime = readRuntimeEnv("contactEmail")?.trim();
+  if (fromRuntime) return fromRuntime;
+
+  return DEFAULT_CONTACT_EMAIL;
+}
+
 export function getRuntimePublicEnvScript(): string {
   const payload = JSON.stringify({
     siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "",
     apiUrl: process.env.NEXT_PUBLIC_API_URL ?? "",
+    contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? DEFAULT_CONTACT_EMAIL,
   });
 
   return `window.__PUBLIC_ENV__=${payload}`;

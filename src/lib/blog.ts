@@ -1,15 +1,14 @@
 import type { BlogPost } from "@toolkit-pro/shared-types";
+import { localBlogPosts } from "@/content/blog/posts";
 
-const DEFAULT_BLOG_API_URL = "https://www.nsrgfx.in/api/blog";
 const BLOG_REVALIDATE_SECONDS = 300;
 const BLOG_SLUGS_PAGE_LIMIT = 50;
-
 const blogFetchOptions = { next: { revalidate: BLOG_REVALIDATE_SECONDS } };
 
-function getBlogApiUrl(): string {
+function getRemoteBlogApiUrl(): string | null {
   const configured = process.env.NEXT_PUBLIC_BLOG_API_URL?.trim();
-  const base = configured || DEFAULT_BLOG_API_URL;
-  return base.replace(/\/+$/, "");
+  if (!configured) return null;
+  return configured.replace(/\/+$/, "");
 }
 
 function estimateReadingTimeFromHtml(html: string): number {
@@ -22,6 +21,25 @@ function estimateReadingTimeFromHtml(html: string): number {
 
   const words = text ? text.split(/\s+/).filter(Boolean).length : 0;
   return Math.max(1, Math.ceil(words / 220));
+}
+
+function withReadingTime(post: BlogPost): BlogPost {
+  if (post.readingTimeMinutes) return post;
+  return {
+    ...post,
+    readingTimeMinutes: estimateReadingTimeFromHtml(post.content ?? ""),
+  };
+}
+
+function getLocalPosts(): BlogPost[] {
+  return localBlogPosts
+    .filter((post) => post.status === "published")
+    .map(withReadingTime)
+    .sort((a, b) => {
+      const aDate = a.publishedAt ? Date.parse(a.publishedAt) : 0;
+      const bDate = b.publishedAt ? Date.parse(b.publishedAt) : 0;
+      return bDate - aDate;
+    });
 }
 
 type ExternalPost = {
@@ -84,7 +102,7 @@ function normalizeFaqs(faqs: unknown): BlogPost["faqs"] {
 }
 
 function mapExternalPostToBlogPost(raw: ExternalPost): BlogPost {
-  const author = raw.author ?? raw.authorName ?? "ToolKit Pro";
+  const author = raw.author ?? raw.authorName ?? "ApkaOS";
   const tags = normalizeTags(raw.tags);
   const faqs = normalizeFaqs(raw.faqs);
   const status = (raw.status === "draft" ? "draft" : "published") as "draft" | "published";
@@ -133,6 +151,62 @@ async function fetchBlogJson<T>(url: string): Promise<T | null> {
   return res.json() as Promise<T>;
 }
 
+async function listRemotePosts(): Promise<BlogPost[]> {
+  const apiUrl = getRemoteBlogApiUrl();
+  if (!apiUrl) return [];
+
+  const limit = BLOG_SLUGS_PAGE_LIMIT;
+  let page = 1;
+  let total = Infinity;
+  const posts: BlogPost[] = [];
+
+  while ((page - 1) * limit < total) {
+    const params = new URLSearchParams({
+      page: String(page),
+      limit: String(limit),
+    });
+    const data = await fetchBlogJson<ExternalListResponse>(`${apiUrl}?${params.toString()}`);
+    if (!data) break;
+    total = data.total ?? posts.length;
+    posts.push(...(data.posts ?? []).map(mapExternalPostToBlogPost));
+    const currentPage = data.page ?? page;
+    const pageLimit = data.limit ?? limit;
+    if (!data.posts?.length || currentPage * pageLimit >= total) break;
+    page += 1;
+  }
+
+  return posts.filter((post) => post.status === "published");
+}
+
+async function getAllPublishedPosts(): Promise<BlogPost[]> {
+  const local = getLocalPosts();
+  let remote: BlogPost[] = [];
+  try {
+    remote = await listRemotePosts();
+  } catch {
+    remote = [];
+  }
+
+  const seen = new Set(local.map((post) => post.slug));
+  const merged = [...local];
+  for (const post of remote) {
+    if (!post.slug || seen.has(post.slug)) continue;
+    seen.add(post.slug);
+    merged.push(withReadingTime(post));
+  }
+  return merged;
+}
+
+function matchesSearch(post: BlogPost, search: string) {
+  const q = search.toLowerCase();
+  return (
+    post.title.toLowerCase().includes(q) ||
+    post.excerpt.toLowerCase().includes(q) ||
+    post.tags.some((tag) => tag.toLowerCase().includes(q)) ||
+    (post.focusKeyword ?? "").toLowerCase().includes(q)
+  );
+}
+
 export async function listPublishedBlogs({
   page = 1,
   limit = 12,
@@ -142,68 +216,34 @@ export async function listPublishedBlogs({
   limit?: number;
   search?: string;
 } = {}) {
-  const apiUrl = getBlogApiUrl();
-  const params = new URLSearchParams({
-    page: String(page),
-    limit: String(limit),
-  });
-  if (search?.trim()) params.set("search", search.trim());
-
-  const data = await fetchBlogJson<ExternalListResponse>(`${apiUrl}?${params.toString()}`);
-  if (!data) {
-    return { posts: [], total: 0, page, totalPages: 1 };
-  }
-
-  const resolvedLimit = data.limit ?? limit;
-  const total = data.total ?? 0;
-
+  const all = await getAllPublishedPosts();
+  const filtered = search?.trim() ? all.filter((post) => matchesSearch(post, search.trim())) : all;
+  const total = filtered.length;
+  const start = (page - 1) * limit;
   return {
-    posts: (data.posts ?? []).map(mapExternalPostToBlogPost),
+    posts: filtered.slice(start, start + limit),
     total,
-    page: data.page ?? page,
-    totalPages: data.totalPages ?? Math.max(1, Math.ceil(total / resolvedLimit)),
+    page,
+    totalPages: Math.max(1, Math.ceil(total / limit)),
   };
 }
 
 export async function getPublishedBlogBySlug(slug: string) {
-  const apiUrl = getBlogApiUrl();
+  const local = getLocalPosts().find((post) => post.slug === slug);
+  if (local) return local;
+
+  const apiUrl = getRemoteBlogApiUrl();
+  if (!apiUrl) return null;
+
   const data = await fetchBlogJson<ExternalDetailResponse>(`${apiUrl}/${encodeURIComponent(slug)}`);
   if (!data?.post) return null;
-  return mapExternalPostToBlogPost(data.post);
+  return withReadingTime(mapExternalPostToBlogPost(data.post));
 }
 
 export async function getPublishedBlogSlugs(): Promise<Array<{ slug: string; updatedAt?: string }>> {
-  const apiUrl = getBlogApiUrl();
-  const limit = BLOG_SLUGS_PAGE_LIMIT;
-  let page = 1;
-  let total = Infinity;
-  const results: Array<{ slug: string; updatedAt?: string }> = [];
-
-  while ((page - 1) * limit < total) {
-    const params = new URLSearchParams({
-      page: String(page),
-      limit: String(limit),
-    });
-    const data = await fetchBlogJson<ExternalListResponse>(`${apiUrl}?${params.toString()}`);
-    if (!data) break;
-    total = data.total ?? results.length;
-
-    for (const post of data.posts ?? []) {
-      if (post.slug) {
-        results.push({ slug: post.slug, updatedAt: post.updatedAt ?? post.publishedAt });
-      }
-    }
-
-    const currentPage = data.page ?? page;
-    const pageLimit = data.limit ?? limit;
-    if (!data.posts?.length || currentPage * pageLimit >= total) break;
-    page += 1;
-  }
-
-  const seen = new Set<string>();
-  return results.filter(({ slug }) => {
-    if (seen.has(slug)) return false;
-    seen.add(slug);
-    return true;
-  });
+  const posts = await getAllPublishedPosts();
+  return posts.map((post) => ({
+    slug: post.slug,
+    updatedAt: post.updatedAt ?? post.publishedAt,
+  }));
 }
