@@ -40,7 +40,7 @@ export function WorkflowShowcase() {
           <span className="text-metallic-gold">premium</span>
         </h2>
         <p className="mt-4 text-base leading-7 text-muted-foreground md:text-lg">
-          From drop to download in seconds — validated, processed, and delivered with enterprise-grade security.
+          From drop to download in seconds. Most tools never leave your browser; Office conversions use a short-lived server.
         </p>
       </div>
 
