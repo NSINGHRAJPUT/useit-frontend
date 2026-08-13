@@ -29,6 +29,11 @@ export interface JwtPayload {
   email: string;
 }
 
+export interface ToolFaq {
+  question: string;
+  answer: string;
+}
+
 export interface ToolDefinition {
   slug: string;
   name: string;
@@ -42,9 +47,13 @@ export interface ToolDefinition {
   outputFormat: string | "same";
   seoTitle: string;
   seoDescription: string;
+  intro?: string;
+  howToSteps?: string[];
+  longDescription?: string;
+  tips?: string[];
   benefits: string[];
   useCases: string[];
-  faq: Array<{ question: string; answer: string }>;
+  faq: ToolFaq[];
   isActive: boolean;
   inputType: ToolInputType;
   processingMode: ToolProcessingMode;

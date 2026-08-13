@@ -117,8 +117,8 @@ function imageConvert(
     acceptedFormats: [...fromFormats],
     acceptedMimeTypes: [...imageMime[from]],
     outputFormat: to,
-    seoTitle: `${name} Converter`,
-    seoDescription: `${description} online with ToolKit Pro.`,
+    seoTitle: `${name} Converter Online`,
+    seoDescription: `${description} free in your browser with ApkaOS. No signup, no watermark.`,
   });
 }
 
@@ -435,8 +435,8 @@ function documentTool(
     acceptedMimeTypes: mimeTypes,
     outputFormat: outputFormats[0] ?? "pdf",
     processingLocation,
-    seoTitle: name,
-    seoDescription: `${description} online.`,
+    seoTitle: `${name} Online`,
+    seoDescription: `${description} free in your browser with ApkaOS. No signup, no watermark.`,
   });
 }
 
@@ -540,8 +540,8 @@ function textTool(slug: string, name: string, description: string, searchKeyword
     outputFormat: "same",
     inputType: "text",
     processingMode: "sync",
-    seoTitle: name,
-    seoDescription: `${description} online.`,
+    seoTitle: `${name} Online`,
+    seoDescription: `${description} free in your browser with ApkaOS. No signup required.`,
     searchKeywords,
   });
 }
