@@ -10,8 +10,8 @@ declare global {
 
 const DEV_SITE_URL = "http://localhost:3000";
 const DEV_API_URL = "http://localhost:5001/api";
-const PROD_SITE_URL = "https://apkaos.in";
-const DEFAULT_CONTACT_EMAIL = "hello@apkaos.in";
+const PROD_SITE_URL = "https://toolpin.online";
+const DEFAULT_CONTACT_EMAIL = "hello@toolpin.online";
 
 function readRuntimeEnv(key: "siteUrl" | "apiUrl" | "contactEmail"): string | undefined {
   if (typeof window === "undefined") return undefined;
