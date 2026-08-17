@@ -2,11 +2,11 @@ import type { ToolSeoMap } from "./types";
 
 export const imageToolContent: ToolSeoMap = {
   "jpg-to-png": {
-    seoTitle: "Convert JPG to PNG Online Free – No Signup | ApkaOS",
+    seoTitle: "Convert JPG to PNG Online Free – No Signup | ToolPin",
     seoDescription:
-      "Turn JPEG photos into PNG in your browser. Keep edges sharp for overlays, skip uploads and signups, and download a clean file with no watermark on ApkaOS.",
+      "Turn JPEG photos into PNG in your browser. Keep edges sharp for overlays, skip uploads and signups, and download a clean file with no watermark on ToolPin.",
     intro:
-      "JPEG is built for camera photos, not for graphics you drop onto a slide or a product page. Converting to PNG stops extra compression damage and unlocks a real alpha channel so you can cut a subject out later. ApkaOS runs the switch on your device—drop a JPG, download a PNG, and nothing is stored on our servers.",
+      "JPEG is built for camera photos, not for graphics you drop onto a slide or a product page. Converting to PNG stops extra compression damage and unlocks a real alpha channel so you can cut a subject out later. ToolPin runs the switch on your device—drop a JPG, download a PNG, and nothing is stored on our servers.",
     howToSteps: [
       "Open the JPG to PNG tool and drop a .jpg or .jpeg file (up to 250 MB).",
       "Wait while the browser decodes the photo and re-encodes it as PNG.",
@@ -37,11 +37,11 @@ You do not magically recover detail JPEG already deleted. A blocky sky stays blo
 
 Transparency is the other fork. A straight JPG-to-PNG conversion produces an opaque PNG. The checkerboard you see in design apps will not appear until you erase or mask pixels. If your goal is a logo with a see-through background, this tool is the first hop, not the last. Pair it with crop or a dedicated editor. Do not expect GIF-style one-bit holes either; PNG alpha is 8-bit and much cleaner, which is why product sites prefer PNG or WebP over GIF for cutouts.
 
-File size is the honest cost. A 4K JPEG at quality 85 might be 800 KB. The PNG can land between 3 and 12 MB depending on noise and resolution. That is fine for a local working file and painful as a hero image on a homepage. Use PNG for editing and overlays; export JPEG or WebP for delivery. ApkaOS also offers JPG to WebP if your only goal is a smaller web asset.
+File size is the honest cost. A 4K JPEG at quality 85 might be 800 KB. The PNG can land between 3 and 12 MB depending on noise and resolution. That is fine for a local working file and painful as a hero image on a homepage. Use PNG for editing and overlays; export JPEG or WebP for delivery. ToolPin also offers JPG to WebP if your only goal is a smaller web asset.
 
-## How ApkaOS handles the file
+## How ToolPin handles the file
 
-The converter runs in your browser tab. The JPEG is decoded with the same graphics stack your device already uses, then written out as PNG. Nothing is posted to apkaos.in, so camera EXIF—GPS, lens model, timestamps—never sits on a server. (If you want that metadata gone from the pixels you share, use Strip Image Metadata after or before conversion.) Individual files can be up to 250 MB. Very large phone panoramas may stall on an older laptop because the whole bitmap lives in RAM; if that happens, resize first, then convert.
+The converter runs in your browser tab. The JPEG is decoded with the same graphics stack your device already uses, then written out as PNG. Nothing is posted to toolpin.online, so camera EXIF—GPS, lens model, timestamps—never sits on a server. (If you want that metadata gone from the pixels you share, use Strip Image Metadata after or before conversion.) Individual files can be up to 250 MB. Very large phone panoramas may stall on an older laptop because the whole bitmap lives in RAM; if that happens, resize first, then convert.
 
 There is no watermark and no signup. You get the PNG your browser encoded, not a branded preview. Unusual color profiles may flatten to standard RGB on the canvas.
 
@@ -66,9 +66,9 @@ Convert once, then work. Do not bounce JPG → PNG → JPG in a loop. If you sti
           "Not automatically. JPEG has no alpha, so the PNG stays opaque until you erase or mask pixels in an editor.",
       },
       {
-        question: "Are my photos uploaded to ApkaOS?",
+        question: "Are my photos uploaded to ToolPin?",
         answer:
-          "No. Decoding and encoding happen in your browser. Closing the tab discards the working copy; we do not store the file on apkaos.in.",
+          "No. Decoding and encoding happen in your browser. Closing the tab discards the working copy; we do not store the file on toolpin.online.",
       },
       {
         question: "Why is the PNG so much larger than the JPEG?",
@@ -93,16 +93,16 @@ Convert once, then work. Do not bounce JPG → PNG → JPG in a loop. If you sti
       "jpg to png no upload",
       "lossless jpeg to png",
       "free jpg to png",
-      "apkaos jpg png",
+      "toolpin jpg png",
     ],
   },
 
   "png-to-jpg": {
-    seoTitle: "Convert PNG to JPG Online – Smaller Photos | ApkaOS",
+    seoTitle: "Convert PNG to JPG Online – Smaller Photos | ToolPin",
     seoDescription:
-      "Flatten PNG graphics or photos to JPEG in your browser. Cut file size for email, WhatsApp, and print labs. Free on ApkaOS—no signup, no watermark at all.",
+      "Flatten PNG graphics or photos to JPEG in your browser. Cut file size for email, WhatsApp, and print labs. Free on ToolPin—no signup, no watermark at all.",
     intro:
-      "A PNG of a photograph can be ten times heavier than a good JPEG of the same scene. If you do not need transparency, converting to JPG is the fastest way to make the file travel—email attachments, marketplace listings, and labs that still want JPEG. ApkaOS encodes in your browser, so the PNG never leaves the device, and the download has no watermark.",
+      "A PNG of a photograph can be ten times heavier than a good JPEG of the same scene. If you do not need transparency, converting to JPG is the fastest way to make the file travel—email attachments, marketplace listings, and labs that still want JPEG. ToolPin encodes in your browser, so the PNG never leaves the device, and the download has no watermark.",
     howToSteps: [
       "Drop a PNG onto the converter (files up to 250 MB).",
       "The browser flattens any transparent pixels onto a solid background and encodes JPEG.",
@@ -125,7 +125,7 @@ Convert once, then work. Do not bounce JPG → PNG → JPG in a loop. If you sti
 
 PNG is excellent for icons, UI, and anything with a hole in the background. It is a poor default for photographs. Lossless encoding keeps every speck of sensor noise, so a casual 12-megapixel PNG can weigh 20 MB. Email servers bounce it, WhatsApp recompresses it into something uglier than a controlled JPEG would have been, and many government or college portals still list “JPG only” in the upload hint. Converting PNG to JPG is the practical fix: you accept a little softness in exchange for a file that actually sends.
 
-The other reason is transparency you no longer need. A cutout PNG sitting on a white landing page does not need an alpha channel once it is baked into a rectangular photo. JPEG cannot store transparency. ApkaOS flattens those pixels—typically onto white—so the subject does not pick up a checkerboard or a black halo. If the PNG was meant to float over a colored banner, flatten it in a design tool onto that color first, then convert. Otherwise you will see a hard white box.
+The other reason is transparency you no longer need. A cutout PNG sitting on a white landing page does not need an alpha channel once it is baked into a rectangular photo. JPEG cannot store transparency. ToolPin flattens those pixels—typically onto white—so the subject does not pick up a checkerboard or a black halo. If the PNG was meant to float over a colored banner, flatten it in a design tool onto that color first, then convert. Otherwise you will see a hard white box.
 
 ## Quality versus size
 
@@ -137,7 +137,7 @@ Color is another quiet change. PNG is usually sRGB or untagged. JPEG from a brow
 
 ## Privacy, limits, and what the browser does
 
-Everything runs in the tab. The PNG is decoded, drawn to a canvas, and encoded as JPEG on your machine. ApkaOS does not receive the pixels. That is useful when the PNG is a passport scan, a medical form, or a screenshot of a dashboard. Files can be up to 250 MB. Animated APNG is not a target here—you get a still frame. Indexed PNGs and 16-bit PNGs are reduced to standard 8-bit RGB as part of canvas encoding.
+Everything runs in the tab. The PNG is decoded, drawn to a canvas, and encoded as JPEG on your machine. ToolPin does not receive the pixels. That is useful when the PNG is a passport scan, a medical form, or a screenshot of a dashboard. Files can be up to 250 MB. Animated APNG is not a target here—you get a still frame. Indexed PNGs and 16-bit PNGs are reduced to standard 8-bit RGB as part of canvas encoding.
 
 There is no watermark and no login. If the output is still too heavy for a 2 MB portal, run Compress JPG on the result or resize the image so the pixel count matches how it will be displayed. A 4000-pixel-wide JPEG of a passport photo is wasted data.
 
@@ -157,9 +157,9 @@ Use JPG when the destination is photo-centric: cameras, labs, many CRMs, older W
           "JPEG cannot store alpha. Transparent areas are flattened onto a solid background (typically white) during conversion.",
       },
       {
-        question: "Does ApkaOS keep a copy of my PNG?",
+        question: "Does ToolPin keep a copy of my PNG?",
         answer:
-          "No. Encoding happens in the browser. We do not upload, cache, or watermark the file on apkaos.in.",
+          "No. Encoding happens in the browser. We do not upload, cache, or watermark the file on toolpin.online.",
       },
       {
         question: "Will the JPG look as sharp as the PNG?",
@@ -189,16 +189,16 @@ Use JPG when the destination is photo-centric: cameras, labs, many CRMs, older W
       "flatten png to jpg",
       "png to jpg no signup",
       "compress png as jpeg",
-      "apkaos png jpg",
+      "toolpin png jpg",
     ],
   },
 
   "jpg-to-webp": {
-    seoTitle: "Convert JPG to WebP Online – Smaller Files | ApkaOS",
+    seoTitle: "Convert JPG to WebP Online – Smaller Files | ToolPin",
     seoDescription:
-      "Turn JPEG photos into WebP in your browser for faster pages and lighter uploads. Free on ApkaOS—no account, no watermark, files never leave the device.",
+      "Turn JPEG photos into WebP in your browser for faster pages and lighter uploads. Free on ToolPin—no account, no watermark, files never leave the device.",
     intro:
-      "WebP typically beats JPEG on size at the same perceived quality, which is why Lighthouse and Core Web Vitals care about it. Converting a photo library to WebP is one of the cheapest speed wins for a site or a shop. ApkaOS does the encode locally, so your originals never go to a server, and you can download the WebP without creating an account.",
+      "WebP typically beats JPEG on size at the same perceived quality, which is why Lighthouse and Core Web Vitals care about it. Converting a photo library to WebP is one of the cheapest speed wins for a site or a shop. ToolPin does the encode locally, so your originals never go to a server, and you can download the WebP without creating an account.",
     howToSteps: [
       "Drop one or more JPEG photos onto the JPG to WebP tool.",
       "The browser re-encodes each image using WebP, keeping the same pixel dimensions.",
@@ -221,7 +221,7 @@ Use JPG when the destination is photo-centric: cameras, labs, many CRMs, older W
 
 JPEG is a 1990s compromise that every camera still speaks. WebP is Google’s newer still-image format with a more modern compression model. For photographs, a well-encoded WebP is often 25–35% smaller than a JPEG that looks the same on a phone. That is not a party trick: on a homepage with five large photos, you can drop hundreds of kilobytes without touching layout. Search consoles and performance reports flag oversized JPEGs constantly; converting them is usually faster than rewriting the design.
 
-Browser support is no longer the blocker it was in 2018. Current Chrome, Edge, Firefox, and Safari all display WebP. You still need a fallback if you support very old WebViews or some email clients. The usual pattern is a <picture> element with WebP first and JPEG second, or a CDN that negotiates Accept headers. Converting JPG to WebP on ApkaOS gives you the modern file; it does not invent the fallback. Keep the original JPEG if you still send photos into Word, older CRMs, or print labs.
+Browser support is no longer the blocker it was in 2018. Current Chrome, Edge, Firefox, and Safari all display WebP. You still need a fallback if you support very old WebViews or some email clients. The usual pattern is a <picture> element with WebP first and JPEG second, or a CDN that negotiates Accept headers. Converting JPG to WebP on ToolPin gives you the modern file; it does not invent the fallback. Keep the original JPEG if you still send photos into Word, older CRMs, or print labs.
 
 WebP is not a print format. A shop that asked for “high-res JPEG” does not want WebP. Neither does a WhatsApp status in every region, nor every government upload form. Use this conversion when you control the page that will display the image, or when the destination (a modern CMS, Discord, recent Android gallery) already understands WebP.
 
@@ -233,9 +233,9 @@ Alpha is irrelevant here: JPEG has none, and a photo WebP typically stays opaque
 
 Some images barely shrink. Hard-edged screenshots, already-tiny thumbnails, and JPEGs that were crushed once already may come out similar in size or even slightly larger because of WebP container overhead. In those cases, stay on JPEG or resize the pixel dimensions. Compression cannot invent savings that are not in the data.
 
-## Local processing on ApkaOS
+## Local processing on ToolPin
 
-The encode runs in your browser. Photos do not upload to apkaos.in. That matters if the JPEGs are unpublished shoots, ID scans, or client work under NDA. The limit is 250 MB per file, with real-world headroom set by RAM. A 50-megapixel JPEG will decode to a huge bitmap before WebP encoding starts; close other tabs if a laptop fans up.
+The encode runs in your browser. Photos do not upload to toolpin.online. That matters if the JPEGs are unpublished shoots, ID scans, or client work under NDA. The limit is 250 MB per file, with real-world headroom set by RAM. A 50-megapixel JPEG will decode to a huge bitmap before WebP encoding starts; close other tabs if a laptop fans up.
 
 No account, no watermark. EXIF may be dropped or reduced by canvas encoding—do not treat this tool as a metadata-preserving archive. If you need GPS gone on purpose, run Strip Image Metadata. If you need GPS kept, do not use a browser canvas converter.
 
@@ -255,7 +255,7 @@ Swap WebP into templates that already serve it. For HTML, prefer <picture> or a 
           "Current major browsers do. Very old WebViews and many email clients still need a JPEG fallback.",
       },
       {
-        question: "Are JPEGs uploaded to ApkaOS servers?",
+        question: "Are JPEGs uploaded to ToolPin servers?",
         answer:
           "No. Conversion is local. Closing the tab clears the working files from memory.",
       },
@@ -287,16 +287,16 @@ Swap WebP into templates that already serve it. For HTML, prefer <picture> or a 
       "webp for website",
       "smaller than jpeg",
       "jpg to webp no upload",
-      "apkaos webp",
+      "toolpin webp",
     ],
   },
 
   "png-to-webp": {
     seoTitle: "Convert PNG to WebP Online – Alpha at Smaller Size",
     seoDescription:
-      "Turn PNG graphics into WebP and keep transparency while cutting weight. Free in-browser conversion on ApkaOS—no signup, no watermark, no server upload.",
+      "Turn PNG graphics into WebP and keep transparency while cutting weight. Free in-browser conversion on ToolPin—no signup, no watermark, no server upload.",
     intro:
-      "PNG is the default export from design tools, and it is often overweight for the web. WebP can keep a real alpha channel and still land far smaller than a 24-bit PNG, which is why logos, badges, and UI chrome belong in WebP on modern sites. ApkaOS converts in your browser so source files never leave the device.",
+      "PNG is the default export from design tools, and it is often overweight for the web. WebP can keep a real alpha channel and still land far smaller than a 24-bit PNG, which is why logos, badges, and UI chrome belong in WebP on modern sites. ToolPin converts in your browser so source files never leave the device.",
     howToSteps: [
       "Drop a PNG—icons, logos, or photos with a transparent background.",
       "The browser encodes WebP, preserving alpha where the PNG had it.",
@@ -329,9 +329,9 @@ Indexed PNGs (8-bit palette) are already small. Converting those to WebP can go 
 
 Older Outlook, some ebook readers, and a few social networks still dislike WebP. If the file is going into a Word header, an email signature, or a marketplace that lists PNG/JPG only, stay on PNG. If it is going into a Next.js or Shopify storefront, WebP is the default you want.
 
-## What happens on ApkaOS
+## What happens on ToolPin
 
-Conversion is in-browser. The PNG never uploads to apkaos.in. That is the right model for unreleased brand assets and app mockups. The cap is 250 MB per file. Very wide @3x marketing PNGs can stress memory; resize to the largest size you actually render (for example 2× the CSS width) before converting if a machine struggles.
+Conversion is in-browser. The PNG never uploads to toolpin.online. That is the right model for unreleased brand assets and app mockups. The cap is 250 MB per file. Very wide @3x marketing PNGs can stress memory; resize to the largest size you actually render (for example 2× the CSS width) before converting if a machine struggles.
 
 Canvas encoding may flatten exotic PNG features: 16-bit channels, animation (APNG), and some color profiles. You get a still WebP with standard 8-bit color and alpha. No watermark is applied. No account is required.
 
@@ -355,7 +355,7 @@ Use WebP for on-site images. Keep PNG for the source file, for print-adjacent PD
       {
         question: "Is the PNG uploaded anywhere?",
         answer:
-          "No. ApkaOS encodes in the browser. Brand files and mockups stay on your device.",
+          "No. ToolPin encodes in the browser. Brand files and mockups stay on your device.",
       },
       {
         question: "Should I delete the original PNG?",
@@ -385,16 +385,16 @@ Use WebP for on-site images. Keep PNG for the source file, for print-adjacent PD
       "convert png to webp online",
       "png logo to webp",
       "webp with alpha",
-      "apkaos png webp",
+      "toolpin png webp",
     ],
   },
 
   "webp-to-jpg": {
     seoTitle: "WebP to JPG Converter Online – Open Anywhere, Free",
     seoDescription:
-      "Convert WebP photos to JPEG so email, Word, and older apps can open them. Free in your browser on ApkaOS—no signup, no watermark, nothing is uploaded.",
+      "Convert WebP photos to JPEG so email, Word, and older apps can open them. Free in your browser on ToolPin—no signup, no watermark, nothing is uploaded.",
     intro:
-      "Chrome and many phones save images as WebP. Then a colleague’s Outlook, a college portal, or a printer driver refuses the file. Converting WebP to JPG restores a format every photo workflow already understands. ApkaOS does it on your device, so the WebP never hits a server, and the JPEG has no watermark.",
+      "Chrome and many phones save images as WebP. Then a colleague’s Outlook, a college portal, or a printer driver refuses the file. Converting WebP to JPG restores a format every photo workflow already understands. ToolPin does it on your device, so the WebP never hits a server, and the JPEG has no watermark.",
     howToSteps: [
       "Drop a .webp image onto the converter.",
       "The browser decodes WebP and writes a standard JPEG.",
@@ -429,7 +429,7 @@ Color management is simple in the browser: you get sRGB JPEG. That is correct fo
 
 ## Privacy and limits
 
-ApkaOS decodes and encodes in the tab. The WebP is not uploaded. That matters when the image is a screenshot of a ticket, a medical record, or an unpublished product. Limit is 250 MB per file, with memory as the real ceiling. Animated WebP becomes a still JPEG—the first (or representative) frame, not a movie. If you need the animation, keep WebP or convert to GIF knowing you will lose color fidelity.
+ToolPin decodes and encodes in the tab. The WebP is not uploaded. That matters when the image is a screenshot of a ticket, a medical record, or an unpublished product. Limit is 250 MB per file, with memory as the real ceiling. Animated WebP becomes a still JPEG—the first (or representative) frame, not a movie. If you need the animation, keep WebP or convert to GIF knowing you will lose color fidelity.
 
 No signup, no watermark. Metadata from the WebP is usually stripped by canvas export. Do not rely on this tool to preserve GPS; do rely on it to avoid sending the file to a random “free converter” that hosts uploads.
 
@@ -449,9 +449,9 @@ If a form still rejects the JPEG, the problem is often dimensions or bytes, not 
           "Many desktop apps never added WebP support. JPEG is the format they already expect for photos.",
       },
       {
-        question: "Does ApkaOS upload the WebP?",
+        question: "Does ToolPin upload the WebP?",
         answer:
-          "No. Conversion stays in the browser. Nothing is stored on apkaos.in.",
+          "No. Conversion stays in the browser. Nothing is stored on toolpin.online.",
       },
       {
         question: "What happens to transparent WebP files?",
@@ -481,16 +481,16 @@ If a form still rejects the JPEG, the problem is often dimensions or bytes, not 
       "open webp in word",
       "webp email attachment",
       "webp to jpg no upload",
-      "apkaos webp jpg",
+      "toolpin webp jpg",
     ],
   },
 
   "webp-to-png": {
     seoTitle: "WebP to PNG Converter Online – Restore Transparency",
     seoDescription:
-      "Convert WebP images to PNG in your browser to keep cutouts and edit in any app. Free on ApkaOS—no account, no watermark, files never leave your device.",
+      "Convert WebP images to PNG in your browser to keep cutouts and edit in any app. Free on ToolPin—no account, no watermark, files never leave your device.",
     intro:
-      "You saved a logo or sticker as WebP and now Photoshop, a print vendor, or a form wants PNG. Converting WebP to PNG gives you a lossless, widely supported graphic with the alpha channel intact. ApkaOS runs in the browser, so brand assets stay on your machine and the PNG is not watermarked.",
+      "You saved a logo or sticker as WebP and now Photoshop, a print vendor, or a form wants PNG. Converting WebP to PNG gives you a lossless, widely supported graphic with the alpha channel intact. ToolPin runs in the browser, so brand assets stay on your machine and the PNG is not watermarked.",
     howToSteps: [
       "Drop a WebP file that you need as a standard PNG.",
       "The browser decodes WebP, including any alpha channel, and writes PNG.",
@@ -523,9 +523,9 @@ Alpha handling is the sensitive part. WebP alpha should survive into PNG. Soft g
 
 Animated WebP is a different story. PNG (unless you specifically make APNG) is a still image. You will get a frame, not a loop. For motion, keep WebP or accept GIF’s 256-color limit.
 
-## Browser-local on ApkaOS
+## Browser-local on ToolPin
 
-Files stay in the tab. Unreleased packaging, app store icons, and client mockups are not uploaded to apkaos.in. The limit is 250 MB. Extremely wide WebP marketing banners can exhaust mobile RAM; try a desktop browser or resize first.
+Files stay in the tab. Unreleased packaging, app store icons, and client mockups are not uploaded to toolpin.online. The limit is 250 MB. Extremely wide WebP marketing banners can exhaust mobile RAM; try a desktop browser or resize first.
 
 No account, no watermark. Color is standardized through the canvas to typical 8-bit sRGB PNG. Rare 10-bit or HDR WebP will be tone-mapped to what the browser can draw. That is fine for web and office; it is not an HDR pipeline.
 
@@ -547,7 +547,7 @@ After you have PNG, you can compress it, convert to AVIF for the site, or strip 
       {
         question: "Does the file leave my computer?",
         answer:
-          "No. ApkaOS converts in the browser and does not store WebP or PNG on the server.",
+          "No. ToolPin converts in the browser and does not store WebP or PNG on the server.",
       },
       {
         question: "Why is the PNG bigger than the WebP?",
@@ -577,16 +577,16 @@ After you have PNG, you can compress it, convert to AVIF for the site, or strip 
       "webp transparency to png",
       "open webp in photoshop",
       "webp to png no upload",
-      "apkaos webp png",
+      "toolpin webp png",
     ],
   },
 
   "jpg-to-gif": {
     seoTitle: "JPG to GIF Converter Online – Legacy Files & Forums",
     seoDescription:
-      "Convert a JPEG photo to GIF in your browser for old forums, badges, and tiny thumbs. Free on ApkaOS—no signup, no watermark, and nothing gets uploaded.",
+      "Convert a JPEG photo to GIF in your browser for old forums, badges, and tiny thumbs. Free on ToolPin—no signup, no watermark, and nothing gets uploaded.",
     intro:
-      "GIF is a 256-color format from the 1980s. Turning a JPEG into GIF is rarely about quality and almost always about a destination that still demands it: vintage forums, email signatures, or hardware that only previews GIF. ApkaOS palettizes the photo in your browser so the JPEG never leaves the device, and the GIF is not watermarked.",
+      "GIF is a 256-color format from the 1980s. Turning a JPEG into GIF is rarely about quality and almost always about a destination that still demands it: vintage forums, email signatures, or hardware that only previews GIF. ToolPin palettizes the photo in your browser so the JPEG never leaves the device, and the GIF is not watermarked.",
     howToSteps: [
       "Drop a JPG or JPEG that must become a GIF.",
       "The browser reduces the photo to a GIF palette (up to 256 colors).",
@@ -619,9 +619,9 @@ Transparency in GIF is one-bit: a pixel is either fully see-through or fully opa
 
 File size is unpredictable. Simple graphics can get small. Photos usually do not. If your goal is a smaller photo, use Compress JPG or JPG to WebP instead. GIF is the wrong compressor for cameras.
 
-## How ApkaOS runs it
+## How ToolPin runs it
 
-Everything stays in the browser. The JPEG is not uploaded to apkaos.in. That is still worth saying for ID photos and screenshots people try to squeeze into old portals. Cap is 250 MB, but you should never convert a 250 MB JPEG to GIF; resize it first so the palette has a chance.
+Everything stays in the browser. The JPEG is not uploaded to toolpin.online. That is still worth saying for ID photos and screenshots people try to squeeze into old portals. Cap is 250 MB, but you should never convert a 250 MB JPEG to GIF; resize it first so the palette has a chance.
 
 No signup, no watermark. Color management is whatever the canvas provides. CMYK JPEGs flatten to RGB, then to 256 colors—expect a shift. Progressive JPEGs work; corrupted JPEGs do not.
 
@@ -646,7 +646,7 @@ If the host accepts PNG, use PNG—you keep more color and optional alpha. If it
           "GIF allows only 256 colors. Photographs need thousands. Banding and dither are expected.",
       },
       {
-        question: "Is my JPEG uploaded to ApkaOS?",
+        question: "Is my JPEG uploaded to ToolPin?",
         answer:
           "No. Palettizing runs in the browser. We do not store the file.",
       },
@@ -673,16 +673,16 @@ If the host accepts PNG, use PNG—you keep more color and optional alpha. If it
       "still gif from photo",
       "jpg to gif forum avatar",
       "jpg to gif no upload",
-      "apkaos gif",
+      "toolpin gif",
     ],
   },
 
   "gif-to-jpg": {
     seoTitle: "GIF to JPG Converter Online – Flatten GIFs to Share",
     seoDescription:
-      "Turn a GIF into a JPEG photo for email, print, and forms. Animation becomes a still. Free in-browser on ApkaOS—no signup, no watermark, and no upload.",
+      "Turn a GIF into a JPEG photo for email, print, and forms. Animation becomes a still. Free in-browser on ToolPin—no signup, no watermark, and no upload.",
     intro:
-      "Many “photos” people send are actually GIFs: a single frame, a reaction clip, or a scan saved in the wrong era. Converting GIF to JPG gives you a normal photograph you can attach, print, or upload where GIF is blocked. ApkaOS flattens in the browser—the file stays on your device, and the JPEG is not watermarked.",
+      "Many “photos” people send are actually GIFs: a single frame, a reaction clip, or a scan saved in the wrong era. Converting GIF to JPG gives you a normal photograph you can attach, print, or upload where GIF is blocked. ToolPin flattens in the browser—the file stays on your device, and the JPEG is not watermarked.",
     howToSteps: [
       "Drop a .gif file, animated or still.",
       "The browser captures a still frame and encodes it as JPEG.",
@@ -715,9 +715,9 @@ GIF transparency is 1-bit. JPEG has none. Transparent pixels flatten onto a soli
 
 Quality is capped by the source. You cannot recover colors GIF never stored. JPEG may even look slightly smoother because it dithers differently, but it cannot invent a 24-bit original. Screenshots and pixel art often look worse as JPEG—keep PNG for those. Photos and scans usually look better as JPEG than as GIF, and they shrink.
 
-## Privacy and limits on ApkaOS
+## Privacy and limits on ToolPin
 
-Processing is local. A GIF of a private chat, a medical cartoon someone made, or a family clip is not uploaded to apkaos.in. Limit is 250 MB. Very long animated GIFs can be huge in memory because every frame may be decoded; if the tab struggles, try a shorter GIF or extract a frame elsewhere first.
+Processing is local. A GIF of a private chat, a medical cartoon someone made, or a family clip is not uploaded to toolpin.online. Limit is 250 MB. Very long animated GIFs can be huge in memory because every frame may be decoded; if the tab struggles, try a shorter GIF or extract a frame elsewhere first.
 
 No signup, no watermark. Metadata on GIF is uncommon compared with JPEG EXIF; the output JPEG from a canvas usually has little or no EXIF. That is good for privacy and bad if you hoped to keep a comment block.
 
@@ -737,7 +737,7 @@ Compress or resize if a portal wants under 1 MB. If you needed a lossless still 
           "No. JPEG is a still image. You get one frame from the GIF.",
       },
       {
-        question: "Are GIFs uploaded to ApkaOS?",
+        question: "Are GIFs uploaded to ToolPin?",
         answer:
           "No. Decoding and JPEG encoding happen in your browser only.",
       },
@@ -769,16 +769,16 @@ Compress or resize if a portal wants under 1 MB. If you needed a lossless still 
       "gif to still photo",
       "flatten gif to jpeg",
       "gif to jpg no upload",
-      "apkaos gif jpg",
+      "toolpin gif jpg",
     ],
   },
 
   "png-to-gif": {
     seoTitle: "PNG to GIF Converter Online Free – Palette Graphics",
     seoDescription:
-      "Convert PNG icons and pixel art to GIF in your browser. Watch 256-color limits and 1-bit transparency. Free on ApkaOS—no signup, no watermark, no upload.",
+      "Convert PNG icons and pixel art to GIF in your browser. Watch 256-color limits and 1-bit transparency. Free on ToolPin—no signup, no watermark, no upload.",
     intro:
-      "PNG can hold 16 million colors and soft alpha. GIF can hold 256 colors and on/off transparency. You convert PNG to GIF when a host, a badge system, or an old page still requires GIF—not because GIF is better. ApkaOS palettizes locally so your PNG never leaves the device, and the GIF has no watermark.",
+      "PNG can hold 16 million colors and soft alpha. GIF can hold 256 colors and on/off transparency. You convert PNG to GIF when a host, a badge system, or an old page still requires GIF—not because GIF is better. ToolPin palettizes locally so your PNG never leaves the device, and the GIF has no watermark.",
     howToSteps: [
       "Drop a PNG—ideally a simple icon, pixel illustration, or flat graphic.",
       "The browser builds a 256-color palette and writes GIF.",
@@ -813,7 +813,7 @@ Animation is not created here. A still PNG becomes a still GIF. People who want 
 
 Dithering mixes palette colors to fake a gradient. It can hide banding and it can add noise that inflates the GIF. For icons, turn dither mentally “off” by starting from flat colors. For photos (if you insist), dither may look less posterized but the file may rival the PNG.
 
-ApkaOS runs in the tab. The PNG is not sent to apkaos.in. Limit 250 MB—again, you should convert small graphics, not 4K marketing PNGs, to GIF. No watermark, no account. Indexed PNGs may already be 256 colors; the GIF can be a near copy. 16-bit or huge PNGs are reduced through the canvas first.
+ToolPin runs in the tab. The PNG is not sent to toolpin.online. Limit 250 MB—again, you should convert small graphics, not 4K marketing PNGs, to GIF. No watermark, no account. Indexed PNGs may already be 256 colors; the GIF can be a near copy. 16-bit or huge PNGs are reduced through the canvas first.
 
 ## Prefer PNG unless you are forced
 
@@ -833,7 +833,7 @@ Modern web, iOS, Android, and almost every CMS accept PNG. GIF’s remaining nic
       {
         question: "Is the PNG uploaded?",
         answer:
-          "No. Palettizing is local in the browser on ApkaOS.",
+          "No. Palettizing is local in the browser on ToolPin.",
       },
       {
         question: "Can I keep more than 256 colors?",
@@ -863,16 +863,16 @@ Modern web, iOS, Android, and almost every CMS accept PNG. GIF’s remaining nic
       "png icon to gif",
       "pixel art gif",
       "png to gif no upload",
-      "apkaos png gif",
+      "toolpin png gif",
     ],
   },
 
   "gif-to-png": {
     seoTitle: "GIF to PNG Converter Online – Still Frames, Sharper",
     seoDescription:
-      "Convert a GIF to PNG for sharper stills and easier editing. Animation stops; colors can look cleaner. Free in-browser on ApkaOS—no signup and no upload.",
+      "Convert a GIF to PNG for sharper stills and easier editing. Animation stops; colors can look cleaner. Free in-browser on ToolPin—no signup and no upload.",
     intro:
-      "A GIF may be the only copy of a graphic you have—an old logo, a forum icon, a one-frame scan. Converting to PNG gives you a still image that editors, printers, and modern sites handle without palette drama. ApkaOS does the work in your browser, so the GIF never goes to a server, and the PNG is not watermarked.",
+      "A GIF may be the only copy of a graphic you have—an old logo, a forum icon, a one-frame scan. Converting to PNG gives you a still image that editors, printers, and modern sites handle without palette drama. ToolPin does the work in your browser, so the GIF never goes to a server, and the PNG is not watermarked.",
     howToSteps: [
       "Drop a GIF, animated or still.",
       "The browser draws a still frame and writes a PNG.",
@@ -907,9 +907,9 @@ Color: PNG can store the image as 24-bit even if the source only had 256 colors.
 
 JPEG smears pixel boundaries. A GIF sprite or a screenshot of text looks worse as JPG than as PNG. JPEG also kills transparency. GIF to JPG is for photo-like stills going to forms. GIF to PNG is for graphics. If the GIF is a camera photo saved badly, JPEG may be smaller after flatten—but PNG is the safer edit format.
 
-## ApkaOS processing
+## ToolPin processing
 
-The GIF is decoded in the browser and encoded as PNG. Nothing is uploaded to apkaos.in. 250 MB limit; long animations are memory-heavy. No account, no watermark. You get a still PNG. APNG output (animated PNG) is not the goal here.
+The GIF is decoded in the browser and encoded as PNG. Nothing is uploaded to toolpin.online. 250 MB limit; long animations are memory-heavy. No account, no watermark. You get a still PNG. APNG output (animated PNG) is not the goal here.
 
 Privacy: GIFs from chats and old websites can contain surprising frames. Because processing is local, you are not leaking them to a conversion farm. Still, preview before you publish the PNG.
 
@@ -929,7 +929,7 @@ Compress PNG if the still is a large screenshot. Convert to WebP or AVIF for the
           "No. You get a still PNG. Keep the GIF if you need the loop.",
       },
       {
-        question: "Is the GIF sent to ApkaOS servers?",
+        question: "Is the GIF sent to ToolPin servers?",
         answer:
           "No. Frame decode and PNG encode happen in your browser.",
       },
@@ -961,16 +961,16 @@ Compress PNG if the still is a large screenshot. Convert to WebP or AVIF for the
       "gif to still png",
       "extract gif frame png",
       "gif to png no upload",
-      "apkaos gif png",
+      "toolpin gif png",
     ],
   },
 
   "webp-to-avif": {
     seoTitle: "WebP to AVIF Converter Online – Max Web Compression",
     seoDescription:
-      "Convert WebP images to AVIF in your browser for smaller stills on modern sites. Free on ApkaOS—no signup, no watermark, and files stay on your device.",
+      "Convert WebP images to AVIF in your browser for smaller stills on modern sites. Free on ToolPin—no signup, no watermark, and files stay on your device.",
     intro:
-      "AVIF is the still-image format built on AV1. It often beats WebP on bytes at the same quality, which matters on image-heavy homepages. If you already standardized on WebP, converting select heroes to AVIF is the next squeeze. ApkaOS encodes in the browser—no account, no watermark, no upload to apkaos.in.",
+      "AVIF is the still-image format built on AV1. It often beats WebP on bytes at the same quality, which matters on image-heavy homepages. If you already standardized on WebP, converting select heroes to AVIF is the next squeeze. ToolPin encodes in the browser—no account, no watermark, no upload to toolpin.online.",
     howToSteps: [
       "Drop a WebP still you want as AVIF.",
       "Wait while the browser encodes AVIF; this can be slower than WebP.",
@@ -1005,11 +1005,11 @@ Animated WebP should not be forced through a still AVIF converter if you care ab
 
 Some images barely shrink or even grow: already tiny WebPs, heavy noise, or screenshots with UI text. Screenshot text can also look worse under AVIF’s blockiness. Keep WebP or PNG for UI captures.
 
-## ApkaOS, privacy, and limits
+## ToolPin, privacy, and limits
 
 Encode happens in the browser. Client photos and unpublished campaigns are not uploaded. 250 MB max; in practice AVIF encode memory and time will stop you before that on a phone. No watermark, no account.
 
-If encode fails, the browser may lack AVIF encoding support. Encoding support lags decoding: a browser can display AVIF and still not create it. Try a current desktop Chrome or Firefox. This is a platform limit, not an ApkaOS account limit.
+If encode fails, the browser may lack AVIF encoding support. Encoding support lags decoding: a browser can display AVIF and still not create it. Try a current desktop Chrome or Firefox. This is a platform limit, not a ToolPin account limit.
 
 Metadata is typically stripped by canvas-style export. Do not use this as an archival converter. Strip deliberately if you need a clean public file; keep the WebP if you needed tags.
 
@@ -1029,9 +1029,9 @@ Use <picture> with AVIF first, then WebP, then JPEG. Or let a CDN vary on Accept
           "Current major browsers can display it. Older WebViews, email, and many apps cannot—serve a fallback.",
       },
       {
-        question: "Does ApkaOS upload my WebP?",
+        question: "Does ToolPin upload my WebP?",
         answer:
-          "No. Encoding is local. We do not store the image on apkaos.in.",
+          "No. Encoding is local. We do not store the image on toolpin.online.",
       },
       {
         question: "Why is encoding so slow?",
@@ -1061,16 +1061,16 @@ Use <picture> with AVIF first, then WebP, then JPEG. Or let a CDN vary on Accept
       "avif smaller than webp",
       "next gen image format",
       "webp to avif no upload",
-      "apkaos avif",
+      "toolpin avif",
     ],
   },
 
   "avif-to-webp": {
     seoTitle: "AVIF to WebP Converter Online – Wider Compatibility",
     seoDescription:
-      "Convert AVIF images to WebP so more apps and older browsers can show them. Free in your browser on ApkaOS—no signup, no watermark, nothing is uploaded.",
+      "Convert AVIF images to WebP so more apps and older browsers can show them. Free in your browser on ToolPin—no signup, no watermark, nothing is uploaded.",
     intro:
-      "You received an AVIF from a modern camera, a CDN, or a design handoff, and something in the chain cannot decode it. WebP is the compatibility layer: still efficient, far more widely accepted in apps and older WebViews. ApkaOS converts in your browser so the AVIF never uploads, and the WebP is not watermarked.",
+      "You received an AVIF from a modern camera, a CDN, or a design handoff, and something in the chain cannot decode it. WebP is the compatibility layer: still efficient, far more widely accepted in apps and older WebViews. ToolPin converts in your browser so the AVIF never uploads, and the WebP is not watermarked.",
     howToSteps: [
       "Drop an .avif still onto the converter.",
       "The browser decodes AVIF and encodes WebP.",
@@ -1103,7 +1103,7 @@ Quality: both formats are typically lossy. Expect a small extra generation loss.
 
 ## Privacy and limits
 
-ApkaOS does not receive the AVIF. Conversion is in-tab. That matters for unreleased product shots labeled “AVIF for web.” 250 MB limit; decode of huge AVIFs can spike memory. No signup, no watermark.
+ToolPin does not receive the AVIF. Conversion is in-tab. That matters for unreleased product shots labeled “AVIF for web.” 250 MB limit; decode of huge AVIFs can spike memory. No signup, no watermark.
 
 Animated or multi-layer AVIF will not become an animated WebP here. You get a still. Keep the AVIF or use video if motion matters.
 
@@ -1125,9 +1125,9 @@ Drop WebP into the same slots you already use for WebP. For maximum reach, also 
           "Reach. Many apps and older WebViews decode WebP but still fail on AVIF.",
       },
       {
-        question: "Does the AVIF upload to ApkaOS?",
+        question: "Does the AVIF upload to ToolPin?",
         answer:
-          "No. Decode and encode stay in your browser. Nothing is stored on apkaos.in.",
+          "No. Decode and encode stay in your browser. Nothing is stored on toolpin.online.",
       },
       {
         question: "Will WebP look worse?",
@@ -1157,16 +1157,16 @@ Drop WebP into the same slots you already use for WebP. For maximum reach, also 
       "open avif as webp",
       "avif fallback webp",
       "avif to webp no upload",
-      "apkaos avif webp",
+      "toolpin avif webp",
     ],
   },
 
   "jpg-to-tiff": {
-    seoTitle: "Convert JPG to TIFF Online – Print & Archive | ApkaOS",
+    seoTitle: "Convert JPG to TIFF Online – Print & Archive | ToolPin",
     seoDescription:
-      "Turn JPEGs into TIFF for print shops, DTP, and scans that need a lossless container. Free in your browser on ApkaOS—no signup, no watermark, no upload.",
+      "Turn JPEGs into TIFF for print shops, DTP, and scans that need a lossless container. Free in your browser on ToolPin—no signup, no watermark, no upload.",
     intro:
-      "Print vendors and layout apps still speak TIFF. A JPEG is already lossy, but wrapping it as TIFF stops further JPEG saves and matches what many RIPs and Photoshop print workflows expect. ApkaOS converts in your browser so press files and client photos never hit a server, and the TIFF is not watermarked.",
+      "Print vendors and layout apps still speak TIFF. A JPEG is already lossy, but wrapping it as TIFF stops further JPEG saves and matches what many RIPs and Photoshop print workflows expect. ToolPin converts in your browser so press files and client photos never hit a server, and the TIFF is not watermarked.",
     howToSteps: [
       "Drop a JPG you need to deliver as TIFF.",
       "The browser decodes the JPEG and writes a TIFF container.",
@@ -1199,9 +1199,9 @@ Browser encoding typically produces an RGB TIFF, 8-bit, often without CMYK. That
 
 Multi-page TIFF (from scanners) is also out of scope when the input is a single JPEG. You get one page. Layers and alpha are not a JPEG feature, so the TIFF is a flattened bitmap.
 
-## Privacy and ApkaOS limits
+## Privacy and ToolPin limits
 
-The JPEG never uploads to apkaos.in. Wedding photos headed to an album printer, ID shots, and unpublished editorial pictures stay on the device. 250 MB input cap; output TIFF can be larger and may strain a download on mobile data—prefer desktop. No signup, no watermark.
+The JPEG never uploads to toolpin.online. Wedding photos headed to an album printer, ID shots, and unpublished editorial pictures stay on the device. 250 MB input cap; output TIFF can be larger and may strain a download on mobile data—prefer desktop. No signup, no watermark.
 
 EXIF may be reduced. Some print shops use EXIF DPI tags; you may need to set pixel dimensions or DPI in Photoshop after download. Orientation tags may already have been baked in by the decoder, which is usually what you want so the TIFF is not sideways.
 
@@ -1223,7 +1223,7 @@ If the destination is the web, TIFF is the wrong format—use WebP or JPEG. If y
       {
         question: "Are my photos uploaded?",
         answer:
-          "No. ApkaOS converts in the browser. Print files stay on your device.",
+          "No. ToolPin converts in the browser. Print files stay on your device.",
       },
       {
         question: "Why is the TIFF so big?",
@@ -1253,16 +1253,16 @@ If the destination is the web, TIFF is the wrong format—use WebP or JPEG. If y
       "jpeg for print tiff",
       "jpg to tiff print shop",
       "jpg to tiff no upload",
-      "apkaos tiff",
+      "toolpin tiff",
     ],
   },
 
   "tiff-to-jpg": {
     seoTitle: "TIFF to JPG Converter Online – Share Scanner Files",
     seoDescription:
-      "Turn huge TIFF scans into JPEG photos you can email and upload. Free in your browser on ApkaOS—no signup, no watermark, files never leave your device.",
+      "Turn huge TIFF scans into JPEG photos you can email and upload. Free in your browser on ToolPin—no signup, no watermark, files never leave your device.",
     intro:
-      "Scanner software loves TIFF: lossless, huge, sometimes multi-page. Email and websites do not. Converting TIFF to JPG is how a 40 MB page becomes a 1 MB photo you can actually send. ApkaOS decodes in the browser so legal scans and artwork stay on your machine, and the JPEG has no watermark.",
+      "Scanner software loves TIFF: lossless, huge, sometimes multi-page. Email and websites do not. Converting TIFF to JPG is how a 40 MB page becomes a 1 MB photo you can actually send. ToolPin decodes in the browser so legal scans and artwork stay on your machine, and the JPEG has no watermark.",
     howToSteps: [
       "Drop a TIFF from a scanner, camera, or print archive.",
       "The browser decodes the bitmap and encodes a JPEG.",
@@ -1291,7 +1291,7 @@ Keep the TIFF if the scan still has a job to do. Once you only have JPEG, heavy 
 
 TIFF is a family. Some files are uncompressed RGB. Some are LZW or ZIP. Some are JPEG-in-TIFF. Some are 1-bit black-and-white at 600 DPI (great for text, enormous in pixels). Some are 16-bit. A browser decoder may not understand every flavor—Fax Group 4, unusual tiles, or 32-bit float. If a file fails, try opening it in Preview or IrfanView and re-saving a simpler TIFF, or export JPEG there.
 
-Multi-page TIFFs (a 12-page contract in one file) are a scan-shop staple. A canvas converter typically gives you one image—the first page—not a ZIP of JPEGs. For full documents, a dedicated multi-page splitter or a PDF workflow is more appropriate. ApkaOS PDF tools may be a better path if the goal is a shareable multi-page file rather than a photo.
+Multi-page TIFFs (a 12-page contract in one file) are a scan-shop staple. A canvas converter typically gives you one image—the first page—not a ZIP of JPEGs. For full documents, a dedicated multi-page splitter or a PDF workflow is more appropriate. ToolPin PDF tools may be a better path if the goal is a shareable multi-page file rather than a photo.
 
 1-bit text scans can look muddy as JPEG. JPEG is for continuous tone. If the TIFF is a contract, consider PDF (from the scanner or a PDF printer) instead of JPEG, or use a high JPEG quality and do not downsample below readable type. Color photos and magazines convert more happily.
 
@@ -1301,9 +1301,9 @@ A 300 DPI A4 color TIFF can be 25 MB; a decent JPEG of the same page is often 0.
 
 Transparency is rare in scan TIFFs. If present, JPEG will flatten it.
 
-## Privacy on ApkaOS
+## Privacy on ToolPin
 
-This is one of the more sensitive conversions people do: IDs, bank statements, medical records, exam papers. Processing is local. The TIFF is not sent to apkaos.in. 250 MB limit. No signup, no watermark. After you download, you may still want Strip Image Metadata on the JPEG if the scanner embedded a device serial or your name in tags—then delete the JPEG from Downloads when the portal is done.
+This is one of the more sensitive conversions people do: IDs, bank statements, medical records, exam papers. Processing is local. The TIFF is not sent to toolpin.online. 250 MB limit. No signup, no watermark. After you download, you may still want Strip Image Metadata on the JPEG if the scanner embedded a device serial or your name in tags—then delete the JPEG from Downloads when the portal is done.
 
 Browser memory can choke on 600 DPI full-color A3. Try a desktop, close tabs, or downsample in the scanner software first.
 
@@ -1323,7 +1323,7 @@ Compress JPG if needed. Rotate if the copier saved landscape pages as portrait w
           "Typically you get the primary page as one JPEG. Multi-page stacks belong in PDF or a splitter.",
       },
       {
-        question: "Does ApkaOS store my scan?",
+        question: "Does ToolPin store my scan?",
         answer:
           "No. Decode and encode run in the browser. Sensitive TIFFs never go to our servers.",
       },
@@ -1355,16 +1355,16 @@ Compress JPG if needed. Rotate if the copier saved landscape pages as portrait w
       "scanner tiff to jpeg",
       "compress tiff to jpg",
       "tiff to jpg no upload",
-      "apkaos tiff jpg",
+      "toolpin tiff jpg",
     ],
   },
 
   "bmp-to-png": {
     seoTitle: "BMP to PNG Converter Online – Shrink Windows Bitmaps",
     seoDescription:
-      "Convert uncompressed BMP screenshots and icons to PNG in your browser. Same pixels, far smaller files. Free on ApkaOS—no signup, no watermark, no upload.",
+      "Convert uncompressed BMP screenshots and icons to PNG in your browser. Same pixels, far smaller files. Free on ToolPin—no signup, no watermark, no upload.",
     intro:
-      "BMP is Windows’ old uncompressed bitmap. A simple screenshot can be 10 MB for no good reason. PNG stores the same pixels losslessly at a fraction of the size and works on every platform. ApkaOS converts in your browser so legacy icons and snips never leave the device, and the PNG is not watermarked.",
+      "BMP is Windows’ old uncompressed bitmap. A simple screenshot can be 10 MB for no good reason. PNG stores the same pixels losslessly at a fraction of the size and works on every platform. ToolPin converts in your browser so legacy icons and snips never leave the device, and the PNG is not watermarked.",
     howToSteps: [
       "Drop a .bmp file from Paint, an old game, or a Windows screenshot tool.",
       "The browser reads the bitmap and writes a PNG.",
@@ -1399,9 +1399,9 @@ This conversion does not add detail. A 32×32 icon stays 32×32. If you needed a
 
 macOS Preview and many Linux tools open BMP, but the web does not. <img src="file.bmp"> is not a thing you want in production. Chat apps may refuse BMP. Email scanners sometimes flag unusual attachments. PNG is the interchange format. After conversion you can still go to WebP or AVIF for the live site, or to ICO via other tooling if you are building a Windows icon—but PNG is the right first step.
 
-## ApkaOS handling
+## ToolPin handling
 
-The BMP is decoded in the browser and encoded as PNG. No upload to apkaos.in. That matters if the BMP is a screenshot of a dashboard or a patient list from an old Windows app. 250 MB limit; uncompressed BMP hits that faster than JPEG would, because BMP is already huge. No signup, no watermark.
+The BMP is decoded in the browser and encoded as PNG. No upload to toolpin.online. That matters if the BMP is a screenshot of a dashboard or a patient list from an old Windows app. 250 MB limit; uncompressed BMP hits that faster than JPEG would, because BMP is already huge. No signup, no watermark.
 
 Metadata on BMP is minimal. PNG may not carry BMP header quirks. You get pixels. If you needed an exact binary copy for forensics, do not convert; keep the BMP.
 
@@ -1423,7 +1423,7 @@ Compress PNG if the screenshot is still heavy (busy photos inside the snip). Res
       {
         question: "Is the BMP uploaded?",
         answer:
-          "No. Conversion stays in the browser on ApkaOS.",
+          "No. Conversion stays in the browser on ToolPin.",
       },
       {
         question: "Why was BMP so large?",
@@ -1453,16 +1453,16 @@ Compress PNG if the screenshot is still heavy (busy photos inside the snip). Res
       "windows bitmap to png",
       "compress bmp",
       "bmp to png no upload",
-      "apkaos bmp",
+      "toolpin bmp",
     ],
   },
 
   "png-to-avif": {
     seoTitle: "PNG to AVIF Converter Online – Tiny Graphics Files",
     seoDescription:
-      "Convert PNG to AVIF for next-gen web delivery, with alpha where supported. Free in your browser on ApkaOS—no signup, no watermark, and no server upload.",
+      "Convert PNG to AVIF for next-gen web delivery, with alpha where supported. Free in your browser on ToolPin—no signup, no watermark, and no server upload.",
     intro:
-      "PNG is the designer’s export; AVIF is the smallest still format many browsers now understand. Converting PNG to AVIF can crush photographic cutouts and detailed illustrations while keeping a path to transparency. ApkaOS encodes locally—no account, no watermark, and the PNG never leaves your device.",
+      "PNG is the designer’s export; AVIF is the smallest still format many browsers now understand. Converting PNG to AVIF can crush photographic cutouts and detailed illustrations while keeping a path to transparency. ToolPin encodes locally—no account, no watermark, and the PNG never leaves your device.",
     howToSteps: [
       "Drop a PNG that you plan to serve on a modern website.",
       "Wait for AVIF encode; large files can take longer than WebP.",
@@ -1485,7 +1485,7 @@ Compress PNG if the screenshot is still heavy (busy photos inside the snip). Res
 
 Exporting PNG from Figma or Photoshop is correct for source control. Serving that PNG to every visitor is often not. Photographic PNGs are huge because lossless compression cannot discard grain. AVIF can. On a product cutout, it is common to see 70–90% size cuts at a quality that still looks like the PNG on a phone. That is the reason this converter exists: take the graphic you already have and make a next-gen derivative for the web.
 
-Keep the PNG. AVIF is harder to edit in some apps, slower to encode, and still missing from email and a long tail of WebViews. The pipeline is PNG (master) → AVIF (primary web) + WebP (fallback). ApkaOS can also do PNG to WebP if you are not ready for AVIF yet.
+Keep the PNG. AVIF is harder to edit in some apps, slower to encode, and still missing from email and a long tail of WebViews. The pipeline is PNG (master) → AVIF (primary web) + WebP (fallback). ToolPin can also do PNG to WebP if you are not ready for AVIF yet.
 
 ## Alpha, type, and when AVIF misbehaves
 
@@ -1499,7 +1499,7 @@ You cannot recover what a lossy AVIF drops. Do not replace the only copy of a lo
 
 Encoding AVIF in a tab is heavy. Phones may take a while or fail. Use desktop for 4K PNGs. Decoding AVIF for visitors is widely available in current Chrome, Firefox, and Safari, but not in many mail clients or in-app browsers. Always provide a fallback.
 
-ApkaOS runs locally. Brand PNGs are not uploaded to apkaos.in. 250 MB limit; memory and time will bite first. No watermark, no account. Animated PNG (APNG) becomes a still AVIF.
+ToolPin runs locally. Brand PNGs are not uploaded to toolpin.online. 250 MB limit; memory and time will bite first. No watermark, no account. Animated PNG (APNG) becomes a still AVIF.
 
 Color: 16-bit or wide-gamut PNG will be reduced to what the canvas can draw, typically 8-bit sRGB. That matches the web. It does not match a print master—keep TIFF or PDF for print.
 
@@ -1519,7 +1519,7 @@ In HTML, <picture> with AVIF then WebP then PNG/JPEG. In Next.js or similar, let
           "It can. Verify the cutout in a current browser and keep a PNG/WebP fallback.",
       },
       {
-        question: "Is my PNG uploaded to ApkaOS?",
+        question: "Is my PNG uploaded to ToolPin?",
         answer:
           "No. Encoding happens in the browser. We do not store the file.",
       },
@@ -1551,16 +1551,16 @@ In HTML, <picture> with AVIF then WebP then PNG/JPEG. In Next.js or similar, let
       "transparent avif",
       "png hero to avif",
       "png to avif no upload",
-      "apkaos png avif",
+      "toolpin png avif",
     ],
   },
 
   "compress-jpg": {
     seoTitle: "Compress JPG Online – Shrink Photos Without Signup",
     seoDescription:
-      "Reduce JPEG file size in your browser while keeping photos usable for web and email. Free on ApkaOS—no account, no watermark, originals stay on your device.",
+      "Reduce JPEG file size in your browser while keeping photos usable for web and email. Free on ToolPin—no account, no watermark, originals stay on your device.",
     intro:
-      "Camera JPEGs and phone exports are often far larger than the pixels you actually display. Compressing JPG is the straightforward way to hit a 1 MB form cap or a faster homepage without converting formats. ApkaOS recompresses in your browser—no signup, no watermark, and the photo is not uploaded to apkaos.in.",
+      "Camera JPEGs and phone exports are often far larger than the pixels you actually display. Compressing JPG is the straightforward way to hit a 1 MB form cap or a faster homepage without converting formats. ToolPin recompresses in your browser—no signup, no watermark, and the photo is not uploaded to toolpin.online.",
     howToSteps: [
       "Drop a .jpg or .jpeg photo (up to 250 MB).",
       "Choose a quality that still looks acceptable at the size you will show it.",
@@ -1593,7 +1593,7 @@ Resolution is the other lever, and it is often the bigger one. A 4000-pixel JPEG
 
 Progressive JPEG (loads blurry then sharp) is a nice extra on the web; not every encoder emits it. Do not worry if the output is baseline sequential—portals do not care.
 
-## What ApkaOS does with the file
+## What ToolPin does with the file
 
 Recompression runs in the tab. Passport photos, medical images, and unpublished shoots are not uploaded. 250 MB limit. No account, no watermark. Canvas encode typically strips or reduces EXIF. That can be a privacy win (GPS gone) and a surprise if a lab used EXIF DPI. Orientation is usually baked in, which prevents sideways uploads.
 
@@ -1615,9 +1615,9 @@ Email: under 1–2 MB per image is polite. Many portals: 200–500 KB. Hero imag
           "Yes. This tool recompresses JPEG. It does not convert to WebP or PNG.",
       },
       {
-        question: "Are photos uploaded to ApkaOS?",
+        question: "Are photos uploaded to ToolPin?",
         answer:
-          "No. Compression runs in your browser. We do not store the image on apkaos.in.",
+          "No. Compression runs in your browser. We do not store the image on toolpin.online.",
       },
       {
         question: "Why didn’t the size drop much?",
@@ -1647,16 +1647,16 @@ Email: under 1–2 MB per image is polite. Many portals: 200–500 KB. Hero imag
       "jpg compressor no upload",
       "shrink jpeg for email",
       "compress jpg free",
-      "apkaos compress jpg",
+      "toolpin compress jpg",
     ],
   },
 
   "compress-png": {
     seoTitle: "Compress PNG Online Free – Smaller Graphics, Same Look",
     seoDescription:
-      "Optimize PNG files in your browser by tightening palettes and lossless packing. Free on ApkaOS—no signup, no watermark, graphics never leave your device.",
+      "Optimize PNG files in your browser by tightening palettes and lossless packing. Free on ToolPin—no signup, no watermark, graphics never leave your device.",
     intro:
-      "PNG does not have a JPEG-style quality slider in the same way, but it can still be overweight: 24-bit photos, unused chunks, or a palette that is larger than the art needs. Compressing PNG on ApkaOS tries to keep the graphic looking like itself while cutting bytes. It runs in your browser—no account, no watermark, no upload.",
+      "PNG does not have a JPEG-style quality slider in the same way, but it can still be overweight: 24-bit photos, unused chunks, or a palette that is larger than the art needs. Compressing PNG on ToolPin tries to keep the graphic looking like itself while cutting bytes. It runs in your browser—no account, no watermark, no upload.",
     howToSteps: [
       "Drop a PNG icon, screenshot, or graphic (up to 250 MB).",
       "Let the browser re-encode with a tighter palette or lossless packer.",
@@ -1679,7 +1679,7 @@ Email: under 1–2 MB per image is polite. Many portals: 200–500 KB. Hero imag
 
 JPEG compression throws away picture information. PNG compression, at its best, is lossless: it finds a cheaper way to store the same pixels (filters, zlib, indexed palettes). A logo with 12 colors does not need 24-bit PNG; an 8-bit palette PNG can be a tenth the size and look identical. A screenshot of a terminal is mostly flat color and compresses well. A PNG of a photograph will not shrink like a JPEG would, because lossless cannot discard grain. If your “PNG” is a camera photo, converting to JPEG or WebP is the real compressor. This tool is for graphics that must remain PNG.
 
-ApkaOS may use palette reduction tied to a quality-like control. That can become visually lossless for icons and slightly lossy for photos. Inspect the result. If you see banding in a sky, you needed a format change, not a tighter PNG.
+ToolPin may use palette reduction tied to a quality-like control. That can become visually lossless for icons and slightly lossy for photos. Inspect the result. If you see banding in a sky, you needed a format change, not a tighter PNG.
 
 ## Transparency and chunks
 
@@ -1715,9 +1715,9 @@ Masters: keep 24-bit PNG or SVG in the design folder. Delivery: compressed PNG f
           "It can be. Palette reduction is a mild quality trade. Compare the result, especially on photos and gradients.",
       },
       {
-        question: "Does ApkaOS upload my PNG?",
+        question: "Does ToolPin upload my PNG?",
         answer:
-          "No. Optimization runs in the browser. Files are not stored on apkaos.in.",
+          "No. Optimization runs in the browser. Files are not stored on toolpin.online.",
       },
       {
         question: "Will transparency survive?",
@@ -1747,16 +1747,16 @@ Masters: keep 24-bit PNG or SVG in the design folder. Delivery: compressed PNG f
       "png compressor no upload",
       "shrink png logo",
       "compress png free",
-      "apkaos compress png",
+      "toolpin compress png",
     ],
   },
 
   "compress-webp": {
-    seoTitle: "Compress WebP Images Online – Tighter Files | ApkaOS",
+    seoTitle: "Compress WebP Images Online – Tighter Files | ToolPin",
     seoDescription:
-      "Recompress WebP images in your browser for extra page-weight savings. Free on ApkaOS—no signup, no watermark, files stay on your device the whole time.",
+      "Recompress WebP images in your browser for extra page-weight savings. Free on ToolPin—no signup, no watermark, files stay on your device the whole time.",
     intro:
-      "WebP is already efficient, but exports from design tools and CMSs are not always tuned. Compressing WebP again can shave a hero down to the budget you set in Lighthouse. ApkaOS does it in the tab—no account, no watermark, and the WebP is not uploaded to our servers.",
+      "WebP is already efficient, but exports from design tools and CMSs are not always tuned. Compressing WebP again can shave a hero down to the budget you set in Lighthouse. ToolPin does it in the tab—no account, no watermark, and the WebP is not uploaded to our servers.",
     howToSteps: [
       "Drop a .webp still (up to 250 MB).",
       "Re-encode at a quality that still holds up at display size.",
@@ -1791,7 +1791,7 @@ Alpha should remain for transparent WebP. Check the matte. Animation is a separa
 
 If you still need more savings on a photographic hero and you control the HTML, AVIF may beat a third WebP pass. If a destination does not accept WebP, you are in the wrong tool—convert to JPEG. Compression does not change compatibility.
 
-## ApkaOS details
+## ToolPin details
 
 Processing is local. Campaign assets stay on the device. 250 MB limit. No signup, no watermark. Metadata is typically stripped on re-encode. That is usually what you want on the public web. Orientation and color go through the canvas: sRGB, 8-bit.
 
@@ -1815,7 +1815,7 @@ Set a per-image budget (for example 150 KB for a hero on 3G). Resize to 2× disp
       {
         question: "Is the file uploaded?",
         answer:
-          "No. ApkaOS recompresses in the browser and does not store the image.",
+          "No. ToolPin recompresses in the browser and does not store the image.",
       },
       {
         question: "Will transparency be kept?",
@@ -1845,16 +1845,16 @@ Set a per-image budget (for example 150 KB for a hero on 3G). Resize to 2× disp
       "webp compressor",
       "compress webp no upload",
       "shrink webp image",
-      "apkaos compress webp",
+      "toolpin compress webp",
     ],
   },
 
   "compress-gif": {
     seoTitle: "Compress GIF Online Free – Lighter Animations Fast",
     seoDescription:
-      "Shrink GIF animations and stills in your browser by tightening palettes and frames. Free on ApkaOS—no signup, no watermark, files stay on your device.",
+      "Shrink GIF animations and stills in your browser by tightening palettes and frames. Free on ToolPin—no signup, no watermark, files stay on your device.",
     intro:
-      "Animated GIFs are charming and notoriously heavy. A three-second clip can outweigh a short video. Compressing GIF tries to keep the loop while cutting colors and waste so chat apps and old CMS fields stop choking. ApkaOS works in the browser—no account, no watermark, and the GIF is not uploaded.",
+      "Animated GIFs are charming and notoriously heavy. A three-second clip can outweigh a short video. Compressing GIF tries to keep the loop while cutting colors and waste so chat apps and old CMS fields stop choking. ToolPin works in the browser—no account, no watermark, and the GIF is not uploaded.",
     howToSteps: [
       "Drop a .gif, still or animated (up to 250 MB).",
       "Wait while the browser re-encodes with a tighter palette.",
@@ -1885,11 +1885,11 @@ Color: 256 is the ceiling; many GIFs look fine at 64 or 128 colors, especially c
 
 Transparency: 1-bit. Compression should not invent soft alpha. Watch for a new matte color around edges.
 
-If the compressor flattens animation to a still, stop and keep the original—you needed a tool that rewrites the frame list. ApkaOS aims to optimize GIFs, but extremely large or oddly constructed files (huge canvas, disposal tricks) can be too much for a browser.
+If the compressor flattens animation to a still, stop and keep the original—you needed a tool that rewrites the frame list. ToolPin aims to optimize GIFs, but extremely large or oddly constructed files (huge canvas, disposal tricks) can be too much for a browser.
 
 ## Privacy, limits, and honesty
 
-GIFs from group chats can be sensitive or just embarrassing. Processing is local; they are not uploaded to apkaos.in. 250 MB limit. A 200 MB GIF will likely freeze a phone tab—that file should have been a video anyway. No signup, no watermark.
+GIFs from group chats can be sensitive or just embarrassing. Processing is local; they are not uploaded to toolpin.online. 250 MB limit. A 200 MB GIF will likely freeze a phone tab—that file should have been a video anyway. No signup, no watermark.
 
 Metadata on GIF is uncommon. Still, re-encode typically produces a clean file without comment blocks.
 
@@ -1909,9 +1909,9 @@ If the compressed GIF is still several megabytes, convert the motion to video an
           "That is the goal for animated inputs. Always play the output; odd GIFs can flatten in a browser encoder.",
       },
       {
-        question: "Does ApkaOS upload my GIF?",
+        question: "Does ToolPin upload my GIF?",
         answer:
-          "No. Compression runs in the browser. Nothing is stored on apkaos.in.",
+          "No. Compression runs in the browser. Nothing is stored on toolpin.online.",
       },
       {
         question: "Why is it still several megabytes?",
@@ -1941,16 +1941,16 @@ If the compressed GIF is still several megabytes, convert the motion to video an
       "compress animated gif",
       "gif compressor no upload",
       "shrink gif",
-      "apkaos compress gif",
+      "toolpin compress gif",
     ],
   },
 
   "resize-image": {
     seoTitle: "Resize Image Online Free – Set Exact Width & Height",
     seoDescription:
-      "Change JPG, PNG, and WebP dimensions in your browser for web, forms, and retina. Free on ApkaOS—no signup, no watermark, files never leave your device.",
+      "Change JPG, PNG, and WebP dimensions in your browser for web, forms, and retina. Free on ToolPin—no signup, no watermark, files never leave your device.",
     intro:
-      "Most oversized files are oversized in pixels, not just in quality. A 4000-pixel photo displayed at 800 pixels is wasted data and a slow page. Resizing to the width you actually need is the highest-leverage image fix. ApkaOS scales in your browser—no account, no watermark, and the original stays on your device.",
+      "Most oversized files are oversized in pixels, not just in quality. A 4000-pixel photo displayed at 800 pixels is wasted data and a slow page. Resizing to the width you actually need is the highest-leverage image fix. ToolPin scales in your browser—no account, no watermark, and the original stays on your device.",
     howToSteps: [
       "Drop a JPG, PNG, or WebP you want at a new size.",
       "Set a target width, height, or both while keeping the aspect ratio unless you mean to stretch.",
@@ -1987,9 +1987,9 @@ Formats: JPEG for photos, PNG for graphics with type or alpha, WebP when the des
 
 Downscaling photos usually looks fine; it can even hide noise. Downscaling UI screenshots can make text muddy—capture at the size you need when you can. Algorithms (bilinear, bicubic, better modern filters) differ at edges. Browser resize is good enough for web and forms; it is not a print-lab drum scan.
 
-## ApkaOS, privacy, limits
+## ToolPin, privacy, limits
 
-Scaling runs in the tab. School photos, IDs, and unreleased products are not uploaded to apkaos.in. 250 MB input. A 100-megapixel file may fail on a phone even under the cap. No signup, no watermark. EXIF is often dropped; the new pixel dimensions are the truth, not an old DPI tag.
+Scaling runs in the tab. School photos, IDs, and unreleased products are not uploaded to toolpin.online. 250 MB input. A 100-megapixel file may fail on a phone even under the cap. No signup, no watermark. EXIF is often dropped; the new pixel dimensions are the truth, not an old DPI tag.
 
 After resize, compress if needed. Strip metadata before public posts. Rotate first if the photo is sideways—resizing a sideways original just makes a sideways smaller original.
 
@@ -2009,7 +2009,7 @@ Website content width: often 1200–1600 px. Open Graph: 1200×630. Instagram fe
           "JPG, PNG, and WebP. Convert other formats first if needed.",
       },
       {
-        question: "Does the image upload to ApkaOS?",
+        question: "Does the image upload to ToolPin?",
         answer:
           "No. Scaling happens in your browser. We do not store the file.",
       },
@@ -2041,16 +2041,16 @@ Website content width: often 1200–1600 px. Open Graph: 1200×630. Instagram fe
       "resize jpg png webp",
       "resize photo for web",
       "resize image no upload",
-      "apkaos resize",
+      "toolpin resize",
     ],
   },
 
   "crop-image": {
     seoTitle: "Crop Image Online – Exact Aspect Ratios, No Signup",
     seoDescription:
-      "Crop JPG, PNG, and WebP photos in your browser for Instagram, thumbnails, and focus. Free on ApkaOS—no account, no watermark, files stay on your device.",
+      "Crop JPG, PNG, and WebP photos in your browser for Instagram, thumbnails, and focus. Free on ToolPin—no account, no watermark, files stay on your device.",
     intro:
-      "Cropping is composition, not compression. You throw away edges so the subject fills the frame a platform expects: a square avatar, a 16:9 thumbnail, a 4:5 portrait. ApkaOS lets you crop JPG, PNG, and WebP locally—no signup, no watermark, and the unused pixels never go to a server.",
+      "Cropping is composition, not compression. You throw away edges so the subject fills the frame a platform expects: a square avatar, a 16:9 thumbnail, a 4:5 portrait. ToolPin lets you crop JPG, PNG, and WebP locally—no signup, no watermark, and the unused pixels never go to a server.",
     howToSteps: [
       "Drop a JPG, PNG, or WebP and open the crop editor.",
       "Drag the box to keep the subject; lock an aspect ratio if a platform requires one.",
@@ -2087,9 +2087,9 @@ Cropping JPEG and saving JPEG again is another encode. Crop from the highest-qua
 
 Do not crop so tightly that you then upscale. Keep enough pixels for the destination. A 200-pixel crop sent to a 1080 story will look like mush.
 
-## Privacy and ApkaOS
+## Privacy and ToolPin
 
-The editor runs in the browser. IDs, kids’ photos, and unreleased campaigns are not uploaded to apkaos.in. 250 MB limit. No account, no watermark. EXIF GPS often drops on export—good when you crop a home interior for a listing and do not want coordinates still in the file. Use Strip Image Metadata if you need to be sure.
+The editor runs in the browser. IDs, kids’ photos, and unreleased campaigns are not uploaded to toolpin.online. 250 MB limit. No account, no watermark. EXIF GPS often drops on export—good when you crop a home interior for a listing and do not want coordinates still in the file. Use Strip Image Metadata if you need to be sure.
 
 Very large panoramas can be awkward to crop on a phone; use a desktop for precision.
 
@@ -2109,7 +2109,7 @@ Instagram feed portrait: 4:5, 1080×1350. Landscape feed: 1.91:1, 1080×566. Sto
           "No. Crop removes edges. Resize scales what remains. Many workflows need both.",
       },
       {
-        question: "Are images uploaded to ApkaOS?",
+        question: "Are images uploaded to ToolPin?",
         answer:
           "No. The crop editor runs in your browser. Files are not stored on our servers.",
       },
@@ -2141,16 +2141,16 @@ Instagram feed portrait: 4:5, 1080×1350. Landscape feed: 1.91:1, 1080×566. Sto
       "crop instagram photo",
       "crop jpg png webp",
       "crop image no upload",
-      "apkaos crop",
+      "toolpin crop",
     ],
   },
 
   "rotate-image": {
     seoTitle: "Rotate Image Online Free – Fix Sideways Phone Shots",
     seoDescription:
-      "Rotate JPG, PNG, and WebP by 90, 180, or 270 degrees in your browser. Fix EXIF-sideways photos. Free on ApkaOS—no signup, no watermark, nothing uploaded.",
+      "Rotate JPG, PNG, and WebP by 90, 180, or 270 degrees in your browser. Fix EXIF-sideways photos. Free on ToolPin—no signup, no watermark, nothing uploaded.",
     intro:
-      "Phones often store a landscape photo with a sideways buffer plus an EXIF orientation flag. Some websites ignore the flag and show a person on their side. Rotating the pixels themselves fixes that for every viewer. ApkaOS rotates JPG, PNG, and WebP in your browser—no account, no watermark, nothing uploaded.",
+      "Phones often store a landscape photo with a sideways buffer plus an EXIF orientation flag. Some websites ignore the flag and show a person on their side. Rotating the pixels themselves fixes that for every viewer. ToolPin rotates JPG, PNG, and WebP in your browser—no account, no watermark, nothing uploaded.",
     howToSteps: [
       "Drop a sideways or upside-down JPG, PNG, or WebP.",
       "Choose 90°, 180°, or 270° so the subject stands the right way up.",
@@ -2185,9 +2185,9 @@ PNG and WebP also re-encode through the canvas. PNG should remain visually lossl
 
 A transparent PNG stays transparent; you are only moving pixels. Animated formats are not the target—rotate a still. If a GIF is sideways, convert or rotate in a GIF-aware editor so every frame turns.
 
-## Privacy and ApkaOS
+## Privacy and ToolPin
 
-Rotation is local. The photo of your house, your child, or your ID is not sent to apkaos.in. 250 MB limit. No signup, no watermark. Because canvas export drops a lot of EXIF, GPS may disappear as a side effect. If you needed tags kept, this is the wrong environment. If you needed tags gone, even better—or run Strip Image Metadata.
+Rotation is local. The photo of your house, your child, or your ID is not sent to toolpin.online. 250 MB limit. No signup, no watermark. Because canvas export drops a lot of EXIF, GPS may disappear as a side effect. If you needed tags kept, this is the wrong environment. If you needed tags gone, even better—or run Strip Image Metadata.
 
 Some files look correct in the tool preview (the browser applied EXIF) and still download sideways if the output did not bake pixels. Preview the downloaded file in a dumb viewer (a CMS preview, Windows Photos with tags ignored, or upload a test). The whole point is that the pixels stand up without a tag.
 
@@ -2207,9 +2207,9 @@ Resize and compress for the destination. Crop if rotation revealed extra sensor 
           "The phone honors EXIF orientation. Many upload forms display raw pixels. Baking rotation in fixes that.",
       },
       {
-        question: "Does ApkaOS upload the photo?",
+        question: "Does ToolPin upload the photo?",
         answer:
-          "No. Rotation runs in the browser. Nothing is stored on apkaos.in.",
+          "No. Rotation runs in the browser. Nothing is stored on toolpin.online.",
       },
       {
         question: "Can I rotate by 15 degrees?",
@@ -2239,16 +2239,16 @@ Resize and compress for the destination. Crop if rotation revealed extra sensor 
       "rotate jpg 90 degrees",
       "exif orientation fix",
       "rotate image no upload",
-      "apkaos rotate",
+      "toolpin rotate",
     ],
   },
 
   "flip-image": {
     seoTitle: "Flip Image Online – Mirror Photos Horizontally Fast",
     seoDescription:
-      "Mirror JPG, PNG, and WebP horizontally or vertically in your browser. Fix selfies and product shots. Free on ApkaOS—no signup, no watermark, no upload.",
+      "Mirror JPG, PNG, and WebP horizontally or vertically in your browser. Fix selfies and product shots. Free on ToolPin—no signup, no watermark, no upload.",
     intro:
-      "A flip mirrors pixels: left becomes right, or top becomes bottom. It is how you correct a selfie that feels “off,” match a product to a storefront photo, or reverse a scan that went through a copier as a mirror. ApkaOS flips JPG, PNG, and WebP in the browser—no account, no watermark, files stay on your device.",
+      "A flip mirrors pixels: left becomes right, or top becomes bottom. It is how you correct a selfie that feels “off,” match a product to a storefront photo, or reverse a scan that went through a copier as a mirror. ToolPin flips JPG, PNG, and WebP in the browser—no account, no watermark, files stay on your device.",
     howToSteps: [
       "Drop a JPG, PNG, or WebP that needs a mirror.",
       "Flip horizontally (mirror) or vertically (upside-down mirror) as required.",
@@ -2285,9 +2285,9 @@ A flip is a pixel remap. In a perfect lossless pipeline it does not soften the i
 
 You cannot flip animation frames here as a GIF timeline; this is for still JPG/PNG/WebP.
 
-## Privacy and ApkaOS
+## Privacy and ToolPin
 
-The mirror happens in the tab. Photos are not uploaded to apkaos.in. 250 MB limit. No account, no watermark. EXIF, including GPS and camera make, is often stripped on export. A flipped interior shot of a home for sale should still have GPS removed before public posting—use Strip Image Metadata if the export kept tags.
+The mirror happens in the tab. Photos are not uploaded to toolpin.online. 250 MB limit. No account, no watermark. EXIF, including GPS and camera make, is often stripped on export. A flipped interior shot of a home for sale should still have GPS removed before public posting—use Strip Image Metadata if the export kept tags.
 
 Some EXIF already contains an orientation or a “mirrored” flag from phones. Baking the flip into pixels avoids depending on that flag.
 
@@ -2307,7 +2307,7 @@ Horizontal flips are common in mockups: put a device in the other hand, face a p
           "Rotate turns the image. Flip mirrors it. Sideways photos need rotate; mirror-selfies need a horizontal flip.",
       },
       {
-        question: "Does ApkaOS upload my file?",
+        question: "Does ToolPin upload my file?",
         answer:
           "No. Flipping runs in the browser. We do not store the image.",
       },
@@ -2339,16 +2339,16 @@ Horizontal flips are common in mockups: put a device in the other hand, face a p
       "mirror selfie",
       "flip jpg png",
       "flip image no upload",
-      "apkaos flip",
+      "toolpin flip",
     ],
   },
 
   "strip-metadata": {
     seoTitle: "Strip Image Metadata Online – Remove EXIF GPS Data",
     seoDescription:
-      "Remove EXIF, GPS, and camera tags from JPG, PNG, and WebP in your browser. Share photos without location. Free on ApkaOS—no signup, no upload, no watermark.",
+      "Remove EXIF, GPS, and camera tags from JPG, PNG, and WebP in your browser. Share photos without location. Free on ToolPin—no signup, no upload, no watermark.",
     intro:
-      "Photos hide more than pixels. EXIF can store GPS, camera serials, timestamps, and software names. Before you post a home listing, a child’s picture, or a document scan, stripping metadata is the privacy step most people skip. ApkaOS removes tags in your browser—the image never goes to a server, and nothing is watermarked.",
+      "Photos hide more than pixels. EXIF can store GPS, camera serials, timestamps, and software names. Before you post a home listing, a child’s picture, or a document scan, stripping metadata is the privacy step most people skip. ToolPin removes tags in your browser—the image never goes to a server, and nothing is watermarked.",
     howToSteps: [
       "Drop a JPG, PNG, or WebP you plan to share publicly.",
       "The browser re-encodes a copy without EXIF, GPS, and similar tag blocks.",
@@ -2375,7 +2375,7 @@ Stripping metadata is the act of writing a new image file that contains the pixe
 
 ## Why a browser tool is the right place to do it
 
-Many “EXIF removers” ask you to upload the photo to a server, which is a poor joke: you just sent GPS to a stranger in order to delete GPS. ApkaOS re-encodes in the tab. The file does not go to apkaos.in. You download a clean copy. Keep the original in a private album if you still want the map pin for your own travel log.
+Many “EXIF removers” ask you to upload the photo to a server, which is a poor joke: you just sent GPS to a stranger in order to delete GPS. ToolPin re-encodes in the tab. The file does not go to toolpin.online. You download a clean copy. Keep the original in a private album if you still want the map pin for your own travel log.
 
 Re-encoding has a cost. JPEG will be decoded and saved again, so you may see a slight quality shift and a different file size. That is the trade for a copy that no longer carries the APP1 EXIF segment. If you need a truly lossless JPEG EXIF strip, specialized tools can rewrite segments without touching MCU data; a canvas-based web tool generally cannot. For privacy before a public post, re-encode is the standard, acceptable approach. For a forensics archive, do not re-encode—work on a copy with a dedicated EXIF editor.
 
@@ -2385,7 +2385,7 @@ PNG and WebP similarly lose ancillary chunks on canvas write. Color may be flatt
 
 Writing on the image, watermarks, faces, screenshots of chat names, and reflected documents in a mirror are in the pixels. Crop them or redact them separately. Thumbnail EXIF (a tiny preview inside the JPEG) usually goes away with a full re-encode, which is good—old thumbnails have leaked uncropped versions before. Maker notes that some cameras bury may or may not all vanish; a second pass through a dedicated inspector (exiftool on your machine) is wise for high-risk files.
 
-## Limits on ApkaOS
+## Limits on ToolPin
 
 JPG, PNG, and WebP, up to 250 MB, in the browser, no signup, no watermark. Very large files follow the same memory rules as other image tools. After you strip, verify with an inspector if the stakes are high: “Properties” on Windows, “Get Info” on a Mac, or a local EXIF viewer. Then upload the cleaned file, not the original sitting next to it in Downloads.
 
@@ -2435,7 +2435,7 @@ Pair with crop (remove a house number in the frame), resize (do not ship 12 MP o
       "exif cleaner browser",
       "strip jpeg metadata",
       "remove photo location",
-      "apkaos strip metadata",
+      "toolpin strip metadata",
     ],
   },
 };

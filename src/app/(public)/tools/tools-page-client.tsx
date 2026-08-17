@@ -45,7 +45,7 @@ export default function ToolsPageClient() {
         <span className="text-metallic-gold">Free conversion tools</span>
       </h1>
       <p className="mt-4 max-w-3xl leading-8 text-muted-foreground">
-        Browse {tools.length} ApkaOS utilities for images, PDFs, Office documents, and text. Most tools process files
+        Browse {tools.length} ToolPin utilities for images, PDFs, Office documents, and text. Most tools process files
         in your browser — no account, no watermark. Use search or filter by category to find a converter.
       </p>
       {selectedCategory ? (

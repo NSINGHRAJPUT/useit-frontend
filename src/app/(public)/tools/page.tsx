@@ -6,9 +6,9 @@ import { tools } from "@/constants/site";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "All Conversion Tools",
-  description: `Browse ${tools.length} free ApkaOS image, PDF, document, and text tools. Convert, compress, merge, and format files in your browser.`,
+  description: `Browse ${tools.length} free ToolPin image, PDF, document, and text tools. Convert, compress, merge, and format files in your browser.`,
   path: "/tools",
-  keywords: ["online conversion tools", "image converter", "pdf tools", "document converter", "apkaos tools"],
+  keywords: ["online conversion tools", "image converter", "pdf tools", "document converter", "toolpin tools"],
 });
 
 export default function ToolsPage() {

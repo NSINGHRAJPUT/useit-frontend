@@ -6,8 +6,8 @@ import { siteConfig } from "@/constants/site";
 export const defaultSiteSettings: SiteSettings = {
   siteName: siteConfig.name,
   siteDescription: siteConfig.description,
-  defaultTitle: "ApkaOS - Free Online Image, PDF & Document Tools",
-  titleTemplate: "%s | ApkaOS",
+  defaultTitle: "ToolPin - Free Online Image, PDF & Document Tools",
+  titleTemplate: "%s | ToolPin",
   keywords: [
     "free online converter",
     "image converter",
@@ -20,10 +20,10 @@ export const defaultSiteSettings: SiteSettings = {
     "online file conversion",
     "webp converter",
     "json formatter",
-    "apkaos",
+    "toolpin",
   ],
   twitterCard: "summary_large_image",
-  organizationName: "ApkaOS",
+  organizationName: "ToolPin",
   organizationEmail: siteConfig.contactEmail,
   organizationLogo: `${siteConfig.url}/icon`,
   organizationSameAs: [],
@@ -143,7 +143,7 @@ export function buildBlogMetadata(post: BlogPost, settings: SiteSettings): Metad
       type: "article",
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
-      authors: [post.author || "ApkaOS"],
+      authors: [post.author || "ToolPin"],
       tags: post.tags ?? [],
       images: [{ url: image, alt: post.title }],
     },
@@ -201,7 +201,7 @@ export function buildArticleJsonLd(post: BlogPost, settings: SiteSettings) {
     description: post.excerpt,
     author: {
       "@type": "Organization",
-      name: post.author || "ApkaOS",
+      name: post.author || "ToolPin",
     },
     publisher: {
       "@type": "Organization",

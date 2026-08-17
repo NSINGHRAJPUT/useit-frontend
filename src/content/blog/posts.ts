@@ -6,9 +6,9 @@ export const localBlogPosts: BlogPost[] = [
     slug: "jpg-vs-png-vs-webp",
     excerpt:
       "A practical guide to choosing JPEG, PNG, or WebP for photos, logos, and pages—plus when to convert and what to keep as a master file.",
-    content: `Picking an image format is less about fashion and more about what the file has to do. A camera photo, a logo with a transparent edge, and a homepage hero are three different jobs. JPEG, PNG, and WebP each solve one of those jobs well and the others poorly. This guide is the decision process we use on ApkaOS when someone asks which export to keep.
+    content: `Picking an image format is less about fashion and more about what the file has to do. A camera photo, a logo with a transparent edge, and a homepage hero are three different jobs. JPEG, PNG, and WebP each solve one of those jobs well and the others poorly. This guide is the decision process we use on ToolPin when someone asks which export to keep.
 
-You do not need a graphics degree. You need a rule you can apply in thirty seconds, a fallback when a portal rejects the modern format, and a converter that does not upload unpublished work. That is what apkaos.in is for.
+You do not need a graphics degree. You need a rule you can apply in thirty seconds, a fallback when a portal rejects the modern format, and a converter that does not upload unpublished work. That is what toolpin.online is for.
 
 ## What each format is actually good at
 
@@ -24,7 +24,7 @@ If a job portal, university form, WhatsApp-to-email forward, or print shop says 
 
 Photos from a phone already are JPEG. Keep that file as the working original unless you still have a RAW. If you need the photo smaller for a 200 KB form, compress it as JPEG rather than switching formats first. If you need it on a modern website you control, convert a high-quality JPEG to WebP and keep the JPEG as fallback.
 
-On ApkaOS, PNG to JPG lives at /tools/png-to-jpg and WebP to JPG at /tools/webp-to-jpg. Both run in the browser, so ID photos and unpublished shoots never hit a server.
+On ToolPin, PNG to JPG lives at /tools/png-to-jpg and WebP to JPG at /tools/webp-to-jpg. Both run in the browser, so ID photos and unpublished shoots never hit a server.
 
 ## Use PNG when edges and holes matter
 
@@ -34,7 +34,7 @@ A PNG of a photograph is almost always the wrong archive. Design tools default t
 
 If you received a JPEG and you need a format that will not get worse each time you edit it, PNG is a reasonable working copy for crops and annotations. It will be larger. That is the point of lossless. Convert back to JPEG or WebP only when you publish.
 
-JPG to PNG is at /tools/jpg-to-png on apkaos.in. Use it for a one-off edit, not as a way to “improve” a photo. You cannot invent detail JPEG already discarded.
+JPG to PNG is at /tools/jpg-to-png on toolpin.online. Use it for a one-off edit, not as a way to “improve” a photo. You cannot invent detail JPEG already discarded.
 
 ## Use WebP when you control the HTML
 
@@ -42,7 +42,7 @@ WebP is the default we recommend for marketing sites, blogs, and shops once you 
 
 You still need a plan for stragglers. The usual pattern is a picture element with WebP first and JPEG second, or a CDN that reads the Accept header. Converting the file is the easy half. Wiring the page is the other half. If you only upload to Instagram, converting to WebP is wasted work—the network will recompress to JPEG anyway.
 
-Convert photos with JPG to WebP at /tools/jpg-to-webp. Convert graphics with PNG to WebP at /tools/png-to-webp. If a partner cannot open the result, reverse it with WebP to JPG or WebP to PNG. ApkaOS does not watermark the download and does not ask for an account.
+Convert photos with JPG to WebP at /tools/jpg-to-webp. Convert graphics with PNG to WebP at /tools/png-to-webp. If a partner cannot open the result, reverse it with WebP to JPG or WebP to PNG. ToolPin does not watermark the download and does not ask for an account.
 
 ## A thirty-second decision tree
 
@@ -60,15 +60,15 @@ If the file is already tiny, leave it. Converting a 12 KB thumbnail rarely pays.
 
 Do not treat a browser conversion as an archival master. Canvas encode often drops EXIF, may flatten color to sRGB, and for JPEG-to-WebP you are compressing a file that was already lossy. Keep the camera original or the design-tool export in a folder you do not overwrite. Publish copies.
 
-If the photo will be posted publicly, strip location tags after you convert. Strip Image Metadata on ApkaOS is at /tools/strip-metadata. Conversion alone may drop GPS, but “may” is not a privacy policy.
+If the photo will be posted publicly, strip location tags after you convert. Strip Image Metadata on ToolPin is at /tools/strip-metadata. Conversion alone may drop GPS, but “may” is not a privacy policy.
 
-ApkaOS on apkaos.in is the place to do the conversions without installing Photoshop and without uploading a shoot to a random server. Open the matching tool, drop the file, download the result, and keep the original until you have checked the new file at the size it will actually display.`,
-    author: "ApkaOS",
+ToolPin on toolpin.online is the place to do the conversions without installing Photoshop and without uploading a shoot to a random server. Open the matching tool, drop the file, download the result, and keep the original until you have checked the new file at the size it will actually display.`,
+    author: "ToolPin",
     categories: ["Image Tools", "Guides"],
     tags: ["jpg", "png", "webp", "image formats", "web performance"],
     seoTitle: "JPG vs PNG vs WebP: When to Use Each Format in 2026",
     seoDescription:
-      "Learn when to pick JPG, PNG, or WebP for photos, logos, and web pages. Practical rules, browser fallbacks, and free converters on ApkaOS at apkaos.in.",
+      "Learn when to pick JPG, PNG, or WebP for photos, logos, and web pages. Practical rules, browser fallbacks, and free converters on ToolPin at toolpin.online.",
     focusKeyword: "jpg vs png vs webp",
     faqs: [
       {
@@ -87,9 +87,9 @@ ApkaOS on apkaos.in is the place to do the conversions without installing Photos
           "Only as a working copy for edits. PNG will not restore detail JPEG already discarded, and the file will get much larger. Publish JPEG or WebP when you are done.",
       },
       {
-        question: "Where do I convert formats on ApkaOS?",
+        question: "Where do I convert formats on ToolPin?",
         answer:
-          "Use JPG to WebP at /tools/jpg-to-webp, PNG to WebP at /tools/png-to-webp, and the reverse tools when a partner needs JPEG or PNG. Conversions run in the browser on apkaos.in.",
+          "Use JPG to WebP at /tools/jpg-to-webp, PNG to WebP at /tools/png-to-webp, and the reverse tools when a partner needs JPEG or PNG. Conversions run in the browser on toolpin.online.",
       },
     ],
     status: "published",
@@ -103,7 +103,7 @@ ApkaOS on apkaos.in is the place to do the conversions without installing Photos
       "Make photos small enough for pages, email, and portals without the muddy WhatsApp look—resize first, then compress the right format.",
     content: `A phone photo is built for a 12-megapixel sensor, not for a 720-pixel blog column. That mismatch is why homepages crawl and why job portals reject a 6 MB headshot. Compression is the fix, but only if you treat it as a sequence: decide the display size, pick the format the destination accepts, then squeeze quality last. Doing those steps backwards is how pictures turn blotchy.
 
-ApkaOS compresses in your browser on apkaos.in. The original never uploads. That matters when the file is a passport photo, a product that is not public yet, or a family picture you only need smaller for email.
+ToolPin compresses in your browser on toolpin.online. The original never uploads. That matters when the file is a passport photo, a product that is not public yet, or a family picture you only need smaller for email.
 
 ## Why “just lower the quality slider” fails
 
@@ -119,7 +119,7 @@ Open Resize Image at /tools/resize-image when the long edge is far larger than t
 
 Resize, then look at the byte size. Many photos are already fine after a resize and need only a light compress. That is cheaper visually than hammering quality on a huge bitmap.
 
-ApkaOS resize stays in the tab. You download a new file. Keep the camera original if you might print or crop later. A resized copy is a publish artifact, not an archive.
+ToolPin resize stays in the tab. You download a new file. Keep the camera original if you might print or crop later. A resized copy is a publish artifact, not an archive.
 
 ## Match the compressor to the file
 
@@ -143,27 +143,27 @@ Product grids: consistency matters more than a single perfect file. Same long-ed
 
 Print: do not use a web compressor for a 300 DPI poster. You need pixels. Compress for the web copy, not the lab copy.
 
-## How to run this on ApkaOS without making a mess
+## How to run this on ToolPin without making a mess
 
 Work from a folder of originals. Make a sibling folder named for the destination (portal, blog, whatsapp). Resize into that folder, compress those copies, and never save over the originals.
 
-On apkaos.in, open the matching compressor, drop the copy, compare the new size with the limit you wrote down, and download. If the result looks crunchy, raise quality or start from a larger original—do not compress the already-compressed download again. If the size barely moved, the file was already crushed or the pixel count is still huge; go back to resize.
+On toolpin.online, open the matching compressor, drop the copy, compare the new size with the limit you wrote down, and download. If the result looks crunchy, raise quality or start from a larger original—do not compress the already-compressed download again. If the size barely moved, the file was already crushed or the pixel count is still huge; go back to resize.
 
 Browser re-encode often drops EXIF, including GPS. That is usually a gift for public posts. If you need location gone on purpose, run Strip Image Metadata at /tools/strip-metadata after you are happy with the pixels. If you needed camera tags kept for a catalog, a canvas compressor is the wrong environment.
 
-ApkaOS does not add a watermark and does not require an account. Individual files can be large (typical cap around 250 MB), but a 50-megapixel JPEG will still tax a phone tab because the whole bitmap sits in RAM. Use a laptop for huge files, or resize first.
+ToolPin does not add a watermark and does not require an account. Individual files can be large (typical cap around 250 MB), but a 50-megapixel JPEG will still tax a phone tab because the whole bitmap sits in RAM. Use a laptop for huge files, or resize first.
 
 ## A short checklist before you hit upload
 
 Confirm the destination format. Confirm the max bytes and, if stated, the max pixels. Resize. Compress once. Open the result at the size it will display, not only in a file-manager thumbnail. Keep the original until the portal shows a green tick. If the upload fails for a reason other than size, you still have the master.
 
-That is the whole craft. Smaller photos are a workflow, not a miracle button. ApkaOS gives you the buttons; the order you press them is what protects quality.`,
-    author: "ApkaOS",
+That is the whole craft. Smaller photos are a workflow, not a miracle button. ToolPin gives you the buttons; the order you press them is what protects quality.`,
+    author: "ToolPin",
     categories: ["Image Tools", "Guides"],
     tags: ["compress images", "jpg", "png", "webp", "web performance"],
     seoTitle: "Compress Images for the Web Without Losing Quality",
     seoDescription:
-      "Shrink photos for faster pages and email without muddy results. Resize first, pick the right compressor, then keep originals safe on ApkaOS at apkaos.in.",
+      "Shrink photos for faster pages and email without muddy results. Resize first, pick the right compressor, then keep originals safe on ToolPin at toolpin.online.",
     focusKeyword: "compress images for web",
     faqs: [
       {
@@ -182,9 +182,9 @@ That is the whole craft. Smaller photos are a workflow, not a miracle button. Ap
           "Yes. Each full recompress adds artifacts. Always start from the best original, compress once, and keep that result. Do not stack WhatsApp forwards and extra compress passes.",
       },
       {
-        question: "Which ApkaOS tools should I use?",
+        question: "Which ToolPin tools should I use?",
         answer:
-          "Resize Image at /tools/resize-image, then Compress JPG at /tools/compress-jpg, Compress PNG at /tools/compress-png, or Compress WebP at /tools/compress-webp. All of them run in the browser on apkaos.in.",
+          "Resize Image at /tools/resize-image, then Compress JPG at /tools/compress-jpg, Compress PNG at /tools/compress-png, or Compress WebP at /tools/compress-webp. All of them run in the browser on toolpin.online.",
       },
     ],
     status: "published",
@@ -198,7 +198,7 @@ That is the whole craft. Smaller photos are a workflow, not a miracle button. Ap
       "Combine scattered PDFs into one packet, or pull out the pages you actually need—locally in the browser, without Acrobat or an upload.",
     content: `People rarely have “the PDF.” They have a resume, two degree scans, an ID, and a fee receipt saved on four different days. Portals want one file. Clerks want one file. Your accountant wants one file. The opposite problem is just as common: a 90-page report where the recipient only needs pages 12–15. Merging and splitting are the two chores that replace a day of wrestling with Adobe Acrobat.
 
-ApkaOS does both in the browser on apkaos.in. The files are not uploaded, so offer letters, marksheets, and medical scans stay on the device. There is no account and no watermark on the result.
+ToolPin does both in the browser on toolpin.online. The files are not uploaded, so offer letters, marksheets, and medical scans stay on the device. There is no account and no watermark on the result.
 
 ## Merge when the reader must see a packet
 
@@ -228,29 +228,29 @@ Bookmarks and forms inside a source file may or may not survive a browser merge 
 
 ## Privacy is the reason to stay in the browser
 
-Offer letters, bank statements, and medical scans should not sit on a stranger’s disk while a website “processes” them. On ApkaOS the join and the split happen in the tab. Close the tab when you are done. There is no history to delete on our side because we never received the files.
+Offer letters, bank statements, and medical scans should not sit on a stranger’s disk while a website “processes” them. On ToolPin the join and the split happen in the tab. Close the tab when you are done. There is no history to delete on our side because we never received the files.
 
 That is different from Word-to-PDF on the same site, which needs a short-lived server job for layout. PDF merge and split do not. If a tool page says processing is local, believe it; if it says temporary upload, treat the file as something you are willing to send over HTTPS.
 
 ## A workflow that does not lose pages
 
-Collect sources in one folder. Rename them in the order you want. Open Merge PDF on apkaos.in, drop the set, confirm the list, run the merge, and open the download. Scroll every section once. Confirm that no file was dropped and that a blank from file B is not sitting between two chapters. Then, if the inbox or portal has a megabyte cap, run Compress PDF.
+Collect sources in one folder. Rename them in the order you want. Open Merge PDF on toolpin.online, drop the set, confirm the list, run the merge, and open the download. Scroll every section once. Confirm that no file was dropped and that a blank from file B is not sitting between two chapters. Then, if the inbox or portal has a megabyte cap, run Compress PDF.
 
 To pull a chapter out of a large file, open Split PDF or Extract PDF Pages, take only what you need, and name the download after the purpose (visa-page.pdf, not split-3.pdf). Keep the original until the recipient confirms they can open the packet. A merge is easy to repeat. Reconstructing a deleted source is not.
 
-ApkaOS is free for these chores. You can merge again as often as you need. That is the point of a browser tool: no license, no watermark, and no reason to email the packet to yourself “so Google Drive can combine it.”`,
-    author: "ApkaOS",
+ToolPin is free for these chores. You can merge again as often as you need. That is the point of a browser tool: no license, no watermark, and no reason to email the packet to yourself “so Google Drive can combine it.”`,
+    author: "ToolPin",
     categories: ["PDF Tools", "Guides"],
     tags: ["merge pdf", "split pdf", "extract pages", "pdf tools"],
     seoTitle: "How to Merge and Split PDFs Online Without Acrobat",
     seoDescription:
-      "Combine PDFs into one packet or pull out the pages you actually need. Local merge, split, and extract steps on ApkaOS—no Acrobat, no upload to apkaos.in.",
+      "Combine PDFs into one packet or pull out the pages you actually need. Local merge, split, and extract steps on ToolPin—no Acrobat, no upload to toolpin.online.",
     focusKeyword: "merge and split pdf",
     faqs: [
       {
-        question: "Are my PDFs uploaded when I merge or split on ApkaOS?",
+        question: "Are my PDFs uploaded when I merge or split on ToolPin?",
         answer:
-          "No. Merge PDF, Split PDF, extract, and delete run in your browser. The source files and the download never go to an ApkaOS server.",
+          "No. Merge PDF, Split PDF, extract, and delete run in your browser. The source files and the download never go to a ToolPin server.",
       },
       {
         question: "Should I merge first or extract first?",
@@ -279,7 +279,7 @@ ApkaOS is free for these chores. You can merge again as often as you need. That 
       "Turn a finished DOCX into a shareable PDF from any browser—no Word install, no watermark, and a clear picture of what can shift in layout.",
     content: `A Word file is a draft. Fonts substitute, tracked changes leak, and page breaks move when someone opens the document in a different version of Word or in Google Docs. A PDF is a snapshot: what you see is what they print. When you are done writing and you need a file that travels—job applications, invoices, school submissions, a handbook for a website—you convert.
 
-You do not need Microsoft Office on the machine in front of you. ApkaOS DOCX to PDF on apkaos.in accepts a .docx, converts it, and lets you download a PDF with no account and no watermark. This article is about doing that without surprises.
+You do not need Microsoft Office on the machine in front of you. ToolPin DOCX to PDF on toolpin.online accepts a .docx, converts it, and lets you download a PDF with no account and no watermark. This article is about doing that without surprises.
 
 ## Use PDF when editing should stop
 
@@ -291,9 +291,9 @@ If you still need an editable copy later, keep the Word file. The PDF is the pub
 
 The tool at /tools/docx-to-pdf wants a real Office Open XML document (.docx). Legacy .doc files from Word 97–2003 are a different binary. Open them in Word or LibreOffice, save as .docx, then convert. Macro-enabled .docm files should be saved as a .docx without macros if you only need the text and layout. Password-protected files cannot be converted until you remove the password on your computer.
 
-Word layout is too complex to rebuild reliably inside a browser tab. Tables with merged cells, floating images, footnotes, and theme fonts need a document engine. ApkaOS therefore uploads the DOCX to a conversion server for a short job, builds the PDF, and lets you download it. The upload is temporary. After you download—or after the result expires unused—both the source and the output are deleted.
+Word layout is too complex to rebuild reliably inside a browser tab. Tables with merged cells, floating images, footnotes, and theme fonts need a document engine. ToolPin therefore uploads the DOCX to a conversion server for a short job, builds the PDF, and lets you download it. The upload is temporary. After you download—or after the result expires unused—both the source and the output are deleted.
 
-That is different from image and PDF tools on the same site, which stay on your device. Do not upload documents that contain secrets you are not allowed to send over HTTPS. For highly confidential legal files, convert on an offline copy of LibreOffice. For everyday school and office work, the temporary-server model is the same pattern most online converters use; ApkaOS expires the files instead of keeping a library.
+That is different from image and PDF tools on the same site, which stay on your device. Do not upload documents that contain secrets you are not allowed to send over HTTPS. For highly confidential legal files, convert on an offline copy of LibreOffice. For everyday school and office work, the temporary-server model is the same pattern most online converters use; ToolPin expires the files instead of keeping a library.
 
 ## Layout, fonts, and tracked changes
 
@@ -309,25 +309,25 @@ Cover pages, tables of contents, and numbered headings usually render correctly 
 
 Open the PDF and skim every page, especially tables that span a page break and any page that uses columns. If something is off, adjust the DOCX and convert again rather than editing the PDF. When you need the reverse—a PDF that should become an editable Word file—use PDF to DOCX at /tools/pdf-to-docx, and remember that reconstruction is never pixel-identical to the original .docx.
 
-If the PDF is too large for a portal, run Compress PDF at /tools/compress-pdf. If you only needed the words, DOCX to Text at /tools/docx-to-text extracts them in the browser without a server trip. RTF to PDF and ODT to PDF exist on ApkaOS for other word processors.
+If the PDF is too large for a portal, run Compress PDF at /tools/compress-pdf. If you only needed the words, DOCX to Text at /tools/docx-to-text extracts them in the browser without a server trip. RTF to PDF and ODT to PDF exist on ToolPin for other word processors.
 
 ## A practical convert checklist
 
-Finish the draft. Accept tracked changes. Delete comments. Check Print Layout, including leftover blank pages. Save as .docx. Open DOCX to PDF on apkaos.in, upload, wait, download. Preview. Rename the file for the purpose (offer-letter.pdf, not document.pdf). Keep the Word source until the recipient confirms the PDF opens.
+Finish the draft. Accept tracked changes. Delete comments. Check Print Layout, including leftover blank pages. Save as .docx. Open DOCX to PDF on toolpin.online, upload, wait, download. Preview. Rename the file for the purpose (offer-letter.pdf, not document.pdf). Keep the Word source until the recipient confirms the PDF opens.
 
-You can convert as often as you need. There is no daily cap for this kind of job on ApkaOS and no watermark on the pages. The cost of a second pass is a few minutes, which is cheaper than sending a PDF that still shows “Comment from intern.”`,
-    author: "ApkaOS",
+You can convert as often as you need. There is no daily cap for this kind of job on ToolPin and no watermark on the pages. The cost of a second pass is a few minutes, which is cheaper than sending a PDF that still shows “Comment from intern.”`,
+    author: "ToolPin",
     categories: ["Document Tools", "Guides"],
     tags: ["word to pdf", "docx", "office converter", "pdf"],
     seoTitle: "Convert Word to PDF Online Without Microsoft Office",
     seoDescription:
-      "Turn a DOCX into a shareable PDF without installing Word. Layout tips, what can shift, and a free converter on ApkaOS at apkaos.in for everyday files.",
+      "Turn a DOCX into a shareable PDF without installing Word. Layout tips, what can shift, and a free converter on ToolPin at toolpin.online for everyday files.",
     focusKeyword: "convert word to pdf online",
     faqs: [
       {
         question: "Does Word to PDF run entirely in my browser?",
         answer:
-          "No. Word layout needs a document engine, so ApkaOS uploads the .docx temporarily, converts it, and deletes the files after you download or the link expires. Image and most PDF tools on apkaos.in stay local instead.",
+          "No. Word layout needs a document engine, so ToolPin uploads the .docx temporarily, converts it, and deletes the files after you download or the link expires. Image and most PDF tools on toolpin.online stay local instead.",
       },
       {
         question: "Can I convert an old .doc file?",
@@ -342,7 +342,7 @@ You can convert as often as you need. There is no daily cap for this kind of job
       {
         question: "Is the converter free, and do I need an account?",
         answer:
-          "Yes. DOCX to PDF at /tools/docx-to-pdf is free on apkaos.in with no signup and no watermark on the PDF.",
+          "Yes. DOCX to PDF at /tools/docx-to-pdf is free on toolpin.online with no signup and no watermark on the PDF.",
       },
     ],
     status: "published",
@@ -358,7 +358,7 @@ You can convert as often as you need. There is no daily cap for this kind of job
 
 Social networks strip some of this on upload and not all of it, and they do it after the file has already crossed their servers. Marketplace apps and email do not reliably strip GPS. If you email a photo of a receipt on your kitchen table, you may also be emailing your home coordinates. Stripping metadata is the boring privacy step that prevents that.
 
-ApkaOS Strip Image Metadata at /tools/strip-metadata re-encodes a copy in your browser. The photo is not uploaded to apkaos.in. That is the point: you should not send GPS to a stranger in order to delete GPS.
+ToolPin Strip Image Metadata at /tools/strip-metadata re-encodes a copy in your browser. The photo is not uploaded to toolpin.online. That is the point: you should not send GPS to a stranger in order to delete GPS.
 
 ## What stripping does and what it does not
 
@@ -372,11 +372,11 @@ Before you post a home or a rental listing. Interior photos plus GPS is a map to
 
 You do not need to strip photos that will only live in a private album on your phone. Keep the original with GPS if you want a travel log. Share the cleaned copy.
 
-Conversion and compression on ApkaOS often drop EXIF as a side effect of canvas encode. “Often” is not the same as a deliberate wipe. If privacy is the goal, run the metadata tool and then verify.
+Conversion and compression on ToolPin often drop EXIF as a side effect of canvas encode. “Often” is not the same as a deliberate wipe. If privacy is the goal, run the metadata tool and then verify.
 
 ## Why a browser tool is the right place
 
-Many “EXIF removers” ask you to upload the photo. That is a poor joke. ApkaOS re-encodes in the tab. You download a clean copy. Keep the original in a private folder if you still want the map pin.
+Many “EXIF removers” ask you to upload the photo. That is a poor joke. ToolPin re-encodes in the tab. You download a clean copy. Keep the original in a private folder if you still want the map pin.
 
 Re-encoding has a cost. JPEG is decoded and saved again, so you may see a slight quality shift and a different file size. For a public post, that trade is acceptable. For a forensics archive, do not re-encode; work on a copy with a dedicated EXIF editor that rewrites segments without touching the image data.
 
@@ -388,15 +388,15 @@ Decide whether the pixels themselves are safe. Crop street signs and documents i
 
 Download the cleaned file into a differently named folder so you do not upload the original sitting next to it in Downloads. Verify once: Properties on Windows, Get Info on a Mac, or a local EXIF viewer. If GPS is gone and the camera fields are empty, you are done.
 
-JPG, PNG, and WebP are supported, up to a typical 250 MB, with no signup and no watermark. Very large files follow the same memory rules as other image tools on apkaos.in. After you strip, upload the cleaned file, not the original.
+JPG, PNG, and WebP are supported, up to a typical 250 MB, with no signup and no watermark. Very large files follow the same memory rules as other image tools on toolpin.online. After you strip, upload the cleaned file, not the original.
 
-Privacy is a stack. Metadata is one layer. The picture is another. ApkaOS will not make a photo anonymous. It will stop you from handing out a map pin with the picture by accident, which is the mistake most people actually make.`,
-    author: "ApkaOS",
+Privacy is a stack. Metadata is one layer. The picture is another. ToolPin will not make a photo anonymous. It will stop you from handing out a map pin with the picture by accident, which is the mistake most people actually make.`,
+    author: "ToolPin",
     categories: ["Image Tools", "Privacy"],
     tags: ["exif", "privacy", "strip metadata", "gps", "photos"],
     seoTitle: "Remove EXIF Before Sharing Photos: A Privacy Guide",
     seoDescription:
-      "Phone photos hide GPS, camera serials, and timestamps. Strip EXIF in your browser before you post, list a home, or email a scan on ApkaOS at apkaos.in.",
+      "Phone photos hide GPS, camera serials, and timestamps. Strip EXIF in your browser before you post, list a home, or email a scan on ToolPin at toolpin.online.",
     focusKeyword: "remove exif before sharing",
     faqs: [
       {
@@ -405,9 +405,9 @@ Privacy is a stack. Metadata is one layer. The picture is another. ApkaOS will n
           "No. It only removes hidden tags such as GPS, camera fields, and timestamps. Redact or crop anything that is visible in the pixels separately.",
       },
       {
-        question: "Is the photo uploaded to ApkaOS to remove metadata?",
+        question: "Is the photo uploaded to ToolPin to remove metadata?",
         answer:
-          "No. Strip Image Metadata at /tools/strip-metadata runs in your browser. The file is not sent to apkaos.in.",
+          "No. Strip Image Metadata at /tools/strip-metadata runs in your browser. The file is not sent to toolpin.online.",
       },
       {
         question: "Will the picture look different after stripping?",
@@ -431,7 +431,7 @@ Privacy is a stack. Metadata is one layer. The picture is another. ApkaOS will n
       "Pretty-print JSON when you are debugging, minify it when you ship—same data, different whitespace, entirely in the browser.",
     content: `JSON is the default envelope for APIs, config files, and browser storage. Minified JSON is efficient on the wire and hostile on a screen. Formatted JSON is the opposite: easy to scan, larger on disk. You need both views of the same payload at different moments in a project. Treating them as two tools instead of one magic button is how you avoid pasting broken config into production.
 
-ApkaOS JSON Formatter at /tools/json-formatter and JSON Minify at /tools/json-minify run in your browser on apkaos.in. Nothing you paste is uploaded. That matters when the payload contains tokens, emails, or customer records.
+ToolPin JSON Formatter at /tools/json-formatter and JSON Minify at /tools/json-minify run in your browser on toolpin.online. Nothing you paste is uploaded. That matters when the payload contains tokens, emails, or customer records.
 
 ## Format when a human has to read it
 
@@ -465,19 +465,19 @@ A parse error usually names a position. Look one token earlier: a missing comma 
 
 Empty input is an error, not an empty object. XML, YAML, and Python dicts fail. Convert those formats properly. If you paste a JWT or a Base64 blob, you are in the wrong tool; use Base64 Decode at /tools/base64-decode if that is what you have.
 
-Very large documents can freeze a tab. Pretty-printing multiplies size with whitespace. For tens of megabytes, use jq or a desktop editor. ApkaOS is for the everyday payload: a few kilobytes to a couple of megabytes.
+Very large documents can freeze a tab. Pretty-printing multiplies size with whitespace. For tens of megabytes, use jq or a desktop editor. ToolPin is for the everyday payload: a few kilobytes to a couple of megabytes.
 
 ## Privacy and habit
 
-Logs and API responses contain secrets. Because formatting is local, you can pretty-print production payloads on a locked-down laptop without sending them to an online viewer that stores pastes. ApkaOS does not keep a history of what you typed. Your clipboard still exists—do not paste tokens into a chat after you format them.
+Logs and API responses contain secrets. Because formatting is local, you can pretty-print production payloads on a locked-down laptop without sending them to an online viewer that stores pastes. ToolPin does not keep a history of what you typed. Your clipboard still exists—do not paste tokens into a chat after you format them.
 
-The habit is simple. Open JSON Formatter on apkaos.in when you need to see. Open JSON Minify when you need to ship. Copy with confidence. Keep source of truth in the repo, not in a browser tab.`,
-    author: "ApkaOS",
+The habit is simple. Open JSON Formatter on toolpin.online when you need to see. Open JSON Minify when you need to ship. Copy with confidence. Keep source of truth in the repo, not in a browser tab.`,
+    author: "ToolPin",
     categories: ["Text & Data Tools", "Guides"],
     tags: ["json", "json formatter", "json minify", "developers"],
     seoTitle: "JSON Formatter vs Minify: Readable and Production JSON",
     seoDescription:
-      "Pretty-print JSON to debug APIs, then minify for production payloads. Local formatter and minifier on ApkaOS—nothing you paste is uploaded to apkaos.in.",
+      "Pretty-print JSON to debug APIs, then minify for production payloads. Local formatter and minifier on ToolPin—nothing you paste is uploaded to toolpin.online.",
     focusKeyword: "json formatter and minify",
     faqs: [
       {
@@ -491,9 +491,9 @@ The habit is simple. Open JSON Formatter on apkaos.in when you need to see. Open
           "Standard JSON forbids comments, trailing commas, and single-quoted keys. Remove those, or use a JSONC-aware editor first, then paste valid JSON.",
       },
       {
-        question: "Is my payload uploaded to ApkaOS?",
+        question: "Is my payload uploaded to ToolPin?",
         answer:
-          "No. JSON Formatter at /tools/json-formatter and JSON Minify at /tools/json-minify run in the browser. Nothing is stored on apkaos.in.",
+          "No. JSON Formatter at /tools/json-formatter and JSON Minify at /tools/json-minify run in the browser. Nothing is stored on toolpin.online.",
       },
       {
         question: "Should I commit minified JSON to git?",
@@ -512,7 +512,7 @@ The habit is simple. Open JSON Formatter on apkaos.in when you need to see. Open
       "Practical QR uses that work in print and on phones—URLs, UPI, Wi-Fi, and event check-in—plus size, contrast, and a free generator.",
     content: `A QR code is a URL you can print, tape to a wall, or drop into a slide. Phones open the camera, the camera opens the link, and the person does not have to type a long address. That is the whole product. Everything else—menus, UPI payments, Wi-Fi join, event check-in—is the same idea with a different destination.
 
-ApkaOS QR Code Generator at /tools/qr-code-generator builds the image in your browser on apkaos.in. The text you type is not uploaded. That is useful when the payload is an internal form, a staging URL, or a Wi-Fi password you do not want sitting in a server log.
+ToolPin QR Code Generator at /tools/qr-code-generator builds the image in your browser on toolpin.online. The text you type is not uploaded. That is useful when the payload is an internal form, a staging URL, or a Wi-Fi password you do not want sitting in a server log.
 
 ## Put a stable URL in the code
 
@@ -530,7 +530,7 @@ Event check-in and feedback: a code on a badge or a standee that opens a form. K
 
 Packaging and manuals: a code on a device that opens the latest PDF instead of a booklet that is already wrong. Host the PDF somewhere you can replace.
 
-Classroom and office posters: a code to a timetable, a Wi-Fi guest page, or a tool on apkaos.in you actually want people to use. A flyer that goes to /tools/qr-code-generator is a reasonable demo; a flyer that goes to your real form is the production version.
+Classroom and office posters: a code to a timetable, a Wi-Fi guest page, or a tool on toolpin.online you actually want people to use. A flyer that goes to /tools/qr-code-generator is a reasonable demo; a flyer that goes to your real form is the production version.
 
 Business cards: one code to a single profile page beats four tiny icons nobody types. Keep the card’s text readable; the code is a backup, not the only identity.
 
@@ -554,17 +554,17 @@ Untrusted redirects. If you use a public shortener you do not control, the desti
 
 ## Generate, download, then test for real
 
-Open QR Code Generator on apkaos.in at /tools/qr-code-generator. Paste the URL or text. Download the image. Place it in the design at a size you measured with a ruler, not only with “it looked fine on screen.” Print one copy. Scan it. Then print the rest.
+Open QR Code Generator on toolpin.online at /tools/qr-code-generator. Paste the URL or text. Download the image. Place it in the design at a size you measured with a ruler, not only with “it looked fine on screen.” Print one copy. Scan it. Then print the rest.
 
 If you need the destination to be a PDF you just made, convert the document first (DOCX to PDF at /tools/docx-to-pdf, or Images to PDF at /tools/images-to-pdf), host the file, and encode that link. Do not try to stuff a PDF into the QR itself.
 
-ApkaOS does not require an account and does not watermark the code. The generator is a convenience, not a marketing platform. You own the URL. You own the print. The code is only as good as the destination and the centimeters on paper.`,
-    author: "ApkaOS",
+ToolPin does not require an account and does not watermark the code. The generator is a convenience, not a marketing platform. You own the URL. You own the print. The code is only as good as the destination and the centimeters on paper.`,
+    author: "ToolPin",
     categories: ["Text & Data Tools", "Guides"],
     tags: ["qr code", "qr generator", "upi", "print", "links"],
     seoTitle: "Generate QR Codes for Links, Menus, and UPI Payments",
     seoDescription:
-      "Build QR codes for URLs, UPI, Wi-Fi, and print menus. Sizing, error correction, and a free generator on ApkaOS at apkaos.in that stays in your browser.",
+      "Build QR codes for URLs, UPI, Wi-Fi, and print menus. Sizing, error correction, and a free generator on ToolPin at toolpin.online that stays in your browser.",
     focusKeyword: "generate qr codes for links",
     faqs: [
       {
@@ -578,9 +578,9 @@ ApkaOS does not require an account and does not watermark the code. The generato
           "It is usually too small, low contrast, or missing a quiet margin. Print larger, use dark modules on a light background, and test on an older phone in the real lighting.",
       },
       {
-        question: "Is the text I type uploaded to ApkaOS?",
+        question: "Is the text I type uploaded to ToolPin?",
         answer:
-          "No. QR Code Generator at /tools/qr-code-generator runs in your browser. The payload never goes to apkaos.in.",
+          "No. QR Code Generator at /tools/qr-code-generator runs in your browser. The payload never goes to toolpin.online.",
       },
       {
         question: "Can I put a whole PDF or menu into the QR?",
@@ -601,7 +601,7 @@ ApkaOS does not require an account and does not watermark the code. The generato
 
 You should not rasterize when the recipient still needs to search the text, fill a form, print a sharp certificate at any size, or archive a legal original. Once a page is pixels, you have a picture of the document, not the document.
 
-ApkaOS PDF to JPG at /tools/pdf-to-jpg and PDF to PNG at /tools/pdf-to-png run in the browser on apkaos.in. Pages are not uploaded. That is the right model for marksheets, offer letters, and unpublished decks.
+ToolPin PDF to JPG at /tools/pdf-to-jpg and PDF to PNG at /tools/pdf-to-png run in the browser on toolpin.online. Pages are not uploaded. That is the right model for marksheets, offer letters, and unpublished decks.
 
 ## When JPG is enough
 
@@ -623,13 +623,13 @@ If you later need a PDF again, Images to PDF at /tools/images-to-pdf can staple 
 
 Search. Copy-paste. Accessibility for a screen reader that could have read the tagged text. Infinite zoom on vectors. Form fields. Layers. Some print shops still want the PDF for a reason: a 300 DPI JPEG of an A4 certificate is a different object from a vector PDF that a RIP can draw at the device resolution.
 
-Rasterizing is also a resolution choice. Too low, and print looks crunchy. Too high, and a phone tab runs out of memory drawing a 40-page deck at poster size. For screen share, 150–220 DPI equivalent is usually enough. For a poster, you want more, and you may want a desktop tool. ApkaOS is built for everyday pages, not for imposing a book at press resolution.
+Rasterizing is also a resolution choice. Too low, and print looks crunchy. Too high, and a phone tab runs out of memory drawing a 40-page deck at poster size. For screen share, 150–220 DPI equivalent is usually enough. For a poster, you want more, and you may want a desktop tool. ToolPin is built for everyday pages, not for imposing a book at press resolution.
 
 Password-protected PDFs need the password removed locally before a browser tool can draw them. Encrypted files are not a puzzle to bypass; they are a stop.
 
 ## A practical rasterize workflow
 
-Decide whether you need one page or all pages. Extract if you need one. Open PDF to JPG or PDF to PNG on apkaos.in. Drop the file. Wait while each page is drawn. Download the image or the zip of images. Open the result at the size you will actually show it.
+Decide whether you need one page or all pages. Extract if you need one. Open PDF to JPG or PDF to PNG on toolpin.online. Drop the file. Wait while each page is drawn. Download the image or the zip of images. Open the result at the size you will actually show it.
 
 If the page is sideways, rotate the PDF first at /tools/rotate-pdf so you do not share a landscape letter as a tiny sideways JPEG. If the PDF is huge because it contains other people’s scans, compress the PDF first only when size is blocking the render; compression can hurt already-soft scans.
 
@@ -639,13 +639,13 @@ After you have the image, strip metadata if the PDF-to-image step could have car
 
 Send a PDF when the other person might print, sign, or search. Merge and split stay in PDF for a reason. Rasterize for previews, chat, slides, and CMS cards. If you are unsure, send the PDF and attach one JPEG preview so they can glance without opening a reader.
 
-ApkaOS will not add a watermark to the JPG or PNG. There is no account. Close the tab when you are done. Keep the original PDF until you are sure the picture is the picture you meant to send. You can always draw the page again. You cannot recover a deleted source from a blurry JPEG.`,
-    author: "ApkaOS",
+ToolPin will not add a watermark to the JPG or PNG. There is no account. Close the tab when you are done. Keep the original PDF until you are sure the picture is the picture you meant to send. You can always draw the page again. You cannot recover a deleted source from a blurry JPEG.`,
+    author: "ToolPin",
     categories: ["PDF Tools", "Guides"],
     tags: ["pdf to jpg", "pdf to png", "rasterize", "pdf tools"],
     seoTitle: "PDF to JPG or PNG: When You Should Rasterize a Page",
     seoDescription:
-      "Rasterize a PDF page to JPG or PNG when you need a preview, slide, or WhatsApp share. When to convert, quality tips, and free tools on ApkaOS at apkaos.in.",
+      "Rasterize a PDF page to JPG or PNG when you need a preview, slide, or WhatsApp share. When to convert, quality tips, and free tools on ToolPin at toolpin.online.",
     focusKeyword: "pdf to jpg or png",
     faqs: [
       {
@@ -659,9 +659,9 @@ ApkaOS will not add a watermark to the JPG or PNG. There is no account. Close th
           "No. Rasterizing draws the page into pixels. Search, copy, and form fields do not survive. Keep the original PDF when those still matter.",
       },
       {
-        question: "Are PDF pages uploaded to ApkaOS?",
+        question: "Are PDF pages uploaded to ToolPin?",
         answer:
-          "No. PDF to JPG at /tools/pdf-to-jpg and PDF to PNG at /tools/pdf-to-png run in your browser. Files are not stored on apkaos.in.",
+          "No. PDF to JPG at /tools/pdf-to-jpg and PDF to PNG at /tools/pdf-to-png run in your browser. Files are not stored on toolpin.online.",
       },
       {
         question: "How do I convert only one page of a long PDF?",

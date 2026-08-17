@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "ApkaOS — free online image, PDF and document tools";
+export const alt = "ToolPin — free online image, PDF and document tools";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -19,8 +19,8 @@ export default function OpenGraphImage() {
           color: "#f6f1e4",
         }}
       >
-        <div style={{ fontSize: 28, letterSpacing: 8, color: "#e4c36a", textTransform: "uppercase" }}>apkaos.in</div>
-        <div style={{ marginTop: 24, fontSize: 72, fontWeight: 700, lineHeight: 1.05 }}>ApkaOS</div>
+        <div style={{ fontSize: 28, letterSpacing: 8, color: "#e4c36a", textTransform: "uppercase" }}>toolpin.online</div>
+        <div style={{ marginTop: 24, fontSize: 72, fontWeight: 700, lineHeight: 1.05 }}>ToolPin</div>
         <div style={{ marginTop: 16, fontSize: 32, color: "#d9d0b8", maxWidth: 900 }}>
           Free online image, PDF and document tools
         </div>

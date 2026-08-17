@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "ApkaOS",
-    short_name: "ApkaOS",
+    name: "ToolPin",
+    short_name: "ToolPin",
     description: "Free online image, PDF, document, and text conversion tools.",
     start_url: "/",
     display: "standalone",

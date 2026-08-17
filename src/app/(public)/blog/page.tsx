@@ -14,7 +14,7 @@ export const revalidate = 300;
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Guides from ApkaOS on JPG vs PNG vs WebP, compressing images, merging PDFs, Word to PDF, EXIF privacy, JSON, and QR codes.",
+    "Guides from ToolPin on JPG vs PNG vs WebP, compressing images, merging PDFs, Word to PDF, EXIF privacy, JSON, and QR codes.",
   alternates: { canonical: `${siteConfig.url}/blog` },
 };
 
@@ -47,7 +47,7 @@ export default async function BlogPage({
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Blog</p>
         <h1 className="mt-3 font-heading text-4xl font-semibold md:text-5xl">Guides & updates</h1>
         <p className="mt-4 text-muted-foreground">
-          Practical guides on image formats, PDF workflows, and getting more from free ApkaOS tools on apkaos.in.
+          Practical guides on image formats, PDF workflows, and getting more from free ToolPin tools on toolpin.online.
         </p>
       </div>
 

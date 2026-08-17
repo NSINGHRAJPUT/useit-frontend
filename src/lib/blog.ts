@@ -102,7 +102,7 @@ function normalizeFaqs(faqs: unknown): BlogPost["faqs"] {
 }
 
 function mapExternalPostToBlogPost(raw: ExternalPost): BlogPost {
-  const author = raw.author ?? raw.authorName ?? "ApkaOS";
+  const author = raw.author ?? raw.authorName ?? "ToolPin";
   const tags = normalizeTags(raw.tags);
   const faqs = normalizeFaqs(raw.faqs);
   const status = (raw.status === "draft" ? "draft" : "published") as "draft" | "published";

@@ -6,7 +6,7 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Terms of Service",
-  description: "Terms for using free ApkaOS file conversion tools on apkaos.in, including acceptable use and disclaimers.",
+  description: "Terms for using free ToolPin file conversion tools on toolpin.online, including acceptable use and disclaimers.",
   path: "/terms-of-service",
 });
 
@@ -14,13 +14,13 @@ export default function TermsPage() {
   return (
     <LegalPage title="Terms of Service" updated="13 August 2026">
       <p>
-        These terms govern your use of ApkaOS at apkaos.in. By using a tool you agree to them. If you do not agree, do
+        These terms govern your use of ToolPin at toolpin.online. By using a tool you agree to them. If you do not agree, do
         not use the site.
       </p>
 
       <h2>The service</h2>
       <p>
-        ApkaOS provides free browser and server utilities for converting, compressing, merging, and formatting files.
+        ToolPin provides free browser and server utilities for converting, compressing, merging, and formatting files.
         Features may change. We do not guarantee that a conversion will be perfect for every file.
       </p>
 
@@ -40,7 +40,7 @@ export default function TermsPage() {
 
       <h2>Intellectual property</h2>
       <p>
-        ApkaOS branding, layout, and original copy belong to us. You keep the rights to files you process. We do not
+        ToolPin branding, layout, and original copy belong to us. You keep the rights to files you process. We do not
         claim ownership of your documents.
       </p>
 
@@ -52,7 +52,7 @@ export default function TermsPage() {
 
       <h2>Limitation of liability</h2>
       <p>
-        To the fullest extent permitted by law, ApkaOS is not liable for indirect, incidental, or consequential damages
+        To the fullest extent permitted by law, ToolPin is not liable for indirect, incidental, or consequential damages
         arising from use of the tools. Our total liability for any claim is limited to INR 0 because the service is
         free.
       </p>

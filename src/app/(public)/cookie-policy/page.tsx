@@ -7,7 +7,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildPageMetadata({
   title: "Cookie Policy",
   description:
-    "How ApkaOS uses first-party cookies for theme preference and Google AdSense advertising cookies on apkaos.in.",
+    "How ToolPin uses first-party cookies for theme preference and Google AdSense advertising cookies on toolpin.online.",
   path: "/cookie-policy",
 });
 
@@ -15,7 +15,7 @@ export default function CookiePolicyPage() {
   return (
     <LegalPage title="Cookie Policy" updated="13 August 2026">
       <p>
-        Cookies are small files stored on your device. ApkaOS uses a small number of first-party cookies and allows
+        Cookies are small files stored on your device. ToolPin uses a small number of first-party cookies and allows
         Google AdSense to set advertising cookies. This page complements the{" "}
         <Link href="/privacy-policy">Privacy Policy</Link>.
       </p>
@@ -33,7 +33,7 @@ export default function CookiePolicyPage() {
       <h2>Google AdSense cookies</h2>
       <p>
         Google and its partners may set cookies (including advertising cookies such as those historically associated
-        with the DoubleClick / DART family) to serve and measure ads on apkaos.in. These cookies may be used to show
+        with the DoubleClick / DART family) to serve and measure ads on toolpin.online. These cookies may be used to show
         ads based on your visits to this site and other sites.
       </p>
       <p>

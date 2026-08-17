@@ -7,7 +7,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildPageMetadata({
   title: "Privacy Policy",
   description:
-    "How ApkaOS handles files, cookies, Google AdSense advertising, and your rights under Indian data protection law.",
+    "How ToolPin handles files, cookies, Google AdSense advertising, and your rights under Indian data protection law.",
   path: "/privacy-policy",
 });
 
@@ -15,21 +15,21 @@ export default function PrivacyPage() {
   return (
     <LegalPage title="Privacy Policy" updated="13 August 2026">
       <p>
-        This policy explains how ApkaOS (“we”, “us”) treats information when you use apkaos.in. We designed the product
+        This policy explains how ToolPin (“we”, “us”) treats information when you use toolpin.online. We designed the product
         so most files never reach our servers. Please also read the <Link href="/cookie-policy">Cookie Policy</Link>{" "}
         and <Link href="/terms-of-service">Terms of Service</Link>.
       </p>
 
       <h2>Who we are</h2>
       <p>
-        ApkaOS is operated from India and published at {siteConfig.url}. Contact:{" "}
+        ToolPin is operated from India and published at {siteConfig.url}. Contact:{" "}
         <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>.
       </p>
 
       <h2>Files you process</h2>
       <p>
         <strong>Browser-local tools</strong> (image conversion and compression, most PDF tools, CSV/Excel helpers, and
-        all text utilities) run in your browser. Those files are not uploaded to ApkaOS and are not stored by us.
+        all text utilities) run in your browser. Those files are not uploaded to ToolPin and are not stored by us.
       </p>
       <p>
         <strong>Server tools</strong> (DOCX/PPTX/XLSX/MD/RTF/ODT to PDF, and PDF to DOCX) upload a file so we can
@@ -51,7 +51,7 @@ export default function PrivacyPage() {
         We use Google AdSense (publisher ID ca-pub-4634994555998964) to show ads that fund the free tools. Google may
         use cookies, including advertising cookies, to serve ads based on your visits to this site and other sites on
         the internet. Google’s use of advertising cookies enables it and its partners to serve ads based on your visit
-        to apkaos.in and/or other sites.
+        to toolpin.online and/or other sites.
       </p>
       <p>
         You may opt out of personalized advertising by visiting{" "}
@@ -88,13 +88,13 @@ export default function PrivacyPage() {
 
       <h2>Children</h2>
       <p>
-        ApkaOS is a general-audience tools site. We do not knowingly collect personal information from children. If you
+        ToolPin is a general-audience tools site. We do not knowingly collect personal information from children. If you
         believe a child has sent us personal data, email us and we will delete it.
       </p>
 
       <h2>Changes</h2>
       <p>
-        We may update this policy. The “Last updated” date at the top will change. Continued use of apkaos.in after an
+        We may update this policy. The “Last updated” date at the top will change. Continued use of toolpin.online after an
         update means you accept the revised policy.
       </p>
     </LegalPage>

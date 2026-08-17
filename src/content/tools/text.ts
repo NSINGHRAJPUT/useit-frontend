@@ -2,20 +2,20 @@ import type { ToolSeoMap } from "./types";
 
 export const textToolContent: ToolSeoMap = {
   "json-formatter": {
-    seoTitle: "JSON Formatter & Validator Online Free | ApkaOS Tools",
+    seoTitle: "JSON Formatter & Validator Online Free | ToolPin Tools",
     seoDescription:
-      "Format and validate JSON in your browser with ApkaOS. Free pretty-print, no signup, never uploaded. Fix indentation and spot JSON syntax errors instantly.",
+      "Format and validate JSON in your browser with ToolPin. Free pretty-print, no signup, never uploaded. Fix indentation and spot JSON syntax errors instantly.",
     intro:
-      "Pretty-print JSON in your browser on ApkaOS. Paste a minified payload or a messy API response, and the formatter indents objects, arrays, and keys so you can read them. Validation catches missing commas and unquoted keys before you ship the file. Everything stays on your device — nothing is uploaded. The tool is free and needs no account.",
+      "Pretty-print JSON in your browser on ToolPin. Paste a minified payload or a messy API response, and the formatter indents objects, arrays, and keys so you can read them. Validation catches missing commas and unquoted keys before you ship the file. Everything stays on your device — nothing is uploaded. The tool is free and needs no account.",
     howToSteps: [
-      "Open the JSON Formatter on ApkaOS. Processing never leaves this tab.",
+      "Open the JSON Formatter on ToolPin. Processing never leaves this tab.",
       "Paste JSON, or drop a .json file if the page accepts one.",
       "Run format. Invalid JSON shows a parse error instead of silently rewriting your data.",
       "Copy the indented result or download it as a .json file.",
       "Paste the formatted text into your editor, ticket, or documentation.",
     ],
     benefits: [
-      "100% browser-local — API payloads and secrets in JSON never hit ApkaOS servers.",
+      "100% browser-local — API payloads and secrets in JSON never hit ToolPin servers.",
       "Free pretty-print with no signup and no watermark.",
       "Instant validation so a missing comma is obvious before a deploy.",
       "Works offline after the page loads; no CLI or IDE plugin required.",
@@ -28,7 +28,7 @@ export const textToolContent: ToolSeoMap = {
     ],
     guide: `## Why format JSON at all
 
-JSON is the default for APIs, config files, and browser storage. Minified JSON is efficient on the wire and unreadable on a screen. A formatter adds consistent indentation and line breaks so objects, nested arrays, and long string values are scannable. ApkaOS JSON Formatter does that entirely in your browser with the built-in JSON parser. Nothing is uploaded. The tool is free and does not require an account.
+JSON is the default for APIs, config files, and browser storage. Minified JSON is efficient on the wire and unreadable on a screen. A formatter adds consistent indentation and line breaks so objects, nested arrays, and long string values are scannable. ToolPin JSON Formatter does that entirely in your browser with the built-in JSON parser. Nothing is uploaded. The tool is free and does not require an account.
 
 This is not a linter for schema (required keys, types). It only asks: is this valid JSON, and can we reprint it with whitespace? For schema checks, use a JSON Schema validator in your project. For smaller files on the wire, use JSON Minify on the same site — the inverse operation, also local.
 
@@ -48,7 +48,7 @@ If the input is empty, you get an error, not an empty object. If you paste XML, 
 
 ## Privacy
 
-Logs and API responses often contain tokens, emails, and PII. Because formatting is local, you can pretty-print production payloads on a locked-down laptop without sending them to an online “JSON viewer” that stores pastes. ApkaOS does not keep a history of what you typed.
+Logs and API responses often contain tokens, emails, and PII. Because formatting is local, you can pretty-print production payloads on a locked-down laptop without sending them to an online “JSON viewer” that stores pastes. ToolPin does not keep a history of what you typed.
 
 Very large documents (tens of megabytes) can freeze a tab. Pretty-printing multiplies size with whitespace. For huge files, use jq or a desktop editor. This page is for the everyday payload: a few kilobytes to a couple of megabytes.
 
@@ -56,7 +56,7 @@ Very large documents (tens of megabytes) can freeze a tab. Pretty-printing multi
 
 Copy with confidence into git. Set your editor to the same indent (2 spaces is common) so diffs stay small. If you need CSV rows from an array of objects, use JSON to CSV next. If you only needed to shrink the file again, run JSON Minify.
 
-ApkaOS is a convenience formatter, not a JSON database. Keep source of truth in your repo.`,
+ToolPin is a convenience formatter, not a JSON database. Keep source of truth in your repo.`,
     tips: [
       "If parse fails, you likely have a trailing comma, a comment, or single-quoted keys — those are not JSON.",
       "Keep large numeric IDs as strings in JSON to avoid JavaScript precision loss.",
@@ -66,7 +66,7 @@ ApkaOS is a convenience formatter, not a JSON database. Keep source of truth in 
     ],
     faq: [
       {
-        question: "Is my JSON uploaded to ApkaOS?",
+        question: "Is my JSON uploaded to ToolPin?",
         answer:
           "No. Formatting and validation run in your browser. The payload never leaves your device.",
       },
@@ -78,7 +78,7 @@ ApkaOS is a convenience formatter, not a JSON database. Keep source of truth in 
       {
         question: "Is it free? Do I need an account?",
         answer:
-          "Yes. The JSON Formatter on apkaos.in is free with no signup.",
+          "Yes. The JSON Formatter on toolpin.online is free with no signup.",
       },
       {
         question: "Will formatting change my data?",
@@ -93,7 +93,7 @@ ApkaOS is a convenience formatter, not a JSON database. Keep source of truth in 
       {
         question: "How is this different from JSON Minify?",
         answer:
-          "Formatter adds whitespace for reading. Minify removes it for smaller payloads. Both are browser-local on ApkaOS.",
+          "Formatter adds whitespace for reading. Minify removes it for smaller payloads. Both are browser-local on ToolPin.",
       },
     ],
     searchKeywords: [
@@ -103,18 +103,18 @@ ApkaOS is a convenience formatter, not a JSON database. Keep source of truth in 
       "format json online",
       "beautify json",
       "json formatter no upload",
-      "json formatter apkaos",
+      "json formatter toolpin",
     ],
   },
 
   "json-minify": {
-    seoTitle: "JSON Minify Online — Compact JSON Free | ApkaOS Tools",
+    seoTitle: "JSON Minify Online — Compact JSON Free | ToolPin Tools",
     seoDescription:
-      "Minify JSON in your browser with ApkaOS. Strip whitespace, keep valid JSON, never upload. Free, no signup. Smaller payloads for APIs, config, and storage.",
+      "Minify JSON in your browser with ToolPin. Strip whitespace, keep valid JSON, never upload. Free, no signup. Smaller payloads for APIs, config, and storage.",
     intro:
-      "Compress JSON by removing unnecessary whitespace in your browser on ApkaOS. Minify turns a pretty-printed document into a single compact payload without changing keys or values. Nothing is uploaded. The tool is free and needs no account. Use it before embedding JSON in a script tag, shipping a config, or trimming localStorage — not as a substitute for gzip on the server.",
+      "Compress JSON by removing unnecessary whitespace in your browser on ToolPin. Minify turns a pretty-printed document into a single compact payload without changing keys or values. Nothing is uploaded. The tool is free and needs no account. Use it before embedding JSON in a script tag, shipping a config, or trimming localStorage — not as a substitute for gzip on the server.",
     howToSteps: [
-      "Open JSON Minify on ApkaOS. The text stays in this tab.",
+      "Open JSON Minify on ToolPin. The text stays in this tab.",
       "Paste formatted JSON or a file’s contents.",
       "Run minify. Invalid JSON is rejected; the tool will not emit broken output.",
       "Copy the compact string or download it.",
@@ -134,9 +134,9 @@ ApkaOS is a convenience formatter, not a JSON database. Keep source of truth in 
     ],
     guide: `## Minify is not encryption and not gzip
 
-Removing spaces, tabs, and newlines from JSON makes the text shorter. It does not hide data, and it is weaker than HTTP gzip or Brotli, which your server should still enable. Use ApkaOS JSON Minify when you need the JSON text itself to be compact: inline config, a file on disk, or a message body you will paste somewhere that does not compress. Everything runs in the browser. Nothing is uploaded. The tool is free and needs no account.
+Removing spaces, tabs, and newlines from JSON makes the text shorter. It does not hide data, and it is weaker than HTTP gzip or Brotli, which your server should still enable. Use ToolPin JSON Minify when you need the JSON text itself to be compact: inline config, a file on disk, or a message body you will paste somewhere that does not compress. Everything runs in the browser. Nothing is uploaded. The tool is free and needs no account.
 
-The correct way to minify JSON is parse-then-stringify with no extra whitespace. Deleting spaces with a regex can break strings that contain spaces you actually need. ApkaOS parses first; if the input is invalid, you get an error instead of a corrupted file.
+The correct way to minify JSON is parse-then-stringify with no extra whitespace. Deleting spaces with a regex can break strings that contain spaces you actually need. ToolPin parses first; if the input is invalid, you get an error instead of a corrupted file.
 
 ## What stays, what goes
 
@@ -174,7 +174,7 @@ Need rows for Excel? JSON to CSV wants an array of objects and is also local. Ne
       {
         question: "Does JSON Minify upload my data?",
         answer:
-          "No. Parse and compact stringify run in your browser on ApkaOS.",
+          "No. Parse and compact stringify run in your browser on ToolPin.",
       },
       {
         question: "Is it free?",
@@ -209,18 +209,18 @@ Need rows for Excel? JSON to CSV wants an array of objects and is also local. Ne
       "json compact",
       "remove whitespace json",
       "json minify in browser",
-      "json minify apkaos",
+      "json minify toolpin",
     ],
   },
 
   "json-to-csv": {
-    seoTitle: "JSON to CSV Converter in Browser Free | ApkaOS Tools",
+    seoTitle: "JSON to CSV Converter in Browser Free | ToolPin Tools",
     seoDescription:
-      "Convert JSON arrays to CSV in your browser with ApkaOS. Free, no signup, never uploaded. Flatten objects into spreadsheet-ready rows and columns for Excel.",
+      "Convert JSON arrays to CSV in your browser with ToolPin. Free, no signup, never uploaded. Flatten objects into spreadsheet-ready rows and columns for Excel.",
     intro:
-      "Turn a JSON array of objects into a CSV table in your browser on ApkaOS. Each object becomes a row; keys become column headers. Nested objects need flattening or they will not look like a sheet. Nothing is uploaded. The tool is free and needs no account. Use it when an API gave you JSON and Excel, Sheets, or a database import wants CSV.",
+      "Turn a JSON array of objects into a CSV table in your browser on ToolPin. Each object becomes a row; keys become column headers. Nested objects need flattening or they will not look like a sheet. Nothing is uploaded. The tool is free and needs no account. Use it when an API gave you JSON and Excel, Sheets, or a database import wants CSV.",
     howToSteps: [
-      "Open JSON to CSV on ApkaOS. Conversion stays in the browser.",
+      "Open JSON to CSV on ToolPin. Conversion stays in the browser.",
       "Paste a JSON array of objects (not a single object unless the tool wraps it).",
       "Convert. Check that headers match the keys you care about.",
       "Download the CSV and open it in Excel, Google Sheets, or a text editor.",
@@ -240,7 +240,7 @@ Need rows for Excel? JSON to CSV wants an array of objects and is also local. Ne
     ],
     guide: `## JSON trees versus CSV rectangles
 
-JSON can nest. CSV cannot, not without conventions. JSON to CSV on ApkaOS expects a list of similar objects and writes one row per object. Top-level keys become headers. Nested objects and arrays are either flattened with a separator, stringified, or omitted — depending on how the converter is implemented. Plan for a flat shape: id, name, email, not user.profile.address.city unless flattening is documented in the UI.
+JSON can nest. CSV cannot, not without conventions. JSON to CSV on ToolPin expects a list of similar objects and writes one row per object. Top-level keys become headers. Nested objects and arrays are either flattened with a separator, stringified, or omitted — depending on how the converter is implemented. Plan for a flat shape: id, name, email, not user.profile.address.city unless flattening is documented in the UI.
 
 Everything runs in your browser. Nothing is uploaded. The tool is free and needs no account.
 
@@ -256,7 +256,7 @@ Commas and quotes inside values are escaped with CSV quoting rules. Newlines ins
 
 ## What this tool is not
 
-It is not a general ETL mapper. It will not join two arrays, will not explode a nested array into extra rows (unless a specific flatten mode says so), and will not apply JSONPath. For those jobs, use a script. It is also not XLSX — you get CSV. Open it in Excel or send it through CSV to XLSX (also local on ApkaOS) if you need a workbook.
+It is not a general ETL mapper. It will not join two arrays, will not explode a nested array into extra rows (unless a specific flatten mode says so), and will not apply JSONPath. For those jobs, use a script. It is also not XLSX — you get CSV. Open it in Excel or send it through CSV to XLSX (also local on ToolPin) if you need a workbook.
 
 Deep GeoJSON, GraphQL blobs, and arbitrary nested documents are a poor fit. Extract the array you actually need with JSON Formatter + a small edit, then convert.
 
@@ -268,7 +268,7 @@ Because conversion is local, you can turn a production export into CSV on your l
 
 Open the CSV as UTF-8. Confirm the header row. If a column shifted, a value probably contained an unescaped quote in the source — fix the JSON string. Keep the JSON as the structured source of truth; CSV is a projection.
 
-Going the other way: CSV to JSON on ApkaOS rebuilds an array of objects from rows. Round-trips lose types (everything comes back as strings unless you coerce) and lose nested structure you flattened away.`,
+Going the other way: CSV to JSON on ToolPin rebuilds an array of objects from rows. Round-trips lose types (everything comes back as strings unless you coerce) and lose nested structure you flattened away.`,
     tips: [
       "Start from an array of flat objects. Nesting does not belong in CSV without a flatten step.",
       "Wrap a single record in [ ] if you only have one object.",
@@ -280,7 +280,7 @@ Going the other way: CSV to JSON on ApkaOS rebuilds an array of objects from row
       {
         question: "Is the JSON uploaded?",
         answer:
-          "No. JSON to CSV runs entirely in your browser on ApkaOS.",
+          "No. JSON to CSV runs entirely in your browser on ToolPin.",
       },
       {
         question: "What JSON shape works best?",
@@ -300,7 +300,7 @@ Going the other way: CSV to JSON on ApkaOS rebuilds an array of objects from row
       {
         question: "Can I get an Excel file directly?",
         answer:
-          "This tool outputs CSV. Convert that file with CSV to XLSX on ApkaOS (also browser-local) if you need .xlsx.",
+          "This tool outputs CSV. Convert that file with CSV to XLSX on ToolPin (also browser-local) if you need .xlsx.",
       },
       {
         question: "How are null and booleans exported?",
@@ -315,18 +315,18 @@ Going the other way: CSV to JSON on ApkaOS rebuilds an array of objects from row
       "json to csv online",
       "json to csv in browser",
       "free json csv converter",
-      "json to csv apkaos",
+      "json to csv toolpin",
     ],
   },
 
   "csv-to-json": {
-    seoTitle: "CSV to JSON Converter in Browser Free | ApkaOS Tools",
+    seoTitle: "CSV to JSON Converter in Browser Free | ToolPin Tools",
     seoDescription:
-      "Convert CSV to JSON in your browser with ApkaOS. Free, no signup, never uploaded. Header row becomes object keys; each record is a JSON object for APIs.",
+      "Convert CSV to JSON in your browser with ToolPin. Free, no signup, never uploaded. Header row becomes object keys; each record is a JSON object for APIs.",
     intro:
-      "Turn a CSV table into a JSON array of objects in your browser on ApkaOS. The first row becomes keys; every following row becomes an object. Nothing is uploaded. The tool is free and needs no account. Use it to feed a web app, a mock API, or a script when your data started life in Excel or a bank export.",
+      "Turn a CSV table into a JSON array of objects in your browser on ToolPin. The first row becomes keys; every following row becomes an object. Nothing is uploaded. The tool is free and needs no account. Use it to feed a web app, a mock API, or a script when your data started life in Excel or a bank export.",
     howToSteps: [
-      "Open CSV to JSON on ApkaOS. Parsing stays in this tab.",
+      "Open CSV to JSON on ToolPin. Parsing stays in this tab.",
       "Paste CSV or select a .csv file. Confirm the first row is a header.",
       "Convert to JSON. Each data row should become one object.",
       "Copy or download the JSON. Pretty-print it with JSON Formatter if you want to inspect it.",
@@ -346,7 +346,7 @@ Going the other way: CSV to JSON on ApkaOS rebuilds an array of objects from row
     ],
     guide: `## Rows become objects
 
-CSV is a rectangle: headers on row one, values below. CSV to JSON on ApkaOS maps that rectangle into [{ "Header": "value", ... }, ...]. Conversion runs in your browser. Nothing is uploaded. The tool is free and needs no account.
+CSV is a rectangle: headers on row one, values below. CSV to JSON on ToolPin maps that rectangle into [{ "Header": "value", ... }, ...]. Conversion runs in your browser. Nothing is uploaded. The tool is free and needs no account.
 
 If there is no header row, you will get keys like 0, 1, 2 or field1 — add a header in a text editor first. Duplicate headers collide; rename columns so each key is unique.
 
@@ -364,7 +364,7 @@ Quoted commas and newlines inside fields should parse as a single value. Broken 
 
 ## Shape choices
 
-An array of objects is the default and what JSON to CSV on ApkaOS expects on the way back. Some tools offer an array of arrays (no keys) or a single object keyed by the first column. Use array-of-objects unless you have a reason not to.
+An array of objects is the default and what JSON to CSV on ToolPin expects on the way back. Some tools offer an array of arrays (no keys) or a single object keyed by the first column. Use array-of-objects unless you have a reason not to.
 
 This is not a schema generator and not TypeScript. It will not infer interfaces. It will not nest columns like address.city unless the CSV already used a convention and the UI flattens/unflattens that way.
 
@@ -376,7 +376,7 @@ Local conversion is appropriate for payroll and student lists. Do not use an upl
 
 Run JSON Formatter to read the result. Minify if you will embed it. If you need Excel again, you already had CSV — or use CSV to XLSX. Round-tripping CSV → JSON → CSV should preserve headers and values if types were left as strings; nested JSON you add by hand will not survive a trip back to CSV without flattening.
 
-ApkaOS does not host your JSON. Copy it into the project that needs it.`,
+ToolPin does not host your JSON. Copy it into the project that needs it.`,
     tips: [
       "Put a unique header on every column before converting.",
       "Treat values as strings in JSON unless you are sure numeric inference will not drop leading zeros.",
@@ -388,12 +388,12 @@ ApkaOS does not host your JSON. Copy it into the project that needs it.`,
       {
         question: "Does CSV to JSON upload my file?",
         answer:
-          "No. Parsing runs in your browser. ApkaOS never receives the CSV.",
+          "No. Parsing runs in your browser. ToolPin never receives the CSV.",
       },
       {
         question: "Is it free?",
         answer:
-          "Yes. No account required on apkaos.in.",
+          "Yes. No account required on toolpin.online.",
       },
       {
         question: "Why is every value a string in the JSON?",
@@ -423,18 +423,18 @@ ApkaOS does not host your JSON. Copy it into the project that needs it.`,
       "spreadsheet to json",
       "csv to json online",
       "csv to json in browser",
-      "csv to json apkaos",
+      "csv to json toolpin",
     ],
   },
 
   "base64-encode": {
-    seoTitle: "Base64 Encode Text Online Free, No Signup | ApkaOS",
+    seoTitle: "Base64 Encode Text Online Free, No Signup | ToolPin",
     seoDescription:
-      "Encode text to Base64 in your browser with ApkaOS. Free, no signup, never uploaded. Encoding is not encryption — anyone can decode the result in one click.",
+      "Encode text to Base64 in your browser with ToolPin. Free, no signup, never uploaded. Encoding is not encryption — anyone can decode the result in one click.",
     intro:
-      "Convert text to Base64 in your browser on ApkaOS. Encoding turns bytes into an A–Z, a–z, 0–9, +, / alphabet (with = padding) so you can embed data in JSON, data URLs, or email-safe strings. It is not encryption and not hashing. Nothing is uploaded. The tool is free and needs no account. Decode with the companion Base64 Decode page.",
+      "Convert text to Base64 in your browser on ToolPin. Encoding turns bytes into an A–Z, a–z, 0–9, +, / alphabet (with = padding) so you can embed data in JSON, data URLs, or email-safe strings. It is not encryption and not hashing. Nothing is uploaded. The tool is free and needs no account. Decode with the companion Base64 Decode page.",
     howToSteps: [
-      "Open Base64 Encode on ApkaOS. Encoding runs locally in this tab.",
+      "Open Base64 Encode on ToolPin. Encoding runs locally in this tab.",
       "Paste the text you want to encode (UTF-8 is the usual interpretation).",
       "Encode. Copy the ASCII Base64 string that appears.",
       "Paste it into a data URL, a JSON field, or a config file that requires Base64.",
@@ -444,7 +444,7 @@ ApkaOS does not host your JSON. Copy it into the project that needs it.`,
       "100% browser-local — source text never leaves your device.",
       "Free, no signup.",
       "Uses standard Base64 so other languages’ decoders will accept the output.",
-      "Paired decode tool on ApkaOS for a full round-trip.",
+      "Paired decode tool on ToolPin for a full round-trip.",
     ],
     useCases: [
       "Embed a small SVG or snippet in a data: URL during front-end work.",
@@ -454,7 +454,7 @@ ApkaOS does not host your JSON. Copy it into the project that needs it.`,
     ],
     guide: `## Encoding is not encryption
 
-Base64 maps every three bytes to four ASCII characters. Anyone who sees the string can decode it in one click. Do not treat Base64 as a way to hide passwords, API keys, or personal data. If you need confidentiality, use TLS in transit and a real cipher at rest. ApkaOS Base64 Encode only transforms representation. It runs in your browser, uploads nothing, is free, and needs no account.
+Base64 maps every three bytes to four ASCII characters. Anyone who sees the string can decode it in one click. Do not treat Base64 as a way to hide passwords, API keys, or personal data. If you need confidentiality, use TLS in transit and a real cipher at rest. ToolPin Base64 Encode only transforms representation. It runs in your browser, uploads nothing, is free, and needs no account.
 
 HTTP Basic authentication uses Base64(username:password). That is a transport convention, not protection — it must only be used over HTTPS, and it is still not a substitute for OAuth or hashed passwords on a server.
 
@@ -476,25 +476,25 @@ Round-trip: encode here, decode on Base64 Decode. If the decoded text has replac
 
 Because encoding is local, you can Base64 a draft email or a token without sending it to a paste site. The output is still readable by anyone with a decoder, including anyone looking at your screen.
 
-Do not confuse this with hashing (MD5, SHA-256 on ApkaOS). Hashes are one-way fingerprints. Base64 is two-way. Do not confuse it with URL encode either — percent-encoding is a different mapping for URLs.
+Do not confuse this with hashing (MD5, SHA-256 on ToolPin). Hashes are one-way fingerprints. Base64 is two-way. Do not confuse it with URL encode either — percent-encoding is a different mapping for URLs.
 
 ## When Base64 is the wrong tool
 
 If you need a checksum, use SHA-256 (or MD5 only for a legacy checksum). If you need to put a name in a query string, use URL Encode. If you need to hide a secret, use encryption and TLS, not an alphabet change. Base64 shows up in PEM certificates, SMTP attachments, and JSON web tokens as a wrapper — the wrapper is not the security.
 
-ApkaOS does not store what you encode. Copy the string into the system that asked for Base64 and delete it from shared chats if it wraps a token.`,
+ToolPin does not store what you encode. Copy the string into the system that asked for Base64 and delete it from shared chats if it wraps a token.`,
     tips: [
       "Never use Base64 to “hide” passwords or secrets — decoding is trivial.",
       "Assume UTF-8 input. Do not paste raw binary into a text encoder.",
       "If a URL or JWT rejects + or /, you need URL-safe Base64, not the MIME alphabet.",
       "Expect the output to be about one-third longer than the input bytes.",
-      "Use Base64 Decode on ApkaOS to verify a round-trip before you ship the string.",
+      "Use Base64 Decode on ToolPin to verify a round-trip before you ship the string.",
     ],
     faq: [
       {
         question: "Is Base64 encoding done on a server?",
         answer:
-          "No. ApkaOS encodes in your browser. Text is never uploaded.",
+          "No. ToolPin encodes in your browser. Text is never uploaded.",
       },
       {
         question: "Is Base64 encryption?",
@@ -504,7 +504,7 @@ ApkaOS does not store what you encode. Copy the string into the system that aske
       {
         question: "Is the tool free?",
         answer:
-          "Yes. No signup on apkaos.in.",
+          "Yes. No signup on toolpin.online.",
       },
       {
         question: "Why does my decoder show garbled characters?",
@@ -529,18 +529,18 @@ ApkaOS does not store what you encode. Copy the string into the system that aske
       "utf8 to base64",
       "base64 encode in browser",
       "free base64 encoder",
-      "base64 encode apkaos",
+      "base64 encode toolpin",
     ],
   },
 
   "base64-decode": {
-    seoTitle: "Base64 Decode Text Online Free, No Signup | ApkaOS",
+    seoTitle: "Base64 Decode Text Online Free, No Signup | ToolPin",
     seoDescription:
-      "Decode Base64 to text in your browser with ApkaOS. Free, no signup, never uploaded. Reverses standard Base64 — not a way to crack encryption or hashes.",
+      "Decode Base64 to text in your browser with ToolPin. Free, no signup, never uploaded. Reverses standard Base64 — not a way to crack encryption or hashes.",
     intro:
-      "Decode a Base64 string back to text in your browser on ApkaOS. Paste an encoded payload from an API, a data URL, or an email, and read the original UTF-8 text. Decoding is the reverse of encoding, not a cryptographic attack. Nothing is uploaded. The tool is free and needs no account. Encode again with Base64 Encode if you need to go the other way.",
+      "Decode a Base64 string back to text in your browser on ToolPin. Paste an encoded payload from an API, a data URL, or an email, and read the original UTF-8 text. Decoding is the reverse of encoding, not a cryptographic attack. Nothing is uploaded. The tool is free and needs no account. Encode again with Base64 Encode if you need to go the other way.",
     howToSteps: [
-      "Open Base64 Decode on ApkaOS. Decoding stays in this tab.",
+      "Open Base64 Decode on ToolPin. Decoding stays in this tab.",
       "Paste the Base64 string. Strip data:image/...;base64, prefixes if you only want the payload, or keep them out of the decoder input.",
       "Decode. Invalid characters or bad padding produce an error instead of garbage.",
       "Read or copy the recovered text.",
@@ -550,7 +550,7 @@ ApkaOS does not store what you encode. Copy the string into the system that aske
       "Browser-local decode — tokens and message bodies stay on your device.",
       "Free, no signup.",
       "Rejects malformed strings instead of silently emitting junk when possible.",
-      "Matches the ApkaOS encoder so round-trips work for UTF-8 text.",
+      "Matches the ToolPin encoder so round-trips work for UTF-8 text.",
     ],
     useCases: [
       "Read a Base64 field in a JSON log without writing a one-liner in a REPL.",
@@ -560,7 +560,7 @@ ApkaOS does not store what you encode. Copy the string into the system that aske
     ],
     guide: `## What decoding does
 
-Base64 decode maps four ASCII characters back to three bytes, then those bytes are shown as text (UTF-8). ApkaOS does this in your browser. Nothing is uploaded. The tool is free and needs no account. If the bytes are not valid UTF-8, you may see replacement characters — the data might be a file, not a sentence.
+Base64 decode maps four ASCII characters back to three bytes, then those bytes are shown as text (UTF-8). ToolPin does this in your browser. Nothing is uploaded. The tool is free and needs no account. If the bytes are not valid UTF-8, you may see replacement characters — the data might be a file, not a sentence.
 
 Decoding is not “breaking” encryption, hashing, or password storage. Encrypted blobs that happen to be Base64-wrapped still need the key. MD5 and SHA-256 hashes are not Base64 of the password; they are one-way digests (and MD5 must not be used for passwords anyway).
 
@@ -578,7 +578,7 @@ Base64 length should be a multiple of 4. Missing = padding is common. Adding = u
 
 ## Privacy and safety
 
-You might decode something that contains a secret. Because the tool is local, ApkaOS never sees it. You still should not paste other people’s credentials into a shared screen.
+You might decode something that contains a secret. Because the tool is local, ToolPin never sees it. You still should not paste other people’s credentials into a shared screen.
 
 Do not decode untrusted Base64 and then execute it as HTML or a script. Treat the output like any untrusted text.
 
@@ -592,7 +592,7 @@ To go the other way, use Base64 Encode. Round-trip only holds for the same alpha
 
 API logs often Base64-wrap small JSON blobs. Decode, then run JSON Formatter. Email MIME parts may include line-wrapped Base64; strip whitespace if the decoder is strict. Browser data URLs mix a media type with a payload — only the part after the comma is Base64. None of these are encrypted. If the decoded bytes look like a ZIP or PNG header, save them as a file instead of reading them as a paragraph.
 
-ApkaOS never logs the string. Treat the output like the original secret if the payload contained one.`,
+ToolPin never logs the string. Treat the output like the original secret if the payload contained one.`,
     tips: [
       "Strip data: and ;base64, prefixes before pasting into a raw decoder.",
       "JWT segments need URL-safe handling and padding; they are not always classic Base64.",
@@ -604,7 +604,7 @@ ApkaOS never logs the string. Treat the output like the original secret if the p
       {
         question: "Does Base64 Decode upload my string?",
         answer:
-          "No. Decoding runs in your browser on ApkaOS.",
+          "No. Decoding runs in your browser on ToolPin.",
       },
       {
         question: "Can this decrypt encrypted data?",
@@ -639,18 +639,18 @@ ApkaOS never logs the string. Treat the output like the original secret if the p
       "base64 decoder",
       "base64 decode in browser",
       "free base64 decode",
-      "base64 decode apkaos",
+      "base64 decode toolpin",
     ],
   },
 
   "url-encode": {
-    seoTitle: "URL Encode / Percent-Encode Online Free | ApkaOS Tools",
+    seoTitle: "URL Encode / Percent-Encode Online Free | ToolPin Tools",
     seoDescription:
-      "Percent-encode text for URLs in your browser with ApkaOS. Free, no signup, never uploaded. Safe query strings without breaking &, ?, or spaces in links.",
+      "Percent-encode text for URLs in your browser with ToolPin. Free, no signup, never uploaded. Safe query strings without breaking &, ?, or spaces in links.",
     intro:
-      "Percent-encode text for use in URLs in your browser on ApkaOS. Spaces become %20 (or + in form style), and reserved characters are escaped so a query parameter cannot break the rest of the link. This is not Base64 and not encryption. Nothing is uploaded. The tool is free and needs no account. Decode with URL Decode when you need the original string.",
+      "Percent-encode text for use in URLs in your browser on ToolPin. Spaces become %20 (or + in form style), and reserved characters are escaped so a query parameter cannot break the rest of the link. This is not Base64 and not encryption. Nothing is uploaded. The tool is free and needs no account. Decode with URL Decode when you need the original string.",
     howToSteps: [
-      "Open URL Encode on ApkaOS. Encoding runs locally.",
+      "Open URL Encode on ToolPin. Encoding runs locally.",
       "Paste the parameter value — the search term, name, or path segment, not necessarily the entire URL.",
       "Encode. Copy the percent-encoded result.",
       "Insert it into your query string or path. Do not encode the entire URL including https:// unless you intend to nest a URL as data.",
@@ -660,7 +660,7 @@ ApkaOS never logs the string. Treat the output like the original secret if the p
       "Browser-local — query values never leave your device.",
       "Free, no signup.",
       "Prevents broken links when names contain spaces, ampersands, or non-ASCII text.",
-      "Companion decoder on ApkaOS for inspecting incoming query strings.",
+      "Companion decoder on ToolPin for inspecting incoming query strings.",
     ],
     useCases: [
       "Build a search URL that contains Hindi, emoji, or spaces.",
@@ -670,9 +670,9 @@ ApkaOS never logs the string. Treat the output like the original secret if the p
     ],
     guide: `## Why URLs need encoding
 
-A URL uses ?, &, =, #, and / as syntax. If a search term contains & or a space, the browser (or a naive string concat) will split the query in the wrong place. Percent-encoding replaces unsafe bytes with %HH sequences (UTF-8 then hex). ApkaOS URL Encode does that in your browser. Nothing is uploaded. The tool is free and needs no account.
+A URL uses ?, &, =, #, and / as syntax. If a search term contains & or a space, the browser (or a naive string concat) will split the query in the wrong place. Percent-encoding replaces unsafe bytes with %HH sequences (UTF-8 then hex). ToolPin URL Encode does that in your browser. Nothing is uploaded. The tool is free and needs no account.
 
-Encode values, not whole URLs, in the common case. Encoding https://apkaos.in/tools into a redirect parameter is correct. Encoding the entire address bar including the scheme will turn : and / into %3A and %2F and the link will not navigate until something decodes it.
+Encode values, not whole URLs, in the common case. Encoding https://toolpin.online/tools into a redirect parameter is correct. Encoding the entire address bar including the scheme will turn : and / into %3A and %2F and the link will not navigate until something decodes it.
 
 ## encodeURIComponent versus forms
 
@@ -694,13 +694,13 @@ Local encoding means you can prepare a query that contains a customer name witho
 
 ## After you encode
 
-Paste into the query, test in a browser, and confirm the server decoded once. If you see pluses where you wanted spaces, check form-encoding versus %20. Use URL Decode on ApkaOS to inspect a captured request.
+Paste into the query, test in a browser, and confirm the server decoded once. If you see pluses where you wanted spaces, check form-encoding versus %20. Use URL Decode on ToolPin to inspect a captured request.
 
 ## Path segments versus query values
 
 Path encoding is stricter about some characters than query encoding. A space in a path should be %20, not +. Reserved characters that are allowed in a path (such as unencoded slashes) must not be encoded if they are meant as separators. When in doubt, encode each path segment separately and join with /. Hash fragments after # are not sent to servers; encoding them only affects client-side routers.
 
-ApkaOS does not fetch the URL you build. You still need to test the finished link in a browser.`,
+ToolPin does not fetch the URL you build. You still need to test the finished link in a browser.`,
     tips: [
       "Encode parameter values, not the entire https:// URL, unless the whole URL is itself a value.",
       "Avoid double-encoding; %20 should not become %2520.",
@@ -712,7 +712,7 @@ ApkaOS does not fetch the URL you build. You still need to test the finished lin
       {
         question: "Is URL encoding done on a server?",
         answer:
-          "No. ApkaOS percent-encodes in your browser. Nothing is uploaded.",
+          "No. ToolPin percent-encodes in your browser. Nothing is uploaded.",
       },
       {
         question: "Is this the same as Base64?",
@@ -722,7 +722,7 @@ ApkaOS does not fetch the URL you build. You still need to test the finished lin
       {
         question: "Is it free?",
         answer:
-          "Yes. No signup on apkaos.in.",
+          "Yes. No signup on toolpin.online.",
       },
       {
         question: "Should I encode a full URL or just the query value?",
@@ -747,18 +747,18 @@ ApkaOS does not fetch the URL you build. You still need to test the finished lin
       "query string encode",
       "url encoder online",
       "url encode in browser",
-      "url encode apkaos",
+      "url encode toolpin",
     ],
   },
 
   "url-decode": {
-    seoTitle: "URL Decode Percent-Encoding Online Free | ApkaOS Tools",
+    seoTitle: "URL Decode Percent-Encoding Online Free | ToolPin Tools",
     seoDescription:
-      "Decode percent-encoded URL text in your browser with ApkaOS. Free, no signup, never uploaded. Turn %20 and %26 back into readable query values and paths.",
+      "Decode percent-encoded URL text in your browser with ToolPin. Free, no signup, never uploaded. Turn %20 and %26 back into readable query values and paths.",
     intro:
-      "Decode percent-encoded URL text in your browser on ApkaOS. Paste a query value or a full encoded string and recover spaces, ampersands, and UTF-8 characters. Useful when you are reading logs, debugging a redirect, or copying a messy address bar. Nothing is uploaded. The tool is free and needs no account. Encode with URL Encode when you are building a link.",
+      "Decode percent-encoded URL text in your browser on ToolPin. Paste a query value or a full encoded string and recover spaces, ampersands, and UTF-8 characters. Useful when you are reading logs, debugging a redirect, or copying a messy address bar. Nothing is uploaded. The tool is free and needs no account. Encode with URL Encode when you are building a link.",
     howToSteps: [
-      "Open URL Decode on ApkaOS. Decoding stays in this tab.",
+      "Open URL Decode on ToolPin. Decoding stays in this tab.",
       "Paste the encoded fragment. You can paste a whole query string if you only need to read it.",
       "Decode. %20 becomes a space, %26 becomes &, and UTF-8 sequences become characters.",
       "Copy the readable text. Decode a second time only if the value was double-encoded.",
@@ -778,7 +778,7 @@ ApkaOS does not fetch the URL you build. You still need to test the finished lin
     ],
     guide: `## Reading what the address bar hid
 
-Percent-encoding is how URLs carry bytes that would otherwise be syntax. URL Decode on ApkaOS reverses %HH sequences (and often + to space for form-encoded data) in your browser. Nothing is uploaded. The tool is free and needs no account.
+Percent-encoding is how URLs carry bytes that would otherwise be syntax. URL Decode on ToolPin reverses %HH sequences (and often + to space for form-encoded data) in your browser. Nothing is uploaded. The tool is free and needs no account.
 
 If you paste a full URL, only the encoded parts change; already-plain characters stay. If you paste only q=foo%20bar, you get the decoded value (or the whole snippet decoded — either way you can read it).
 
@@ -810,7 +810,7 @@ Plus signs in emails copied from HTML can be real pluses in phone numbers. If a 
 
 Broken copies from chat apps replace % with a fullwidth percent or insert zero-width spaces. Those will not decode. Re-copy from the server log or the address bar.
 
-ApkaOS does not log the strings you decode. Use the readable text to fix the bug, then encode again when you rebuild the link.`,
+ToolPin does not log the strings you decode. Use the readable text to fix the bug, then encode again when you rebuild the link.`,
     tips: [
       "If you still see %20 after one pass, the value was double-encoded — decode again once.",
       "A plus sign in a query often means space; %2B is a real plus.",
@@ -822,7 +822,7 @@ ApkaOS does not log the strings you decode. Use the readable text to fix the bug
       {
         question: "Does URL Decode upload my text?",
         answer:
-          "No. Percent-decoding runs in your browser on ApkaOS.",
+          "No. Percent-decoding runs in your browser on ToolPin.",
       },
       {
         question: "Is it free?",
@@ -857,18 +857,18 @@ ApkaOS does not log the strings you decode. Use the readable text to fix the bug
       "url decoder online",
       "decodeuri component",
       "url decode in browser",
-      "url decode apkaos",
+      "url decode toolpin",
     ],
   },
 
   "md5-hash": {
-    seoTitle: "MD5 Hash Generator Online — Not for Passwords | ApkaOS",
+    seoTitle: "MD5 Hash Generator Online — Not for Passwords | ToolPin",
     seoDescription:
-      "Generate an MD5 hash in your browser with ApkaOS. Free, no signup, never uploaded. For checksums only — MD5 is not safe for passwords or security use.",
+      "Generate an MD5 hash in your browser with ToolPin. Free, no signup, never uploaded. For checksums only — MD5 is not safe for passwords or security use.",
     intro:
-      "Create an MD5 digest from text in your browser on ApkaOS. You get a 128-bit fingerprint, usually shown as 32 hex characters. Use it to compare files or to match a published checksum — not to store passwords. MD5 is broken for security use; attackers can force collisions. Hashing stays on your device. The tool is free and needs no account. Prefer SHA-256 when you need a stronger fingerprint.",
+      "Create an MD5 digest from text in your browser on ToolPin. You get a 128-bit fingerprint, usually shown as 32 hex characters. Use it to compare files or to match a published checksum — not to store passwords. MD5 is broken for security use; attackers can force collisions. Hashing stays on your device. The tool is free and needs no account. Prefer SHA-256 when you need a stronger fingerprint.",
     howToSteps: [
-      "Open MD5 Hash on ApkaOS. The text never leaves this tab.",
+      "Open MD5 Hash on ToolPin. The text never leaves this tab.",
       "Paste the string you want to fingerprint (UTF-8).",
       "Generate the hash. Copy the 32-character hexadecimal value.",
       "Compare it to a known checksum, or store it as a non-security cache key.",
@@ -888,9 +888,9 @@ ApkaOS does not log the strings you decode. Use the readable text to fix the bug
     ],
     guide: `## MD5 is a checksum, not a lock
 
-MD5 produces a 128-bit digest. For decades it was used for file checksums and, wrongly, for password databases. Collision attacks are practical: two different inputs can share an MD5 hash. Chosen-prefix collisions exist too. Do not use MD5 to protect passwords, to sign data, or to verify a file when an attacker might swap it. ApkaOS still offers MD5 because legacy systems and docs ask for it. The hash is computed in your browser. Nothing is uploaded. The tool is free and needs no account.
+MD5 produces a 128-bit digest. For decades it was used for file checksums and, wrongly, for password databases. Collision attacks are practical: two different inputs can share an MD5 hash. Chosen-prefix collisions exist too. Do not use MD5 to protect passwords, to sign data, or to verify a file when an attacker might swap it. ToolPin still offers MD5 because legacy systems and docs ask for it. The hash is computed in your browser. Nothing is uploaded. The tool is free and needs no account.
 
-For a stronger fingerprint of the same text, use SHA-256 Hash on ApkaOS. For storing user passwords on a server, use a slow password hashing function (Argon2id, scrypt, or bcrypt) with a unique salt — never MD5, never plain SHA-256 by itself either.
+For a stronger fingerprint of the same text, use SHA-256 Hash on ToolPin. For storing user passwords on a server, use a slow password hashing function (Argon2id, scrypt, or bcrypt) with a unique salt — never MD5, never plain SHA-256 by itself either.
 
 ## What you get
 
@@ -906,7 +906,7 @@ Hashing locally means you can fingerprint a string without sending it to a websi
 
 ## After you hash
 
-If you needed MD5 to satisfy an old API, you have it. If you are designing something new, pick SHA-256 for integrity checks and a real password KDF for authentication. ApkaOS will not store the digest or the input.
+If you needed MD5 to satisfy an old API, you have it. If you are designing something new, pick SHA-256 for integrity checks and a real password KDF for authentication. ToolPin will not store the digest or the input.
 
 Rainbow tables exist for MD5 of common passwords. That is another reason MD5 must not be used for credentials.
 
@@ -917,7 +917,7 @@ People often compare this page to md5sum, PHP md5(), or Python hashlib.md5. All 
 If a vendor still requires MD5 of a license string, hash exactly their specified encoding and do not use the digest as proof that the string is secret. Anyone can MD5 the same public string.`,
     tips: [
       "Do not use MD5 for passwords, tokens, or anything an attacker might forge.",
-      "Use SHA-256 on ApkaOS when you need a stronger content fingerprint.",
+      "Use SHA-256 on ToolPin when you need a stronger content fingerprint.",
       "You cannot reverse an MD5 hash; “decrypt MD5” sites only look up common strings.",
       "Hash UTF-8 text consistently or your digest will not match another tool’s.",
       "For files, compare against a file hasher; this page hashes the text you paste, not a binary path on disk.",
@@ -926,7 +926,7 @@ If a vendor still requires MD5 of a license string, hash exactly their specified
       {
         question: "Is my text uploaded to compute MD5?",
         answer:
-          "No. MD5 runs in your browser on ApkaOS.",
+          "No. MD5 runs in your browser on ToolPin.",
       },
       {
         question: "Can I use MD5 to store passwords?",
@@ -961,25 +961,25 @@ If a vendor still requires MD5 of a license string, hash exactly their specified
       "md5 hash in browser",
       "create md5 digest",
       "md5 not for passwords",
-      "md5 hash apkaos",
+      "md5 hash toolpin",
     ],
   },
 
   "sha256-hash": {
-    seoTitle: "SHA-256 Hash Generator Online Free, No Signup | ApkaOS",
+    seoTitle: "SHA-256 Hash Generator Online Free, No Signup | ToolPin",
     seoDescription:
-      "Generate a SHA-256 hash in your browser with ApkaOS. Free, no signup, never uploaded. Stronger than MD5 — still not a password storage function alone.",
+      "Generate a SHA-256 hash in your browser with ToolPin. Free, no signup, never uploaded. Stronger than MD5 — still not a password storage function alone.",
     intro:
-      "Create a SHA-256 digest from text in your browser on ApkaOS. You get a 256-bit fingerprint, usually 64 hex characters. SHA-256 is the SHA-2 family hash used for file integrity and many protocols. It is much stronger than MD5, but it is still not how you should store passwords (use Argon2 or bcrypt). Hashing stays on your device. The tool is free and needs no account.",
+      "Create a SHA-256 digest from text in your browser on ToolPin. You get a 256-bit fingerprint, usually 64 hex characters. SHA-256 is the SHA-2 family hash used for file integrity and many protocols. It is much stronger than MD5, but it is still not how you should store passwords (use Argon2 or bcrypt). Hashing stays on your device. The tool is free and needs no account.",
     howToSteps: [
-      "Open SHA-256 Hash on ApkaOS. Computation never leaves this tab.",
+      "Open SHA-256 Hash on ToolPin. Computation never leaves this tab.",
       "Paste the text to fingerprint (UTF-8).",
       "Generate the hash and copy the 64-character hex string.",
       "Use it to verify a payload, label a cache, or match a published SHA-256 checksum.",
       "Do not use this alone as your website’s password database — use a slow salted KDF.",
     ],
     benefits: [
-      "Browser-local — input never uploaded to ApkaOS.",
+      "Browser-local — input never uploaded to ToolPin.",
       "Free, no signup.",
       "256-bit digest; collision resistance far above MD5 for practical use.",
       "Hex output matches openssl dgst -sha256 and Web Crypto.",
@@ -996,7 +996,7 @@ SHA-256 is a cryptographic hash function in the SHA-2 family. It outputs 256 bit
 
 It is still a fast hash. Fast is bad for storing passwords: attackers can try billions of guesses per second on GPUs. Password storage needs a memory-hard, slow function (Argon2id, scrypt, bcrypt) and a unique salt per user. Do not hash passwords with SHA-256 and call it done. HMAC-SHA256 is for keyed integrity, not for a password file either unless you know why you are using it.
 
-ApkaOS SHA-256 Hash computes the digest in your browser with Web Crypto or an equivalent local implementation. Nothing is uploaded. The tool is free and needs no account. Use MD5 Hash only when a legacy checksum demands MD5.
+ToolPin SHA-256 Hash computes the digest in your browser with Web Crypto or an equivalent local implementation. Nothing is uploaded. The tool is free and needs no account. Use MD5 Hash only when a legacy checksum demands MD5.
 
 ## Output format
 
@@ -1014,7 +1014,7 @@ Local hashing lets you fingerprint sensitive documents without sending them to a
 
 If you are verifying a download, compare the hex to the publisher’s SHA-256, not MD5. If you are designing an API, hashing the body with SHA-256 can detect accidental corruption; use HMAC or signatures when an attacker is in the threat model.
 
-ApkaOS does not store hashes or inputs. For QR codes of a URL, use the QR tool — hashing a URL is unrelated to encoding it as an image.
+ToolPin does not store hashes or inputs. For QR codes of a URL, use the QR tool — hashing a URL is unrelated to encoding it as an image.
 
 ## Integrity versus authenticity
 
@@ -1022,7 +1022,7 @@ A SHA-256 digest tells you whether two byte strings match. It does not tell you 
 
 When you compare hashes, copy both hex strings into a text editor and compare, or use a known-good command on your machine. Case and whitespace are the usual false mismatches.
 
-Use the MD5 tool on ApkaOS only when a legacy checklist still names MD5. For anything new, SHA-256 is the fingerprint to reach for — and a password KDF is what you reach for when the input is a user password.`,
+Use the MD5 tool on ToolPin only when a legacy checklist still names MD5. For anything new, SHA-256 is the fingerprint to reach for — and a password KDF is what you reach for when the input is a user password.`,
     tips: [
       "Prefer SHA-256 over MD5 for new checksums and integrity checks.",
       "Do not store user passwords as SHA-256(password). Use Argon2, scrypt, or bcrypt with a salt.",
@@ -1034,7 +1034,7 @@ Use the MD5 tool on ApkaOS only when a legacy checklist still names MD5. For any
       {
         question: "Is SHA-256 computed on the server?",
         answer:
-          "No. ApkaOS hashes in your browser. Text is never uploaded.",
+          "No. ToolPin hashes in your browser. Text is never uploaded.",
       },
       {
         question: "Is SHA-256 safe for passwords?",
@@ -1054,7 +1054,7 @@ Use the MD5 tool on ApkaOS only when a legacy checklist still names MD5. For any
       {
         question: "Is the tool free?",
         answer:
-          "Yes. No signup on apkaos.in.",
+          "Yes. No signup on toolpin.online.",
       },
       {
         question: "Why does my hash not match openssl?",
@@ -1069,40 +1069,40 @@ Use the MD5 tool on ApkaOS only when a legacy checklist still names MD5. For any
       "sha256 in browser",
       "sha256 vs md5",
       "sha256 integrity hash",
-      "sha256 hash apkaos",
+      "sha256 hash toolpin",
     ],
   },
 
   "qr-code-generator": {
-    seoTitle: "QR Code Generator from URL or Text Free | ApkaOS Tools",
+    seoTitle: "QR Code Generator from URL or Text Free | ToolPin Tools",
     seoDescription:
-      "Generate a QR code image from a URL or text in your browser with ApkaOS. Free, no signup, never uploaded. Scan to open a link or read a short message.",
+      "Generate a QR code image from a URL or text in your browser with ToolPin. Free, no signup, never uploaded. Scan to open a link or read a short message.",
     intro:
-      "Turn a URL or short text into a QR code image in your browser on ApkaOS. Someone scans the code with a phone camera and gets the link or the message. Nothing is uploaded. The tool is free and needs no account. QR codes are public once printed — do not encode secrets. This is an encoder to an image, not a tracker and not a URL shortener.",
+      "Turn a URL or short text into a QR code image in your browser on ToolPin. Someone scans the code with a phone camera and gets the link or the message. Nothing is uploaded. The tool is free and needs no account. QR codes are public once printed — do not encode secrets. This is an encoder to an image, not a tracker and not a URL shortener.",
     howToSteps: [
-      "Open the QR Code Generator on ApkaOS. Encoding runs locally in this tab.",
+      "Open the QR Code Generator on ToolPin. Encoding runs locally in this tab.",
       "Paste a full URL (including https://) or the short text you want the scan to reveal.",
       "Generate the QR image. Keep the text short so the pattern stays easy to scan.",
       "Download the image (PNG) and place it on a poster, slide, menu, or product insert.",
       "Scan it with your own phone before you print a hundred copies.",
     ],
     benefits: [
-      "Browser-local — the URL or message is not sent to ApkaOS servers.",
+      "Browser-local — the URL or message is not sent to ToolPin servers.",
       "Free, no signup, no watermark on the QR image.",
       "Works for links and plain text; no app install on your computer.",
-      "You keep the image file; ApkaOS does not host a tracking redirect.",
+      "You keep the image file; ToolPin does not host a tracking redirect.",
     ],
     useCases: [
       "Put a Wi-Fi-free restaurant menu link on a table tent.",
       "Add a QR to a slide that opens the demo URL when the audience scans it.",
-      "Print a code on a flyer that goes to your apkaos.in tool or a form.",
+      "Print a code on a flyer that goes to your toolpin.online tool or a form.",
       "Encode a short inventory ID or classroom join code as text for quick capture.",
     ],
     guide: `## From text to a scannable image
 
-A QR code is a 2D barcode. It stores the bytes you give it — typically a URL or a short string — as a square pattern. A camera reads the pattern and hands the text to the phone (often opening https links automatically). ApkaOS QR Code Generator builds that image in your browser. Nothing is uploaded. The tool is free and needs no account.
+A QR code is a 2D barcode. It stores the bytes you give it — typically a URL or a short string — as a square pattern. A camera reads the pattern and hands the text to the phone (often opening https links automatically). ToolPin QR Code Generator builds that image in your browser. Nothing is uploaded. The tool is free and needs no account.
 
-This is not a link shortener. The full URL is inside the code. Long URLs make denser patterns that fail in print or from a distance. Use a short, stable https URL. This is not analytics: ApkaOS does not know who scanned the code, because the image is just pixels on their device.
+This is not a link shortener. The full URL is inside the code. Long URLs make denser patterns that fail in print or from a distance. Use a short, stable https URL. This is not analytics: ToolPin does not know who scanned the code, because the image is just pixels on their device.
 
 ## URLs versus raw text
 
@@ -1122,7 +1122,7 @@ Test with iOS Camera and Android Camera, indoors and in glare. If it fails, shor
 
 Anyone who sees the code can read the payload. Do not encode passwords, OTPs, or private URLs that grant access. Phishing uses QR codes too: print your own, and do not scan random stickers over payment codes.
 
-Because generation is local, a private staging URL never hits ApkaOS. Once you print the poster, the URL is as public as the paper.
+Because generation is local, a private staging URL never hits ToolPin. Once you print the poster, the URL is as public as the paper.
 
 ## After you generate
 
@@ -1138,12 +1138,12 @@ Keep the PNG with the project. If the destination URL changes, you must print a 
       {
         question: "Is the URL uploaded to generate the QR code?",
         answer:
-          "No. ApkaOS draws the QR image in your browser. The text never leaves your device.",
+          "No. ToolPin draws the QR image in your browser. The text never leaves your device.",
       },
       {
         question: "Is it free? Is there a watermark?",
         answer:
-          "Yes, it is free with no signup. The downloaded QR image has no ApkaOS watermark.",
+          "Yes, it is free with no signup. The downloaded QR image has no ToolPin watermark.",
       },
       {
         question: "Can I put a PDF or image inside the QR code?",
@@ -1153,7 +1153,7 @@ Keep the PNG with the project. If the destination URL changes, you must print a 
       {
         question: "Will I see who scanned the code?",
         answer:
-          "No. ApkaOS does not track scans. The code is only an image of your text or URL.",
+          "No. ToolPin does not track scans. The code is only an image of your text or URL.",
       },
       {
         question: "Why will my phone not open the website?",
@@ -1173,22 +1173,22 @@ Keep the PNG with the project. If the destination URL changes, you must print a 
       "qr code from link",
       "free qr generator",
       "qr code in browser",
-      "qr code generator apkaos",
+      "qr code generator toolpin",
     ],
   },
 
   "word-counter": {
-    seoTitle: "Word Counter: Characters & Lines Online | ApkaOS Tools",
+    seoTitle: "Word Counter: Characters & Lines Online | ToolPin Tools",
     seoDescription:
-      "Count words, characters, and lines in your browser with ApkaOS. Free, no signup, never uploaded. Instant totals for essays, captions, and social posts.",
+      "Count words, characters, and lines in your browser with ToolPin. Free, no signup, never uploaded. Instant totals for essays, captions, and social posts.",
     intro:
-      "Count words, characters, and lines in your browser on ApkaOS. Paste an essay, caption, or script and see live totals. Nothing is uploaded and nothing is stored. The tool is free and needs no account. Use it for school limits, ad copy, and social posts — remembering that “word” rules differ slightly between tools and languages.",
+      "Count words, characters, and lines in your browser on ToolPin. Paste an essay, caption, or script and see live totals. Nothing is uploaded and nothing is stored. The tool is free and needs no account. Use it for school limits, ad copy, and social posts — remembering that “word” rules differ slightly between tools and languages.",
     howToSteps: [
-      "Open Word Counter on ApkaOS. Counting runs locally as you type.",
+      "Open Word Counter on ToolPin. Counting runs locally as you type.",
       "Paste or type your text.",
       "Read the word, character (with and without spaces if shown), and line counts.",
       "Trim or expand the draft until you hit the limit you were given.",
-      "Copy the final text back to your editor; ApkaOS does not save a document.",
+      "Copy the final text back to your editor; ToolPin does not save a document.",
     ],
     benefits: [
       "100% in-browser — unpublished drafts never leave your device.",
@@ -1204,11 +1204,11 @@ Keep the PNG with the project. If the destination URL changes, you must print a 
     ],
     guide: `## What a “word” is
 
-Most online counters split on whitespace: hello world is two words. Hyphenated compounds (state-of-the-art) may count as one. Numbers like 2026 usually count as a word. ApkaOS Word Counter follows a simple, transparent rule in the browser — whitespace-separated tokens — unless the UI documents otherwise. Nothing is uploaded. The tool is free and needs no account.
+Most online counters split on whitespace: hello world is two words. Hyphenated compounds (state-of-the-art) may count as one. Numbers like 2026 usually count as a word. ToolPin Word Counter follows a simple, transparent rule in the browser — whitespace-separated tokens — unless the UI documents otherwise. Nothing is uploaded. The tool is free and needs no account.
 
 Character counts matter more for tweets, SMS, and meta descriptions. “Characters with spaces” is the length of the string. “Without spaces” excludes space characters but usually not punctuation. Line count is newline-based; a wrapped sentence that looks like three lines on your screen may still be one line in the file.
 
-Microsoft Word’s count can differ slightly (footnotes, text boxes, hyphenation). If a professor says “Word count,” use Word — or confirm they accept any counter. For web limits, the platform’s counter wins; use ApkaOS as a draft check.
+Microsoft Word’s count can differ slightly (footnotes, text boxes, hyphenation). If a professor says “Word count,” use Word — or confirm they accept any counter. For web limits, the platform’s counter wins; use ToolPin as a draft check.
 
 ## Languages and scripts
 
@@ -1218,7 +1218,7 @@ Emoji and combining marks: a grapheme cluster may be multiple code points. Chara
 
 ## Privacy
 
-Drafts of theses, complaint letters, and unpublished posts stay in the tab. That is the point of a local counter versus a website that saves history. Clearing the page clears the text. ApkaOS does not create an account or a cloud document.
+Drafts of theses, complaint letters, and unpublished posts stay in the tab. That is the point of a local counter versus a website that saves history. Clearing the page clears the text. ToolPin does not create an account or a cloud document.
 
 ## After you count
 
@@ -1232,7 +1232,7 @@ Some schools want a count that excludes the title, bibliography, or footnotes. D
 
 A rough spoken-word estimate is 130–150 words per minute. That is a planning number, not a clock. Character limits on ads include spaces and punctuation; going one character over can truncate a headline in ugly ways, so leave a small buffer.
 
-ApkaOS does not store drafts and does not offer revision history. Copy the text back to your editor when you are done. If you need a case change next, use Case Converter on the same paste — still local, still free, still no account.`,
+ToolPin does not store drafts and does not offer revision history. Copy the text back to your editor when you are done. If you need a case change next, use Case Converter on the same paste — still local, still free, still no account.`,
     tips: [
       "Match the authority’s counter when it matters (Word for a thesis, the ad platform for ads).",
       "Use character count for tweets and meta descriptions; word count for essays.",
@@ -1244,7 +1244,7 @@ ApkaOS does not store drafts and does not offer revision history. Copy the text 
       {
         question: "Is my writing uploaded?",
         answer:
-          "No. Word Counter runs in your browser. ApkaOS does not store the text.",
+          "No. Word Counter runs in your browser. ToolPin does not store the text.",
       },
       {
         question: "Is it free?",
@@ -1279,18 +1279,18 @@ ApkaOS does not store drafts and does not offer revision history. Copy the text 
       "essay word count",
       "word counter online",
       "word counter in browser",
-      "word counter apkaos",
+      "word counter toolpin",
     ],
   },
 
   "case-converter": {
-    seoTitle: "Case Converter — Upper, Lower, Title | ApkaOS Free",
+    seoTitle: "Case Converter — Upper, Lower, Title | ToolPin Free",
     seoDescription:
-      "Convert text case in your browser with ApkaOS: uppercase, lowercase, title case, and more. Free, no signup, never uploaded. Instant letter-case changes.",
+      "Convert text case in your browser with ToolPin: uppercase, lowercase, title case, and more. Free, no signup, never uploaded. Instant letter-case changes.",
     intro:
-      "Change letter case in your browser on ApkaOS: UPPERCASE, lowercase, Title Case, and sentence case. Paste a headline or a noisy ALL CAPS paragraph and convert it in one click. Nothing is uploaded. The tool is free and needs no account. Case conversion does not translate language and does not fix grammar — it only changes character case.",
+      "Change letter case in your browser on ToolPin: UPPERCASE, lowercase, Title Case, and sentence case. Paste a headline or a noisy ALL CAPS paragraph and convert it in one click. Nothing is uploaded. The tool is free and needs no account. Case conversion does not translate language and does not fix grammar — it only changes character case.",
     howToSteps: [
-      "Open Case Converter on ApkaOS. Conversion stays in this tab.",
+      "Open Case Converter on ToolPin. Conversion stays in this tab.",
       "Paste the text.",
       "Choose uppercase, lowercase, title case, or sentence case.",
       "Copy the result. Tweak small words (of, the) in titles if the automatic title case is too aggressive.",
@@ -1310,13 +1310,13 @@ ApkaOS does not store drafts and does not offer revision history. Copy the text 
     ],
     guide: `## Case is style, not meaning
 
-UPPERCASE shouts. lowercase is informal. Title Case Capitalizes Most Words. Sentence case capitalizes the first letter. ApkaOS Case Converter applies those mechanical rules in your browser. Nothing is uploaded. The tool is free and needs no account.
+UPPERCASE shouts. lowercase is informal. Title Case Capitalizes Most Words. Sentence case capitalizes the first letter. ToolPin Case Converter applies those mechanical rules in your browser. Nothing is uploaded. The tool is free and needs no account.
 
 It will not detect proper nouns perfectly. “iPhone” may become “Iphone” in title case. “NASA” may become “Nasa”. After conversion, restore brand spellings by hand. It also will not lowercase the I in a mid-sentence English pronoun unless the mode says so — read the output.
 
 ## Title case rules vary
 
-Some title-case algorithms capitalize every word. Others leave short prepositions in lowercase (AP, Chicago). ApkaOS uses a simple, predictable rule so you are not surprised. If you publish under a specific style guide, fix of/and/the after conversion.
+Some title-case algorithms capitalize every word. Others leave short prepositions in lowercase (AP, Chicago). ToolPin uses a simple, predictable rule so you are not surprised. If you publish under a specific style guide, fix of/and/the after conversion.
 
 Hyphenated words and apostrophes (O’Neill, state-of-the-art) are edge cases. Check them. Mixed scripts (Hindi + English) only change the Latin letters; Devanagari has no upper/lower case.
 
@@ -1342,7 +1342,7 @@ If you pasted a URL-style slug, replace hyphens with spaces first, then title-ca
 
 All-caps legal disclaimers are often left in uppercase on purpose. Converting them to sentence case can make a contract clause look unofficial. Know the document type before you convert the whole paste.
 
-ApkaOS does not save a casing history. Keep the original in your clipboard until you like the result.`,
+ToolPin does not save a casing history. Keep the original in your clipboard until you like the result.`,
     tips: [
       "Restore brand spellings (iPhone, NASA) after automatic title case.",
       "Do not title-case URLs or file paths; they can be case-sensitive.",
@@ -1354,7 +1354,7 @@ ApkaOS does not save a casing history. Keep the original in your clipboard until
       {
         question: "Is my text uploaded?",
         answer:
-          "No. Case conversion runs in your browser on ApkaOS.",
+          "No. Case conversion runs in your browser on ToolPin.",
       },
       {
         question: "Is it free?",
@@ -1389,18 +1389,18 @@ ApkaOS does not save a casing history. Keep the original in your clipboard until
       "title case online",
       "sentence case",
       "convert text case",
-      "case converter apkaos",
+      "case converter toolpin",
     ],
   },
 
   "markdown-to-html": {
-    seoTitle: "Markdown to HTML Converter Online Free | ApkaOS Tools",
+    seoTitle: "Markdown to HTML Converter Online Free | ToolPin Tools",
     seoDescription:
-      "Convert Markdown to HTML in your browser with ApkaOS. Free, no signup, never uploaded. Headings, lists, and links become HTML you can paste into a page.",
+      "Convert Markdown to HTML in your browser with ToolPin. Free, no signup, never uploaded. Headings, lists, and links become HTML you can paste into a page.",
     intro:
-      "Turn Markdown into HTML in your browser on ApkaOS. Headings, lists, links, emphasis, and fenced code become tags you can paste into a CMS or static page. Nothing is uploaded. The tool is free and needs no account. This is HTML markup, not a PDF — for a printable file use Markdown to PDF (that one is a temporary server job).",
+      "Turn Markdown into HTML in your browser on ToolPin. Headings, lists, links, emphasis, and fenced code become tags you can paste into a CMS or static page. Nothing is uploaded. The tool is free and needs no account. This is HTML markup, not a PDF — for a printable file use Markdown to PDF (that one is a temporary server job).",
     howToSteps: [
-      "Open Markdown to HTML on ApkaOS. Conversion stays in this tab.",
+      "Open Markdown to HTML on ToolPin. Conversion stays in this tab.",
       "Paste Markdown (README style: # headings, lists, links, code fences).",
       "Convert and preview or copy the HTML.",
       "Paste into your page or CMS. Sanitize if the Markdown came from untrusted users.",
@@ -1420,9 +1420,9 @@ ApkaOS does not save a casing history. Keep the original in your clipboard until
     ],
     guide: `## Markdown in, HTML out
 
-Markdown is a writing format. HTML is what browsers render. Markdown to HTML on ApkaOS runs a client-side parser (CommonMark or GFM-like) in your tab and returns tags: h1–h3, p, ul/ol, a, code, pre, blockquote, and often tables. Nothing is uploaded. The tool is free and needs no account.
+Markdown is a writing format. HTML is what browsers render. Markdown to HTML on ToolPin runs a client-side parser (CommonMark or GFM-like) in your tab and returns tags: h1–h3, p, ul/ol, a, code, pre, blockquote, and often tables. Nothing is uploaded. The tool is free and needs no account.
 
-This is not Markdown to PDF. PDF rendering needs a print engine and is a temporary upload on ApkaOS. Keep private notes here (local HTML) and only use MD to PDF when you accept a short-lived server job.
+This is not Markdown to PDF. PDF rendering needs a print engine and is a temporary upload on ToolPin. Keep private notes here (local HTML) and only use MD to PDF when you accept a short-lived server job.
 
 ## Flavour and what is skipped
 
@@ -1434,13 +1434,13 @@ Code is escaped inside code/pre so a snippet of HTML in a fence should not execu
 
 ## Security
 
-If you convert Markdown written by other people, sanitize the HTML before putting it on a public site. A link can be javascript: and an image URL can track. Local conversion does not make the output safe — it only means ApkaOS never saw the source.
+If you convert Markdown written by other people, sanitize the HTML before putting it on a public site. A link can be javascript: and an image URL can track. Local conversion does not make the output safe — it only means ToolPin never saw the source.
 
 ## After you convert
 
 Copy the HTML into your template. Add CSS yourself; the converter does not ship a blog theme. If you need a PDF handout, use Markdown to PDF and do not upload secrets. If you need plain text without tags, use HTML to Text on the result, or skip HTML entirely.
 
-ApkaOS does not host the HTML. You own the snippet.
+ToolPin does not host the HTML. You own the snippet.
 
 ## Images, tables, and pasting into a CMS
 
@@ -1448,7 +1448,7 @@ An image in Markdown becomes an img tag with the URL you wrote. If that URL is a
 
 When you paste into WordPress, Notion, or Google Docs, those apps may treat the HTML as rich text or as a code block. Use “paste as HTML” or a custom HTML block if you want tags to remain tags. If the CMS already accepts Markdown, you may not need this converter at all.
 
-For a printout of the same notes, use Markdown to PDF on ApkaOS and remember that path is a temporary server upload. Keep secrets in this local HTML tool instead.`,
+For a printout of the same notes, use Markdown to PDF on ToolPin and remember that path is a temporary server upload. Keep secrets in this local HTML tool instead.`,
     tips: [
       "Use https image URLs; relative ./img.png will 404 unless you host that file beside the HTML.",
       "Sanitize HTML if the Markdown is from users — conversion is not a security boundary.",
@@ -1460,7 +1460,7 @@ For a printout of the same notes, use Markdown to PDF on ApkaOS and remember tha
       {
         question: "Is Markdown uploaded?",
         answer:
-          "No. Markdown to HTML runs in your browser on ApkaOS.",
+          "No. Markdown to HTML runs in your browser on ToolPin.",
       },
       {
         question: "Is it free?",
@@ -1495,18 +1495,18 @@ For a printout of the same notes, use Markdown to PDF on ApkaOS and remember tha
       "markdown parser",
       "gfm to html",
       "markdown to html in browser",
-      "markdown to html apkaos",
+      "markdown to html toolpin",
     ],
   },
 
   "html-to-text": {
-    seoTitle: "HTML to Text Converter — Strip Tags Free | ApkaOS Tools",
+    seoTitle: "HTML to Text Converter — Strip Tags Free | ToolPin Tools",
     seoDescription:
-      "Strip HTML tags and extract plain text in your browser with ApkaOS. Free, no signup, never uploaded. Get readable copy from a page fragment or email HTML.",
+      "Strip HTML tags and extract plain text in your browser with ToolPin. Free, no signup, never uploaded. Get readable copy from a page fragment or email HTML.",
     intro:
-      "Extract plain text from HTML in your browser on ApkaOS. Tags, scripts, and styles are stripped so you can keep the words — for a word count, a translation, or a text-only archive. Nothing is uploaded. The tool is free and needs no account. This is not a full browser: JavaScript will not run, and layout such as columns or hidden menus is not interpreted like a rendered page.",
+      "Extract plain text from HTML in your browser on ToolPin. Tags, scripts, and styles are stripped so you can keep the words — for a word count, a translation, or a text-only archive. Nothing is uploaded. The tool is free and needs no account. This is not a full browser: JavaScript will not run, and layout such as columns or hidden menus is not interpreted like a rendered page.",
     howToSteps: [
-      "Open HTML to Text on ApkaOS. Stripping runs locally in this tab.",
+      "Open HTML to Text on ToolPin. Stripping runs locally in this tab.",
       "Paste an HTML fragment or a saved .html snippet (not a live URL fetch unless the UI offers one — default is paste).",
       "Convert. Review the text for leftover entities or missing line breaks.",
       "Copy the plain text. Run Word Counter if you need totals.",
@@ -1522,11 +1522,11 @@ For a printout of the same notes, use Markdown to PDF on ApkaOS and remember tha
       "Pull the body copy out of an HTML email before forwarding as plain text.",
       "Strip a CMS export so a translator works in a .txt file.",
       "Get a text-only version of a newsletter module for SMS or WhatsApp.",
-      "Clean a scraped fragment you already have in the clipboard (you paste it; ApkaOS does not crawl the web).",
+      "Clean a scraped fragment you already have in the clipboard (you paste it; ToolPin does not crawl the web).",
     ],
     guide: `## Tags off, words on
 
-HTML to Text walks markup and keeps character data. script and style contents should be dropped. Tags disappear. Entities like &amp; and &nbsp; should become & and a space. Line breaks are inferred from block tags (p, div, br, li, h1) so the result is readable rather than one long line. ApkaOS does this in your browser. Nothing is uploaded. The tool is free and needs no account.
+HTML to Text walks markup and keeps character data. script and style contents should be dropped. Tags disappear. Entities like &amp; and &nbsp; should become & and a space. Line breaks are inferred from block tags (p, div, br, li, h1) so the result is readable rather than one long line. ToolPin does this in your browser. Nothing is uploaded. The tool is free and needs no account.
 
 This is the inverse of Markdown to HTML only in a loose sense: you will not get Markdown back, just text. Links may appear as the link text only, or as text plus URL — check the output. Images become nothing or their alt attribute.
 
@@ -1544,7 +1544,7 @@ Because processing is local, confidential HTML emails stay on your machine.
 
 ## After you extract
 
-Count words, convert case, or hash the text with SHA-256 if you are fingerprinting a version. If you needed structured data, this is the wrong tool — parse the HTML in a script. If you needed a PDF of the rendered page, print from a browser; ApkaOS HTML to Text will not paginate a design.
+Count words, convert case, or hash the text with SHA-256 if you are fingerprinting a version. If you needed structured data, this is the wrong tool — parse the HTML in a script. If you needed a PDF of the rendered page, print from a browser; ToolPin HTML to Text will not paginate a design.
 
 Related: DOCX to Text for Word files (also local), PDF to Text for PDFs (local PDF tools). Those start from documents, not markup.
 
@@ -1554,7 +1554,7 @@ Named entities (nbsp, copy, mdash) and numeric entities should decode to the rea
 
 HTML email is notoriously messy: VML for Outlook, hidden preheader spans, and tracker pixels. Those pixels will not load here because we only strip text, but their alt or leftover URLs might appear. Delete tracking URLs before you forward the plain-text version.
 
-ApkaOS does not fetch remote HTML. Paste what you already have, convert, and copy the words into the next tool — Word Counter, Case Converter, or a translator — all without an account.`,
+ToolPin does not fetch remote HTML. Paste what you already have, convert, and copy the words into the next tool — Word Counter, Case Converter, or a translator — all without an account.`,
     tips: [
       "Paste HTML source, not a live URL, unless the page explicitly fetches (the default tool is a paste box).",
       "Check how links are emitted — you may want the href kept in parentheses for an archive.",
@@ -1566,7 +1566,7 @@ ApkaOS does not fetch remote HTML. Paste what you already have, convert, and cop
       {
         question: "Is the HTML uploaded?",
         answer:
-          "No. HTML to Text runs in your browser on ApkaOS.",
+          "No. HTML to Text runs in your browser on ToolPin.",
       },
       {
         question: "Is it free?",
@@ -1574,7 +1574,7 @@ ApkaOS does not fetch remote HTML. Paste what you already have, convert, and cop
           "Yes. No signup required.",
       },
       {
-        question: "Can I paste a URL and have ApkaOS download the page?",
+        question: "Can I paste a URL and have ToolPin download the page?",
         answer:
           "No. You paste HTML you already have. The site does not crawl arbitrary URLs for this tool.",
       },
@@ -1601,7 +1601,7 @@ ApkaOS does not fetch remote HTML. Paste what you already have, convert, and cop
       "extract text from html",
       "remove html tags online",
       "html to text in browser",
-      "html to text apkaos",
+      "html to text toolpin",
     ],
   },
 };

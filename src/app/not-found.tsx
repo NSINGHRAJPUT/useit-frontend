@@ -13,7 +13,7 @@ export default function NotFound() {
       <p className="text-sm font-semibold uppercase tracking-[0.24em] text-gold">404</p>
       <h1 className="mt-4 font-heading text-4xl font-semibold">Page not found</h1>
       <p className="mt-4 text-muted-foreground">
-        That URL is not a tool or article on ApkaOS. Try the tools directory or go home.
+        That URL is not a tool or article on ToolPin. Try the tools directory or go home.
       </p>
       <div className="mt-8 flex gap-3">
         <Button asChild className="btn-gold border-0">

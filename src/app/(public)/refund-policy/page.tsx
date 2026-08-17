@@ -6,7 +6,7 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Refund Policy",
-  description: "ApkaOS tools on apkaos.in are free. There are no paid plans or charges to refund.",
+  description: "ToolPin tools on toolpin.online are free. There are no paid plans or charges to refund.",
   path: "/refund-policy",
 });
 
@@ -14,8 +14,8 @@ export default function RefundPolicyPage() {
   return (
     <LegalPage title="Refund Policy" updated="13 August 2026">
       <p>
-        ApkaOS file tools are free to use. We do not sell subscriptions, conversion credits, or paid downloads on
-        apkaos.in at this time. There is nothing to charge and therefore nothing to refund.
+        ToolPin file tools are free to use. We do not sell subscriptions, conversion credits, or paid downloads on
+        toolpin.online at this time. There is nothing to charge and therefore nothing to refund.
       </p>
       <p>
         If a tool fails to convert a file, try a smaller file, another browser, or a different format. You can also

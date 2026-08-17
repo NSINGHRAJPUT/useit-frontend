@@ -5,21 +5,21 @@ import { siteConfig } from "@/constants/site";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Contact ApkaOS",
-  description: `Contact ApkaOS at ${siteConfig.contactEmail} for questions about free image, PDF, and document tools on apkaos.in.`,
+  title: "Contact ToolPin",
+  description: `Contact ToolPin at ${siteConfig.contactEmail} for questions about free image, PDF, and document tools on toolpin.online.`,
   path: "/contact",
-  keywords: ["contact apkaos", "apkaos support", "hello@apkaos.in"],
+  keywords: ["contact toolpin", "toolpin support", "hello@toolpin.online"],
 });
 
 export default function ContactPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    name: "Contact ApkaOS",
+    name: "Contact ToolPin",
     url: `${siteConfig.url}/contact`,
     mainEntity: {
       "@type": "Organization",
-      name: "ApkaOS",
+      name: "ToolPin",
       email: siteConfig.contactEmail,
       url: siteConfig.url,
     },
@@ -35,7 +35,7 @@ export default function ContactPage() {
           {siteConfig.contactEmail}
         </a>
         . Use the form below to open a message in your mail app. We read every note about tools, privacy, or ads on
-        apkaos.in.
+        toolpin.online.
       </p>
       <ContactForm />
     </Section>

@@ -12,9 +12,9 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildPageMetadata({
   title: "Tool Categories",
   description:
-    "Browse ApkaOS tools by category: image converters, PDF editors, Office document exports, and text utilities.",
+    "Browse ToolPin tools by category: image converters, PDF editors, Office document exports, and text utilities.",
   path: "/categories",
-  keywords: ["image tools", "pdf tools", "document converter", "json formatter", "apkaos categories"],
+  keywords: ["image tools", "pdf tools", "document converter", "json formatter", "toolpin categories"],
 });
 
 export default function CategoriesPage() {
@@ -22,7 +22,7 @@ export default function CategoriesPage() {
     <Section>
       <h1 className="font-heading text-4xl font-semibold">Tool categories</h1>
       <p className="mt-4 max-w-3xl leading-8 text-muted-foreground">
-        ApkaOS groups {tools.length} free utilities into four suites. Open a category to see converters, compressors,
+        ToolPin groups {tools.length} free utilities into four suites. Open a category to see converters, compressors,
         and formatters built for that job. Most image, PDF, and text tools run locally in your browser.
       </p>
       <div className="mt-8 grid gap-6">

@@ -35,7 +35,7 @@ export const metadata: Metadata = buildPageMetadata({
     "merge pdf",
     "compress jpg",
     "word to pdf",
-    "apkaos",
+    "toolpin",
   ],
 });
 
@@ -51,7 +51,7 @@ const trustBadges = [
   { label: "No watermark", icon: ShieldCheck },
   { label: "Instant downloads", icon: Zap },
   { label: "JPG, PNG, WebP, PDF", icon: Upload },
-  { label: "Free on apkaos.in", icon: CheckCircle2 },
+  { label: "Free on toolpin.online", icon: CheckCircle2 },
 ];
 
 export default function HomePage() {
@@ -69,7 +69,7 @@ export default function HomePage() {
           <div className="relative z-10">
             <div className="inline-flex items-center gap-2 rounded-full border border-gold/20 bg-gold/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.28em] text-gold">
               <Sparkles className="size-3.5" />
-              Free on apkaos.in
+              Free on toolpin.online
             </div>
             <h1 className="mt-6 max-w-2xl font-heading text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
               <span className="text-metallic-gold">Free online image, PDF</span>
@@ -133,10 +133,10 @@ export default function HomePage() {
       <Section className="pt-0">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-heading text-3xl font-semibold md:text-4xl">
-            What you can do with <span className="text-metallic-gold">ApkaOS</span>
+            What you can do with <span className="text-metallic-gold">ToolPin</span>
           </h2>
           <p className="mt-4 text-muted-foreground leading-8">
-            ApkaOS is a free file-tools site for India and the web. Use it when you need a JPG converted to PNG or
+            ToolPin is a free file-tools site for India and the web. Use it when you need a JPG converted to PNG or
             WebP, a PDF merged or split, a Word file turned into a PDF, or a JSON blob formatted. Image, PDF, and
             most text tools never upload your file. A small set of Office conversions uses a temporary server and
             deletes the file after you download the result.

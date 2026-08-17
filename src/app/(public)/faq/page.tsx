@@ -6,12 +6,12 @@ import { buildFaqJsonLd, buildPageMetadata } from "@/lib/seo";
 
 const extraFaqs: Array<[string, string]> = [
   [
-    "Can I use ApkaOS on a phone?",
+    "Can I use ToolPin on a phone?",
     "Yes. The tools work in mobile Chrome, Safari, and Firefox. Very large PDFs or images may be limited by the memory on the device.",
   ],
   [
     "Do converted files include a watermark?",
-    "No. ApkaOS never stamps a logo or watermark on images, PDFs, or documents you process.",
+    "No. ToolPin never stamps a logo or watermark on images, PDFs, or documents you process.",
   ],
   [
     "Why do some Office conversions upload my file?",
@@ -22,12 +22,12 @@ const extraFaqs: Array<[string, string]> = [
     `Email ${siteConfig.contactEmail} with the tool name, file type, and what you expected. Do not attach confidential files.`,
   ],
   [
-    "Does ApkaOS work without JavaScript?",
+    "Does ToolPin work without JavaScript?",
     "The marketing pages can be read, but converters need JavaScript. Keep JS enabled for the tool you want to run.",
   ],
   [
-    "Where is ApkaOS based?",
-    "ApkaOS is operated from India and published at apkaos.in. The privacy policy explains how we handle files, cookies, and advertising.",
+    "Where is ToolPin based?",
+    "ToolPin is operated from India and published at toolpin.online. The privacy policy explains how we handle files, cookies, and advertising.",
   ],
 ];
 
@@ -36,9 +36,9 @@ const allFaqs = [...faqs, ...extraFaqs];
 export const metadata: Metadata = buildPageMetadata({
   title: "Frequently Asked Questions",
   description:
-    "Answers about ApkaOS privacy, file uploads, watermarks, file size limits, AdSense, and how browser-local conversion works.",
+    "Answers about ToolPin privacy, file uploads, watermarks, file size limits, AdSense, and how browser-local conversion works.",
   path: "/faq",
-  keywords: ["apkaos faq", "are files uploaded", "free pdf tools questions"],
+  keywords: ["toolpin faq", "are files uploaded", "free pdf tools questions"],
 });
 
 export default function FaqPage() {
@@ -51,7 +51,7 @@ export default function FaqPage() {
       ) : null}
       <h1 className="font-heading text-4xl font-semibold">FAQ</h1>
       <p className="mt-4 max-w-2xl text-muted-foreground">
-        Common questions about free converters on apkaos.in. For something else, write to {siteConfig.contactEmail}.
+        Common questions about free converters on toolpin.online. For something else, write to {siteConfig.contactEmail}.
       </p>
       <Accordion type="single" collapsible className="mt-8">
         {allFaqs.map(([question, answer], index) => (

@@ -2,20 +2,20 @@ import type { ToolSeoMap } from "./types";
 
 export const documentToolContent: ToolSeoMap = {
   "docx-to-pdf": {
-    seoTitle: "DOCX to PDF Converter Online Free, No Signup | ApkaOS",
+    seoTitle: "DOCX to PDF Converter Online Free, No Signup | ToolPin",
     seoDescription:
-      "Convert Word DOCX to PDF online free with ApkaOS. No signup, no watermark. Temporary secure upload; files auto-delete after you download the PDF file.",
+      "Convert Word DOCX to PDF online free with ToolPin. No signup, no watermark. Temporary secure upload; files auto-delete after you download the PDF file.",
     intro:
-      "Turn a Microsoft Word .docx file into a shareable PDF on ApkaOS without installing Office. Upload your document, convert on a secure temporary server, then download the PDF. Files are deleted after the download link expires. The tool is free, needs no account, and keeps headings, images, and page layout intact for reports, letters, and contracts.",
+      "Turn a Microsoft Word .docx file into a shareable PDF on ToolPin without installing Office. Upload your document, convert on a secure temporary server, then download the PDF. Files are deleted after the download link expires. The tool is free, needs no account, and keeps headings, images, and page layout intact for reports, letters, and contracts.",
     howToSteps: [
-      "Open the DOCX to PDF tool on apkaos.in and choose your .docx file (not the older .doc binary format).",
-      "Upload the file. ApkaOS sends it to a temporary conversion server because Word layout needs a full document engine.",
+      "Open the DOCX to PDF tool on toolpin.online and choose your .docx file (not the older .doc binary format).",
+      "Upload the file. ToolPin sends it to a temporary conversion server because Word layout needs a full document engine.",
       "Wait for the job to finish. Large reports with images take longer than a short letter.",
       "Download the PDF, then confirm pages, fonts, and images look right before you share it.",
       "You do not need an account. The uploaded DOCX and the PDF expire automatically after download.",
     ],
     benefits: [
-      "Free Word-to-PDF conversion with no watermark and no signup on ApkaOS.",
+      "Free Word-to-PDF conversion with no watermark and no signup on ToolPin.",
       "Server-side engine preserves headings, tables, headers, and embedded images better than a screenshot.",
       "Temporary storage only — source and result are deleted after the download window closes.",
       "Works from any modern browser on Windows, macOS, Linux, or a phone — no Microsoft Word install.",
@@ -28,15 +28,15 @@ export const documentToolContent: ToolSeoMap = {
     ],
     guide: `## When a Word file should become a PDF
 
-A .docx file is meant to be edited. Fonts can substitute, tracked changes can leak, and page breaks shift when someone else opens the document in a different version of Word or Google Docs. A PDF is a snapshot: what you see is what the recipient prints. Use ApkaOS DOCX to PDF when you are done drafting and need a file that travels — job applications, invoices, school submissions, or a handbook you will host on a website.
+A .docx file is meant to be edited. Fonts can substitute, tracked changes can leak, and page breaks shift when someone else opens the document in a different version of Word or Google Docs. A PDF is a snapshot: what you see is what the recipient prints. Use ToolPin DOCX to PDF when you are done drafting and need a file that travels — job applications, invoices, school submissions, or a handbook you will host on a website.
 
 This converter is free and does not require an account. It is not a desktop publisher and it does not claim OCR. It expects a real Office Open XML Word document (.docx). Legacy .doc files from Word 97–2003 are a different binary format and should be saved as .docx in Word or LibreOffice first.
 
-## How ApkaOS processes the file
+## How ToolPin processes the file
 
-Word layout is too complex to rebuild reliably inside a browser tab. Tables with merged cells, floating images, footnotes, and theme fonts need a document engine. ApkaOS therefore uploads your DOCX to a conversion server for a short job, builds the PDF, and lets you download it. The upload is temporary. After you download — or after the result expires unused — both the source and the output are deleted. That is different from the image and PDF tools on this site, which stay entirely on your device.
+Word layout is too complex to rebuild reliably inside a browser tab. Tables with merged cells, floating images, footnotes, and theme fonts need a document engine. ToolPin therefore uploads your DOCX to a conversion server for a short job, builds the PDF, and lets you download it. The upload is temporary. After you download — or after the result expires unused — both the source and the output are deleted. That is different from the image and PDF tools on this site, which stay entirely on your device.
 
-Do not upload documents that contain secrets you are not allowed to send over HTTPS. For highly confidential legal files, convert on an offline copy of LibreOffice instead. For everyday school and office work, the temporary-server model is the same pattern used by most online converters; ApkaOS simply expires the files instead of keeping a library.
+Do not upload documents that contain secrets you are not allowed to send over HTTPS. For highly confidential legal files, convert on an offline copy of LibreOffice instead. For everyday school and office work, the temporary-server model is the same pattern used by most online converters; ToolPin simply expires the files instead of keeping a library.
 
 ## Layout, fonts, and what can shift
 
@@ -54,7 +54,7 @@ Multi-section documents with mixed portrait and landscape pages are supported as
 
 ## After you download
 
-Open the PDF and skim every page, especially tables that span a page break and any page that uses columns. If something is off, adjust the DOCX and convert again rather than editing the PDF. When you need the reverse direction — a PDF that should become an editable Word file — use the PDF to DOCX tool on ApkaOS, and remember that reconstruction is never pixel-identical to the original .docx.
+Open the PDF and skim every page, especially tables that span a page break and any page that uses columns. If something is off, adjust the DOCX and convert again rather than editing the PDF. When you need the reverse direction — a PDF that should become an editable Word file — use the PDF to DOCX tool on ToolPin, and remember that reconstruction is never pixel-identical to the original .docx.
 
 Related tools on the same site: RTF to PDF and ODT to PDF for other word-processor formats, and DOCX to Text if you only need the words without layout.`,
     tips: [
@@ -68,12 +68,12 @@ Related tools on the same site: RTF to PDF and ODT to PDF for other word-process
       {
         question: "Does DOCX to PDF run in my browser?",
         answer:
-          "No. Word layout needs a server-side document engine. ApkaOS uploads the .docx temporarily, converts it, and deletes the files after you download the PDF or the link expires.",
+          "No. Word layout needs a server-side document engine. ToolPin uploads the .docx temporarily, converts it, and deletes the files after you download the PDF or the link expires.",
       },
       {
         question: "Is the converter free? Do I need an account?",
         answer:
-          "Yes, it is free on apkaos.in with no signup and no watermark on the PDF.",
+          "Yes, it is free on toolpin.online with no signup and no watermark on the PDF.",
       },
       {
         question: "Can I convert old .doc files?",
@@ -88,7 +88,7 @@ Related tools on the same site: RTF to PDF and ODT to PDF for other word-process
       {
         question: "How long are my files kept?",
         answer:
-          "Only for the conversion and a short download window. ApkaOS does not keep a permanent copy of your Word file or the PDF.",
+          "Only for the conversion and a short download window. ToolPin does not keep a permanent copy of your Word file or the PDF.",
       },
       {
         question: "Can I convert a password-protected Word document?",
@@ -103,25 +103,25 @@ Related tools on the same site: RTF to PDF and ODT to PDF for other word-process
       "free word to pdf",
       "docx to pdf no signup",
       "office document to pdf",
-      "word pdf apkaos",
+      "word pdf toolpin",
     ],
   },
 
   "pptx-to-pdf": {
-    seoTitle: "PPTX to PDF Converter Online Free, No Signup | ApkaOS",
+    seoTitle: "PPTX to PDF Converter Online Free, No Signup | ToolPin",
     seoDescription:
-      "Convert PowerPoint PPTX to PDF online free on ApkaOS. No signup, no watermark. Temporary upload for slides; files auto-delete after you download the file.",
+      "Convert PowerPoint PPTX to PDF online free on ToolPin. No signup, no watermark. Temporary upload for slides; files auto-delete after you download the file.",
     intro:
-      "Export a PowerPoint .pptx deck to PDF on ApkaOS when you need slides that anyone can open without PowerPoint. Each slide becomes a PDF page. Animations and speaker notes are not part of the PDF. Conversion runs on a temporary server, the download is free, and both files are deleted after the link expires. No account is required.",
+      "Export a PowerPoint .pptx deck to PDF on ToolPin when you need slides that anyone can open without PowerPoint. Each slide becomes a PDF page. Animations and speaker notes are not part of the PDF. Conversion runs on a temporary server, the download is free, and both files are deleted after the link expires. No account is required.",
     howToSteps: [
-      "Open PPTX to PDF on ApkaOS and select a .pptx file (not the older .ppt format).",
+      "Open PPTX to PDF on ToolPin and select a .pptx file (not the older .ppt format).",
       "Upload the deck. Slides are rendered on a temporary server because PowerPoint layouts are not rebuilt in the browser.",
       "Wait while each slide is drawn to a page. Decks with photos and charts take longer than text-only slides.",
       "Download the PDF and flip through every slide, especially ones with custom fonts or full-bleed images.",
       "Share the PDF. You do not need to sign up; uploaded files are removed after download.",
     ],
     benefits: [
-      "Free PowerPoint-to-PDF export with no watermark and no ApkaOS account.",
+      "Free PowerPoint-to-PDF export with no watermark and no ToolPin account.",
       "One PDF page per slide so the deck is easy to email, print, or archive.",
       "Temporary server processing only — source and PDF are not kept as a library.",
       "Recipients do not need Microsoft PowerPoint or a Google account to open the file.",
@@ -134,13 +134,13 @@ Related tools on the same site: RTF to PDF and ODT to PDF for other word-process
     ],
     guide: `## Why convert a deck to PDF
 
-PowerPoint files are living documents. Fonts substitute, videos fail to play, and a reviewer can accidentally drag a chart. A PDF of the deck is a handout: one page per slide, no transitions, no risk that someone edits your pricing table. Use ApkaOS PPTX to PDF when the presentation is finished and you need something that opens on phones, printers, and locked-down office PCs.
+PowerPoint files are living documents. Fonts substitute, videos fail to play, and a reviewer can accidentally drag a chart. A PDF of the deck is a handout: one page per slide, no transitions, no risk that someone edits your pricing table. Use ToolPin PPTX to PDF when the presentation is finished and you need something that opens on phones, printers, and locked-down office PCs.
 
-The tool is free and does not require signup. It converts .pptx (Office Open XML presentations). Older .ppt files should be saved as .pptx in PowerPoint or LibreOffice first. ApkaOS does not run slide animations, does not export speaker notes as extra pages, and does not convert video or audio into the PDF.
+The tool is free and does not require signup. It converts .pptx (Office Open XML presentations). Older .ppt files should be saved as .pptx in PowerPoint or LibreOffice first. ToolPin does not run slide animations, does not export speaker notes as extra pages, and does not convert video or audio into the PDF.
 
 ## Server conversion, then deletion
 
-Slide masters, theme colors, SmartArt, and chart objects need a presentation engine. That work happens on a temporary ApkaOS server after you upload the file. When the PDF is ready you download it; the upload and the result are then deleted. If a slide contains confidential financials or unpublished research, convert it on your own machine with PowerPoint’s Export → Create PDF instead.
+Slide masters, theme colors, SmartArt, and chart objects need a presentation engine. That work happens on a temporary ToolPin server after you upload the file. When the PDF is ready you download it; the upload and the result are then deleted. If a slide contains confidential financials or unpublished research, convert it on your own machine with PowerPoint’s Export → Create PDF instead.
 
 HTTPS protects the file in transit, but you are still sending a copy off your device. Treat this like attaching the deck to an email: fine for class slides and public talks, not for material under NDA unless your policy allows it.
 
@@ -158,13 +158,13 @@ High-resolution photos across 40 slides produce a heavy PDF. Compress pictures i
 
 Hidden slides are typically omitted, matching what you would get from a standard export. Slide numbers, footers, and the date field follow the master. If you use different masters for sections, check the first slide of each section in the PDF.
 
-Widescreen slides on A4 paper will have large margins when printed unless you choose “fit to page” or “poster” in the print dialog. That is a print setting, not a conversion bug. For a print-friendly handout, some people duplicate the deck at 4:3; ApkaOS will honour whichever size is in the .pptx.
+Widescreen slides on A4 paper will have large margins when printed unless you choose “fit to page” or “poster” in the print dialog. That is a print setting, not a conversion bug. For a print-friendly handout, some people duplicate the deck at 4:3; ToolPin will honour whichever size is in the .pptx.
 
 ## After conversion
 
 Skim the PDF in full-screen or two-page view. Look for clipped text on tight layouts, missing icons, and slides that relied on animation to avoid clutter. If a slide is too dense as a static page, split it in PowerPoint and convert again.
 
-Need the opposite workflow? ApkaOS does not turn a PDF back into an editable PowerPoint. For Word, use PDF to DOCX. For spreading a static deck, PDF tools on this site (merge, split, compress) run in the browser after you have the PDF in hand.`,
+Need the opposite workflow? ToolPin does not turn a PDF back into an editable PowerPoint. For Word, use PDF to DOCX. For spreading a static deck, PDF tools on this site (merge, split, compress) run in the browser after you have the PDF in hand.`,
     tips: [
       "Save older .ppt files as .pptx before uploading; this tool expects the modern format.",
       "Turn off or finish animations in your mind: the PDF shows the complete slide, not each build.",
@@ -176,7 +176,7 @@ Need the opposite workflow? ApkaOS does not turn a PDF back into an editable Pow
       {
         question: "Are PowerPoint files processed in the browser?",
         answer:
-          "No. PPTX conversion runs on a temporary ApkaOS server. Files are deleted after you download the PDF or the result expires.",
+          "No. PPTX conversion runs on a temporary ToolPin server. Files are deleted after you download the PDF or the result expires.",
       },
       {
         question: "Do animations and transitions appear in the PDF?",
@@ -191,7 +191,7 @@ Need the opposite workflow? ApkaOS does not turn a PDF back into an editable Pow
       {
         question: "Is this free? Do I need to register?",
         answer:
-          "The converter is free on ApkaOS with no signup and no watermark on the downloaded PDF.",
+          "The converter is free on ToolPin with no signup and no watermark on the downloaded PDF.",
       },
       {
         question: "Can I convert a password-protected presentation?",
@@ -211,25 +211,25 @@ Need the opposite workflow? ApkaOS does not turn a PDF back into an editable Pow
       "slides to pdf",
       "free pptx converter",
       "powerpoint pdf no signup",
-      "pptx to pdf apkaos",
+      "pptx to pdf toolpin",
     ],
   },
 
   "xlsx-to-pdf": {
-    seoTitle: "XLSX to PDF Converter Online Free, No Signup | ApkaOS",
+    seoTitle: "XLSX to PDF Converter Online Free, No Signup | ToolPin",
     seoDescription:
-      "Convert Excel XLSX spreadsheets to PDF online free on ApkaOS. No account needed. Temporary upload; files auto-delete after you download the printable PDF.",
+      "Convert Excel XLSX spreadsheets to PDF online free on ToolPin. No account needed. Temporary upload; files auto-delete after you download the printable PDF.",
     intro:
-      "Turn an Excel .xlsx workbook into a printable PDF on ApkaOS without installing Microsoft Excel. The converter uses the sheet’s print area, page orientation, and scaling. Upload is temporary, the PDF is free and unmarked, and files are deleted after download. No signup. Check page breaks before you share — wide tables often span several PDF pages.",
+      "Turn an Excel .xlsx workbook into a printable PDF on ToolPin without installing Microsoft Excel. The converter uses the sheet’s print area, page orientation, and scaling. Upload is temporary, the PDF is free and unmarked, and files are deleted after download. No signup. Check page breaks before you share — wide tables often span several PDF pages.",
     howToSteps: [
       "In Excel, set print area, orientation, and scaling (Fit Sheet on One Page only if the sheet is small enough to read).",
-      "Save the workbook as .xlsx and open XLSX to PDF on ApkaOS.",
+      "Save the workbook as .xlsx and open XLSX to PDF on ToolPin.",
       "Upload the file. Conversion runs on a temporary server because Excel layout is not rebuilt in the browser.",
       "Download the PDF and confirm that columns are not clipped and headers repeat as you expect.",
       "No account is required. The spreadsheet and PDF are removed after the download window.",
     ],
     benefits: [
-      "Free Excel-to-PDF conversion on ApkaOS with no watermark and no signup.",
+      "Free Excel-to-PDF conversion on ToolPin with no watermark and no signup.",
       "Respects print settings so the PDF matches what Excel’s Print Preview would show.",
       "Temporary upload only — workbooks are not stored as a permanent archive.",
       "Shareable output for people who should not receive a live, formula-filled spreadsheet.",
@@ -242,7 +242,7 @@ Need the opposite workflow? ApkaOS does not turn a PDF back into an editable Pow
     ],
     guide: `## Spreadsheets are not pages until you say so
 
-An Excel grid can be hundreds of columns wide. A PDF is a stack of fixed pages. XLSX to PDF is really “print this workbook to PDF,” not “squeeze every cell onto one screen.” On ApkaOS that print job runs on a temporary server: you upload the .xlsx, the engine uses the workbook’s print settings, and you download a PDF. The tool is free, needs no account, and deletes the files after download.
+An Excel grid can be hundreds of columns wide. A PDF is a stack of fixed pages. XLSX to PDF is really “print this workbook to PDF,” not “squeeze every cell onto one screen.” On ToolPin that print job runs on a temporary server: you upload the .xlsx, the engine uses the workbook’s print settings, and you download a PDF. The tool is free, needs no account, and deletes the files after download.
 
 If you only need data — not a printable view — use XLSX to CSV instead. That tool stays in your browser and never uploads the file. PDF is for sharing a look; CSV is for sharing numbers.
 
@@ -268,7 +268,7 @@ Multiple sheets become multiple sections of the PDF (or multiple page sequences)
 
 ## Privacy and size
 
-Spreadsheets often hold more than you intend to share: salary columns, personal emails, or a “scratch” sheet. Because this conversion is a server upload, copy the workbook, delete sensitive sheets, and convert the copy. ApkaOS does not keep the file after the download expires, but you still transmitted it.
+Spreadsheets often hold more than you intend to share: salary columns, personal emails, or a “scratch” sheet. Because this conversion is a server upload, copy the workbook, delete sensitive sheets, and convert the copy. ToolPin does not keep the file after the download expires, but you still transmitted it.
 
 Very large workbooks (tens of thousands of rows with heavy formatting) make large PDFs and slow jobs. Filter to the rows you need, or print a summary sheet. Embedded images and high-resolution logos add weight the same way they do in Word.
 
@@ -282,13 +282,13 @@ For data interchange with developers or databases, skip PDF entirely and use the
       "Prefer landscape and “fit columns” over forcing an entire wide sheet onto one page.",
       "Remove or hide sheets that should not be in the PDF — converters may include every visible sheet.",
       "Recalculate and save so formula results are current before you upload.",
-      "Use XLSX to CSV on ApkaOS (browser-local) when you need data, not a printable snapshot.",
+      "Use XLSX to CSV on ToolPin (browser-local) when you need data, not a printable snapshot.",
     ],
     faq: [
       {
         question: "Is my Excel file uploaded?",
         answer:
-          "Yes. XLSX to PDF needs a server-side spreadsheet engine. ApkaOS stores the file only for the job and deletes it after you download the PDF or the result expires.",
+          "Yes. XLSX to PDF needs a server-side spreadsheet engine. ToolPin stores the file only for the job and deletes it after you download the PDF or the result expires.",
       },
       {
         question: "Does the PDF include all sheets?",
@@ -308,7 +308,7 @@ For data interchange with developers or databases, skip PDF entirely and use the
       {
         question: "Is the tool free?",
         answer:
-          "Yes. ApkaOS converts XLSX to PDF at no charge, with no signup and no watermark.",
+          "Yes. ToolPin converts XLSX to PDF at no charge, with no signup and no watermark.",
       },
       {
         question: "Can I convert CSV to PDF here?",
@@ -323,25 +323,25 @@ For data interchange with developers or databases, skip PDF entirely and use the
       "xlsx print to pdf",
       "free excel pdf online",
       "excel to pdf no signup",
-      "xlsx to pdf apkaos",
+      "xlsx to pdf toolpin",
     ],
   },
 
   "pdf-to-docx": {
-    seoTitle: "PDF to DOCX Converter Online Free, No Signup | ApkaOS",
+    seoTitle: "PDF to DOCX Converter Online Free, No Signup | ToolPin",
     seoDescription:
-      "Convert PDF to editable Word DOCX online free on ApkaOS. No signup. Temporary upload; files auto-delete after download. Best for digital PDFs, not scans.",
+      "Convert PDF to editable Word DOCX online free on ToolPin. No signup. Temporary upload; files auto-delete after download. Best for digital PDFs, not scans.",
     intro:
-      "Turn a digital PDF into an editable Word .docx on ApkaOS when you need to reuse text, not just read it. Conversion runs on a temporary server and the files are deleted after download. The tool is free and needs no account. It reconstructs paragraphs and tables from text already in the PDF — it is not OCR, so scanned page images will not become reliable Word text.",
+      "Turn a digital PDF into an editable Word .docx on ToolPin when you need to reuse text, not just read it. Conversion runs on a temporary server and the files are deleted after download. The tool is free and needs no account. It reconstructs paragraphs and tables from text already in the PDF — it is not OCR, so scanned page images will not become reliable Word text.",
     howToSteps: [
-      "Open PDF to DOCX on ApkaOS and choose a text-based PDF (exported from Word, a report generator, or a website).",
+      "Open PDF to DOCX on ToolPin and choose a text-based PDF (exported from Word, a report generator, or a website).",
       "Upload the file. Reconstruction runs on a temporary server because mapping PDF boxes to Word is not done in the browser.",
       "Download the .docx and open it in Word or LibreOffice.",
       "Compare it with the PDF: fix heading styles, table borders, and any columns that became text boxes.",
       "No signup is required. Uploaded PDFs and the Word file expire after download.",
     ],
     benefits: [
-      "Free PDF-to-Word conversion on ApkaOS with no watermark and no account.",
+      "Free PDF-to-Word conversion on ToolPin with no watermark and no account.",
       "Produces a real .docx you can edit, comment on, and track-change — not a screenshot inside Word.",
       "Temporary server job only; files are not kept after the download window.",
       "Saves retyping when a vendor sent a PDF and you need to update a paragraph or table.",
@@ -354,9 +354,9 @@ For data interchange with developers or databases, skip PDF entirely and use the
     ],
     guide: `## What “PDF to Word” actually does
 
-A PDF stores glyphs and positions, not a Word document’s style tree. Converting to DOCX is reconstruction: the engine groups characters into lines, lines into paragraphs, and ruling lines into tables, then writes a .docx. ApkaOS does that on a temporary server, lets you download the Word file, and deletes both sides. The tool is free and does not require signup.
+A PDF stores glyphs and positions, not a Word document’s style tree. Converting to DOCX is reconstruction: the engine groups characters into lines, lines into paragraphs, and ruling lines into tables, then writes a .docx. ToolPin does that on a temporary server, lets you download the Word file, and deletes both sides. The tool is free and does not require signup.
 
-This is not magic and it is not OCR. If a page is a photograph of a printed document, the PDF contains an image, not characters. The resulting Word file may hold a picture of the page or garbled placeholders. For scans, use a dedicated OCR app on your computer. ApkaOS PDF to DOCX is for born-digital PDFs — files exported from Word, Google Docs, LaTeX, or a business system that already contains a text layer.
+This is not magic and it is not OCR. If a page is a photograph of a printed document, the PDF contains an image, not characters. The resulting Word file may hold a picture of the page or garbled placeholders. For scans, use a dedicated OCR app on your computer. ToolPin PDF to DOCX is for born-digital PDFs — files exported from Word, Google Docs, LaTeX, or a business system that already contains a text layer.
 
 ## When reconstruction works well
 
@@ -368,7 +368,7 @@ Headers, footers, and page numbers often land in the body or in floating boxes. 
 
 ## Privacy, passwords, and permissions
 
-The PDF is uploaded. Do not send contracts, medical records, or ID scans unless you are allowed to. ApkaOS expires the files after download, but the bytes still left your device. Encrypted or permission-restricted PDFs (no copying, owner password) typically cannot be converted until you remove protection in a PDF tool you already use, and only if you have the right to do so.
+The PDF is uploaded. Do not send contracts, medical records, or ID scans unless you are allowed to. ToolPin expires the files after download, but the bytes still left your device. Encrypted or permission-restricted PDFs (no copying, owner password) typically cannot be converted until you remove protection in a PDF tool you already use, and only if you have the right to do so.
 
 ## After you open the DOCX
 
@@ -380,11 +380,11 @@ Round-tripping (DOCX → PDF → DOCX) always loses some style fidelity. Keep or
 
 ## Limits worth knowing
 
-Very large PDFs (hundreds of pages, heavy image backgrounds) make slow jobs and bulky .docx files. Convert a split chapter if you only need part of a book — the browser-local Split PDF tool on ApkaOS can cut pages first, then you upload the smaller PDF here.
+Very large PDFs (hundreds of pages, heavy image backgrounds) make slow jobs and bulky .docx files. Convert a split chapter if you only need part of a book — the browser-local Split PDF tool on ToolPin can cut pages first, then you upload the smaller PDF here.
 
 Vector logos usually become images in Word. Equations may become pictures or broken characters. Complex CAD-style PDFs are a poor fit. When the result is unusable, it is often cheaper to retype a page than to fight a broken reconstruction.
 
-ApkaOS does not add a watermark and does not require an account. Preview every converted file before you send it onward as if it were the original.`,
+ToolPin does not add a watermark and does not require an account. Preview every converted file before you send it onward as if it were the original.`,
     tips: [
       "Use this for digital PDFs with a real text layer. Scanned pages need OCR, which this tool does not provide.",
       "Restyle headings in Word after conversion; reconstructed files rarely keep a clean style gallery.",
@@ -396,7 +396,7 @@ ApkaOS does not add a watermark and does not require an account. Preview every c
       {
         question: "Does PDF to DOCX run on my device?",
         answer:
-          "No. Reconstruction runs on a temporary ApkaOS server. The PDF and the Word file are deleted after you download or the link expires.",
+          "No. Reconstruction runs on a temporary ToolPin server. The PDF and the Word file are deleted after you download or the link expires.",
       },
       {
         question: "Will a scanned PDF become editable text?",
@@ -406,7 +406,7 @@ ApkaOS does not add a watermark and does not require an account. Preview every c
       {
         question: "Is it free? Do I need to sign up?",
         answer:
-          "Yes. PDF to DOCX on apkaos.in is free, with no account and no watermark on the .docx.",
+          "Yes. PDF to DOCX on toolpin.online is free, with no account and no watermark on the .docx.",
       },
       {
         question: "Why does the Word file look messy compared with the PDF?",
@@ -421,7 +421,7 @@ ApkaOS does not add a watermark and does not require an account. Preview every c
       {
         question: "Does this replace Microsoft Word?",
         answer:
-          "No. It produces a .docx you open in Word, Google Docs, or LibreOffice. ApkaOS does not host an online Word editor.",
+          "No. It produces a .docx you open in Word, Google Docs, or LibreOffice. ToolPin does not host an online Word editor.",
       },
     ],
     searchKeywords: [
@@ -431,25 +431,25 @@ ApkaOS does not add a watermark and does not require an account. Preview every c
       "pdf to editable word",
       "free pdf to docx",
       "pdf to word no signup",
-      "pdf to docx apkaos",
+      "pdf to docx toolpin",
     ],
   },
 
   "xlsx-to-csv": {
-    seoTitle: "XLSX to CSV Converter in Browser Free | ApkaOS Tools",
+    seoTitle: "XLSX to CSV Converter in Browser Free | ToolPin Tools",
     seoDescription:
-      "Convert Excel XLSX to CSV in your browser with ApkaOS. Free, no signup, never uploaded. Formulas become values; CSV holds one sheet of tabular data only.",
+      "Convert Excel XLSX to CSV in your browser with ToolPin. Free, no signup, never uploaded. Formulas become values; CSV holds one sheet of tabular data only.",
     intro:
-      "Export an Excel .xlsx sheet to CSV entirely in your browser on ApkaOS. The file never leaves your device — there is no upload and no account. CSV is a plain-text table: one sheet, values not formulas, no charts or formatting. Use it to feed a database, a script, or another app that will not open Excel. The tool is free and adds no watermark.",
+      "Export an Excel .xlsx sheet to CSV entirely in your browser on ToolPin. The file never leaves your device — there is no upload and no account. CSV is a plain-text table: one sheet, values not formulas, no charts or formatting. Use it to feed a database, a script, or another app that will not open Excel. The tool is free and adds no watermark.",
     howToSteps: [
-      "Open XLSX to CSV on ApkaOS. Processing stays in this tab; nothing is sent to a server.",
+      "Open XLSX to CSV on ToolPin. Processing stays in this tab; nothing is sent to a server.",
       "Choose an .xlsx file. If the workbook has several sheets, pick the sheet that holds the table you need.",
       "Wait a moment while the browser reads cells and writes comma-separated rows.",
       "Download the .csv and open it in a text editor or spreadsheet to confirm headers and encoding.",
       "Keep the original .xlsx if you still need formulas, charts, or extra sheets.",
     ],
     benefits: [
-      "100% browser-local — your spreadsheet is never uploaded to ApkaOS.",
+      "100% browser-local — your spreadsheet is never uploaded to ToolPin.",
       "Free conversion with no signup and no watermark on the CSV.",
       "Ideal for developers and data imports that expect UTF-8 comma-separated values.",
       "Instant for typical sheets; no queue and no temporary download link to expire.",
@@ -462,7 +462,7 @@ ApkaOS does not add a watermark and does not require an account. Preview every c
     ],
     guide: `## CSV is a table, not a workbook
 
-Excel workbooks can hold many sheets, formulas, pivot caches, charts, and VBA. A CSV file is rows of text with a delimiter (commas in this tool’s usual output). There is no second sheet, no cell colour, and no formula — only the values that were in the grid. ApkaOS XLSX to CSV runs entirely in your browser: the .xlsx is parsed on your device, a CSV is generated, and you download it. Nothing is uploaded. The tool is free and needs no account.
+Excel workbooks can hold many sheets, formulas, pivot caches, charts, and VBA. A CSV file is rows of text with a delimiter (commas in this tool’s usual output). There is no second sheet, no cell colour, and no formula — only the values that were in the grid. ToolPin XLSX to CSV runs entirely in your browser: the .xlsx is parsed on your device, a CSV is generated, and you download it. Nothing is uploaded. The tool is free and needs no account.
 
 Use this when another system asks for CSV, when you want a lightweight snapshot of one table, or when you must share data without exposing the rest of the workbook. If you need a printable report, use XLSX to PDF instead (that path is a temporary server upload). If you are going the other way, CSV to XLSX is also local.
 
@@ -476,7 +476,7 @@ Dates and numbers follow what is stored in the sheet. You may see ISO-like dates
 
 ## Encoding, commas, and messy cells
 
-ApkaOS writes a standard CSV that other tools can parse. Cells that contain commas, quotes, or line breaks are quoted per CSV rules. Still, avoid putting paragraphs in a single cell if a picky importer is next in line.
+ToolPin writes a standard CSV that other tools can parse. Cells that contain commas, quotes, or line breaks are quoted per CSV rules. Still, avoid putting paragraphs in a single cell if a picky importer is next in line.
 
 UTF-8 is the right default for names in Hindi, accents, and most modern apps. If a downstream Windows program shows mojibake, open the CSV in Excel with “UTF-8” selected in the import wizard, or check whether that program expects UTF-8 BOM. Do not “fix” encoding by re-saving as ANSI unless you know every character fits.
 
@@ -500,7 +500,7 @@ Open the CSV in a plain text editor and glance at the header row. Confirm there 
     ],
     faq: [
       {
-        question: "Is my Excel file uploaded to ApkaOS?",
+        question: "Is my Excel file uploaded to ToolPin?",
         answer:
           "No. XLSX to CSV runs in your browser. The spreadsheet never leaves your device.",
       },
@@ -517,7 +517,7 @@ Open the CSV in a plain text editor and glance at the header row. Confirm there 
       {
         question: "Is this free? Do I need an account?",
         answer:
-          "Yes. The converter is free on ApkaOS with no signup.",
+          "Yes. The converter is free on ToolPin with no signup.",
       },
       {
         question: "Will charts and formatting be kept?",
@@ -537,18 +537,18 @@ Open the CSV in a plain text editor and glance at the header row. Confirm there 
       "xlsx to csv in browser",
       "free excel csv export",
       "csv from xlsx no upload",
-      "xlsx to csv apkaos",
+      "xlsx to csv toolpin",
     ],
   },
 
   "csv-to-xlsx": {
-    seoTitle: "CSV to XLSX Converter in Browser Free | ApkaOS Tools",
+    seoTitle: "CSV to XLSX Converter in Browser Free | ToolPin Tools",
     seoDescription:
-      "Convert CSV to Excel XLSX in your browser with ApkaOS. Free, no signup, never uploaded. Get a real spreadsheet from comma-separated data in one click.",
+      "Convert CSV to Excel XLSX in your browser with ToolPin. Free, no signup, never uploaded. Get a real spreadsheet from comma-separated data in one click.",
     intro:
-      "Turn a CSV file into a Microsoft Excel .xlsx workbook entirely in your browser on ApkaOS. Nothing is uploaded and no account is required. You get a real spreadsheet you can filter, format, and share — not a renamed text file. The tool is free. CSV has no formulas or multiple sheets; those you add after opening the new workbook.",
+      "Turn a CSV file into a Microsoft Excel .xlsx workbook entirely in your browser on ToolPin. Nothing is uploaded and no account is required. You get a real spreadsheet you can filter, format, and share — not a renamed text file. The tool is free. CSV has no formulas or multiple sheets; those you add after opening the new workbook.",
     howToSteps: [
-      "Open CSV to XLSX on ApkaOS. The file stays in your browser; it is never sent to a server.",
+      "Open CSV to XLSX on ToolPin. The file stays in your browser; it is never sent to a server.",
       "Choose a .csv file. If your data uses semicolons or tabs, check that the delimiter matches what the tool expects or convert delimiters first.",
       "Let the browser parse rows into cells and build an .xlsx workbook.",
       "Download the spreadsheet and open it in Excel, LibreOffice, or Google Sheets.",
@@ -556,7 +556,7 @@ Open the CSV in a plain text editor and glance at the header row. Confirm there 
     ],
     benefits: [
       "Browser-local conversion — your CSV never leaves the device.",
-      "Free on ApkaOS with no signup and no watermark on the .xlsx.",
+      "Free on ToolPin with no signup and no watermark on the .xlsx.",
       "Produces a genuine Office Open XML workbook, not a CSV renamed with an Excel extension.",
       "Easier sharing with colleagues who prefer Excel over raw text files.",
     ],
@@ -568,7 +568,7 @@ Open the CSV in a plain text editor and glance at the header row. Confirm there 
     ],
     guide: `## Why wrap CSV in Excel
 
-CSV is the lingua franca of data exports: banks, CRMs, Google Forms, and admin panels all spit it out. Excel users, though, expect .xlsx — typed columns, filters, and the ability to add a chart. ApkaOS CSV to XLSX builds that workbook in your browser. The CSV is not uploaded. There is no signup, no watermark, and no server copy.
+CSV is the lingua franca of data exports: banks, CRMs, Google Forms, and admin panels all spit it out. Excel users, though, expect .xlsx — typed columns, filters, and the ability to add a chart. ToolPin CSV to XLSX builds that workbook in your browser. The CSV is not uploaded. There is no signup, no watermark, and no server copy.
 
 This is the reverse of XLSX to CSV on the same site, which is also local. Together they let you move tables in and out of Excel without an Office install and without sending the file to a conversion farm.
 
@@ -612,12 +612,12 @@ Need a PDF of the table? After you have the .xlsx, use XLSX to PDF (temporary se
       {
         question: "Does CSV to XLSX upload my file?",
         answer:
-          "No. Parsing and workbook creation run in your browser. ApkaOS never receives the CSV.",
+          "No. Parsing and workbook creation run in your browser. ToolPin never receives the CSV.",
       },
       {
         question: "Is it free?",
         answer:
-          "Yes. No signup, no watermark, no paid step on apkaos.in.",
+          "Yes. No signup, no watermark, no paid step on toolpin.online.",
       },
       {
         question: "Why are my columns all in one cell?",
@@ -647,18 +647,18 @@ Need a PDF of the table? After you have the .xlsx, use XLSX to PDF (temporary se
       "csv to spreadsheet",
       "csv to excel in browser",
       "free csv to xlsx",
-      "csv to xlsx apkaos",
+      "csv to xlsx toolpin",
     ],
   },
 
   "docx-to-text": {
-    seoTitle: "DOCX to Text Extractor in Browser Free | ApkaOS Tools",
+    seoTitle: "DOCX to Text Extractor in Browser Free | ToolPin Tools",
     seoDescription:
-      "Extract plain text from Word DOCX in your browser with ApkaOS. Free, no signup, never uploaded. Get a .txt file without images, styles, comments, or macros.",
+      "Extract plain text from Word DOCX in your browser with ToolPin. Free, no signup, never uploaded. Get a .txt file without images, styles, comments, or macros.",
     intro:
-      "Pull plain text out of a Word .docx file entirely in your browser on ApkaOS. The document is never uploaded. You get a .txt file — words and basic line breaks, not fonts, images, or comments. The tool is free and needs no account. Use it when you want searchable text, a script-friendly dump, or a copy you can paste into another app without Word.",
+      "Pull plain text out of a Word .docx file entirely in your browser on ToolPin. The document is never uploaded. You get a .txt file — words and basic line breaks, not fonts, images, or comments. The tool is free and needs no account. Use it when you want searchable text, a script-friendly dump, or a copy you can paste into another app without Word.",
     howToSteps: [
-      "Open DOCX to Text on ApkaOS. Extraction runs locally in this tab.",
+      "Open DOCX to Text on ToolPin. Extraction runs locally in this tab.",
       "Choose a .docx file (Office Open XML). Older .doc files are not this format.",
       "Wait while the browser reads document.xml inside the package and collects paragraphs.",
       "Download the .txt or copy the text from the page if the tool shows a preview.",
@@ -666,7 +666,7 @@ Need a PDF of the table? After you have the .xlsx, use XLSX to PDF (temporary se
     ],
     benefits: [
       "Never uploaded — the Word file stays on your device.",
-      "Free extraction with no ApkaOS account and no watermark (plain text cannot carry one anyway).",
+      "Free extraction with no ToolPin account and no watermark (plain text cannot carry one anyway).",
       "Useful for search, translation, and pipelines that reject .docx packages.",
       "Avoids opening untrusted Word files in Microsoft Word just to copy the words.",
     ],
@@ -678,7 +678,7 @@ Need a PDF of the table? After you have the .xlsx, use XLSX to PDF (temporary se
     ],
     guide: `## Plain text versus a Word document
 
-A .docx file is a ZIP package of XML, media, and relationship files. What you read in Word is a rendered view: styles, images, tables, headers, footnotes. DOCX to Text on ApkaOS walks the document part and writes the characters to a .txt file. That happens in your browser. Nothing is uploaded. The tool is free and does not require signup.
+A .docx file is a ZIP package of XML, media, and relationship files. What you read in Word is a rendered view: styles, images, tables, headers, footnotes. DOCX to Text on ToolPin walks the document part and writes the characters to a .txt file. That happens in your browser. Nothing is uploaded. The tool is free and does not require signup.
 
 Use this when layout does not matter. If you still need a formatted PDF, use DOCX to PDF (temporary server). If you need an editable Word file from a PDF, that is a different tool. This page is only extraction.
 
@@ -702,11 +702,11 @@ Very large books can take a few seconds in the tab and produce a large text file
 
 ## After you have the text
 
-Run the Word Counter on ApkaOS (also local) if you need counts. Convert case, hash the text, or paste into Markdown. Remember that page-based word limits (academic “pages”) do not map to plain text; character counts are more honest.
+Run the Word Counter on ToolPin (also local) if you need counts. Convert case, hash the text, or paste into Markdown. Remember that page-based word limits (academic “pages”) do not map to plain text; character counts are more honest.
 
 Do not treat the .txt as a legal copy of a signed layout. For sharing a frozen look, convert to PDF. For collaboration, keep the .docx.
 
-ApkaOS never sees this file. You can extract sensitive drafts on a machine that is offline once the page is loaded.`,
+ToolPin never sees this file. You can extract sensitive drafts on a machine that is offline once the page is loaded.`,
     tips: [
       "Accept or reject tracked changes in Word first if you want a single clean reading of the text.",
       "Use .docx, not .doc. Save older files as .docx in Word or LibreOffice, then extract.",
@@ -718,7 +718,7 @@ ApkaOS never sees this file. You can extract sensitive drafts on a machine that 
       {
         question: "Is the Word file uploaded?",
         answer:
-          "No. DOCX to Text runs entirely in your browser. ApkaOS does not receive the document.",
+          "No. DOCX to Text runs entirely in your browser. ToolPin does not receive the document.",
       },
       {
         question: "Does this convert DOC to TXT?",
@@ -733,7 +733,7 @@ ApkaOS never sees this file. You can extract sensitive drafts on a machine that 
       {
         question: "Is it free?",
         answer:
-          "Yes. No signup and no charge on apkaos.in.",
+          "Yes. No signup and no charge on toolpin.online.",
       },
       {
         question: "Are comments and track changes included?",
@@ -753,25 +753,25 @@ ApkaOS never sees this file. You can extract sensitive drafts on a machine that 
       "docx to plain text",
       "word text extractor",
       "docx to txt in browser",
-      "docx to text apkaos",
+      "docx to text toolpin",
     ],
   },
 
   "md-to-pdf": {
-    seoTitle: "Markdown to PDF Converter Online Free | ApkaOS Tools",
+    seoTitle: "Markdown to PDF Converter Online Free | ToolPin Tools",
     seoDescription:
-      "Convert Markdown MD files to PDF online free on ApkaOS. No signup, no watermark. Temporary upload for rendering; files auto-delete after you download.",
+      "Convert Markdown MD files to PDF online free on ToolPin. No signup, no watermark. Temporary upload for rendering; files auto-delete after you download.",
     intro:
-      "Render a Markdown .md file to PDF on ApkaOS when you need a readable document from README-style text. Headings, lists, code blocks, and links become a paginated PDF. Conversion uses a temporary server, then the files are deleted. The tool is free and needs no account. It is not a full book publisher — keep expectations at “clean printout of a Markdown file,” not InDesign.",
+      "Render a Markdown .md file to PDF on ToolPin when you need a readable document from README-style text. Headings, lists, code blocks, and links become a paginated PDF. Conversion uses a temporary server, then the files are deleted. The tool is free and needs no account. It is not a full book publisher — keep expectations at “clean printout of a Markdown file,” not InDesign.",
     howToSteps: [
       "Save your notes as a .md or .markdown file (UTF-8). Use standard headings, lists, and fenced code blocks.",
-      "Open Markdown to PDF on ApkaOS and upload the file. Rendering runs on a temporary server.",
+      "Open Markdown to PDF on ToolPin and upload the file. Rendering runs on a temporary server.",
       "Wait while the Markdown is converted to HTML and then to PDF pages.",
       "Download the PDF and check code wrapping, table widths, and heading hierarchy.",
       "No signup is required. The Markdown and PDF expire after download.",
     ],
     benefits: [
-      "Free Markdown-to-PDF export with no watermark and no ApkaOS account.",
+      "Free Markdown-to-PDF export with no watermark and no ToolPin account.",
       "Turns README, lecture notes, or a changelog into something you can email or print.",
       "Temporary upload only — source and PDF are not kept as a library.",
       "No need to install pandoc, LaTeX, or a local Node toolchain for a one-off printout.",
@@ -784,7 +784,7 @@ ApkaOS never sees this file. You can extract sensitive drafts on a machine that 
     ],
     guide: `## Markdown is source; PDF is the handout
 
-Markdown is designed for git and editors: # headings, - lists, \`code\`, and optional tables. Browsers and chat apps preview it; printers do not. Markdown to PDF on ApkaOS renders that source into a paginated PDF so you can email or print it. The file is uploaded to a temporary server, converted, and deleted after download. The tool is free and does not require signup.
+Markdown is designed for git and editors: # headings, - lists, \`code\`, and optional tables. Browsers and chat apps preview it; printers do not. Markdown to PDF on ToolPin renders that source into a paginated PDF so you can email or print it. The file is uploaded to a temporary server, converted, and deleted after download. The tool is free and does not require signup.
 
 This is not the same as Markdown to HTML in the text tools. That utility stays in the browser and returns HTML you can paste into a page. This tool returns a PDF and therefore needs a print pipeline on the server.
 
@@ -806,11 +806,11 @@ A Markdown file itself is tiny; the PDF grows with images and fonts. That is nor
 
 ## Privacy and what not to upload
 
-The .md is sent to the server. Do not paste secrets, API keys, or unpublished security write-ups into a file you upload. For private notes, run pandoc locally. ApkaOS deletes the job after download, but you still transmitted the text.
+The .md is sent to the server. Do not paste secrets, API keys, or unpublished security write-ups into a file you upload. For private notes, run pandoc locally. ToolPin deletes the job after download, but you still transmitted the text.
 
 ## After you download
 
-Skim every page. Markdown tables wider than the page will break; split columns or convert that section to a list. If you need tighter control (custom CSS, A4 margins, syntax highlighting themes), a local toolchain is the right next step. ApkaOS is the quick path: free, no account, good enough for READMEs, class notes, and internal specs.
+Skim every page. Markdown tables wider than the page will break; split columns or convert that section to a list. If you need tighter control (custom CSS, A4 margins, syntax highlighting themes), a local toolchain is the right next step. ToolPin is the quick path: free, no account, good enough for READMEs, class notes, and internal specs.
 
 Related: RTF to PDF and DOCX to PDF if the source is not Markdown; HTML to Text if you are going the other way from markup.`,
     tips: [
@@ -824,12 +824,12 @@ Related: RTF to PDF and DOCX to PDF if the source is not Markdown; HTML to Text 
       {
         question: "Is Markdown converted in the browser?",
         answer:
-          "No. MD to PDF uses a temporary ApkaOS server. Files are deleted after you download the PDF or the result expires.",
+          "No. MD to PDF uses a temporary ToolPin server. Files are deleted after you download the PDF or the result expires.",
       },
       {
         question: "Is it free?",
         answer:
-          "Yes. No signup and no watermark on apkaos.in.",
+          "Yes. No signup and no watermark on toolpin.online.",
       },
       {
         question: "Does this support GitHub Flavored Markdown?",
@@ -859,19 +859,19 @@ Related: RTF to PDF and DOCX to PDF if the source is not Markdown; HTML to Text 
       "readme to pdf",
       "free markdown pdf",
       "md to pdf no signup",
-      "markdown to pdf apkaos",
+      "markdown to pdf toolpin",
     ],
   },
 
   "rtf-to-pdf": {
-    seoTitle: "RTF to PDF Converter Online Free, No Signup | ApkaOS",
+    seoTitle: "RTF to PDF Converter Online Free, No Signup | ToolPin",
     seoDescription:
-      "Convert RTF documents to PDF online free on ApkaOS. No signup, no watermark. Temporary upload for WordPad-style files; auto-delete after you download.",
+      "Convert RTF documents to PDF online free on ToolPin. No signup, no watermark. Temporary upload for WordPad-style files; auto-delete after you download.",
     intro:
-      "Convert a Rich Text Format .rtf file to PDF on ApkaOS when you have an older WordPad, mail-merge, or exported note that is not a modern .docx. The file is uploaded to a temporary server, rendered, and deleted after download. The tool is free and needs no account. RTF holds basic formatting — not SmartArt or macros — so the PDF is a faithful print of that simpler document.",
+      "Convert a Rich Text Format .rtf file to PDF on ToolPin when you have an older WordPad, mail-merge, or exported note that is not a modern .docx. The file is uploaded to a temporary server, rendered, and deleted after download. The tool is free and needs no account. RTF holds basic formatting — not SmartArt or macros — so the PDF is a faithful print of that simpler document.",
     howToSteps: [
       "Locate the .rtf file (WordPad, old email drafts, some court or hospital exports still use RTF).",
-      "Open RTF to PDF on ApkaOS and upload it. Conversion is a temporary server job.",
+      "Open RTF to PDF on ToolPin and upload it. Conversion is a temporary server job.",
       "Wait while the rich text is laid out on pages.",
       "Download the PDF and check fonts, lists, and any embedded pictures.",
       "No account is required. Source and PDF are removed after the download window.",
@@ -879,7 +879,7 @@ Related: RTF to PDF and DOCX to PDF if the source is not Markdown; HTML to Text 
     benefits: [
       "Free RTF-to-PDF conversion with no watermark and no signup.",
       "Opens a format many modern phones will not preview well, then freezes it as PDF.",
-      "Temporary storage only — ApkaOS does not keep your RTF archive.",
+      "Temporary storage only — ToolPin does not keep your RTF archive.",
       "No need to install WordPad or Microsoft Word just to produce a printable file.",
     ],
     useCases: [
@@ -890,7 +890,7 @@ Related: RTF to PDF and DOCX to PDF if the source is not Markdown; HTML to Text 
     ],
     guide: `## RTF is still around
 
-Rich Text Format was Microsoft’s interchange format before .docx. WordPad on Windows writes it. Some government portals, medical systems, and mail-merge tools still export .rtf. Phones and modern browsers often show it as gobbledygook or refuse to open it. Converting to PDF on ApkaOS gives you a file anyone can read. The RTF is uploaded to a temporary server, converted, and deleted after download. The tool is free and does not require an account.
+Rich Text Format was Microsoft’s interchange format before .docx. WordPad on Windows writes it. Some government portals, medical systems, and mail-merge tools still export .rtf. Phones and modern browsers often show it as gobbledygook or refuse to open it. Converting to PDF on ToolPin gives you a file anyone can read. The RTF is uploaded to a temporary server, converted, and deleted after download. The tool is free and does not require an account.
 
 RTF is not DOCX. It does not hold modern Word themes, content controls, or VBA. That simplicity is helpful: there is less to go wrong. It also means you should not expect advanced layout. If you already have a .docx, use DOCX to PDF instead.
 
@@ -904,7 +904,7 @@ Fonts that are not available on the server substitute, which can change line bre
 
 ## Privacy and file health
 
-Treat the upload like emailing the RTF. Do not send files with account numbers if policy forbids it. ApkaOS expires the job after download.
+Treat the upload like emailing the RTF. Do not send files with account numbers if policy forbids it. ToolPin expires the job after download.
 
 Corrupt RTF (a .doc renamed to .rtf, or a truncated download) will fail. Open it in WordPad or LibreOffice locally; if that fails, the converter will too. Password-protected RTF is uncommon; if you hit one, remove protection in Word first.
 
@@ -912,7 +912,7 @@ Corrupt RTF (a .doc renamed to .rtf, or a truncated download) will fail. Open it
 
 Skim the PDF. If a logo is missing, the picture was probably a linked file rather than embedded — RTF can reference images on a path that does not exist on the server. Embed the image in a fresh save from WordPad or Word, then convert again.
 
-For a long-term archive, PDF is the right container. Keep the RTF only if you still need to edit. There is no RTF editor on ApkaOS. If you need editable Word, open the RTF in Word or LibreOffice and save as .docx; do not expect PDF to DOCX to recreate the original RTF structure perfectly.
+For a long-term archive, PDF is the right container. Keep the RTF only if you still need to edit. There is no RTF editor on ToolPin. If you need editable Word, open the RTF in Word or LibreOffice and save as .docx; do not expect PDF to DOCX to recreate the original RTF structure perfectly.
 
 Related tools: ODT to PDF for LibreOffice native files, DOCX to PDF for modern Word, and DOCX to Text if you only want the words from a Word file (local, no upload).`,
     tips: [
@@ -926,12 +926,12 @@ Related tools: ODT to PDF for LibreOffice native files, DOCX to PDF for modern W
       {
         question: "Does RTF to PDF run in the browser?",
         answer:
-          "No. The .rtf is uploaded to a temporary ApkaOS server, converted, and deleted after you download the PDF.",
+          "No. The .rtf is uploaded to a temporary ToolPin server, converted, and deleted after you download the PDF.",
       },
       {
         question: "Is the converter free?",
         answer:
-          "Yes. No signup and no watermark on apkaos.in.",
+          "Yes. No signup and no watermark on toolpin.online.",
       },
       {
         question: "Can I convert RTF to Word instead of PDF?",
@@ -961,25 +961,25 @@ Related tools: ODT to PDF for LibreOffice native files, DOCX to PDF for modern W
       "rich text to pdf",
       "free rtf converter",
       "rtf to pdf no signup",
-      "rtf to pdf apkaos",
+      "rtf to pdf toolpin",
     ],
   },
 
   "odt-to-pdf": {
-    seoTitle: "ODT to PDF Converter Online Free, No Signup | ApkaOS",
+    seoTitle: "ODT to PDF Converter Online Free, No Signup | ToolPin",
     seoDescription:
-      "Convert LibreOffice ODT to PDF online free on ApkaOS. No signup, no watermark. Temporary upload; files auto-delete after you download the PDF. No account.",
+      "Convert LibreOffice ODT to PDF online free on ToolPin. No signup, no watermark. Temporary upload; files auto-delete after you download the PDF. No account.",
     intro:
-      "Export an OpenDocument Text .odt file to PDF on ApkaOS without installing LibreOffice on the computer you are using now. The document is uploaded to a temporary server, converted, and deleted after download. The tool is free and needs no account. ODT is the native format of LibreOffice Writer and OpenOffice — this converter freezes that layout for sharing.",
+      "Export an OpenDocument Text .odt file to PDF on ToolPin without installing LibreOffice on the computer you are using now. The document is uploaded to a temporary server, converted, and deleted after download. The tool is free and needs no account. ODT is the native format of LibreOffice Writer and OpenOffice — this converter freezes that layout for sharing.",
     howToSteps: [
       "Save your Writer document as .odt (the default in LibreOffice).",
-      "Open ODT to PDF on ApkaOS and upload the file. Conversion is a temporary server job.",
+      "Open ODT to PDF on ToolPin and upload the file. Conversion is a temporary server job.",
       "Wait while the OpenDocument package is laid out to PDF pages.",
       "Download the PDF and verify styles, images, and page size (A4 is common in LibreOffice).",
       "No signup is required. The ODT and PDF are removed after the download window.",
     ],
     benefits: [
-      "Free ODT-to-PDF conversion with no watermark and no ApkaOS account.",
+      "Free ODT-to-PDF conversion with no watermark and no ToolPin account.",
       "Share LibreOffice documents with people who only accept PDF.",
       "Temporary upload — files are not stored as a permanent archive.",
       "Useful on a locked-down PC where you cannot install LibreOffice but can use a browser.",
@@ -992,7 +992,7 @@ Related tools: ODT to PDF for LibreOffice native files, DOCX to PDF for modern W
     ],
     guide: `## OpenDocument versus Word
 
-.odt is the ISO OpenDocument text format used by LibreOffice Writer, Apache OpenOffice, and Collabora. It is not .docx. Styles, frames, and native drawing objects differ. Recipients without LibreOffice often fail to open .odt cleanly in Word. A PDF avoids that fight. ApkaOS ODT to PDF uploads the file to a temporary conversion server, builds the PDF, and deletes both after download. It is free and needs no signup.
+.odt is the ISO OpenDocument text format used by LibreOffice Writer, Apache OpenOffice, and Collabora. It is not .docx. Styles, frames, and native drawing objects differ. Recipients without LibreOffice often fail to open .odt cleanly in Word. A PDF avoids that fight. ToolPin ODT to PDF uploads the file to a temporary conversion server, builds the PDF, and deletes both after download. It is free and needs no signup.
 
 If your file is already .docx, use DOCX to PDF. If it is RTF, use RTF to PDF. Do not rename .odt to .docx; the packages are different.
 
@@ -1008,7 +1008,7 @@ Master documents (.odm) that pull in other files will not have those chapters un
 
 ## Privacy and macros
 
-LibreOffice documents can contain macros. The converter does not run them; it lays out text and graphics. Still, do not upload files you would not email. ApkaOS expires the job after download.
+LibreOffice documents can contain macros. The converter does not run them; it lays out text and graphics. Still, do not upload files you would not email. ToolPin expires the job after download.
 
 Password-protected ODTs cannot be read until you remove the password in Writer.
 
@@ -1016,9 +1016,9 @@ Password-protected ODTs cannot be read until you remove the password in Writer.
 
 Open the PDF and scan for overflow in tables and for footnote numbering. If something is wrong, fix the ODT in LibreOffice — do not expect to patch layout in the PDF.
 
-Need text only? There is no dedicated ODT-to-text tool on ApkaOS. Export text from Writer, or convert to DOCX locally and use DOCX to Text (browser-local). Need the reverse of this page? PDF to DOCX reconstructs Word, not Writer; round-tripping ODT → PDF → DOCX is lossy.
+Need text only? There is no dedicated ODT-to-text tool on ToolPin. Export text from Writer, or convert to DOCX locally and use DOCX to Text (browser-local). Need the reverse of this page? PDF to DOCX reconstructs Word, not Writer; round-tripping ODT → PDF → DOCX is lossy.
 
-ApkaOS is a convenience layer so you can produce a PDF from Writer without the desktop app on the machine in front of you. For daily writing, keep LibreOffice; use this when you only need the export.`,
+ToolPin is a convenience layer so you can produce a PDF from Writer without the desktop app on the machine in front of you. For daily writing, keep LibreOffice; use this when you only need the export.`,
     tips: [
       "Update tables of contents and fields in LibreOffice before you upload.",
       "Embed or stick to common fonts if the document uses Indic or custom typefaces.",
@@ -1030,7 +1030,7 @@ ApkaOS is a convenience layer so you can produce a PDF from Writer without the d
       {
         question: "Is the ODT file uploaded?",
         answer:
-          "Yes. ODT to PDF runs on a temporary ApkaOS server. The document and PDF are deleted after you download or the result expires.",
+          "Yes. ODT to PDF runs on a temporary ToolPin server. The document and PDF are deleted after you download or the result expires.",
       },
       {
         question: "Is it free? Do I need LibreOffice installed?",
@@ -1053,7 +1053,7 @@ ApkaOS is a convenience layer so you can produce a PDF from Writer without the d
           "Remove the password in LibreOffice first. Encrypted packages cannot be opened by the converter.",
       },
       {
-        question: "Can I get a .docx from an .odt on ApkaOS?",
+        question: "Can I get a .docx from an .odt on ToolPin?",
         answer:
           "Not directly. This tool outputs PDF. To get Word, open the ODT in LibreOffice or Word and save as .docx, or convert PDF to DOCX knowing that reconstruction is lossy.",
       },
@@ -1065,7 +1065,7 @@ ApkaOS is a convenience layer so you can produce a PDF from Writer without the d
       "convert odt online",
       "writer to pdf",
       "free odt converter",
-      "odt to pdf apkaos",
+      "odt to pdf toolpin",
     ],
   },
 };
