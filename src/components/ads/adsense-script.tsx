@@ -1,18 +1,26 @@
 "use client";
 
-import Script from "next/script";
+import { useEffect } from "react";
 import { ADSENSE_CLIENT, ADSENSE_SCRIPT_SRC } from "@/constants/adsense";
 
-export function AdSenseScript() {
-  if (!ADSENSE_CLIENT) return null;
+const SCRIPT_ID = "google-adsense";
 
-  return (
-    <Script
-      id="google-adsense"
-      async
-      src={ADSENSE_SCRIPT_SRC}
-      crossOrigin="anonymous"
-      strategy="afterInteractive"
-    />
-  );
+/**
+ * Loads AdSense with a plain DOM script tag.
+ * Avoids next/script's data-nscript attribute, which AdSense rejects.
+ */
+export function AdSenseScript() {
+  useEffect(() => {
+    if (!ADSENSE_CLIENT) return;
+    if (document.getElementById(SCRIPT_ID)) return;
+
+    const script = document.createElement("script");
+    script.id = SCRIPT_ID;
+    script.async = true;
+    script.src = ADSENSE_SCRIPT_SRC;
+    script.crossOrigin = "anonymous";
+    document.head.appendChild(script);
+  }, []);
+
+  return null;
 }

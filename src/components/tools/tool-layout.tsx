@@ -49,7 +49,7 @@ export function ToolLayout({ tool }: { tool: ToolDefinition }) {
             <p className="text-sm font-medium uppercase tracking-wide text-gold">
               {tool.category} · {tool.operation}
             </p>
-            <h1 className="mt-2 font-heading text-4xl font-semibold">{tool.seoTitle.replace(/\s+\|\s+ApkaOS$/i, "")}</h1>
+            <h1 className="mt-2 font-heading text-4xl font-semibold">{tool.seoTitle.replace(/\s+\|\s+ToolPin$/i, "")}</h1>
             <p className="mt-4 max-w-2xl text-lg leading-8 text-muted-foreground">
               {tool.intro || tool.description}
             </p>
@@ -104,7 +104,7 @@ export function ToolLayout({ tool }: { tool: ToolDefinition }) {
         <div className="rounded-lg border bg-card p-8 shadow-sm">
           <h2 className="text-2xl font-semibold">Explore more tools</h2>
           <p className="mt-3 text-muted-foreground">
-            Browse every free ApkaOS converter, compressor, and formatter from one directory.
+            Browse every free ToolPin converter, compressor, and formatter from one directory.
           </p>
           <Button className="mt-6" asChild>
             <Link href="/tools">

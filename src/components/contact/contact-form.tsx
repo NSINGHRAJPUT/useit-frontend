@@ -14,7 +14,7 @@ export function ContactForm() {
   function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const body = `From: ${email}\n\n${message}`;
-    const href = `mailto:${siteConfig.contactEmail}?subject=${encodeURIComponent(subject || "ApkaOS contact")}&body=${encodeURIComponent(body)}`;
+    const href = `mailto:${siteConfig.contactEmail}?subject=${encodeURIComponent(subject || "ToolPin contact")}&body=${encodeURIComponent(body)}`;
     window.location.href = href;
   }
 

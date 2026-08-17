@@ -4,7 +4,7 @@ import { useCallback, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-const STORAGE_KEY = "apkaos-cookie-consent";
+const STORAGE_KEY = "toolpin-cookie-consent";
 const listeners = new Set<() => void>();
 
 function emit() {
@@ -46,7 +46,7 @@ export function CookieBanner() {
     <div className="fixed inset-x-0 bottom-0 z-50 border-t border-gold/20 bg-background/95 px-4 py-4 shadow-[0_-12px_40px_oklch(0.05_0.02_265_/_0.35)] backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="max-w-3xl text-sm leading-6 text-muted-foreground">
-          ApkaOS uses cookies for theme preference and Google AdSense advertising. See our{" "}
+          ToolPin uses cookies for theme preference and Google AdSense advertising. See our{" "}
           <Link href="/privacy-policy" className="text-gold underline-offset-2 hover:underline">
             Privacy Policy
           </Link>{" "}

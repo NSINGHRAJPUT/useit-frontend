@@ -61,7 +61,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-gold/10">
         <p className="mx-auto max-w-7xl px-4 py-5 text-xs text-muted-foreground sm:px-6 lg:px-8">
-          © {new Date().getFullYear()} ApkaOS · apkaos.in · Free online file tools
+          © {new Date().getFullYear()} ToolPin · toolpin.online · Free online file tools
         </p>
       </div>
     </footer>
