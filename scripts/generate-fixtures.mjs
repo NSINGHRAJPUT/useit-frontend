@@ -25,7 +25,7 @@ writeFileSync(join(dir, "sample.bmp"), png);
 const pdf = await PDFDocument.create();
 const page = pdf.addPage([200, 200]);
 const font = await pdf.embedFont(StandardFonts.Helvetica);
-page.drawText("ApkaOS test PDF", { x: 20, y: 160, size: 12, font });
+page.drawText("ToolPin test PDF", { x: 20, y: 160, size: 12, font });
 writeFileSync(join(dir, "sample.pdf"), await pdf.save());
 
 const wb = XLSX.utils.book_new();

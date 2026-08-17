@@ -118,7 +118,7 @@ function imageConvert(
     acceptedMimeTypes: [...imageMime[from]],
     outputFormat: to,
     seoTitle: `${name} Converter Online`,
-    seoDescription: `${description} free in your browser with ApkaOS. No signup, no watermark.`,
+    seoDescription: `${description} free in your browser with ToolPin. No signup, no watermark.`,
   });
 }
 
@@ -436,7 +436,7 @@ function documentTool(
     outputFormat: outputFormats[0] ?? "pdf",
     processingLocation,
     seoTitle: `${name} Online`,
-    seoDescription: `${description} free in your browser with ApkaOS. No signup, no watermark.`,
+    seoDescription: `${description} free in your browser with ToolPin. No signup, no watermark.`,
   });
 }
 
@@ -541,7 +541,7 @@ function textTool(slug: string, name: string, description: string, searchKeyword
     inputType: "text",
     processingMode: "sync",
     seoTitle: `${name} Online`,
-    seoDescription: `${description} free in your browser with ApkaOS. No signup required.`,
+    seoDescription: `${description} free in your browser with ToolPin. No signup required.`,
     searchKeywords,
   });
 }
