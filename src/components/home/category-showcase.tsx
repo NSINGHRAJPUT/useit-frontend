@@ -15,7 +15,7 @@ export function CategoryShowcase() {
         return (
           <Link
             key={category.slug}
-            href="/categories"
+            href={`/categories/${category.slug}`}
             className="card-premium group relative overflow-hidden p-6 transition hover:border-gold/30"
           >
             <div className={`absolute inset-0 bg-gradient-to-br ${meta?.gradient ?? "from-gold/10 to-transparent"} opacity-80`} />

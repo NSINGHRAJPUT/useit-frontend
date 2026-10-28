@@ -1,0 +1,191 @@
+.text-editor-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.text-editor-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+  padding: 0.65rem 0.85rem;
+}
+
+.text-editor-toolbar button,
+.text-editor-toolbar label.toolbar-file {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1f2937;
+  cursor: pointer;
+  user-select: none;
+}
+
+.text-editor-toolbar button:hover,
+.text-editor-toolbar label.toolbar-file:hover {
+  background: #f3f4f6;
+}
+
+.text-editor-toolbar button.is-active {
+  border-color: color-mix(in oklab, var(--gold, #c9a227) 70%, #000);
+  background: color-mix(in oklab, var(--gold, #c9a227) 18%, transparent);
+  color: color-mix(in oklab, var(--gold, #c9a227) 55%, #1a1a1a);
+}
+
+.text-editor-toolbar button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.text-editor-toolbar .toolbar-divider {
+  width: 1px;
+  height: 1.4rem;
+  margin: 0 0.15rem;
+  background: #d1d5db;
+}
+
+.text-editor-canvas-wrap {
+  overflow: auto;
+  background: #e8edf2;
+  padding: 1rem;
+  min-height: 640px;
+  max-height: 730px;
+}
+
+.text-editor-page {
+  margin: 0 auto;
+  width: 760px;
+  min-height: 640px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+}
+
+.text-editor-page .ProseMirror {
+  min-height: 640px;
+  padding: 40px 48px;
+  outline: none;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #1a1a1a;
+  overflow: hidden;
+}
+
+.text-editor-page .ProseMirror::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.text-editor-page .ProseMirror h1 {
+  font-size: 2em;
+  line-height: 1.25;
+  margin: 0 0 0.6em;
+  font-weight: 700;
+}
+
+.text-editor-page .ProseMirror h2 {
+  font-size: 1.5em;
+  line-height: 1.3;
+  margin: 1.2em 0 0.5em;
+  font-weight: 700;
+}
+
+.text-editor-page .ProseMirror h3 {
+  font-size: 1.2em;
+  line-height: 1.35;
+  margin: 1em 0 0.4em;
+  font-weight: 700;
+}
+
+.text-editor-page .ProseMirror p {
+  margin: 0 0 0.85em;
+}
+
+.text-editor-page .ProseMirror ul,
+.text-editor-page .ProseMirror ol {
+  margin: 0 0 0.85em;
+  padding-left: 1.4em;
+}
+
+.text-editor-page .ProseMirror a {
+  color: #1d4ed8;
+}
+
+.text-editor-page .ProseMirror p.is-editor-empty:first-child::before {
+  color: #94a3b8;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.text-editor-page .ProseMirror .freeform-image-view {
+  position: relative;
+  max-width: 100%;
+}
+
+.freeform-image-node {
+  position: relative;
+  display: block;
+  width: 100%;
+  cursor: grab;
+  max-width: 100%;
+}
+
+.freeform-image-node:active {
+  cursor: grabbing;
+}
+
+.freeform-image-node.is-selected {
+  outline: 2px solid var(--gold, #c9a227);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.freeform-image-node img.freeform-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  user-select: none;
+}
+
+.freeform-image-resize {
+  position: absolute;
+  right: -6px;
+  bottom: -6px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  background: var(--gold, #c9a227);
+  cursor: nwse-resize;
+  padding: 0;
+}
+
+.freeform-image-hint {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  white-space: nowrap;
+  border-radius: 999px;
+  background: #111827;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 0.25rem 0.55rem;
+  pointer-events: none;
+}

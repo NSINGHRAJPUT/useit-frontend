@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Section } from "@/components/layout/section";
 import { AdSlot } from "@/components/ads/ad-slot";
 import { ADSENSE_SLOTS } from "@/constants/adsense";
+import { categories } from "@/constants/site";
 import { CategoryToolPanel } from "./category-tool-panel";
 import { ToolBenefits } from "./tool-benefits";
 import { ToolFAQ } from "./tool-faq";
@@ -25,6 +26,7 @@ export function ToolLayout({ tool }: { tool: ToolDefinition }) {
     tool.inputType === "text"
       ? "Text input"
       : tool.acceptedFormats.map((item) => item.toUpperCase()).join(", ");
+  const category = categories.find((item) => item.slug === tool.category);
 
   return (
     <>
@@ -38,6 +40,14 @@ export function ToolLayout({ tool }: { tool: ToolDefinition }) {
             <BreadcrumbItem>
               <BreadcrumbLink href="/tools">Tools</BreadcrumbLink>
             </BreadcrumbItem>
+            {category ? (
+              <>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbLink href={`/categories/${category.slug}`}>{category.name}</BreadcrumbLink>
+                </BreadcrumbItem>
+              </>
+            ) : null}
             <BreadcrumbSeparator />
             <BreadcrumbItem>
               <BreadcrumbPage>{tool.name}</BreadcrumbPage>

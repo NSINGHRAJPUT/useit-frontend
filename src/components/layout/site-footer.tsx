@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { siteConfig } from "@/constants/site";
+import { popularToolSlugs, siteConfig, tools } from "@/constants/site";
 
 const columns = [
   {
@@ -7,6 +7,8 @@ const columns = [
     links: [
       ["All tools", "/tools"],
       ["Categories", "/categories"],
+      ["Image tools", "/categories/image"],
+      ["PDF tools", "/categories/pdf"],
       ["Blog", "/blog"],
       ["FAQ", "/faq"],
     ],
@@ -30,6 +32,10 @@ const columns = [
 ];
 
 export function SiteFooter() {
+  const popularTools = popularToolSlugs
+    .map((slug) => tools.find((tool) => tool.slug === slug))
+    .filter((tool): tool is (typeof tools)[number] => Boolean(tool));
+
   return (
     <footer className="border-t border-gold/10 bg-card/40">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-[1.2fr_2fr] lg:px-8">
@@ -41,6 +47,23 @@ export function SiteFooter() {
               {siteConfig.contactEmail}
             </a>
           </p>
+          {popularTools.length > 0 ? (
+            <div className="mt-6">
+              <p className="font-semibold text-foreground">Popular tools</p>
+              <ul className="mt-3 grid gap-2 text-sm">
+                {popularTools.map((tool) => (
+                  <li key={tool.slug}>
+                    <Link
+                      href={`/tools/${tool.slug}`}
+                      className="text-muted-foreground transition hover:text-gold"
+                    >
+                      {tool.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
         </div>
         <div className="grid gap-8 text-sm sm:grid-cols-3">
           {columns.map((column) => (
