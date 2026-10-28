@@ -1,30 +1,36 @@
 import type { MetadataRoute } from "next";
 import { getPublishedBlogSlugs } from "@/lib/blog";
-import { siteConfig, tools } from "@/constants/site";
+import { categories, siteConfig, tools } from "@/constants/site";
 
-const staticRoutes = [
-  "",
-  "/tools",
-  "/categories",
-  "/blog",
-  "/about",
-  "/contact",
-  "/faq",
-  "/privacy-policy",
-  "/terms-of-service",
-  "/cookie-policy",
-  "/refund-policy",
+/** Stable catalog date — bump when static/tool pages meaningfully change. */
+const CATALOG_LAST_MODIFIED = new Date("2026-10-28T12:00:00.000Z");
+
+const staticRoutes: Array<{
+  route: string;
+  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
+  priority: number;
+}> = [
+  { route: "", changeFrequency: "daily", priority: 1 },
+  { route: "/tools", changeFrequency: "weekly", priority: 0.9 },
+  { route: "/categories", changeFrequency: "weekly", priority: 0.8 },
+  { route: "/blog", changeFrequency: "weekly", priority: 0.75 },
+  { route: "/about", changeFrequency: "monthly", priority: 0.5 },
+  { route: "/contact", changeFrequency: "monthly", priority: 0.5 },
+  { route: "/faq", changeFrequency: "monthly", priority: 0.6 },
+  { route: "/privacy-policy", changeFrequency: "yearly", priority: 0.3 },
+  { route: "/terms-of-service", changeFrequency: "yearly", priority: 0.3 },
+  { route: "/cookie-policy", changeFrequency: "yearly", priority: 0.3 },
+  { route: "/refund-policy", changeFrequency: "yearly", priority: 0.3 },
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date();
   let blogRoutes: MetadataRoute.Sitemap = [];
 
   try {
     const slugs = await getPublishedBlogSlugs();
     blogRoutes = slugs.map(({ slug, updatedAt }) => ({
       url: `${siteConfig.url}/blog/${slug}`,
-      lastModified: updatedAt ? new Date(updatedAt) : now,
+      lastModified: updatedAt ? new Date(updatedAt) : CATALOG_LAST_MODIFIED,
       changeFrequency: "weekly" as const,
       priority: 0.6,
     }));
@@ -33,15 +39,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   return [
-    ...staticRoutes.map((route) => ({
+    ...staticRoutes.map(({ route, changeFrequency, priority }) => ({
       url: `${siteConfig.url}${route}`,
-      lastModified: now,
-      changeFrequency: route === "" ? ("daily" as const) : ("weekly" as const),
-      priority: route === "" ? 1 : route === "/tools" ? 0.9 : route === "/blog" ? 0.75 : 0.7,
+      lastModified: CATALOG_LAST_MODIFIED,
+      changeFrequency,
+      priority,
+    })),
+    ...categories.map((category) => ({
+      url: `${siteConfig.url}/categories/${category.slug}`,
+      lastModified: CATALOG_LAST_MODIFIED,
+      changeFrequency: "weekly" as const,
+      priority: 0.75,
     })),
     ...tools.map((tool) => ({
       url: `${siteConfig.url}/tools/${tool.slug}`,
-      lastModified: now,
+      lastModified: CATALOG_LAST_MODIFIED,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     })),

@@ -41,7 +41,7 @@ export default function CategoriesPage() {
                     <p className="mt-3 max-w-3xl text-sm leading-7 text-muted-foreground">{category.longDescription}</p>
                   </div>
                   <Link
-                    href={`/tools?category=${category.slug}`}
+                    href={`/categories/${category.slug}`}
                     className="inline-flex items-center gap-2 text-sm font-medium text-gold"
                   >
                     View all {categoryTools.length} <ArrowRight className="size-4" />

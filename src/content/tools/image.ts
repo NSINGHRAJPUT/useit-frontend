@@ -2438,4 +2438,77 @@ Pair with crop (remove a house number in the frame), resize (do not ship 12 MP o
       "toolpin strip metadata",
     ],
   },
+  "html-to-image": {
+    seoTitle: "HTML to Image Converter Online Free | ToolPin Tools",
+    seoDescription:
+      "Convert HTML to PNG or JPG online free on ToolPin. Paste or import HTML, preview, download a sharp 2× screenshot. No signup, no watermark.",
+    intro:
+      "Render HTML as a PNG or JPG on ToolPin. Paste markup or import an .html file, preview in a sandboxed iframe, choose width and format, then export. Screenshots use a short-lived serverless Chromium job; HTML is not kept after download. Free, no account required.",
+    howToSteps: [
+      "Open HTML to Image on ToolPin.",
+      "Paste HTML or import an .html file (max 1 MB).",
+      "Set width (360–1440 px) and choose PNG or JPG.",
+      "Confirm the live preview, then download the image.",
+      "Use the image in slides, chat, or design tools as needed.",
+    ],
+    benefits: [
+      "2× device-scale screenshots for sharper PNG/JPG output.",
+      "Sandboxed preview with scripts disabled before you export.",
+      "Free, no signup, no watermark.",
+      "Use HTML to PDF on ToolPin when you need selectable text instead.",
+    ],
+    useCases: [
+      "Capture an HTML email design as a PNG for Slack or WhatsApp.",
+      "Export a marketing banner coded in HTML as a JPG.",
+      "Share a static snapshot of a dashboard mockup without sending HTML.",
+      "Create social images from self-contained HTML templates.",
+    ],
+    guide: `## HTML to a picture
+
+HTML to Image loads your document in headless Chromium and takes a full-page screenshot at 2× scale. Choose PNG for crisp UI chrome and transparency-friendly graphics, or JPG for smaller photographic layouts.
+
+This is not HTML to PDF. PDFs keep selectable text; images do not. Scripts never run in preview or render.
+
+## Assets
+
+Remote images and fonts must be public HTTPS (or listed in \`EDM_ASSET_HOSTS\`). Private network and metadata hosts are blocked. If an image is missing in the export, check the host allow rules.
+
+## Limits
+
+HTML ≤ 1 MB. Rendered height must stay within safe bounds. Outputs larger than about 4 MB cannot be returned as a direct download — reduce width, height, or switch to JPG.`,
+    tips: [
+      "Prefer PNG for UI and logos; JPG for photo-heavy pages.",
+      "Match canvas width to the design’s intended viewport.",
+      "For a printable document with links, use HTML to PDF instead.",
+      "Keep background colors explicit so screenshots do not look washed out.",
+    ],
+    faq: [
+      {
+        question: "Is HTML uploaded?",
+        answer:
+          "Yes, briefly, only when you export. Preview stays local. ToolPin does not keep a library of past exports.",
+      },
+      {
+        question: "PNG or JPG?",
+        answer:
+          "PNG is sharper for UI and supports cleaner edges. JPG is usually smaller for photos.",
+      },
+      {
+        question: "Do scripts run?",
+        answer: "No. Preview and export disable JavaScript.",
+      },
+      {
+        question: "Is it free?",
+        answer: "Yes. No signup on toolpin.online.",
+      },
+    ],
+    searchKeywords: [
+      "html to image",
+      "html to png",
+      "html to jpg",
+      "screenshot html online",
+      "render html as image",
+      "html to image toolpin",
+    ],
+  },
 };

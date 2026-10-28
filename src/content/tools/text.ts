@@ -1604,4 +1604,74 @@ ToolPin does not fetch remote HTML. Paste what you already have, convert, and co
       "html to text toolpin",
     ],
   },
+  "text-to-html": {
+    seoTitle: "Text to HTML Editor Online Free | ToolPin Tools",
+    seoDescription:
+      "Write rich text and export HTML free in your browser on ToolPin. Headings, lists, links, and images — copy or download. Nothing uploaded for HTML export.",
+    intro:
+      "Compose a document in ToolPin’s rich text editor and export a complete HTML file. Formatting, links, and floated images stay in the browser for Copy HTML and Download HTML — nothing is uploaded for those actions. Free, no account. For a PDF of the same document, use Text to PDF.",
+    howToSteps: [
+      "Open Text to HTML on ToolPin.",
+      "Write content with the toolbar (headings, bold, lists, links, images).",
+      "Drag images to float left, right, or center as needed.",
+      "Click Copy HTML or Download HTML. The full document is built in this tab.",
+      "Paste the HTML into your CMS or open the downloaded .html file.",
+    ],
+    benefits: [
+      "100% browser-local for HTML copy and download — drafts never leave the device.",
+      "Complete HTML document with embedded styles, ready to open or paste.",
+      "Free, no signup.",
+      "Switch to Text to PDF when you need a printable file instead.",
+    ],
+    useCases: [
+      "Draft an email body and copy HTML into your ESP.",
+      "Write a short article and download HTML for a static site.",
+      "Build a simple one-page document with a logo without opening a desktop editor.",
+      "Convert notes into HTML for an LMS that accepts markup.",
+    ],
+    guide: `## Write once, export HTML
+
+Text to HTML uses TipTap in your browser. \`buildDocumentHtml\` wraps the body in a DOCTYPE, charset, and shared document CSS so the file opens cleanly. No server round-trip for Copy or Download HTML.
+
+This is not Markdown to HTML (paste Markdown source). It is a visual editor. It is also not HTML to Text (stripping tags).
+
+## Privacy
+
+HTML export is local. Only sibling tools that create PDF/images send HTML to ToolPin’s render API. Keep secrets out of the editor if you later click Text to PDF.`,
+    tips: [
+      "Use Download HTML to get a .html file you can open offline.",
+      "Prefer absolute https:// links so the HTML works outside ToolPin.",
+      "Images are embedded as data URLs — large photos increase file size.",
+      "Need a PDF? Open Text to PDF with the same editor workflow.",
+    ],
+    faq: [
+      {
+        question: "Is my text uploaded?",
+        answer:
+          "Not for Copy HTML or Download HTML. Those run entirely in your browser on ToolPin.",
+      },
+      {
+        question: "Do I get a full HTML document?",
+        answer:
+          "Yes. The download includes DOCTYPE, head styles, and a page wrapper — not just a fragment.",
+      },
+      {
+        question: "Can I export PDF from this page?",
+        answer:
+          "Use the Text to PDF tool. This page focuses on HTML output.",
+      },
+      {
+        question: "Is Text to HTML free?",
+        answer: "Yes. No signup on toolpin.online.",
+      },
+    ],
+    searchKeywords: [
+      "text to html",
+      "rich text to html",
+      "wysiwyg html editor",
+      "html editor online free",
+      "write html online",
+      "text to html toolpin",
+    ],
+  },
 };

@@ -18,6 +18,18 @@ export const siteConfig = {
 
 export const tools = allTools;
 
+/** High-traffic tools linked from the footer for crawl depth. */
+export const popularToolSlugs = [
+  "jpg-to-webp",
+  "png-to-jpg",
+  "compress-jpg",
+  "merge-pdf",
+  "split-pdf",
+  "docx-to-pdf",
+  "json-formatter",
+  "qr-code-generator",
+] as const;
+
 export const categories = [
   {
     name: "Image Tools",

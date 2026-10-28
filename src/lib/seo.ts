@@ -101,7 +101,8 @@ export function buildPageMetadata({
   path: string;
   keywords?: string[];
 }): Metadata {
-  const canonical = path.startsWith("http") ? path : `${siteConfig.url}${path}`;
+  const normalizedPath = path === "/" ? "" : path;
+  const canonical = path.startsWith("http") ? path : `${siteConfig.url}${normalizedPath}`;
   return {
     title,
     description,
@@ -240,12 +241,15 @@ export function buildBreadcrumbJsonLd(items: Array<{ name: string; path: string 
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((item, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: item.name,
-      item: item.path.startsWith("http") ? item.path : `${siteConfig.url}${item.path}`,
-    })),
+    itemListElement: items.map((item, index) => {
+      const path = item.path === "/" ? "" : item.path;
+      return {
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+        item: item.path.startsWith("http") ? item.path : `${siteConfig.url}${path}`,
+      };
+    }),
   };
 }
 

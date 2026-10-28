@@ -1068,4 +1068,155 @@ ToolPin is a convenience layer so you can produce a PDF from Writer without the 
       "odt to pdf toolpin",
     ],
   },
+  "html-to-pdf": {
+    seoTitle: "HTML to PDF Converter Online Free | ToolPin Tools",
+    seoDescription:
+      "Convert HTML to PDF online free on ToolPin. Paste or import HTML, live preview, download a PDF with selectable text and working links. No signup.",
+    intro:
+      "Turn a complete HTML document into a PDF on ToolPin. Paste markup or import an .html file, preview the layout at a chosen width, then export. The PDF keeps browser-rendered text you can select and normal hyperlinks. Rendering uses a short-lived serverless Chromium job; HTML is not kept after the download. The tool is free and needs no account.",
+    howToSteps: [
+      "Open HTML to PDF on ToolPin.",
+      "Paste a full HTML document (including CSS) or import an .html file under 1 MB.",
+      "Set canvas width between 360 and 1440 px and check the sandboxed live preview.",
+      "Click Download PDF. ToolPin renders the HTML and returns the file.",
+      "Open the PDF and verify text selection, links, and layout before you share it.",
+    ],
+    benefits: [
+      "Selectable text and clickable links — not a flat screenshot pasted into a PDF.",
+      "Live preview with scripts disabled so you can check layout before export.",
+      "Free, no signup, no watermark on the PDF.",
+      "Pairs with HTML to Image when you need a PNG or JPG instead.",
+    ],
+    useCases: [
+      "Archive an HTML email or newsletter as a printable PDF.",
+      "Hand a static landing-page mockup to a stakeholder who prefers PDF.",
+      "Convert a self-contained HTML report for offline reading.",
+      "Export a designed HTML invoice template for emailing as PDF.",
+    ],
+    guide: `## HTML in, PDF out
+
+HTML to PDF on ToolPin renders your markup in a headless browser, then writes a PDF page sized to the content width and height. You get real glyphs and hyperlinks, not a raster image of the page. The HTML is sent briefly to ToolPin’s export endpoint for that render and is not stored as a library afterward.
+
+This is different from Markdown to PDF (upload a .md file) and Text to PDF (write in the TipTap editor). Use this page when you already have HTML.
+
+## What works well
+
+Inline and \`<style>\` CSS, tables, images hosted on public HTTPS (or hosts in \`EDM_ASSET_HOSTS\`), and standard fonts. JavaScript does not run during render — interactive widgets will look empty. Form fields are not fillable in the PDF. Keep documents under about 12,000 CSS pixels of height and under the direct download size limit.
+
+## Privacy
+
+Preview stays in your browser. Export uploads HTML only for the render job. Prefer not to paste secrets you cannot send to ToolPin’s serverless function.`,
+    tips: [
+      "Include a full DOCTYPE and charset so fonts and encoding stay correct.",
+      "Replace placeholder links with real https:// URLs before export.",
+      "If remote images are missing, check that the host is public HTTPS or allowlisted.",
+      "For a screenshot instead of a PDF, use HTML to Image on ToolPin.",
+    ],
+    faq: [
+      {
+        question: "Is my HTML stored on ToolPin?",
+        answer:
+          "No permanent storage. HTML is sent only to render the PDF and is not kept as a user library after the download.",
+      },
+      {
+        question: "Does the PDF keep selectable text?",
+        answer:
+          "Yes. ToolPin uses Chromium PDF output so text stays selectable and links stay clickable when the HTML used normal anchors.",
+      },
+      {
+        question: "Can JavaScript run in the PDF?",
+        answer:
+          "No. Scripts are disabled during render and PDFs do not run page scripts.",
+      },
+      {
+        question: "What is the size limit?",
+        answer:
+          "HTML up to 1 MB. Generated files over roughly 4 MB cannot be returned as a direct download — shorten the page or reduce images.",
+      },
+      {
+        question: "Is HTML to PDF free?",
+        answer: "Yes. No signup or watermark on toolpin.online.",
+      },
+    ],
+    searchKeywords: [
+      "html to pdf",
+      "convert html to pdf online",
+      "html pdf free",
+      "export html as pdf",
+      "html email to pdf",
+      "html to pdf toolpin",
+    ],
+  },
+  "text-to-pdf": {
+    seoTitle: "Text to PDF Converter Online Free | ToolPin Tools",
+    seoDescription:
+      "Write rich text online and export a PDF free on ToolPin. Headings, lists, links, and images in a browser editor — no signup, no watermark.",
+    intro:
+      "Draft a document in ToolPin’s rich text editor, then export a PDF. Add headings, lists, links, and floated images, then download. Writing stays in the tab until you export; PDF creation briefly sends HTML to ToolPin’s render API. Free, no account required.",
+    howToSteps: [
+      "Open Text to PDF on ToolPin.",
+      "Write or paste content in the editor. Use the toolbar for headings, lists, links, and images.",
+      "Drag floated images into place if needed.",
+      "Click Download PDF. ToolPin renders the document and returns the file.",
+      "Open the PDF and check layout, links, and images.",
+    ],
+    benefits: [
+      "WYSIWYG editor — no need to write HTML by hand.",
+      "PDF with selectable text and working links from the editor content.",
+      "Free, no signup, no watermark.",
+      "Companion Text to HTML tool exports markup without uploading.",
+    ],
+    useCases: [
+      "Turn meeting notes into a shareable PDF.",
+      "Write a short letter or announcement and email the PDF.",
+      "Draft a one-pager with a logo image and export for print.",
+      "Convert blog draft text into a PDF handout.",
+    ],
+    guide: `## Write, then print to PDF
+
+Text to PDF wraps your TipTap document in a standard HTML page and renders it with the same export engine as HTML to PDF. You do not paste HTML; you write in the editor. For copy/download of HTML only, use Text to HTML — that path stays entirely in the browser.
+
+## Images and layout
+
+Images are compressed and embedded as data URLs when you insert them, so they travel with the HTML on export. Keep the page reasonable in height; very tall documents may hit the download size limit.
+
+## Privacy
+
+Editing is local. Only PDF export sends HTML to the serverless render endpoint. Do not put passwords or private keys in the document if you cannot send them for rendering.`,
+    tips: [
+      "Use one H1 and clear H2 sections for a cleaner PDF outline.",
+      "Prefer the Text to HTML tool if you only need markup, not a PDF.",
+      "Check links in the PDF after export — use full https:// URLs.",
+      "If export fails on size, shrink images or shorten the document.",
+    ],
+    faq: [
+      {
+        question: "Is my draft uploaded while I type?",
+        answer:
+          "No. The editor runs in your browser. Upload happens only when you click Download PDF.",
+      },
+      {
+        question: "Can I get HTML instead of PDF?",
+        answer:
+          "Yes. Use Text to HTML on ToolPin for copy or download of the HTML document without calling the render API.",
+      },
+      {
+        question: "Does Text to PDF need an account?",
+        answer: "No. It is free on toolpin.online with no signup.",
+      },
+      {
+        question: "Will fonts match Microsoft Word?",
+        answer:
+          "The document uses a web-safe serif stack (Georgia / Times). Exact Word theme fonts are not guaranteed.",
+      },
+    ],
+    searchKeywords: [
+      "text to pdf",
+      "rich text to pdf",
+      "wysiwyg to pdf",
+      "online text pdf",
+      "write pdf online free",
+      "text to pdf toolpin",
+    ],
+  },
 };

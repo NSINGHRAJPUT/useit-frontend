@@ -157,7 +157,7 @@ export default function HomePage() {
             <div key={category.slug} className="rounded-2xl border border-gold/15 bg-card/40 p-6">
               <h3 className="font-heading text-xl font-semibold">{category.name}</h3>
               <p className="mt-3 text-sm leading-7 text-muted-foreground">{category.longDescription}</p>
-              <Link href={`/tools?category=${category.slug}`} className="mt-4 inline-flex items-center gap-2 text-sm text-gold">
+              <Link href={`/categories/${category.slug}`} className="mt-4 inline-flex items-center gap-2 text-sm text-gold">
                 Open {category.name} <ArrowRight className="size-4" />
               </Link>
             </div>

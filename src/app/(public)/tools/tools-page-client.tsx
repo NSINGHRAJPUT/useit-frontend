@@ -2,7 +2,6 @@
 
 import { useMemo } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { Section } from "@/components/layout/section";
 import { ToolCard } from "@/components/tools/tool-card";
 import { AdSlot } from "@/components/ads/ad-slot";
 import { ADSENSE_SLOTS } from "@/constants/adsense";
@@ -40,14 +39,7 @@ export default function ToolsPageClient() {
   const selectedCategory = categories.find((item) => item.slug === category);
 
   return (
-    <Section>
-      <h1 className="font-heading text-4xl font-semibold">
-        <span className="text-metallic-gold">Free conversion tools</span>
-      </h1>
-      <p className="mt-4 max-w-3xl leading-8 text-muted-foreground">
-        Browse {tools.length} ToolPin utilities for images, PDFs, Office documents, and text. Most tools process files
-        in your browser — no account, no watermark. Use search or filter by category to find a converter.
-      </p>
+    <>
       {selectedCategory ? (
         <p className="mt-4 max-w-3xl text-sm leading-7 text-muted-foreground">{selectedCategory.longDescription}</p>
       ) : null}
@@ -91,6 +83,6 @@ export default function ToolsPageClient() {
           </div>
         ))}
       </div>
-    </Section>
+    </>
   );
 }

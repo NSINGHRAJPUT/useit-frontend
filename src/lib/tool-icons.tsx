@@ -92,6 +92,10 @@ const slugIcons: Record<string, LucideIcon> = {
   "case-converter": Type,
   "markdown-to-html": FileCode,
   "html-to-text": Code2,
+  "html-to-pdf": FileCode,
+  "html-to-image": FileImage,
+  "text-to-html": FileCode,
+  "text-to-pdf": FileText,
 };
 
 const operationIcons: Record<ToolOperation, LucideIcon> = {

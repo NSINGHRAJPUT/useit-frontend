@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ToolLayout } from "@/components/tools/tool-layout";
-import { siteConfig, tools } from "@/constants/site";
+import { categories, siteConfig, tools } from "@/constants/site";
 import { enrichTool } from "@/lib/tool-content";
 import {
   buildBreadcrumbJsonLd,
@@ -62,9 +62,13 @@ export default async function ToolPage({
   });
   const faqJsonLd = buildFaqJsonLd(tool.faq);
   const howToJsonLd = buildHowToJsonLd(`How to use ${tool.name}`, tool.intro || tool.description, tool.howToSteps ?? []);
+  const category = categories.find((item) => item.slug === tool.category);
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: "Home", path: "/" },
     { name: "Tools", path: "/tools" },
+    ...(category
+      ? [{ name: category.name, path: `/categories/${category.slug}` }]
+      : []),
     { name: tool.name, path: `/tools/${tool.slug}` },
   ]);
 
