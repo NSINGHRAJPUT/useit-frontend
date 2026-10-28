@@ -21,6 +21,20 @@ assertPublicEnv();
 
 const nextConfig: NextConfig = {
   transpilePackages: ["@toolkit-pro/shared-types", "@toolkit-pro/shared-utils"],
+  serverExternalPackages: ["playwright-core", "@sparticuz/chromium"],
+  outputFileTracingIncludes: {
+    "/api/export-edm": ["./node_modules/@sparticuz/chromium/**/*"],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.toolpin.online" }],
+        destination: "https://toolpin.online/:path*",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

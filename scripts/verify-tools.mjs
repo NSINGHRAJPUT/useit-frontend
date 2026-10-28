@@ -37,18 +37,18 @@ async function main() {
   const slugs = loadToolSlugs();
   console.log(`Found ${slugs.length} tool slugs in catalog`);
 
-  if (slugs.length !== 60) {
-    console.error(`Expected 60 tools, found ${slugs.length}`);
+  if (slugs.length !== 64) {
+    console.error(`Expected 64 tools, found ${slugs.length}`);
     process.exit(1);
   }
 
   const serverTools = slugs.filter((s) => SERVER_SET.has(s));
   const clientTools = slugs.filter((s) => !SERVER_SET.has(s));
 
-  console.log(`Client tools: ${clientTools.length} (expected 53)`);
+  console.log(`Client tools: ${clientTools.length} (expected 57)`);
   console.log(`Server tools: ${serverTools.length} (expected 7)`);
 
-  if (clientTools.length !== 53 || serverTools.length !== 7) {
+  if (clientTools.length !== 57 || serverTools.length !== 7) {
     console.error("Tool routing split mismatch");
     process.exit(1);
   }
@@ -61,7 +61,7 @@ async function main() {
   const csv = readFileSync(join(root, "test-fixtures/sample.csv"), "utf8");
   if (csv.trim().split("\n").length < 2) throw new Error("CSV fixture invalid");
 
-  console.log("✓ Tool catalog: 60 tools, 53 client / 7 server");
+  console.log("✓ Tool catalog: 64 tools, 57 client / 7 server");
   console.log("✓ Text fixtures valid");
   console.log("All automated smoke checks passed.");
 }

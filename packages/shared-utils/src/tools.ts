@@ -524,7 +524,65 @@ const documentTools: ToolDefinition[] = [
     ["application/vnd.oasis.opendocument.text"],
     "Convert OpenDocument text files to PDF",
   ),
+  createTool({
+    slug: "html-to-pdf",
+    name: "HTML to PDF",
+    category: "document",
+    operation: "convert",
+    description: "Convert HTML documents to PDF with selectable text and live links",
+    inputFormats: ["html"],
+    outputFormats: ["pdf"],
+    acceptedFormats: ["html", "htm"],
+    acceptedMimeTypes: ["text/html"],
+    outputFormat: "pdf",
+    inputType: "text",
+    processingLocation: "client",
+    processingMode: "sync",
+    seoTitle: "HTML to PDF Converter Online Free | ToolPin Tools",
+    seoDescription:
+      "Convert HTML to PDF online free on ToolPin. Paste or import HTML, preview, download a PDF with selectable text. No signup, no watermark.",
+    searchKeywords: ["html to pdf", "convert html to pdf", "html pdf online", "toolpin"],
+  }),
+  createTool({
+    slug: "text-to-pdf",
+    name: "Text to PDF",
+    category: "document",
+    operation: "convert",
+    description: "Write rich text in the browser and export a PDF",
+    inputFormats: ["text"],
+    outputFormats: ["pdf"],
+    acceptedFormats: ["text"],
+    acceptedMimeTypes: ["text/plain"],
+    outputFormat: "pdf",
+    inputType: "text",
+    processingLocation: "client",
+    processingMode: "sync",
+    seoTitle: "Text to PDF Converter Online Free | ToolPin Tools",
+    seoDescription:
+      "Write formatted text online and export a PDF free on ToolPin. Rich editor with images, headings, and links. No signup required.",
+    searchKeywords: ["text to pdf", "rich text to pdf", "wysiwyg pdf", "toolpin"],
+  }),
 ];
+
+const htmlImageTool = createTool({
+  slug: "html-to-image",
+  name: "HTML to Image",
+  category: "image",
+  operation: "convert",
+  description: "Convert HTML documents to PNG or JPG screenshots",
+  inputFormats: ["html"],
+  outputFormats: ["png", "jpg"],
+  acceptedFormats: ["html", "htm"],
+  acceptedMimeTypes: ["text/html"],
+  outputFormat: "png",
+  inputType: "text",
+  processingLocation: "client",
+  processingMode: "sync",
+  seoTitle: "HTML to Image Converter Online Free | ToolPin Tools",
+  seoDescription:
+    "Convert HTML to PNG or JPG online free on ToolPin. Paste HTML, preview, download a sharp screenshot. No signup, no watermark.",
+  searchKeywords: ["html to image", "html to png", "html to jpg", "screenshot html", "toolpin"],
+});
 
 function textTool(slug: string, name: string, description: string, searchKeywords: string[] = []) {
   return createTool({
@@ -562,6 +620,31 @@ const textTools: ToolDefinition[] = [
   textTool("case-converter", "Case Converter", "Convert text between letter cases", ["uppercase", "lowercase"]),
   textTool("markdown-to-html", "Markdown to HTML", "Convert Markdown to HTML", ["markdown", "html"]),
   textTool("html-to-text", "HTML to Text", "Strip HTML tags and extract plain text", ["html", "text"]),
+  createTool({
+    slug: "text-to-html",
+    name: "Text to HTML",
+    category: "text",
+    operation: "transform",
+    description: "Write rich text and download or copy complete HTML",
+    inputFormats: ["text"],
+    outputFormats: ["html"],
+    acceptedFormats: ["text"],
+    acceptedMimeTypes: ["text/plain"],
+    outputFormat: "html",
+    inputType: "text",
+    processingLocation: "client",
+    processingMode: "sync",
+    seoTitle: "Text to HTML Editor Online Free | ToolPin Tools",
+    seoDescription:
+      "Write rich text and export HTML free in your browser on ToolPin. Headings, lists, links, and images — no upload for HTML download.",
+    searchKeywords: ["text to html", "wysiwyg html", "rich text to html", "html editor online", "toolpin"],
+  }),
 ];
 
-export const allTools: ToolDefinition[] = [...imageTools, ...pdfTools, ...documentTools, ...textTools];
+export const allTools: ToolDefinition[] = [
+  ...imageTools,
+  htmlImageTool,
+  ...pdfTools,
+  ...documentTools,
+  ...textTools,
+];
