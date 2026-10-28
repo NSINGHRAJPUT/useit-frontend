@@ -25,16 +25,8 @@ const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
     "/api/export-edm": ["./node_modules/@sparticuz/chromium/**/*"],
   },
-  async redirects() {
-    return [
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "www.toolpin.online" }],
-        destination: "https://toolpin.online/:path*",
-        permanent: true,
-      },
-    ];
-  },
+  // Do not redirect www ↔ apex here. Vercel Domains already sends
+  // toolpin.online → www.toolpin.online; a reverse Next redirect loops.
 };
 
 export default nextConfig;
