@@ -51,11 +51,11 @@ All 60 tools — verify input produces a valid downloadable output.
 
 | Slug | Location | Fixture | Expected output | Status |
 |------|----------|---------|-------------------|--------|
-| docx-to-pdf | server | test-fixtures/sample.docx | .pdf | [ ] |
+| docx-to-pdf | client | test-fixtures/sample.docx | .pdf | [ ] |
 | pptx-to-pdf | server | test-fixtures/sample.pptx | .pdf | [ ] |
-| xlsx-to-pdf | server | test-fixtures/sample.xlsx | .pdf | [ ] |
-| pdf-to-docx | server | test-fixtures/sample.pdf | .docx | [ ] |
-| md-to-pdf | server | test-fixtures/sample.md | .pdf | [ ] |
+| xlsx-to-pdf | client | test-fixtures/sample.xlsx | .pdf | [ ] |
+| pdf-to-docx | client | test-fixtures/sample.pdf | .docx | [ ] |
+| md-to-pdf | client | test-fixtures/sample.md | .pdf | [ ] |
 | rtf-to-pdf | server | test-fixtures/sample.rtf | .pdf | [ ] |
 | odt-to-pdf | server | test-fixtures/sample.odt | .pdf | [ ] |
 | xlsx-to-csv | client | test-fixtures/sample.xlsx | .csv | [ ] |

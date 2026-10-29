@@ -6,15 +6,7 @@ import { dirname, join } from "node:path";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
 
-const SERVER_SET = new Set([
-  "docx-to-pdf",
-  "pptx-to-pdf",
-  "xlsx-to-pdf",
-  "md-to-pdf",
-  "rtf-to-pdf",
-  "odt-to-pdf",
-  "pdf-to-docx",
-]);
+const SERVER_SET = new Set(["pptx-to-pdf", "rtf-to-pdf", "odt-to-pdf"]);
 
 function loadToolSlugs() {
   const content = readFileSync(join(root, "packages/shared-utils/src/tools.ts"), "utf8");
@@ -45,10 +37,10 @@ async function main() {
   const serverTools = slugs.filter((s) => SERVER_SET.has(s));
   const clientTools = slugs.filter((s) => !SERVER_SET.has(s));
 
-  console.log(`Client tools: ${clientTools.length} (expected 57)`);
-  console.log(`Server tools: ${serverTools.length} (expected 7)`);
+  console.log(`Client tools: ${clientTools.length} (expected 61)`);
+  console.log(`Server tools: ${serverTools.length} (expected 3)`);
 
-  if (clientTools.length !== 57 || serverTools.length !== 7) {
+  if (clientTools.length !== 61 || serverTools.length !== 3) {
     console.error("Tool routing split mismatch");
     process.exit(1);
   }
@@ -61,7 +53,7 @@ async function main() {
   const csv = readFileSync(join(root, "test-fixtures/sample.csv"), "utf8");
   if (csv.trim().split("\n").length < 2) throw new Error("CSV fixture invalid");
 
-  console.log("✓ Tool catalog: 64 tools, 57 client / 7 server");
+  console.log("✓ Tool catalog: 64 tools, 61 client / 3 server");
   console.log("✓ Text fixtures valid");
   console.log("All automated smoke checks passed.");
 }

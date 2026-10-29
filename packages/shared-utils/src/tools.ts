@@ -7,14 +7,11 @@ import type {
   ToolProcessingMode,
 } from "@toolkit-pro/shared-types";
 
+/** Only formats without a workable browser parser stay on the API. */
 export const SERVER_TOOL_SLUGS = [
-  "docx-to-pdf",
   "pptx-to-pdf",
-  "xlsx-to-pdf",
-  "md-to-pdf",
   "rtf-to-pdf",
   "odt-to-pdf",
-  "pdf-to-docx",
 ] as const;
 
 const SERVER_SLUG_SET = new Set<string>(SERVER_TOOL_SLUGS);
@@ -448,6 +445,7 @@ const documentTools: ToolDefinition[] = [
     ["pdf"],
     ["application/vnd.openxmlformats-officedocument.wordprocessingml.document"],
     "Convert Word documents to PDF",
+    "client",
   ),
   documentTool(
     "pptx-to-pdf",
@@ -464,6 +462,7 @@ const documentTools: ToolDefinition[] = [
     ["pdf"],
     ["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"],
     "Convert Excel spreadsheets to PDF",
+    "client",
   ),
   documentTool(
     "pdf-to-docx",
@@ -472,6 +471,7 @@ const documentTools: ToolDefinition[] = [
     ["docx"],
     ["application/pdf"],
     "Convert PDF files to editable Word documents",
+    "client",
   ),
   documentTool(
     "xlsx-to-csv",
@@ -507,6 +507,7 @@ const documentTools: ToolDefinition[] = [
     ["pdf"],
     ["text/markdown", "text/plain"],
     "Convert Markdown files to PDF",
+    "client",
   ),
   documentTool(
     "rtf-to-pdf",

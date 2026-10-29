@@ -21,10 +21,6 @@ assertPublicEnv();
 
 const nextConfig: NextConfig = {
   transpilePackages: ["@toolkit-pro/shared-types", "@toolkit-pro/shared-utils"],
-  serverExternalPackages: ["playwright-core", "@sparticuz/chromium"],
-  outputFileTracingIncludes: {
-    "/api/export-edm": ["./node_modules/@sparticuz/chromium/**/*"],
-  },
   // Do not redirect www ↔ apex here. Vercel Domains already sends
   // toolpin.online → www.toolpin.online; a reverse Next redirect loops.
 };
