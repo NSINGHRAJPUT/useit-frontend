@@ -158,7 +158,7 @@ export function HtmlExportTool({ tool }: { tool: ToolDefinition }) {
             value={html}
             onChange={(e) => setHtml(e.target.value)}
             placeholder="Paste <!DOCTYPE html> … </html> here"
-            className="min-h-[420px] rounded-none border-0 bg-[#0f172a] font-mono text-xs leading-5 text-slate-100 focus-visible:ring-0"
+            className="h-[420px] max-h-[420px] field-sizing-fixed resize-none overflow-y-auto rounded-none border-0 bg-[#0f172a] font-mono text-xs leading-5 text-slate-100 focus-visible:ring-0"
           />
         </section>
 

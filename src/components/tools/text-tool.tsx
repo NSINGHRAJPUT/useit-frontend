@@ -44,7 +44,11 @@ export function TextTool({ tool }: { tool: ToolDefinition }) {
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder="Paste your text, JSON, CSV, or data here…"
-          className="min-h-[280px] font-mono text-sm"
+          className={
+            tool.slug === "html-to-text"
+              ? "h-[280px] max-h-[280px] field-sizing-fixed resize-none overflow-y-auto font-mono text-sm"
+              : "min-h-[280px] font-mono text-sm"
+          }
         />
         <Button onClick={process} disabled={busy} className="w-full sm:w-auto">
           {busy ? <Loader2 className="size-4 animate-spin" /> : null}
