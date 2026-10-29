@@ -1,4 +1,7 @@
-export type EdmExportFormat = "png" | "jpg" | "pdf";
+import { getPublicApiUrl } from "@/lib/public-env";
+import { renderHtml, type HtmlRenderFormat } from "@/lib/processing/html-render";
+
+export type EdmExportFormat = HtmlRenderFormat;
 
 export type ExportEdmHtmlInput = {
   html: string;
@@ -18,21 +21,52 @@ export class EdmExportError extends Error {
   }
 }
 
+/**
+ * PNG/JPG: render in the browser (no backend).
+ * PDF: POST to useit-backend `POST /api/export/html-to-pdf` (Chromium, selectable text).
+ */
 export async function exportEdmHtml(input: ExportEdmHtmlInput): Promise<Blob> {
-  const response = await fetch("/api/export-edm", {
+  if (input.format === "png" || input.format === "jpg") {
+    try {
+      return await renderHtml(input.html, {
+        width: input.width,
+        format: input.format,
+        signal: input.signal,
+        pixelRatio: 2,
+      });
+    } catch (err) {
+      if (err instanceof Error && err.name === "AbortError") throw err;
+      const message = err instanceof Error ? err.message : "Export failed.";
+      const status = /too large|1 MB|12,000|Width must/i.test(message) ? 413 : 400;
+      throw new EdmExportError(message, status);
+    }
+  }
+
+  // PDF via conversion API (not Next.js)
+  const response = await fetch(`${getPublicApiUrl()}/export/html-to-pdf`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       html: input.html,
-      format: input.format,
       width: input.width,
     }),
     signal: input.signal,
   });
 
   if (!response.ok) {
-    const result = (await response.json().catch(() => ({}))) as { error?: string };
-    throw new EdmExportError(result.error || `Export failed (${response.status})`, response.status);
+    const result = (await response.json().catch(() => ({}))) as {
+      error?: string | { message?: string; code?: string };
+      message?: string;
+    };
+    const nested =
+      typeof result.error === "object" && result.error
+        ? result.error.message
+        : undefined;
+    const flat = typeof result.error === "string" ? result.error : undefined;
+    throw new EdmExportError(
+      nested || flat || result.message || `PDF export failed (${response.status})`,
+      response.status,
+    );
   }
 
   return response.blob();

@@ -4,20 +4,20 @@ export const documentToolContent: ToolSeoMap = {
   "docx-to-pdf": {
     seoTitle: "DOCX to PDF Converter Online Free, No Signup | ToolPin",
     seoDescription:
-      "Convert Word DOCX to PDF online free with ToolPin. No signup, no watermark. Temporary secure upload; files auto-delete after you download the PDF file.",
+      "Convert Word DOCX to PDF in your browser with ToolPin. Free, no signup, no watermark, never uploaded. Headings, lists, tables, and images are rendered locally.",
     intro:
-      "Turn a Microsoft Word .docx file into a shareable PDF on ToolPin without installing Office. Upload your document, convert on a secure temporary server, then download the PDF. Files are deleted after the download link expires. The tool is free, needs no account, and keeps headings, images, and page layout intact for reports, letters, and contracts.",
+      "Turn a Microsoft Word .docx file into a shareable PDF on ToolPin without installing Office. Conversion runs entirely in your browser — the file never leaves your device. The tool is free, needs no account, and keeps headings, lists, tables, and images for reports, letters, and contracts. Complex layouts may differ from Word’s Print Layout.",
     howToSteps: [
       "Open the DOCX to PDF tool on toolpin.online and choose your .docx file (not the older .doc binary format).",
-      "Upload the file. ToolPin sends it to a temporary conversion server because Word layout needs a full document engine.",
-      "Wait for the job to finish. Large reports with images take longer than a short letter.",
+      "Drop the file. ToolPin converts it locally in your browser with no upload.",
+      "Wait a moment while the document is rendered to PDF pages.",
       "Download the PDF, then confirm pages, fonts, and images look right before you share it.",
-      "You do not need an account. The uploaded DOCX and the PDF expire automatically after download.",
+      "You do not need an account. Nothing was uploaded to ToolPin servers.",
     ],
     benefits: [
       "Free Word-to-PDF conversion with no watermark and no signup on ToolPin.",
-      "Server-side engine preserves headings, tables, headers, and embedded images better than a screenshot.",
-      "Temporary storage only — source and result are deleted after the download window closes.",
+      "100% browser-local — your DOCX never leaves this device.",
+      "Headings, lists, tables, and embedded images from mammoth HTML rendering.",
       "Works from any modern browser on Windows, macOS, Linux, or a phone — no Microsoft Word install.",
     ],
     useCases: [
@@ -34,9 +34,7 @@ This converter is free and does not require an account. It is not a desktop publ
 
 ## How ToolPin processes the file
 
-Word layout is too complex to rebuild reliably inside a browser tab. Tables with merged cells, floating images, footnotes, and theme fonts need a document engine. ToolPin therefore uploads your DOCX to a conversion server for a short job, builds the PDF, and lets you download it. The upload is temporary. After you download — or after the result expires unused — both the source and the output are deleted. That is different from the image and PDF tools on this site, which stay entirely on your device.
-
-Do not upload documents that contain secrets you are not allowed to send over HTTPS. For highly confidential legal files, convert on an offline copy of LibreOffice instead. For everyday school and office work, the temporary-server model is the same pattern used by most online converters; ToolPin simply expires the files instead of keeping a library.
+ToolPin converts the DOCX to HTML in your browser (mammoth), then rasterizes that HTML into PDF pages — still on your device. Nothing is uploaded. Complex Word features (columns, headers/footers, floating text boxes, uncommon fonts) may not match Print Layout exactly. For pixel-perfect legal output, use Word or LibreOffice on your machine.
 
 ## Layout, fonts, and what can shift
 
@@ -62,13 +60,13 @@ Related tools on the same site: RTF to PDF and ODT to PDF for other word-process
       "Use .docx, not .doc or .docm. Save a copy without macros if the file is a Word macro document.",
       "Compress large photos inside Word first if the PDF must stay under an email attachment limit.",
       "Check Print Layout in Word — the PDF will mirror that view, including odd margins and empty extra pages.",
-      "Do not upload files that contain passwords, bank details, or data you are not allowed to send over the network.",
+      "Preview the PDF before sharing — complex Word layouts may differ from Print Layout.",
     ],
     faq: [
       {
         question: "Does DOCX to PDF run in my browser?",
         answer:
-          "No. Word layout needs a server-side document engine. ToolPin uploads the .docx temporarily, converts it, and deletes the files after you download the PDF or the link expires.",
+          "Yes. The .docx is converted locally and never uploaded to ToolPin.",
       },
       {
         question: "Is the converter free? Do I need an account?",
@@ -83,12 +81,12 @@ Related tools on the same site: RTF to PDF and ODT to PDF for other word-process
       {
         question: "Will fonts and images look the same as in Word?",
         answer:
-          "Standard fonts, headings, tables, and embedded images usually match Print Layout. Rare fonts that were not embedded, SmartArt, and some floating objects can shift. Preview the PDF before you send it.",
+          "Headings, lists, tables, and embedded images usually survive. Rare fonts, SmartArt, headers/footers, and floating objects can shift. Preview the PDF before you send it.",
       },
       {
-        question: "How long are my files kept?",
+        question: "Are my files stored on ToolPin?",
         answer:
-          "Only for the conversion and a short download window. ToolPin does not keep a permanent copy of your Word file or the PDF.",
+          "No. Processing stays in your browser. ToolPin never receives the Word file or the PDF.",
       },
       {
         question: "Can I convert a password-protected Word document?",
@@ -218,20 +216,20 @@ Need the opposite workflow? ToolPin does not turn a PDF back into an editable Po
   "xlsx-to-pdf": {
     seoTitle: "XLSX to PDF Converter Online Free, No Signup | ToolPin",
     seoDescription:
-      "Convert Excel XLSX spreadsheets to PDF online free on ToolPin. No account needed. Temporary upload; files auto-delete after you download the printable PDF.",
+      "Convert Excel XLSX to PDF in your browser with ToolPin. Free, no signup, never uploaded. Each sheet becomes an HTML table rendered to PDF pages.",
     intro:
-      "Turn an Excel .xlsx workbook into a printable PDF on ToolPin without installing Microsoft Excel. The converter uses the sheet’s print area, page orientation, and scaling. Upload is temporary, the PDF is free and unmarked, and files are deleted after download. No signup. Check page breaks before you share — wide tables often span several PDF pages.",
+      "Turn an Excel .xlsx workbook into a printable PDF on ToolPin without installing Microsoft Excel. Conversion runs entirely in your browser — sheets become tables, then PDF pages. The PDF is free and unmarked. No signup. Wide tables often span several pages; check the result before sharing.",
     howToSteps: [
-      "In Excel, set print area, orientation, and scaling (Fit Sheet on One Page only if the sheet is small enough to read).",
       "Save the workbook as .xlsx and open XLSX to PDF on ToolPin.",
-      "Upload the file. Conversion runs on a temporary server because Excel layout is not rebuilt in the browser.",
-      "Download the PDF and confirm that columns are not clipped and headers repeat as you expect.",
-      "No account is required. The spreadsheet and PDF are removed after the download window.",
+      "Drop the file. ToolPin reads every sheet locally — nothing is uploaded.",
+      "Wait while tables are rendered to PDF pages.",
+      "Download the PDF and confirm that columns are readable.",
+      "No account is required.",
     ],
     benefits: [
       "Free Excel-to-PDF conversion on ToolPin with no watermark and no signup.",
-      "Respects print settings so the PDF matches what Excel’s Print Preview would show.",
-      "Temporary upload only — workbooks are not stored as a permanent archive.",
+      "100% browser-local — workbooks never leave your device.",
+      "All sheets included as HTML tables in the PDF.",
       "Shareable output for people who should not receive a live, formula-filled spreadsheet.",
     ],
     useCases: [
@@ -242,9 +240,9 @@ Need the opposite workflow? ToolPin does not turn a PDF back into an editable Po
     ],
     guide: `## Spreadsheets are not pages until you say so
 
-An Excel grid can be hundreds of columns wide. A PDF is a stack of fixed pages. XLSX to PDF is really “print this workbook to PDF,” not “squeeze every cell onto one screen.” On ToolPin that print job runs on a temporary server: you upload the .xlsx, the engine uses the workbook’s print settings, and you download a PDF. The tool is free, needs no account, and deletes the files after download.
+An Excel grid can be hundreds of columns wide. A PDF is a stack of fixed pages. On ToolPin, XLSX to PDF reads the workbook in your browser, turns each sheet into an HTML table, and rasterizes that to PDF pages — nothing is uploaded. The tool is free and needs no account.
 
-If you only need data — not a printable view — use XLSX to CSV instead. That tool stays in your browser and never uploads the file. PDF is for sharing a look; CSV is for sharing numbers.
+If you only need data — not a printable view — use XLSX to CSV instead. That tool also stays in your browser. PDF is for sharing a look; CSV is for sharing numbers.
 
 ## Set print layout before you upload
 
@@ -268,7 +266,7 @@ Multiple sheets become multiple sections of the PDF (or multiple page sequences)
 
 ## Privacy and size
 
-Spreadsheets often hold more than you intend to share: salary columns, personal emails, or a “scratch” sheet. Because this conversion is a server upload, copy the workbook, delete sensitive sheets, and convert the copy. ToolPin does not keep the file after the download expires, but you still transmitted it.
+Spreadsheets often hold more than you intend to share: salary columns, personal emails, or a “scratch” sheet. Even though conversion is local, delete sensitive sheets in a copy before you convert if you will share the PDF.
 
 Very large workbooks (tens of thousands of rows with heavy formatting) make large PDFs and slow jobs. Filter to the rows you need, or print a summary sheet. Embedded images and high-resolution logos add weight the same way they do in Word.
 
@@ -288,7 +286,7 @@ For data interchange with developers or databases, skip PDF entirely and use the
       {
         question: "Is my Excel file uploaded?",
         answer:
-          "Yes. XLSX to PDF needs a server-side spreadsheet engine. ToolPin stores the file only for the job and deletes it after you download the PDF or the result expires.",
+          "No. XLSX to PDF runs entirely in your browser. ToolPin never receives the workbook.",
       },
       {
         question: "Does the PDF include all sheets?",
@@ -330,21 +328,21 @@ For data interchange with developers or databases, skip PDF entirely and use the
   "pdf-to-docx": {
     seoTitle: "PDF to DOCX Converter Online Free, No Signup | ToolPin",
     seoDescription:
-      "Convert PDF to editable Word DOCX online free on ToolPin. No signup. Temporary upload; files auto-delete after download. Best for digital PDFs, not scans.",
+      "Convert PDF to editable Word DOCX in your browser with ToolPin. Free, no signup, never uploaded. Best for digital PDFs with a text layer — not scans.",
     intro:
-      "Turn a digital PDF into an editable Word .docx on ToolPin when you need to reuse text, not just read it. Conversion runs on a temporary server and the files are deleted after download. The tool is free and needs no account. It reconstructs paragraphs and tables from text already in the PDF — it is not OCR, so scanned page images will not become reliable Word text.",
+      "Turn a digital PDF into an editable Word .docx on ToolPin when you need to reuse text, not just read it. Extraction runs entirely in your browser. The tool is free and needs no account. It pulls paragraphs from text already in the PDF — it is not OCR, so scanned page images will not become reliable Word text.",
     howToSteps: [
       "Open PDF to DOCX on ToolPin and choose a text-based PDF (exported from Word, a report generator, or a website).",
-      "Upload the file. Reconstruction runs on a temporary server because mapping PDF boxes to Word is not done in the browser.",
+      "Drop the file. Text is extracted locally — nothing is uploaded.",
       "Download the .docx and open it in Word or LibreOffice.",
-      "Compare it with the PDF: fix heading styles, table borders, and any columns that became text boxes.",
-      "No signup is required. Uploaded PDFs and the Word file expire after download.",
+      "Compare it with the PDF: fix heading styles and line breaks as needed.",
+      "No signup is required.",
     ],
     benefits: [
       "Free PDF-to-Word conversion on ToolPin with no watermark and no account.",
-      "Produces a real .docx you can edit, comment on, and track-change — not a screenshot inside Word.",
-      "Temporary server job only; files are not kept after the download window.",
-      "Saves retyping when a vendor sent a PDF and you need to update a paragraph or table.",
+      "Produces a real .docx you can edit — text extraction, not a screenshot.",
+      "100% browser-local — the PDF never leaves your device.",
+      "Saves retyping when a vendor sent a PDF and you need to update a paragraph.",
     ],
     useCases: [
       "Edit a policy PDF you received so you can return a redlined Word draft.",
@@ -354,7 +352,7 @@ For data interchange with developers or databases, skip PDF entirely and use the
     ],
     guide: `## What “PDF to Word” actually does
 
-A PDF stores glyphs and positions, not a Word document’s style tree. Converting to DOCX is reconstruction: the engine groups characters into lines, lines into paragraphs, and ruling lines into tables, then writes a .docx. ToolPin does that on a temporary server, lets you download the Word file, and deletes both sides. The tool is free and does not require signup.
+A PDF stores glyphs and positions, not a Word document’s style tree. ToolPin extracts text per page in your browser and writes a simple .docx of paragraphs — no layout or images. The tool is free and does not require signup.
 
 This is not magic and it is not OCR. If a page is a photograph of a printed document, the PDF contains an image, not characters. The resulting Word file may hold a picture of the page or garbled placeholders. For scans, use a dedicated OCR app on your computer. ToolPin PDF to DOCX is for born-digital PDFs — files exported from Word, Google Docs, LaTeX, or a business system that already contains a text layer.
 
@@ -368,7 +366,7 @@ Headers, footers, and page numbers often land in the body or in floating boxes. 
 
 ## Privacy, passwords, and permissions
 
-The PDF is uploaded. Do not send contracts, medical records, or ID scans unless you are allowed to. ToolPin expires the files after download, but the bytes still left your device. Encrypted or permission-restricted PDFs (no copying, owner password) typically cannot be converted until you remove protection in a PDF tool you already use, and only if you have the right to do so.
+Processing is local, but still treat sensitive PDFs carefully on a shared screen. Encrypted or permission-restricted PDFs typically cannot be converted until you remove protection in a PDF tool you already use, and only if you have the right to do so.
 
 ## After you open the DOCX
 
@@ -389,14 +387,14 @@ ToolPin does not add a watermark and does not require an account. Preview every 
       "Use this for digital PDFs with a real text layer. Scanned pages need OCR, which this tool does not provide.",
       "Restyle headings in Word after conversion; reconstructed files rarely keep a clean style gallery.",
       "Split huge PDFs first with the in-browser Split PDF tool if you only need a chapter.",
-      "Remove PDF passwords locally before upload, and only if you are allowed to open the file.",
-      "Keep the original PDF until you have checked tables, lists, and images in the .docx.",
+      "Remove PDF passwords locally first, and only if you are allowed to open the file.",
+      "Keep the original PDF until you have checked the extracted text in the .docx.",
     ],
     faq: [
       {
         question: "Does PDF to DOCX run on my device?",
         answer:
-          "No. Reconstruction runs on a temporary ToolPin server. The PDF and the Word file are deleted after you download or the link expires.",
+          "Yes. Text extraction and DOCX packaging happen in your browser. Nothing is uploaded.",
       },
       {
         question: "Will a scanned PDF become editable text?",
@@ -464,7 +462,7 @@ ToolPin does not add a watermark and does not require an account. Preview every 
 
 Excel workbooks can hold many sheets, formulas, pivot caches, charts, and VBA. A CSV file is rows of text with a delimiter (commas in this tool’s usual output). There is no second sheet, no cell colour, and no formula — only the values that were in the grid. ToolPin XLSX to CSV runs entirely in your browser: the .xlsx is parsed on your device, a CSV is generated, and you download it. Nothing is uploaded. The tool is free and needs no account.
 
-Use this when another system asks for CSV, when you want a lightweight snapshot of one table, or when you must share data without exposing the rest of the workbook. If you need a printable report, use XLSX to PDF instead (that path is a temporary server upload). If you are going the other way, CSV to XLSX is also local.
+Use this when another system asks for CSV, when you want a lightweight snapshot of one table, or when you must share data without exposing the rest of the workbook. If you need a printable report, use XLSX to PDF instead (also browser-local). If you are going the other way, CSV to XLSX is also local.
 
 ## Which sheet and which values
 
@@ -600,7 +598,7 @@ Conversion happens in memory in the tab. Multi-million-row files can freeze the 
 
 Open the .xlsx, freeze the top row, and turn on filters. Add a second sheet for notes; CSV could not hold that, but Excel can. Do not email both the CSV and the XLSX as if they will stay in sync — pick one source of truth.
 
-Need a PDF of the table? After you have the .xlsx, use XLSX to PDF (temporary server upload) and set print area first. Need JSON for an API? Use CSV to JSON in the text tools, which is also 100% local.`,
+Need a PDF of the table? After you have the .xlsx, use XLSX to PDF (also browser-local). Need JSON for an API? Use CSV to JSON in the text tools, which is also 100% local.`,
     tips: [
       "If every row lands in column A, the file is probably semicolon- or tab-delimited — fix the delimiter first.",
       "Keep leading zeros on IDs by setting those columns to Text in Excel after conversion.",
@@ -712,7 +710,7 @@ ToolPin never sees this file. You can extract sensitive drafts on a machine that
       "Use .docx, not .doc. Save older files as .docx in Word or LibreOffice, then extract.",
       "Do not expect tables, images, or headers to survive in a meaningful layout.",
       "Password-protected documents must be unlocked locally before the browser can read them.",
-      "For a formatted shareable file, use DOCX to PDF instead — that path uses a temporary server.",
+      "For a formatted shareable file, use DOCX to PDF instead — also browser-local on ToolPin.",
     ],
     faq: [
       {
@@ -760,20 +758,20 @@ ToolPin never sees this file. You can extract sensitive drafts on a machine that
   "md-to-pdf": {
     seoTitle: "Markdown to PDF Converter Online Free | ToolPin Tools",
     seoDescription:
-      "Convert Markdown MD files to PDF online free on ToolPin. No signup, no watermark. Temporary upload for rendering; files auto-delete after you download.",
+      "Convert Markdown MD files to PDF in your browser with ToolPin. Free, no signup, never uploaded. Headings, lists, and code blocks become paginated PDF pages.",
     intro:
-      "Render a Markdown .md file to PDF on ToolPin when you need a readable document from README-style text. Headings, lists, code blocks, and links become a paginated PDF. Conversion uses a temporary server, then the files are deleted. The tool is free and needs no account. It is not a full book publisher — keep expectations at “clean printout of a Markdown file,” not InDesign.",
+      "Render a Markdown .md file to PDF on ToolPin when you need a readable document from README-style text. Headings, lists, code blocks, and links become a paginated PDF — entirely in your browser. The tool is free and needs no account. It is not a full book publisher — keep expectations at “clean printout of a Markdown file,” not InDesign.",
     howToSteps: [
       "Save your notes as a .md or .markdown file (UTF-8). Use standard headings, lists, and fenced code blocks.",
-      "Open Markdown to PDF on ToolPin and upload the file. Rendering runs on a temporary server.",
-      "Wait while the Markdown is converted to HTML and then to PDF pages.",
+      "Open Markdown to PDF on ToolPin and drop the file. Rendering stays in your browser.",
+      "Wait while Markdown is converted to HTML and then to PDF pages.",
       "Download the PDF and check code wrapping, table widths, and heading hierarchy.",
-      "No signup is required. The Markdown and PDF expire after download.",
+      "No signup is required.",
     ],
     benefits: [
       "Free Markdown-to-PDF export with no watermark and no ToolPin account.",
       "Turns README, lecture notes, or a changelog into something you can email or print.",
-      "Temporary upload only — source and PDF are not kept as a library.",
+      "100% browser-local — your .md never leaves this device.",
       "No need to install pandoc, LaTeX, or a local Node toolchain for a one-off printout.",
     ],
     useCases: [
@@ -784,9 +782,9 @@ ToolPin never sees this file. You can extract sensitive drafts on a machine that
     ],
     guide: `## Markdown is source; PDF is the handout
 
-Markdown is designed for git and editors: # headings, - lists, \`code\`, and optional tables. Browsers and chat apps preview it; printers do not. Markdown to PDF on ToolPin renders that source into a paginated PDF so you can email or print it. The file is uploaded to a temporary server, converted, and deleted after download. The tool is free and does not require signup.
+Markdown is designed for git and editors: # headings, - lists, \`code\`, and optional tables. Browsers and chat apps preview it; printers do not. Markdown to PDF on ToolPin renders that source into a paginated PDF in your browser so you can email or print it. The tool is free and does not require signup.
 
-This is not the same as Markdown to HTML in the text tools. That utility stays in the browser and returns HTML you can paste into a page. This tool returns a PDF and therefore needs a print pipeline on the server.
+This is not the same as Markdown to HTML in the text tools. That utility returns HTML you can paste into a page. This tool returns a PDF from the same local Markdown → HTML path.
 
 ## Which Markdown flavour to expect
 
@@ -804,9 +802,9 @@ Links in the PDF are often clickable if the renderer keeps them. Printouts obvio
 
 A Markdown file itself is tiny; the PDF grows with images and fonts. That is normal.
 
-## Privacy and what not to upload
+## Privacy
 
-The .md is sent to the server. Do not paste secrets, API keys, or unpublished security write-ups into a file you upload. For private notes, run pandoc locally. ToolPin deletes the job after download, but you still transmitted the text.
+Conversion is local. Your .md never leaves the browser. Still avoid pasting secrets on a shared screen.
 
 ## After you download
 
@@ -815,16 +813,16 @@ Skim every page. Markdown tables wider than the page will break; split columns o
 Related: RTF to PDF and DOCX to PDF if the source is not Markdown; HTML to Text if you are going the other way from markup.`,
     tips: [
       "Put the document title in an H1; YAML front matter may not appear on the PDF cover.",
-      "Use https image URLs. Local ./image.png paths will not be on the conversion server.",
+      "Use https image URLs with CORS if you want remote images in the PDF.",
       "Keep code samples short so lines do not clip at the page edge.",
       "Prefer simple GFM tables; wide grids belong in a spreadsheet PDF instead.",
-      "Do not upload Markdown that contains secrets — this path is a temporary server job.",
+      "Everything stays in your browser — nothing is uploaded.",
     ],
     faq: [
       {
         question: "Is Markdown converted in the browser?",
         answer:
-          "No. MD to PDF uses a temporary ToolPin server. Files are deleted after you download the PDF or the result expires.",
+          "Yes. MD to PDF runs entirely in your browser. ToolPin never receives the file.",
       },
       {
         question: "Is it free?",
@@ -839,7 +837,7 @@ Related: RTF to PDF and DOCX to PDF if the source is not Markdown; HTML to Text 
       {
         question: "Why are my images missing?",
         answer:
-          "Only the .md file is uploaded. Relative images on your disk are not included. Use public https URLs or merge diagram PDFs afterwards.",
+          "Relative images on disk are not bundled with the .md. Use public https URLs that allow CORS, or merge diagram PDFs afterwards.",
       },
       {
         question: "Can I style the PDF with custom CSS?",
@@ -849,7 +847,7 @@ Related: RTF to PDF and DOCX to PDF if the source is not Markdown; HTML to Text 
       {
         question: "How is this different from Markdown to HTML?",
         answer:
-          "Markdown to HTML is a browser-local text tool that outputs HTML. This tool outputs a PDF and therefore uploads temporarily.",
+          "Markdown to HTML outputs HTML you can copy. This tool takes the same local Markdown path and exports a PDF.",
       },
     ],
     searchKeywords: [
@@ -1095,22 +1093,22 @@ ToolPin is a convenience layer so you can produce a PDF from Writer without the 
     ],
     guide: `## HTML in, PDF out
 
-HTML to PDF on ToolPin renders your markup in a headless browser, then writes a PDF page sized to the content width and height. You get real glyphs and hyperlinks, not a raster image of the page. The HTML is sent briefly to ToolPin’s export endpoint for that render and is not stored as a library afterward.
+HTML to PDF on ToolPin renders your markup with Chromium on the conversion API, then returns a PDF sized to the content width and height. Text stays selectable and normal links stay clickable. Preview stays in your browser; only export sends HTML for the render job.
 
-This is different from Markdown to PDF (upload a .md file) and Text to PDF (write in the TipTap editor). Use this page when you already have HTML.
+This is different from Markdown to PDF (drop a .md file, browser-local) and from HTML to Image (PNG/JPG stays entirely in your browser). Use this page when you already have HTML and need a real PDF.
 
 ## What works well
 
-Inline and \`<style>\` CSS, tables, images hosted on public HTTPS (or hosts in \`EDM_ASSET_HOSTS\`), and standard fonts. JavaScript does not run during render — interactive widgets will look empty. Form fields are not fillable in the PDF. Keep documents under about 12,000 CSS pixels of height and under the direct download size limit.
+Inline and \`<style>\` CSS, tables, public HTTPS images/fonts, and standard fonts. JavaScript does not run during render — interactive widgets will look empty. Keep documents under about 12,000 CSS pixels of height and under 1 MB of HTML.
 
 ## Privacy
 
-Preview stays in your browser. Export uploads HTML only for the render job. Prefer not to paste secrets you cannot send to ToolPin’s serverless function.`,
+Live preview never leaves your tab. PDF export briefly sends HTML to ToolPin’s API for Chromium rendering and does not keep a library of past exports.`,
     tips: [
       "Include a full DOCTYPE and charset so fonts and encoding stay correct.",
       "Replace placeholder links with real https:// URLs before export.",
-      "If remote images are missing, check that the host is public HTTPS or allowlisted.",
-      "For a screenshot instead of a PDF, use HTML to Image on ToolPin.",
+      "If remote images are missing, use public HTTPS hosts.",
+      "For a screenshot instead of a PDF, use HTML to Image on ToolPin (browser-local).",
     ],
     faq: [
       {
@@ -1121,7 +1119,7 @@ Preview stays in your browser. Export uploads HTML only for the render job. Pref
       {
         question: "Does the PDF keep selectable text?",
         answer:
-          "Yes. ToolPin uses Chromium PDF output so text stays selectable and links stay clickable when the HTML used normal anchors.",
+          "Yes. Chromium PDF output keeps selectable text and clickable links when the HTML used normal anchors.",
       },
       {
         question: "Can JavaScript run in the PDF?",
@@ -1131,7 +1129,7 @@ Preview stays in your browser. Export uploads HTML only for the render job. Pref
       {
         question: "What is the size limit?",
         answer:
-          "HTML up to 1 MB. Generated files over roughly 4 MB cannot be returned as a direct download — shorten the page or reduce images.",
+          "HTML up to 1 MB. Keep rendered height under about 12,000 CSS pixels.",
       },
       {
         question: "Is HTML to PDF free?",
@@ -1152,19 +1150,19 @@ Preview stays in your browser. Export uploads HTML only for the render job. Pref
     seoDescription:
       "Write rich text online and export a PDF free on ToolPin. Headings, lists, links, and images in a browser editor — no signup, no watermark.",
     intro:
-      "Draft a document in ToolPin’s rich text editor, then export a PDF. Add headings, lists, links, and floated images, then download. Writing stays in the tab until you export; PDF creation briefly sends HTML to ToolPin’s render API. Free, no account required.",
+      "Draft a document in ToolPin’s rich text editor, then export a PDF. Add headings, lists, links, and floated images, then download. Writing stays in your tab; PDF export uses ToolPin’s conversion API for selectable text. Free, no account required.",
     howToSteps: [
       "Open Text to PDF on ToolPin.",
       "Write or paste content in the editor. Use the toolbar for headings, lists, links, and images.",
       "Drag floated images into place if needed.",
-      "Click Download PDF. ToolPin renders the document and returns the file.",
+      "Click Download PDF. ToolPin renders the document on the conversion API and returns the file.",
       "Open the PDF and check layout, links, and images.",
     ],
     benefits: [
       "WYSIWYG editor — no need to write HTML by hand.",
-      "PDF with selectable text and working links from the editor content.",
+      "PDF with selectable text via Chromium on the conversion API.",
       "Free, no signup, no watermark.",
-      "Companion Text to HTML tool exports markup without uploading.",
+      "Companion Text to HTML tool exports markup entirely in the browser.",
     ],
     useCases: [
       "Turn meeting notes into a shareable PDF.",
@@ -1174,19 +1172,19 @@ Preview stays in your browser. Export uploads HTML only for the render job. Pref
     ],
     guide: `## Write, then print to PDF
 
-Text to PDF wraps your TipTap document in a standard HTML page and renders it with the same export engine as HTML to PDF. You do not paste HTML; you write in the editor. For copy/download of HTML only, use Text to HTML — that path stays entirely in the browser.
+Text to PDF wraps your TipTap document in a standard HTML page and renders it with the same conversion API as HTML to PDF (Chromium). You do not paste HTML; you write in the editor. For copy/download of HTML only, use Text to HTML — that path stays entirely in the browser.
 
 ## Images and layout
 
-Images are compressed and embedded as data URLs when you insert them, so they travel with the HTML on export. Keep the page reasonable in height; very tall documents may hit the download size limit.
+Images are compressed and embedded as data URLs when you insert them, so they travel with the HTML on export. Keep the page reasonable in height.
 
 ## Privacy
 
-Editing is local. Only PDF export sends HTML to the serverless render endpoint. Do not put passwords or private keys in the document if you cannot send them for rendering.`,
+Editing is local. Only PDF export sends HTML to the API for rendering; ToolPin does not keep a library of drafts.`,
     tips: [
       "Use one H1 and clear H2 sections for a cleaner PDF outline.",
       "Prefer the Text to HTML tool if you only need markup, not a PDF.",
-      "Check links in the PDF after export — use full https:// URLs.",
+      "Use full https:// URLs for links in the editor.",
       "If export fails on size, shrink images or shorten the document.",
     ],
     faq: [
@@ -1198,7 +1196,7 @@ Editing is local. Only PDF export sends HTML to the serverless render endpoint. 
       {
         question: "Can I get HTML instead of PDF?",
         answer:
-          "Yes. Use Text to HTML on ToolPin for copy or download of the HTML document without calling the render API.",
+          "Yes. Use Text to HTML on ToolPin for copy or download of the HTML document without calling the PDF API.",
       },
       {
         question: "Does Text to PDF need an account?",

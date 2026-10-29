@@ -2465,28 +2465,28 @@ Pair with crop (remove a house number in the frame), resize (do not ship 12 MP o
     ],
     guide: `## HTML to a picture
 
-HTML to Image loads your document in headless Chromium and takes a full-page screenshot at 2× scale. Choose PNG for crisp UI chrome and transparency-friendly graphics, or JPG for smaller photographic layouts.
+HTML to Image renders your document in the browser and captures a full-page canvas at 2× scale. Choose PNG for crisp UI chrome and transparency-friendly graphics, or JPG for smaller photographic layouts.
 
-This is not HTML to PDF. PDFs keep selectable text; images do not. Scripts never run in preview or render.
+This is not HTML to PDF. Both stay on your device; the PDF path embeds the same style of page image. Scripts never run in preview or render.
 
 ## Assets
 
-Remote images and fonts must be public HTTPS (or listed in \`EDM_ASSET_HOSTS\`). Private network and metadata hosts are blocked. If an image is missing in the export, check the host allow rules.
+Remote images and fonts must allow CORS or they may appear blank on the canvas. Prefer same-origin or CORS-enabled HTTPS hosts.
 
 ## Limits
 
-HTML ≤ 1 MB. Rendered height must stay within safe bounds. Outputs larger than about 4 MB cannot be returned as a direct download — reduce width, height, or switch to JPG.`,
+HTML ≤ 1 MB. Rendered height must stay within about 12,000 CSS pixels.`,
     tips: [
       "Prefer PNG for UI and logos; JPG for photo-heavy pages.",
       "Match canvas width to the design’s intended viewport.",
-      "For a printable document with links, use HTML to PDF instead.",
+      "For a printable document snapshot, use HTML to PDF instead.",
       "Keep background colors explicit so screenshots do not look washed out.",
     ],
     faq: [
       {
         question: "Is HTML uploaded?",
         answer:
-          "Yes, briefly, only when you export. Preview stays local. ToolPin does not keep a library of past exports.",
+          "No. Preview and export both run in your browser. ToolPin never receives the HTML.",
       },
       {
         question: "PNG or JPG?",
