@@ -141,9 +141,9 @@ export function HtmlExportTool({ tool }: { tool: ToolDefinition }) {
       </div>
 
       <p className="text-xs text-muted-foreground">
-        Preview scripts are disabled. External images and fonts load only from public HTTPS hosts
-        (or hosts listed in <code className="text-metallic-gold">EDM_ASSET_HOSTS</code>). PDF/image
-        export briefly sends HTML to ToolPin&apos;s render API; nothing is stored after download.
+        {isImageTool
+          ? "PNG/JPG export runs in your browser. Remote images and fonts must allow CORS or they may appear blank. Scripts do not run during render."
+          : "PDF export uses ToolPin’s conversion API (Chromium) for selectable text. HTML is sent only for the render job and is not stored. Scripts do not run during render."}
       </p>
 
       <div className="grid gap-6 lg:grid-cols-[minmax(280px,0.9fr)_minmax(0,1.1fr)]">
